@@ -1,0 +1,52 @@
+RewriteEngine On
+
+# ----------- PHP REWRITES -------------
+
+# Reescribe la URL para 'Index.php'
+RewriteRule ^Home$ index.php [L]
+
+# Reescribe la URL para 'Header.php'
+RewriteRule ^Encabezado$ View/Layout/Header.php [L]
+
+# Reescribe la URL para 'Footer.php'
+RewriteRule ^Footer$ View/Layout/Footer.php [L]
+
+# Reescribe la URL para 'PortfolioPage.php'
+RewriteRule ^Portafolio$ View/PortfolioPage.php [L]
+
+
+
+# ----------- PHP REWRITES -------------
+
+
+# ----------- CSS REWRITES -------------
+
+# Reescribe la URL para 'Style_Footer.css'
+RewriteRule ^Estilos_Footer$ View/Layout/css/Style_Footer.css [L]
+
+# Reescribe la URL para 'Style_Portfolio.css'
+RewriteRule ^Estilos_Portafolio$ View/Layout/css/Style_Portfolio.css [L]
+
+# Reescribe la URL para 'Style_Portfolio.css'
+RewriteRule ^Estilos_Header$ View/Layout/css/Style_Header.css [L]
+
+
+# ----------- CSS REWRITES -------------
+
+
+# ----------- JS REWRITES --------------
+
+# Reescribe la URL para 'Script_PortfolioPage.js'
+RewriteRule ^Script_Portafolio$ View/Layout/js/Script_PortfolioPage.js [L]
+# ----------- JS REWRITES -------------
+
+
+# ----------- IMG REWRITES -------------
+
+# Reescribe 'PImageProject' a 'Resources'
+RewriteRule ^PImageProject/(.*)$ View/Img/Projects/$1 [L]
+
+# Reescribe 'PImageResource' a 'Projects'
+RewriteRule ^PImageResource/(.*)$ View/Img/Resources/$1 [L]
+
+# ----------- IMG REWRITES -------------

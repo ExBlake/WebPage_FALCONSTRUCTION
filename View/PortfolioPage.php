@@ -1,3 +1,8 @@
+<!--------------------------------------------------------------------------------->
+<!--All rights reserved-->
+<!--Santiago Villada & Brandon Palacios-->
+<!--exblake.com-->
+<!--------------------------------------------------------------------------------->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,23 +13,18 @@
     <title>FALCONSTRUCTIONS</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Layout/Css/PortfolioPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"> <!--Iconos-->
+    <link rel="stylesheet" href="Estilos_Header">
+    <link rel="stylesheet" href="Estilos_Portafolio">
+    <link rel="stylesheet" href="Estilos_Footer">
+    
 </head>
 
 <body>
-    <nav class="navbar-portfolio">
-        <img class="logo-falcon" src="/View/img/projects/resources/logoWithoutBackground-White.png" alt="LogoFalconstructions">
-        <div class="nav-right-portfolio">
-            <a href="#" class="sign-up-portfolio">CONTACT</a>
-            <div class="menu-icon-portfolio" id="navToggle">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                    <circle cx="12" cy="12" r="2" />
-                    <circle cx="12" cy="4" r="2" />
-                    <circle cx="12" cy="20" r="2" />
-                </svg>
-            </div>
-        </div>
-    </nav>
+    <?php
+        // Inclusión del Header
+        require_once 'Layout/Header.php';
+    ?>
 
     <main class="hero-portfolio">
         <div class="hero-content-portfolio">
@@ -43,60 +43,7 @@
         </div>
     </main>
 
-    <div class="fullscreen-menu" id="fullscreenMenu">
-        <div class="menu-content">
-            <div class="menu-icon-portfolio" id="closeMenu" style="position: absolute; top: 36px; right: 64px;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                    <line x1="4" y1="4" x2="20" y2="20" />
-                    <line x1="20" y1="4" x2="4" y2="20" />
-                </svg>
-            </div>
-            <div class="menu-items">
-                <div class="menu-item-wrapper">
-                    <a href="#" class="menu-item" data-image="img/projects/project-1.jpg">
-                        <span class="menu-category">Inicio</span>
-                        <span class="menu-item-content">Bienvenido</span>
-                    </a>
-                </div>
-                <div class="menu-item-wrapper">
-                    <a href="#" class="menu-item" data-image="img/projects/project-2.jpg">
-                        <span class="menu-category">Servicios</span>
-                        <span class="menu-item-content">Soluciones</span>
-                    </a>
-                </div>
-                <div class="menu-item-wrapper">
-                    <a href="#" class="menu-item" data-image="img/projects/project-3.jpg">
-                        <span class="menu-category">Proyectos</span>
-                        <span class="menu-item-content">Portafolio</span>
-                    </a>
-                </div>
-                <div class="menu-item-wrapper">
-                    <a href="#" class="menu-item" data-image="img/projects/project-4.jpg">
-                        <span class="menu-category">Nosotros</span>
-                        <span class="menu-item-content">Historia</span>
-                    </a>
-                </div>
-                <div class="menu-item-wrapper">
-                    <a href="#" class="menu-item" data-image="img/projects/project-5.jpg">
-                        <span class="menu-category">Reseñas</span>
-                        <span class="menu-item-content">Testimonios</span>
-                    </a>
-                </div>
-                <div class="menu-item-wrapper">
-                    <a href="#" class="menu-item" data-image="img/projects/project-0.jpg">
-                        <span class="menu-category">Contacto</span>
-                        <span class="menu-item-content">Conectemos</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="menu-image"></div>
-        <div class="menu-footer">
-            <div class="language-toggle">
-                <span class="active">ES</span> | <span>EN</span>
-            </div>
-        </div>
-    </div>
+   
 
     <section>
         <div class="progress-bar--Projects--Portfolio-Attachment"></div>
@@ -128,7 +75,7 @@
                     </p>
                 </div>
                 <div class="image-container--Projects--Portfolio-Attachment" data-phase="2">
-                    <img src="/View/img/projects/project-1.jpg" alt="New Mexico"
+                    <img src="PImageProject/project-1.jpg" alt="New Mexico"
                         class="parallax-image--Projects--Portfolio-Attachment">
                         <div class="hover-text">+</div>
                 </div>
@@ -144,7 +91,7 @@
                     </p>
                 </div>
                 <div class="image-container--Projects--Portfolio-Attachment" data-phase="3">
-                    <img src="/View/img/projects/project-2.jpg" alt="Spaceflight"
+                    <img src="PImageProject/project-2.jpg" alt="Spaceflight"
                         class="parallax-image--Projects--Portfolio-Attachment">
                         <div class="hover-text">+</div>
                 </div>
@@ -164,7 +111,13 @@
         </div>
     </section>
 
-    <script src="Layout/Js/PortfolioPage.js"></script>
+    <?php
+        // Inclusión del footer
+
+        require_once 'Layout/Footer.php';
+    ?>
+
+    <script src="Script_Portafolio"></script>
 </body>
 
 </html>
