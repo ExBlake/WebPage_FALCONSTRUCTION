@@ -14,8 +14,6 @@ RewriteRule ^Footer$ View/Layout/Footer.php [L]
 # Reescribe la URL para 'PortfolioPage.php'
 RewriteRule ^Portafolio$ View/PortfolioPage.php [L]
 
-
-
 # ----------- PHP REWRITES -------------
 
 
@@ -30,7 +28,6 @@ RewriteRule ^Estilos_Portafolio$ View/Layout/css/Style_Portfolio.css [L]
 # Reescribe la URL para 'Style_Portfolio.css'
 RewriteRule ^Estilos_Header$ View/Layout/css/Style_Header.css [L]
 
-
 # ----------- CSS REWRITES -------------
 
 
@@ -38,6 +35,7 @@ RewriteRule ^Estilos_Header$ View/Layout/css/Style_Header.css [L]
 
 # Reescribe la URL para 'Script_PortfolioPage.js'
 RewriteRule ^Script_Portafolio$ View/Layout/js/Script_PortfolioPage.js [L]
+
 # ----------- JS REWRITES -------------
 
 

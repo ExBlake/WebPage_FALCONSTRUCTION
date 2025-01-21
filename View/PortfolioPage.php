@@ -13,37 +13,71 @@
     <title>FALCONSTRUCTIONS</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"> <!--Iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!--Iconos-->
     <link rel="stylesheet" href="Estilos_Header">
     <link rel="stylesheet" href="Estilos_Portafolio">
     <link rel="stylesheet" href="Estilos_Footer">
-    
+
 </head>
 
 <body>
     <?php
-        // Inclusión del Header
-        require_once 'Layout/Header.php';
+    // Inclusión del Header
+    require_once 'Layout/Header.php';
     ?>
 
-    <main class="hero-portfolio">
-        <div class="hero-content-portfolio">
-            <div class="spaceport-portfolio">FALCONSTRUCTIONS PRESENTS</div>
-            <h1 class="main-title-portfolio">SHAPING NEW<br>SUCCESS<br>STORIES</h1>
-            <div class="scroll-container">
-                <div class="mouse-icon">
-                    <div class="mouse-wheel"></div>
+    <section class="parallax-section hero-section">
+        <main class="hero-portfolio">
+            <div class="hero-content-portfolio">
+                <!-- Decorative elements -->
+                <div class="hero-decorative-line"></div>
+                <div class="hero-side-text">EXCELLENCE IN CONSTRUCTION</div>
+
+                <!-- Main content -->
+                <div class="hero-main-content">
+                    <div class="spaceport-portfolio">
+                        <span class="line-before"></span>
+                        FALCONSTRUCTIONS PRESENTS
+                        <span class="line-after"></span>
+                    </div>
+
+                    <h1 class="main-title-portfolio">
+                        <span class="title-line">SHAPING NEW</span>
+                        <span class="title-line">SUCCESS</span>
+                        <span class="title-line">STORIES</span>
+                    </h1>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-value="25">0</span>
+                            <span class="stat-label">YEARS OF<br>EXCELLENCE</span>
+                        </div>
+                        <div class="stat-separator"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-value="500">0</span>
+                            <span class="stat-label">PROJECTS<br>COMPLETED</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="arrow-container">
-                    <div class="arrow"></div>
-                    <div class="arrow"></div>
-                    <div class="arrow"></div>
+
+                <!-- Scroll indicator -->
+                <div class="scroll-container">
+                    <div class="mouse-icon">
+                        <div class="mouse-wheel"></div>
+                    </div>
+                    <div class="arrow-container">
+                        <div class="arrow"></div>
+                        <div class="arrow"></div>
+                        <div class="arrow"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
 
-   
+            <!-- Blueprint grid overlay -->
+            <div class="blueprint-grid"></div>
+        </main>
+    </section>
 
     <section>
         <div class="progress-bar--Projects--Portfolio-Attachment"></div>
@@ -77,7 +111,7 @@
                 <div class="image-container--Projects--Portfolio-Attachment" data-phase="2">
                     <img src="PImageProject/project-1.jpg" alt="New Mexico"
                         class="parallax-image--Projects--Portfolio-Attachment">
-                        <div class="hover-text">+</div>
+                    <div class="hover-text">+</div>
                 </div>
             </section>
 
@@ -93,7 +127,7 @@
                 <div class="image-container--Projects--Portfolio-Attachment" data-phase="3">
                     <img src="PImageProject/project-2.jpg" alt="Spaceflight"
                         class="parallax-image--Projects--Portfolio-Attachment">
-                        <div class="hover-text">+</div>
+                    <div class="hover-text">+</div>
                 </div>
             </section>
         </div>
@@ -112,9 +146,8 @@
     </section>
 
     <?php
-        // Inclusión del footer
-
-        require_once 'Layout/Footer.php';
+    // Inclusión del footer
+    require_once 'Layout/Footer.php';
     ?>
 
     <script src="Script_Portafolio"></script>

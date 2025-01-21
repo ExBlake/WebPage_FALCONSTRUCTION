@@ -63,7 +63,7 @@ sections.forEach(section => {
 
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
-    
+
     const height = document.documentElement.scrollHeight - window.innerHeight;
     const progress = (scrolled / height) * 100;
     document.querySelector('.progress-bar--Projects--Portfolio-Attachment').style.width = `${progress}%`;
@@ -100,7 +100,7 @@ window.addEventListener('scroll', () => {
         const windowMiddle = window.innerHeight / 2;
         const difference = parentMiddle - windowMiddle;
         const speed = 0.15;
-        
+
         image.style.transform = `scale(1.1) translateY(${difference * speed}px)`;
     });
 
@@ -149,10 +149,10 @@ function openModal(phase) {
 
 function updateModalContent(phase, selectedIndex) {
     const images = phaseImages[phase];
-    
+
     // Update main image
     modalMainImage.src = images[selectedIndex];
-    
+
     // Clear and rebuild thumbnails
     modalThumbnails.innerHTML = '';
     images.forEach((src, index) => {
@@ -196,18 +196,18 @@ document.addEventListener('keydown', (e) => {
 });
 
 function navigateModal(direction) {
-    const currentPhase = modalMainImage.src.includes('RDrQNfekaklBM4noT7RujqROGOjR54') ? '1' : 
-                         modalMainImage.src.includes('XiVRa6Waq3ONEEqNruuCuDOy8gG1RW') ? '2' : '3';
+    const currentPhase = modalMainImage.src.includes('RDrQNfekaklBM4noT7RujqROGOjR54') ? '1' :
+        modalMainImage.src.includes('XiVRa6Waq3ONEEqNruuCuDOy8gG1RW') ? '2' : '3';
     const currentImages = phaseImages[currentPhase];
     const currentIndex = currentImages.indexOf(modalMainImage.src);
     let newIndex = currentIndex + direction;
-    
+
     if (newIndex >= currentImages.length) {
         newIndex = 0;
     } else if (newIndex < 0) {
         newIndex = currentImages.length - 1;
     }
-    
+
     updateModalContent(currentPhase, newIndex);
 }
 
@@ -216,3 +216,25 @@ document.documentElement.style.scrollBehavior = 'smooth';
 /*****************************/
 /* Script para la sección de contacto */
 /*****************************/
+
+// Función para el conteo rápido
+function countUp(element, targetValue, duration) {
+    let startValue = 0;
+    let range = targetValue - startValue;
+    let increment = range / (duration / 50); // Duración del conteo en milisegundos (ajustar según sea necesario)
+
+    let interval = setInterval(() => {
+        startValue += increment;
+        if (startValue >= targetValue) {
+            clearInterval(interval);
+            startValue = targetValue;
+        }
+        element.textContent = Math.floor(startValue);
+    }, 50);
+}
+
+// Ejecutar el conteo para cada elemento
+document.querySelectorAll('.stat-number').forEach((stat) => {
+    const targetValue = parseInt(stat.getAttribute('data-value'));
+    countUp(stat, targetValue, 2000); // 2000ms (2 segundos) para el conteo completo
+});
