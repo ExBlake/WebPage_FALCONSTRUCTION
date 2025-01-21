@@ -5,29 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>FALCONSTRUCTIONS - PORTAFOLIO</title>
+    <title>FALCONSTRUCTIONS</title>
 
-    <link rel="stylesheet" href="Layout/Css/PortfolioPage.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Layout/Css/PortfolioPage.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo-container">
-                <img class="logo" src="img/projects/resources/logoWithoutBackground-Black.png"
-                    alt="LogoFalconstructions">
+    <nav class="navbar-portfolio">
+        <img class="logo-falcon" src="/View/img/projects/resources/logoWithoutBackground-White.png" alt="LogoFalconstructions">
+        <div class="nav-right-portfolio">
+            <a href="#" class="sign-up-portfolio">CONTACT</a>
+            <div class="menu-icon-portfolio" id="navToggle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <circle cx="12" cy="12" r="2" />
+                    <circle cx="12" cy="4" r="2" />
+                    <circle cx="12" cy="20" r="2" />
+                </svg>
             </div>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+        </div>
+    </nav>
+
+    <main class="hero-portfolio">
+        <div class="hero-content-portfolio">
+            <div class="spaceport-portfolio">FALCONSTRUCTIONS PRESENTS</div>
+            <h1 class="main-title-portfolio">SHAPING NEW<br>SUCCESS<br>STORIES</h1>
+            <div class="scroll-container">
+                <div class="mouse-icon">
+                    <div class="mouse-wheel"></div>
+                </div>
+                <div class="arrow-container">
+                    <div class="arrow"></div>
+                    <div class="arrow"></div>
+                    <div class="arrow"></div>
+                </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </main>
 
     <div class="fullscreen-menu" id="fullscreenMenu">
         <div class="menu-content">
+            <div class="menu-icon-portfolio" id="closeMenu" style="position: absolute; top: 36px; right: 64px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <line x1="4" y1="4" x2="20" y2="20" />
+                    <line x1="20" y1="4" x2="4" y2="20" />
+                </svg>
+            </div>
             <div class="menu-items">
                 <div class="menu-item-wrapper">
                     <a href="#" class="menu-item" data-image="img/projects/project-1.jpg">
@@ -69,12 +92,77 @@
         </div>
         <div class="menu-image"></div>
         <div class="menu-footer">
-            <button class="contact-btn">Contáctanos</button>
             <div class="language-toggle">
                 <span class="active">ES</span> | <span>EN</span>
             </div>
         </div>
     </div>
+
+    <section>
+        <div class="progress-bar--Projects--Portfolio-Attachment"></div>
+        <div class="scroll-container--Projects--Portfolio-Attachment">
+            <section class="section--Projects--Portfolio-Attachment">
+                <div class="content--Projects--Portfolio-Attachment">
+                    <div class="section-subtitle--Projects--Portfolio-Attachment">Fase 1</div>
+                    <h2 class="section-title--Projects--Portfolio-Attachment">PREPARE FOR TAKE-OFF</h2>
+                    <p class="section-text--Projects--Portfolio-Attachment">
+                        The Gateway to Space at Spaceport America is our operational center where our team of experts
+                        will guide you through curated activities designed to prepare your mind and body for
+                        spaceflight.
+                    </p>
+                </div>
+                <div class="image-container--Projects--Portfolio-Attachment" data-phase="1">
+                    <img src="/View/img/projects/project-0.jpg" alt="Preparación"
+                        class="parallax-image--Projects--Portfolio-Attachment">
+                    <div class="hover-text">+</div>
+                </div>
+            </section>
+
+            <section class="section--Projects--Portfolio-Attachment">
+                <div class="content--Projects--Portfolio-Attachment">
+                    <div class="section-subtitle--Projects--Portfolio-Attachment">Fase 2</div>
+                    <h2 class="section-title--Projects--Portfolio-Attachment">ARRIVAL TO NEW MEXICO</h2>
+                    <p class="section-text--Projects--Portfolio-Attachment">
+                        Welcome to New Mexico! You will have ample time to settle into your luxury accommodations and
+                        prepare for your spaceflight experience.
+                    </p>
+                </div>
+                <div class="image-container--Projects--Portfolio-Attachment" data-phase="2">
+                    <img src="/View/img/projects/project-1.jpg" alt="New Mexico"
+                        class="parallax-image--Projects--Portfolio-Attachment">
+                        <div class="hover-text">+</div>
+                </div>
+            </section>
+
+            <section class="section--Projects--Portfolio-Attachment">
+                <div class="content--Projects--Portfolio-Attachment">
+                    <div class="section-subtitle--Projects--Portfolio-Attachment">Fase 3</div>
+                    <h2 class="section-title--Projects--Portfolio-Attachment">INTRODUCTION TO SPACEFLIGHT</h2>
+                    <p class="section-text--Projects--Portfolio-Attachment">
+                        Learn the fundamentals of spaceflight and what to expect during your journey beyond Earth's
+                        atmosphere.
+                    </p>
+                </div>
+                <div class="image-container--Projects--Portfolio-Attachment" data-phase="3">
+                    <img src="/View/img/projects/project-2.jpg" alt="Spaceflight"
+                        class="parallax-image--Projects--Portfolio-Attachment">
+                        <div class="hover-text">+</div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Add Modal HTML -->
+        <div class="modal--Projects--Portfolio-Attachment" id="imageModal">
+            <div class="modal-content--Projects--Portfolio-Attachment">
+                <button class="modal-close--Projects--Portfolio-Attachment">&times;</button>
+                <img src="/placeholder.svg" alt="" class="modal-main-image--Projects--Portfolio-Attachment"
+                    id="modalMainImage">
+                <div class="modal-thumbnails--Projects--Portfolio-Attachment" id="modalThumbnails">
+                    <!-- Thumbnails will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="Layout/Js/PortfolioPage.js"></script>
 </body>
