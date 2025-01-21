@@ -14,6 +14,9 @@ RewriteRule ^Footer$ View/Layout/Footer.php [L]
 # Reescribe la URL para 'PortfolioPage.php'
 RewriteRule ^Portafolio$ View/PortfolioPage.php [L]
 
+# Reescribe la URL para 'Contact.php'
+RewriteRule ^Contacto$ View/Contact.php [L]
+
 # ----------- PHP REWRITES -------------
 
 
@@ -25,8 +28,11 @@ RewriteRule ^Estilos_Footer$ View/Layout/css/Style_Footer.css [L]
 # Reescribe la URL para 'Style_Portfolio.css'
 RewriteRule ^Estilos_Portafolio$ View/Layout/css/Style_Portfolio.css [L]
 
-# Reescribe la URL para 'Style_Portfolio.css'
+# Reescribe la URL para 'Style_Header.css'
 RewriteRule ^Estilos_Header$ View/Layout/css/Style_Header.css [L]
+
+# Reescribe la URL para 'Style_Contact.css'
+RewriteRule ^Estilos_Contacto$ View/Layout/css/Style_Contact.css [L]
 
 # ----------- CSS REWRITES -------------
 
@@ -46,5 +52,8 @@ RewriteRule ^PImageProject/(.*)$ View/Img/Projects/$1 [L]
 
 # Reescribe 'PImageResource' a 'Projects'
 RewriteRule ^PImageResource/(.*)$ View/Img/Resources/$1 [L]
+
+# Reescribe 'PImageContact' a 'Contacts'
+RewriteRule ^PImageContact/(.*)$ View/Img/Contacts/$1 [L]
 
 # ----------- IMG REWRITES -------------
