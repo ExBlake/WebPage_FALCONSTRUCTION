@@ -93,7 +93,7 @@
                     </p>
                 </div>
                 <div class="image-container--Projects--Portfolio-Attachment" data-phase="1">
-                    <img src="/View/img/projects/project-0.jpg" alt="Preparación"
+                    <img src="PImageProject/project-0.jpg" alt="Preparación"
                         class="parallax-image--Projects--Portfolio-Attachment">
                     <div class="hover-text">+</div>
                 </div>
