@@ -17,6 +17,9 @@ RewriteRule ^Portafolio$ View/PortfolioPage.php [L]
 # Reescribe la URL para 'Contact.php'
 RewriteRule ^Contacto$ View/Contact.php [L]
 
+# Reescribe la URL para 'AboutUs.php'
+RewriteRule ^Nosotros$ View/AboutUs.php [L]
+
 # ----------- PHP REWRITES -------------
 
 
@@ -34,6 +37,9 @@ RewriteRule ^Estilos_Header$ View/Layout/css/Style_Header.css [L]
 # Reescribe la URL para 'Style_Contact.css'
 RewriteRule ^Estilos_Contacto$ View/Layout/css/Style_Contact.css [L]
 
+# Reescribe la URL para 'Style_AboutUs.css'
+RewriteRule ^Estilos_Nosotros$ View/Layout/css/Style_AboutUs.css [L]
+
 # ----------- CSS REWRITES -------------
 
 
@@ -41,6 +47,9 @@ RewriteRule ^Estilos_Contacto$ View/Layout/css/Style_Contact.css [L]
 
 # Reescribe la URL para 'Script_PortfolioPage.js'
 RewriteRule ^Script_Portafolio$ View/Layout/js/Script_PortfolioPage.js [L]
+
+# Reescribe la URL para 'Script_AboutUs.js'
+RewriteRule ^Script_Nosotros$ View/Layout/js/Script_AboutUs.js [L]
 
 # ----------- JS REWRITES -------------
 
