@@ -1166,7 +1166,7 @@ body {
   width: 100%;
   height: 100%;
   box-shadow: 0.125vw 0.125vw 1vw rgba(81, 137, 251, 0.5), -0.125vw 0.125vw 1vw rgba(81, 137, 251, 0.5), 0.125vw -0.125vw 1vw rgba(81, 137, 251, 0.5), -0.125vw -0.125vw 1vw rgba(81, 137, 251, 0.5);
-  background-image: url("img/logonegro.png");
+  background-image: url("View/img/logonegro.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -1689,7 +1689,7 @@ body {
 }
 
 .cuadro-l__front {
-  background-image: url("img/logofalcon\ \(1\).jpg");
+  background-image: url("View/img/logofalcon\ \(1\).jpg");
   background-color: #021323;
   border: 1vw solid #021323;
 }
@@ -1708,7 +1708,7 @@ body {
   left: 20vw;
 }
 .cuadro-r__front {
-  background-image: url("img/2do\ imagen.jpg");
+  background-image: url("View/img/2do\ imagen.jpg");
   background-color: #0F1110;
   border: 0.5vw solid #0F1110;
 }
