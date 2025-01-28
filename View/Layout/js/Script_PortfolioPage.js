@@ -80,15 +80,15 @@ window.addEventListener('scroll', () => {
             // Scrolling down
             if (currentScrollTop > sectionTop && currentScrollTop < sectionBottom) {
                 const progress = (currentScrollTop - sectionTop) / rect.height;
-                content.style.opacity = 1 - progress;
-                content.style.transform = `translateY(${progress * 50}px)`;
+                content.style.opacity = progress;
+                content.style.transform = `translateY(${(1 - progress) * 50}px)`;
             }
         } else {
             // Scrolling up
             if (currentScrollTop > sectionTop - window.innerHeight && currentScrollTop < sectionBottom - window.innerHeight) {
                 const progress = 1 - (sectionBottom - currentScrollTop - window.innerHeight) / rect.height;
-                content.style.opacity = progress;
-                content.style.transform = `translateY(${(1 - progress) * 50}px)`;
+                content.style.opacity = 1 - progress;
+                content.style.transform = `translateY(${progress * 50}px)`;
             }
         }
     });
@@ -107,111 +107,10 @@ window.addEventListener('scroll', () => {
     lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
 }, false);
 
-// Modal functionality
-const modal = document.getElementById('imageModal');
-const modalMainImage = document.getElementById('modalMainImage');
-const modalThumbnails = document.getElementById('modalThumbnails');
-const closeButton = document.querySelector('.modal-close--Projects--Portfolio-Attachment');
-const imageContainers = document.querySelectorAll('.image-container--Projects--Portfolio-Attachment');
 
-// Define image sources for each phase
-const phaseImages = {
-    1: [
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-RDrQNfekaklBM4noT7RujqROGOjR54.png",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-RDrQNfekaklBM4noT7RujqROGOjR54.png",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-RDrQNfekaklBM4noT7RujqROGOjR54.png"
-    ],
-    2: [
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XiVRa6Waq3ONEEqNruuCuDOy8gG1RW.png",
-        "/placeholder.svg?height=800&width=600",
-        "/placeholder.svg?height=800&width=600"
-    ],
-    3: [
-        "/placeholder.svg?height=800&width=600",
-        "/placeholder.svg?height=800&width=600",
-        "/placeholder.svg?height=800&width=600"
-    ]
-};
-
-// Add click event to all image containers
-imageContainers.forEach((container) => {
-    container.addEventListener('click', () => {
-        const phase = container.getAttribute('data-phase');
-        openModal(phase);
-    });
-});
-
-function openModal(phase) {
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-    updateModalContent(phase, 0);
-}
-
-function updateModalContent(phase, selectedIndex) {
-    const images = phaseImages[phase];
-
-    // Update main image
-    modalMainImage.src = images[selectedIndex];
-
-    // Clear and rebuild thumbnails
-    modalThumbnails.innerHTML = '';
-    images.forEach((src, index) => {
-        const thumb = document.createElement('img');
-        thumb.src = src;
-        thumb.classList.add('modal-thumbnail--Projects--Portfolio-Attachment');
-        if (index === selectedIndex) {
-            thumb.classList.add('active');
-        }
-        thumb.addEventListener('click', () => {
-            updateModalContent(phase, index);
-        });
-        modalThumbnails.appendChild(thumb);
-    });
-}
-
-// Close modal when clicking close button or outside the image
-closeButton.addEventListener('click', closeModal);
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        closeModal();
-    }
-});
-
-function closeModal() {
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
-}
-
-// Keyboard navigation
-document.addEventListener('keydown', (e) => {
-    if (modal.style.display === 'block') {
-        if (e.key === 'Escape') {
-            closeModal();
-        } else if (e.key === 'ArrowLeft') {
-            navigateModal(-1);
-        } else if (e.key === 'ArrowRight') {
-            navigateModal(1);
-        }
-    }
-});
-
-function navigateModal(direction) {
-    const currentPhase = modalMainImage.src.includes('RDrQNfekaklBM4noT7RujqROGOjR54') ? '1' :
-        modalMainImage.src.includes('XiVRa6Waq3ONEEqNruuCuDOy8gG1RW') ? '2' : '3';
-    const currentImages = phaseImages[currentPhase];
-    const currentIndex = currentImages.indexOf(modalMainImage.src);
-    let newIndex = currentIndex + direction;
-
-    if (newIndex >= currentImages.length) {
-        newIndex = 0;
-    } else if (newIndex < 0) {
-        newIndex = currentImages.length - 1;
-    }
-
-    updateModalContent(currentPhase, newIndex);
-}
-
-document.documentElement.style.scrollBehavior = 'smooth';
+/******************************/
+/* Script para la sección de proyectos */
+/******************************/
 
 /*****************************/
 /* Script para la sección de contacto */
@@ -238,3 +137,94 @@ document.querySelectorAll('.stat-number').forEach((stat) => {
     const targetValue = parseInt(stat.getAttribute('data-value'));
     countUp(stat, targetValue, 2000); // 2000ms (2 segundos) para el conteo completo
 });
+
+/*************************************/
+/* Script para el scrolling parallax */
+/*************************************/
+
+document.addEventListener('DOMContentLoaded', () => {
+    const heroSection = document.querySelector('.hero-section');
+    const projectsSection = document.querySelector('.projects-section');
+    const sections = document.querySelectorAll('.section--Projects--Portfolio-Attachment');
+
+    const handleScroll = () => {
+        const scrollPosition = window.pageYOffset;
+        const windowHeight = window.innerHeight;
+
+        // Parallax effect for hero section
+        heroSection.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+
+        // Show/hide projects section
+        if (scrollPosition >= windowHeight) {
+            projectsSection.style.transform = 'translateY(0)';
+        } else {
+            projectsSection.style.transform = `translateY(${windowHeight - scrollPosition}px)`;
+        }
+
+        // Handle individual project sections
+        sections.forEach((section) => {
+            const sectionTop = section.getBoundingClientRect().top + scrollPosition;
+            if (scrollPosition + windowHeight > sectionTop) {
+                section.classList.add('visible');
+            } else {
+                section.classList.remove('visible');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call to set positions
+});
+
+/*************************************/
+/* Script para el scrolling parallax */
+/*************************************/
+
+/***********************/
+/* Script para casa 3D */
+/***********************/
+
+var wrap = document.getElementById("wrap");
+var begX, begY, prevX, prevY, newX, newY, dv;
+newX=33; newY=67;
+document.onmousedown = beginD;
+document.onmouseup = stopD;
+/*document.touchstart = beginD;
+document.touchend = stopD;*/
+
+function beginD(e){
+  dv = wrap.parentNode.offsetWidth >> 7;
+  begX = e.clientX/(dv!=0?dv:dv=1);
+  begY = e.clientY/dv;
+  prevX = newX;
+  prevY = newY;
+  drag = true;
+  document.onmousemove = letsD;
+  /*document.ontouchmove = letsD;*/
+  return false;
+}
+
+function letsD(e) {
+  if (!drag) return;
+  newX = (prevY > 0 && prevY < 180) ? (prevX - (e.clientX/dv) + begX) : (prevX + (e.clientX/dv) - begX);
+  newY = prevY - (e.clientY /dv) + begY;
+  wrap.style.transform = "rotateX(" + newY + "deg) rotateZ(" + newX + "deg)";
+  return false;
+}
+
+function stopD() {
+  drag = false;
+  rotReset();
+}
+
+function rotReset() {
+  if (newX >= 360 || newX < 0) newX -= 360 * Math.floor(newX / 360);
+  if (newY >= 360 || newY < 0) newY -= 360 * Math.floor(newY / 360);
+  wrap.style.transform = "rotateX(" + newY + "deg) rotateZ(" + newX + "deg)";
+}
+
+wrap.style.transform = "rotateX(" + (newY += .11) + "deg) rotateZ(" + (newX += .11) + "deg)"; //flicker preventer
+
+/***********************/
+/* Script para casa 3D */
+/***********************/

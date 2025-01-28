@@ -17,7 +17,7 @@ body {
     color: var(--color-accent);
     min-height: 100vh;
     overflow-x: hidden;
-    background: linear-gradient(135deg, #041b3a 0%, #000000 100%) fixed;
+    background: linear-gradient(135deg, #041b3a 0%, #000000 100%);
     background-blend-mode: overlay;
 }
 
@@ -84,8 +84,8 @@ body {
     position: relative;
     opacity: 0;
     animation: fadeIn 2s 1s forwards;
-    -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% -50%, black 60%, transparent 100%) !important;
-    mask-image: radial-gradient(ellipse 100% 90% at 50% 8%, black 88%, transparent 100%) !important;
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% -50%, black 60%, transparent 100%);
+    mask-image: radial-gradient(ellipse 100% 90% at 50% 8%, black 88%, transparent 100%);
 }
 
 .hero-portfolio::before {
@@ -200,10 +200,6 @@ body {
 
 /* Stats section */
 .hero-stats {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 3rem;
     opacity: 0;
     animation: fadeIn 1s ease-out 1.5s forwards;
 }
@@ -515,7 +511,7 @@ body {
     left: 0;
     width: 0%;
     height: 4px;
-    background: linear-gradient(135deg, #041b3a 0%, #000000 100%) fixed;
+    background: linear-gradient(135deg, #041b3a 0%, #ffffff 100%) fixed;
     z-index: 1000;
     transition: width 0.1s ease;
 }
@@ -616,8 +612,9 @@ body {
     opacity: 1;
 }
 
-/*********************************/
-/* Animations */
+/***********************/
+/* Animations for menu */
+/***********************/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -637,3 +634,583 @@ body {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }
+
+/**************************************/
+/* Estilos para el scrolling Parallax */
+/**************************************/
+.parallax-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.projects-section {
+    position: relative;
+    z-index: 2;
+    background-color: var(--color-dark);
+    transform: translateY(100vh);
+    transition: transform 0.5s ease-out;
+}
+
+.section--Projects--Portfolio-Attachment {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.section--Projects--Portfolio-Attachment.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/**************************************/
+/* Estilos para el scrolling Parallax */
+/**************************************/
+
+/*******************************************/
+/* Estilos para el responsive de la página */
+/*******************************************/
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-image: url("PImageProject/project-0.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    transition: all 0.5s ease;
+    /* Transición suave para todo el contenedor */
+}
+
+/* Capa de overlay */
+.content-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Aumenté la opacidad para oscurecer más */
+    filter: blur(20px);
+    /* Desenfoque moderado */
+    opacity: 1;
+    /* Mantener la opacidad completa */
+    transition: all 1s ease-in-out;
+    /* Animación suave */
+}
+
+/* Hover: menos desenfoque y opacidad reducida */
+.content-wrapper:hover::before {
+    filter: blur(30px);
+    /* Aumento del desenfoque */
+    opacity: 0.5;
+    /* Menos opacidad para que se vea un poco la imagen */
+}
+
+/* Transición suave de zoom (cuando el mouse entra y sale) */
+.content-wrapper {
+    transform: scale(1);
+    /* Estado normal */
+    transition: transform 0.5s ease;
+    /* Transición suave solo para el zoom */
+}
+
+/* Hover: aumentar el zoom */
+.content-wrapper:hover {
+    transform: scale(1.05);
+    /* Aumento sutil de la escala */
+}
+
+/* Fondo de transición */
+.content-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #041b3a 0%, #000000 100%);
+    opacity: 0.5;
+    /* Semi-transparente para suavizar la transición */
+}
+
+.text-content {
+    position: relative;
+    z-index: 1;
+}
+
+.phase-label {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.project-title {
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--color-bright);
+    line-height: 1.2;
+    text-shadow: 0 0 5px var(--color-highlight), 0 0 10px rgba(255, 255, 255, 0.2);
+    animation: slideIn 1.5s ease-out, pulseGlow 4s infinite alternate;
+    transition: transform 0.3s ease, text-shadow 0.3s ease-in-out;
+}
+
+.project-title:hover {
+    transform: scale(1.03);
+    text-shadow: 0 0 15px var(--color-bright), 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+.project-title .title-text {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--color-highlight), var(--color-bright), var(--color-highlight));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    animation: gradientMove 7s infinite linear;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.05;
+    }
+
+    100% {
+        transform: scale(1.02);
+        opacity: 0.1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseGlow {
+    0% {
+        text-shadow: 0 0 5px var(--color-highlight), 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    100% {
+        text-shadow: 0 0 10px var(--color-bright), 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Estilos base (mantén los estilos existentes aquí) */
+
+/* Media Queries Mejorados */
+@media screen and (max-width: 1400px) {
+    .hero-content-portfolio {
+        width: 90%;
+        max-width: 1100px;
+    }
+
+    .main-title-portfolio {
+        font-size: 4rem;
+    }
+
+    .section-title--Projects--Portfolio-Attachment {
+        font-size: 3rem;
+    }
+
+    .content--Projects--Portfolio-Attachment {
+        padding-right: 3rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .hero-content-portfolio {
+        width: 85%;
+        padding: 0 2rem;
+    }
+
+    .main-title-portfolio {
+        font-size: 3.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero-stats {
+        gap: 3rem;
+    }
+
+    .stat-number {
+        font-size: 2.8rem;
+    }
+
+    .content-wrapper {
+        padding: 3rem;
+        margin: 2rem 0;
+    }
+
+    .project-title {
+        font-size: 3.5rem;
+    }
+
+    .phase-label {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .section--Projects--Portfolio-Attachment {
+        padding: 4vh 4vw;
+        margin: 3rem 0;
+    }
+
+    .image-container--Projects--Portfolio-Attachment {
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero-content-portfolio {
+        width: 90%;
+        padding: 0 1.5rem;
+    }
+
+    .main-title-portfolio {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-stats {
+        flex-direction: row;
+        /* Mantener en fila hasta 768px */
+        gap: 2.5rem;
+        margin: 2rem 0;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+
+    .content-wrapper {
+        padding: 2.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .project-title {
+        font-size: 3rem;
+    }
+
+    .phase-label {
+        font-size: 1.2rem;
+    }
+
+    .section--Projects--Portfolio-Attachment {
+        padding: 3vh 3vw;
+        margin: 2.5rem 0;
+        gap: 2rem;
+    }
+
+    .content--Projects--Portfolio-Attachment,
+    .image-container--Projects--Portfolio-Attachment {
+        width: 90%;
+    }
+
+    .section-title--Projects--Portfolio-Attachment {
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-text--Projects--Portfolio-Attachment {
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content-portfolio {
+        width: 70%;
+        padding: 0 1rem;
+    }
+
+    .main-title-portfolio {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+    }
+
+    .spaceport-portfolio {
+        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .content-wrapper {
+        padding: 2rem;
+        margin: 1rem 0;
+    }
+
+    .project-title {
+        font-size: 2.5rem;
+    }
+
+    .phase-label {
+        font-size: 1.1rem;
+    }
+
+    .section--Projects--Portfolio-Attachment {
+        padding: 2.5vh 2.5vw;
+        margin: 2rem 0;
+    }
+
+    .image-container--Projects--Portfolio-Attachment {
+        height: 50vh;
+    }
+
+    .hero-decorative-line {
+        width: 80px;
+    }
+
+    .scroll-container {
+        bottom: 1.5rem;
+    }
+
+    .mouse-icon {
+        width: 22px;
+        height: 38px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero-content-portfolio {
+        padding: 0 1rem;
+    }
+
+    .main-title-portfolio {
+        font-size: 2rem;
+        line-height: 1.3;
+        margin-bottom: 1.2rem;
+    }
+
+    .spaceport-portfolio {
+        font-size: 0.7rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero-decorative-line {
+        width: 60px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .content-wrapper {
+        padding: 1.5rem;
+        margin: 0.8rem 0;
+    }
+
+    .project-title {
+        font-size: 2rem;
+    }
+
+    .phase-label {
+        font-size: 0.9rem;
+    }
+
+    .section--Projects--Portfolio-Attachment {
+        padding: 2vh 2vw;
+        margin: 1.5rem 0;
+    }
+
+    .section-title--Projects--Portfolio-Attachment {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .section-text--Projects--Portfolio-Attachment {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        max-width: 95%;
+    }
+
+    .image-container--Projects--Portfolio-Attachment {
+        height: 40vh;
+    }
+
+    .mouse-icon {
+        width: 20px;
+        height: 35px;
+    }
+
+    .arrow {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-title-portfolio {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .spaceport-portfolio {
+        font-size: 0.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+    }
+
+    .content-wrapper {
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+    }
+
+    .phase-label {
+        font-size: 0.8rem;
+    }
+
+    .section--Projects--Portfolio-Attachment {
+        padding: 1.5vh 1.5vw;
+        margin: 1rem 0;
+    }
+
+    .section-title--Projects--Portfolio-Attachment {
+        font-size: 1.8rem;
+    }
+
+    .section-text--Projects--Portfolio-Attachment {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .image-container--Projects--Portfolio-Attachment {
+        height: 35vh;
+    }
+
+    /* Mantener elementos decorativos pero ajustados */
+    .hero-decorative-line {
+        width: 50px;
+    }
+
+    .scroll-container {
+        transform: scale(0.9);
+        bottom: 1rem;
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media screen and (max-width: 360px) {
+    .main-title-portfolio {
+        font-size: 1.5rem;
+    }
+
+    .scroll-container {
+        left: 70%;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .project-title {
+        font-size: 1.3rem;
+    }
+
+    .section-title--Projects--Portfolio-Attachment {
+        font-size: 1.5rem;
+    }
+
+    .image-container--Projects--Portfolio-Attachment {
+        height: 30vh;
+    }
+
+    .content--Projects--Portfolio-Attachment,
+    .image-container--Projects--Portfolio-Attachment {
+        width: 95%;
+    }
+}
+
+/* Ajustes para la altura */
+@media screen and (max-height: 700px) {
+    .hero-content-portfolio {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .main-title-portfolio {
+        margin-bottom: 1rem;
+    }
+
+    .hero-stats {
+        gap: 1.5rem;
+    }
+
+    .image-container--Projects--Portfolio-Attachment {
+        height: 45vh;
+    }
+}
+
+/*******************************************/
+/* Estilos para el responsive de la página */
+/*******************************************/
