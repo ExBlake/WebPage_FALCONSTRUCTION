@@ -20,6 +20,9 @@ RewriteRule ^Contacto$ View/Contact.php [L]
 # Reescribe la URL para 'AboutUs.php'
 RewriteRule ^Nosotros$ View/AboutUs.php [L]
 
+# Reescribe la URL para 'porto.php'
+RewriteRule ^Portafoliooooo$ View/porto.php [L]
+
 # ----------- PHP REWRITES -------------
 
 
@@ -40,6 +43,9 @@ RewriteRule ^Estilos_Contacto$ View/Layout/css/Style_Contact.css [L]
 # Reescribe la URL para 'Style_AboutUs.css'
 RewriteRule ^Estilos_Nosotros$ View/Layout/css/Style_AboutUs.css [L]
 
+# Reescribe la URL para 'Style_BannerEnd.css'
+RewriteRule ^Estilos_Banner$ View/Layout/css/Style_BannerEnd.css [L]
+
 # ----------- CSS REWRITES -------------
 
 
@@ -50,6 +56,9 @@ RewriteRule ^Script_Portafolio$ View/Layout/js/Script_PortfolioPage.js [L]
 
 # Reescribe la URL para 'Script_AboutUs.js'
 RewriteRule ^Script_Nosotros$ View/Layout/js/Script_AboutUs.js [L]
+
+# Reescribe la URL para 'Script_BannerEnd.js'
+RewriteRule ^Script_Banner$ View/Layout/js/Script_BannerEnd.js [L]
 
 # ----------- JS REWRITES -------------
 
@@ -66,3 +75,10 @@ RewriteRule ^PImageResource/(.*)$ View/Img/Resources/$1 [L]
 RewriteRule ^PImageContact/(.*)$ View/Img/Contacts/$1 [L]
 
 # ----------- IMG REWRITES -------------
+
+# ----------- VIDEO REWRITES -------------
+
+# Reescribe 'PVideoBanner' a 'Resources'
+RewriteRule ^PVideoBanner/(.*)$ View/Videos/Banners/$1 [L]
+
+# ----------- VIDEO REWRITES -------------
