@@ -1,4 +1,23 @@
+/* Estilos base */
+:root {
+    --color-highlight: #FFD700;
+    --color-accent: #FFA500;
+    --color-dark: #001524;
+}
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Animación de fade in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilos de la barra de navegación */
 .navbar-portfolio {
     display: flex;
     justify-content: space-between;
@@ -9,6 +28,7 @@
     z-index: 100;
     opacity: 0;
     animation: fadeIn 2s forwards;
+    box-sizing: border-box;
 }
 
 .nav-right-portfolio {
@@ -20,6 +40,7 @@
 .logo-falcon {
     width: auto;
     height: 70px;
+    object-fit: contain;
 }
 
 .sign-up-portfolio {
@@ -35,7 +56,7 @@
 
 .sign-up-portfolio:hover {
     background: white;
-    color: #001524;
+    color: var(--color-dark);
 }
 
 .menu-icon-portfolio {
@@ -49,6 +70,7 @@
     cursor: pointer;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
 /* Estilos del menú fullscreen */
 .fullscreen-menu {
     position: fixed;
@@ -209,80 +231,160 @@
     color: #fff;
 }
 
-/* Tu CSS existente */
-.navbar-portfolio {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 4rem;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-}
-
-/* Añadimos estilos específicos para el logo responsive */
-.logo-falcon {
-    width: auto;
-    height: 70px;
-    object-fit: contain;
-}
-
-/* Media queries para el responsive */
-@media (max-width: 768px) {
-    .navbar-portfolio {
-        padding: 1rem 2rem;
-    }
-
-    .logo-falcon {
-        height: 50px; /* Logo más pequeño en móvil */
-    }
-
-    .sign-up-portfolio {
-        padding: 0.6rem 1.5rem; /* Botón más pequeño en móvil */
-    }
-}
-
-/* El resto de tu CSS se mantiene igual */
-
 @keyframes menuReveal {
     0% {
         clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
     }
-
     100% {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }
 
-.fullscreen-menu.active {
-    animation: menuReveal 0.8s ease forwards;
-}
-
+/* Media queries para responsividad */
 @media (max-width: 1200px) {
     .menu-items {
         gap: 4rem;
     }
 }
 
+@media (max-width: 992px) {
+    .navbar-portfolio {
+        padding: 1.5rem 3rem;
+    }
+
+    .menu-items {
+        gap: 3rem;
+    }
+
+    .menu-item-content {
+        font-size: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar-portfolio {
         padding: 1rem 2rem;
     }
 
-    .main-title-portfolio {
-        font-size: 3rem;
+    .logo-falcon {
+        height: 50px;
+    }
+
+    .sign-up-portfolio {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
     }
 
     .menu-items {
-        flex-direction: column;
         gap: 2rem;
+        padding: 1rem;
+    }
+
+    .menu-item-wrapper {
+        min-width: 150px;
+    }
+
+    .menu-category {
+        font-size: 0.9rem;
+    }
+
+    .menu-item-content {
+        font-size: 1.75rem;
+    }
+
+    .menu-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
 }
 
-@media (max-width: 480px) {
-    .main-title-portfolio {
-        font-size: 2rem;
+@media (max-width: 576px) {
+    .navbar-portfolio {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .logo-falcon {
+        height: 40px;
+    }
+
+    .sign-up-portfolio {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .menu-icon-portfolio {
+        width: 35px;
+        height: 35px;
+    }
+
+    .menu-items {
+        gap: 1.5rem;
+    }
+
+    .menu-item-wrapper {
+        min-width: 120px;
+    }
+
+    .menu-category {
+        font-size: 0.8rem;
+    }
+
+    .menu-item-content {
+        font-size: 1.5rem;
+    }
+
+    .contact-btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .language-toggle {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar-portfolio {
+        padding: 0.6rem 1rem;
+    }
+
+    .logo-falcon {
+        height: 35px;
+    }
+
+    .sign-up-portfolio {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    .menu-icon-portfolio {
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu-items {
+        gap: 1rem;
+    }
+
+    .menu-item-wrapper {
+        min-width: 100px;
+    }
+
+    .menu-category {
+        font-size: 0.7rem;
+    }
+
+    .menu-item-content {
+        font-size: 1.25rem;
+    }
+
+    .contact-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .language-toggle {
+        font-size: 0.8rem;
     }
 }
