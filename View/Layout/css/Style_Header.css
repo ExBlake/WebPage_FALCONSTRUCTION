@@ -209,6 +209,43 @@
     color: #fff;
 }
 
+/* Tu CSS existente */
+.navbar-portfolio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+/* Añadimos estilos específicos para el logo responsive */
+.logo-falcon {
+    width: auto;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* Media queries para el responsive */
+@media (max-width: 768px) {
+    .navbar-portfolio {
+        padding: 1rem 2rem;
+    }
+
+    .logo-falcon {
+        height: 50px; /* Logo más pequeño en móvil */
+    }
+
+    .sign-up-portfolio {
+        padding: 0.6rem 1.5rem; /* Botón más pequeño en móvil */
+    }
+}
+
+/* El resto de tu CSS se mantiene igual */
+
 @keyframes menuReveal {
     0% {
         clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);

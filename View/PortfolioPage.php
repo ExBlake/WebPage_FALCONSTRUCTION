@@ -164,6 +164,7 @@
     <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script>
     <script src="Script_Banner"></script>
+    <script src="Script_Header"></script>
 </body>
 
 </html>

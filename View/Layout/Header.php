@@ -1,6 +1,14 @@
 <header>
     <nav class="navbar-portfolio">
-        <img class="logo-falcon" src="PImageResource/LogoBanner.jpg" alt="LogoFalconstructions">
+        <!-- Responsive Logo usando picture -->
+        <picture>
+            <source media="(max-width: 768px)" 
+                    srcset="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Logo_Phone-8VqLm7j1VPi7LUXdt2pDi0ljA4rBgw.png">
+            <img class="logo-falcon" 
+                    src="PImageResource/LogoBanner.jpg" 
+                    alt="LogoFalconstructions">
+        </picture>
+
         <div class="nav-right-portfolio">
             <a href="#" class="sign-up-portfolio">CONTACT</a>
             <div class="menu-icon-portfolio" id="navToggle">
@@ -63,7 +71,8 @@
         <div class="menu-image"></div>
         <div class="menu-footer">
             <div class="language-toggle">
-                <span class="active">ES</span> | <span>EN</span>
+                <span class="active" data-lang="ES">ES</span> | 
+                <span data-lang="EN">EN</span>
             </div>
         </div>
     </div>
