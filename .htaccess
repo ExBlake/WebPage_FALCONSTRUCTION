@@ -20,6 +20,9 @@ RewriteRule ^Contacto$ View/Contact.php [L]
 # Reescribe la URL para 'AboutUs.php'
 RewriteRule ^Nosotros$ View/AboutUs.php [L]
 
+# Reescribe la URL para 'Reviews.php'
+RewriteRule ^Resenas$ View/Reviews.php [L]
+
 # Reescribe la URL para 'porto.php'
 RewriteRule ^Portafoliooooo$ View/porto.php [L]
 
@@ -46,6 +49,9 @@ RewriteRule ^Estilos_Nosotros$ View/Layout/css/Style_AboutUs.css [L]
 # Reescribe la URL para 'Style_BannerEnd.css'
 RewriteRule ^Estilos_Banner$ View/Layout/css/Style_BannerEnd.css [L]
 
+# Reescribe la URL para 'Style_Reviews.css'
+RewriteRule ^Estilos_Resenas$ View/Layout/css/Style_Reviews.css [L]
+
 # ----------- CSS REWRITES -------------
 
 
@@ -59,6 +65,12 @@ RewriteRule ^Script_Nosotros$ View/Layout/js/Script_AboutUs.js [L]
 
 # Reescribe la URL para 'Script_BannerEnd.js'
 RewriteRule ^Script_Banner$ View/Layout/js/Script_BannerEnd.js [L]
+
+# Reescribe la URL para 'Script_BannerEnd.js'
+RewriteRule ^Script_Header$ View/Layout/js/Script_Header.js [L]
+
+# Reescribe la URL para 'Script_Reviews.js'
+RewriteRule ^Script_Resenas$ View/Layout/js/Script_Reviews.js [L]
 
 # ----------- JS REWRITES -------------
 

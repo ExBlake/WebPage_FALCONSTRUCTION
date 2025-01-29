@@ -23,6 +23,9 @@
 </head>
 
 <body>
+    <style>
+
+    </style>
     <?php
     // Inclusión del Header
     require_once 'Layout/Header.php';
@@ -103,7 +106,7 @@
             </div>
         </section>
 
-        <section class="section--Projects--Portfolio-Attachment">
+        <section class="section--Projects--Portfolio-Attachment item1">
             <div class="content--Projects--Portfolio-Attachment">
                 <div class="section-subtitle--Projects--Portfolio-Attachment">Fase 2</div>
                 <h2 class="section-title--Projects--Portfolio-Attachment">ARRIVAL TO NEW MEXICO</h2>
@@ -120,7 +123,7 @@
             </div>
         </section>
 
-        <section class="section--Projects--Portfolio-Attachment">
+        <section class="section--Projects--Portfolio-Attachment item2">
             <div class="content--Projects--Portfolio-Attachment">
                 <div class="section-subtitle--Projects--Portfolio-Attachment">Fase 3</div>
                 <h2 class="section-title--Projects--Portfolio-Attachment">INTRODUCTION TO SPACEFLIGHT</h2>
@@ -151,10 +154,13 @@
     </div>
     </div>
 
+    <section class="BannerEnd-Portfolio">
+        <?php
+        // Inclusión Banner End
+        require_once 'Layout/BannerEnd.php';
+        ?>
+    </section>
     <?php
-    // Inclusión Banner End
-    require_once 'Layout/BannerEnd.php';
-
     // Inclusión del footer
     require_once 'Layout/Footer.php';
     ?>
@@ -165,6 +171,9 @@
     <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script>
     <script src="Script_Banner"></script>
     <script src="Script_Header"></script>
+    
+
 </body>
 
 </html>
+
