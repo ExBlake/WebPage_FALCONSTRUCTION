@@ -89,6 +89,9 @@ RewriteRule ^PImageResource/(.*)$ View/Img/Resources/$1 [L]
 # Reescribe 'PImageContact' a 'Contacts'
 RewriteRule ^PImageContact/(.*)$ View/Img/Contacts/$1 [L]
 
+# Reescribe 'PImageResenas' a 'Contacts'
+RewriteRule ^PImageResenas/(.*)$ View/Img/Review/$1 [L]
+
 # ----------- IMG REWRITES -------------
 
 # ----------- VIDEO REWRITES -------------
