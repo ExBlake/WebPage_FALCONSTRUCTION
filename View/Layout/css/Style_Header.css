@@ -1,10 +1,10 @@
-/* Estilos base */
 :root {
-    --color-highlight: #FFD700;
-    --color-accent: #FFA500;
-    --color-dark: #001524;
+    --color-dark-header: #021422;
+    --color-light-header: #041b3a;
+    --color-accent-header: #bbbdc2;
+    --color-text-header: #545e69;
+    --color-highlight-header: #7c8c8c;
 }
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -18,32 +18,31 @@ body {
 }
 
 /* Estilos de la barra de navegación */
-.navbar-portfolio {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 4rem;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
+.navbar-header {
+    display: flex ;
+    justify-content: space-between ;
+    align-items: center ;
+    padding: 2rem 4rem ;
+    position: fixed ;
+    width: 100% ;
+    z-index: 100 ;
     opacity: 0;
-    animation: fadeIn 2s forwards;
-    box-sizing: border-box;
+    animation: fadeIn 2s forwards ;
 }
 
-.nav-right-portfolio {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.nav-right-header {
+    display: flex ;
+    align-items: center ;
+    gap: 1rem ;
 }
 
-.logo-falcon {
-    width: auto;
-    height: 70px;
-    object-fit: contain;
+.logo-falcon-header {
+    width: auto ;
+    height: 70px ;
+    object-fit: contain ;
 }
 
-.sign-up-portfolio {
+.sign-up-header {
     background: transparent;
     color: white;
     padding: 0.8rem 2rem;
@@ -54,12 +53,12 @@ body {
     border: 2px solid white;
 }
 
-.sign-up-portfolio:hover {
+.sign-up-header:hover {
     background: white;
-    color: var(--color-dark);
+    color: var(--color-dark-header);
 }
 
-.menu-icon-portfolio {
+.menu-icon-header {
     width: 40px;
     height: 40px;
     background: rgba(255, 255, 255, 0.1);
@@ -74,7 +73,7 @@ body {
 
 
 /* Estilos del menú fullscreen */
-.fullscreen-menu {
+.fullscreen-menu-header {
     position: fixed;
     top: 0;
     left: 0;
@@ -88,14 +87,14 @@ body {
     z-index: 1000;
 }
 
-.fullscreen-menu.active {
+.fullscreen-menu-header.active {
     height: 100%;
     opacity: 1;
     visibility: visible;
     animation: menuReveal 0.8s ease forwards;
 }
 
-.menu-content {
+.menu-content-header {
     position: relative;
     width: 100%;
     height: 100%;
@@ -106,7 +105,7 @@ body {
     background: radial-gradient(circle, rgba(255, 255, 255, 0.062) 0%, rgba(0, 0, 0, 0) 80%);
 }
 
-.menu-items {
+.menu-items-header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -119,34 +118,34 @@ body {
     z-index: 3;
 }
 
-.menu-item-wrapper {
+.menu-item-wrapper-header {
     text-align: center;
     flex: 0 1 auto;
     min-width: 200px;
     transition: opacity 0.3s ease;
 }
 
-.menu-items:hover .menu-item-wrapper {
+.menu-items-header:hover .menu-item-wrapper-header {
     opacity: 0.5;
 }
 
-.menu-items:hover .menu-item-wrapper:hover {
+.menu-items-header:hover .menu-item-wrapper-header:hover {
     opacity: 1;
 }
 
-.menu-category {
+.menu-category-header {
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 3px;
-    color: var(--color-highlight);
+    color: var(--color-highlight-header);
     margin-bottom: 1rem;
     opacity: 0.9;
     font-weight: 500;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.menu-item {
-    color: var(--color-accent);
+.menu-item-header {
+    color: var(--color-accent-header);
     text-decoration: none;
     font-size: 1.75rem;
     transition: all 0.3s ease;
@@ -156,11 +155,11 @@ body {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-.menu-item:hover {
+.menu-item-header:hover {
     color: #fff;
 }
 
-.menu-item-content {
+.menu-item-content-header {
     font-size: 2.5rem;
     font-weight: 400;
     letter-spacing: 1px;
@@ -170,12 +169,12 @@ body {
     color: white;
 }
 
-.menu-item:hover .menu-item-content {
+.menu-item-header:hover .menu-item-content-header {
     transform: translateY(0);
     opacity: 1;
 }
 
-.menu-image {
+.menu-image-header {
     position: fixed;
     top: 0;
     left: 0;
@@ -191,7 +190,7 @@ body {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.menu-footer {
+.menu-footer-header {
     position: fixed;
     bottom: 2rem;
     left: 2rem;
@@ -202,10 +201,10 @@ body {
     z-index: 2;
 }
 
-.contact-btn {
+.contact-btn-header {
     background-color: transparent;
-    color: var(--color-accent);
-    border: 1px solid var(--color-accent);
+    color: var(--color-accent-header);
+    border: 1px solid var(--color-accent-header);
     padding: 0.8rem 2rem;
     font-size: 1rem;
     cursor: pointer;
@@ -214,22 +213,22 @@ body {
     letter-spacing: 1px;
 }
 
-.contact-btn:hover {
-    background-color: var(--color-accent);
-    color: var(--color-dark);
+.contact-btn-header:hover {
+    background-color: var(--color-accent-header);
+    color: var(--color-dark-header);
 }
 
-.language-toggle {
+.language-toggle-header {
     font-size: 1rem;
 }
 
-.language-toggle span {
+.language-toggle-header span {
     cursor: pointer;
     transition: color 0.3s ease;
     padding: 0 0.5rem;
 }
 
-.language-toggle span.active {
+.language-toggle-header span.active {
     color: #fff;
 }
 
@@ -244,62 +243,64 @@ body {
 
 /* Media queries para responsividad */
 @media (max-width: 1200px) {
-    .menu-items {
+    .menu-items-header {
         gap: 4rem;
     }
 }
 
 @media (max-width: 992px) {
-    .navbar-portfolio {
+    .navbar-header {
         padding: 1.5rem 3rem;
     }
 
-    .menu-items {
+    .menu-items-header {
         gap: 3rem;
     }
 
-    .menu-item-content {
+    .menu-item-content-header {
         font-size: 2rem;
     }
 }
 
 @media (max-width: 768px) {
-    .navbar-portfolio {
+    .navbar-header {
         padding: 1rem 2rem;
     }
 
-    .logo-falcon {
-        height: 50px;
+    .logo-falcon-header {
+        height: 60px;
+        margin-top: 5px;
     }
 
-    .sign-up-portfolio {
-        padding: 0.6rem 1.5rem;
+    .sign-up-header {
+        padding: 0.6rem 1.3rem;
         font-size: 0.9rem;
     }
 
-    .menu-items {
+    .menu-items-header {
         gap: 2rem;
         padding: 1rem;
+        flex-direction: column;
     }
 
-    .menu-item-wrapper {
+    .menu-item-wrapper-header {
         min-width: 150px;
     }
 
-    .menu-category {
+    .menu-category-header {
         font-size: 0.9rem;
     }
 
-    .menu-item-content {
+    .menu-item-content-header {
         font-size: 1.75rem;
     }
 
-    .menu-footer {
+    .menu-footer-header {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
-    .menu-icon-portfolio {
+    .menu-icon-header {
         width: 35px;
         height: 35px;
         top: 33px !important; 
@@ -308,95 +309,97 @@ body {
 }
 
 @media (max-width: 576px) {
-    .navbar-portfolio {
-        padding: 0.8rem 1.5rem;
+    .navbar-header {
+        padding: 1rem 2rem;
     }
 
-    .logo-falcon {
-        height: 40px;
+    .logo-falcon-header {
+        height: 60px;
+        margin-top: 5px;
     }
 
-    .sign-up-portfolio {
-        padding: 0.5rem 1rem;
+    .sign-up-header {
+        padding: 0.6rem 1.3rem;
         font-size: 0.8rem;
     }
 
-    .menu-icon-portfolio {
+    .menu-icon-header {
         width: 35px;
         height: 35px;
         top: 33px !important; 
         right: 32px !important;
     }
 
-    .menu-items {
+    .menu-items-header {
         gap: 1.5rem;
     }
 
-    .menu-item-wrapper {
+    .menu-item-wrapper-header {
         min-width: 120px;
     }
 
-    .menu-category {
+    .menu-category-header {
         font-size: 0.8rem;
     }
 
-    .menu-item-content {
+    .menu-item-content-header {
         font-size: 1.5rem;
     }
 
-    .contact-btn {
+    .contact-btn-header {
         padding: 0.6rem 1.5rem;
         font-size: 0.9rem;
     }
 
-    .language-toggle {
+    .language-toggle-header {
         font-size: 0.9rem;
     }
 }
 
 @media (max-width: 400px) {
-    .navbar-portfolio {
+    .navbar-header {
         padding: 0.6rem 1rem;
     }
 
-    .logo-falcon {
+    .logo-falcon-header {
         height: 35px;
+        margin-top: 5px;
     }
 
-    .sign-up-portfolio {
+    .sign-up-header {
         padding: 0.4rem 0.8rem;
         font-size: 0.7rem;
     }
 
-    .menu-icon-portfolio {
+    .menu-icon-header {
         width: 30px;
         height: 30px;
         top: 33px !important; 
         right: 32px !important;
     }
 
-    .menu-items {
+    .menu-items-header {
         gap: 1rem;
     }
 
-    .menu-item-wrapper {
+    .menu-item-wrapper-header {
         min-width: 100px;
     }
 
-    .menu-category {
+    .menu-category-header {
         font-size: 0.7rem;
     }
 
-    .menu-item-content {
+    .menu-item-content-header {
         font-size: 1.25rem;
     }
 
-    .contact-btn {
+    .contact-btn-header {
         padding: 0.5rem 1rem;
         font-size: 0.8rem;
     }
 
-    .language-toggle {
+    .language-toggle-header {
         font-size: 0.8rem;
     }
 }

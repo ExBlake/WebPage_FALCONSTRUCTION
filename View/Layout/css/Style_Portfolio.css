@@ -21,55 +21,6 @@ body {
     background-blend-mode: overlay;
 }
 
-.navbar-portfolio {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 4rem;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-}
-
-.nav-right-portfolio {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.logo-falcon {
-    height: 70px;
-}
-
-.sign-up-portfolio {
-    background: transparent;
-    color: white;
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s;
-    border: 2px solid white;
-}
-
-.sign-up-portfolio:hover {
-    background: white;
-    color: #001524;
-}
-
-.menu-icon-portfolio {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
 
 .hero-portfolio {
     min-height: 100vh;
@@ -343,25 +294,10 @@ body {
     }
 }
 
-/* Responsive styles */
-@media (max-width: 1200px) {
-    .menu-items {
-        gap: 4rem;
-    }
-}
 
 @media (max-width: 768px) {
-    .navbar-portfolio {
-        padding: 1rem 2rem;
-    }
-
     .main-title-portfolio {
         font-size: 3rem;
-    }
-
-    .menu-items {
-        flex-direction: column;
-        gap: 2rem;
     }
 
     .section--Projects--Portfolio-Attachment {

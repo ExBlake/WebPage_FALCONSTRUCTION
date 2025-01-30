@@ -23,6 +23,9 @@ RewriteRule ^Nosotros$ View/AboutUs.php [L]
 # Reescribe la URL para 'Reviews.php'
 RewriteRule ^Resenas$ View/Reviews.php [L]
 
+# Reescribe la URL para 'Reviews.php'
+RewriteRule ^Resena$ View/Review.php [L]
+
 # Reescribe la URL para 'porto.php'
 RewriteRule ^Portafoliooooo$ View/porto.php [L]
 

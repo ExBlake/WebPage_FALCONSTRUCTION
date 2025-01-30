@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="Estilos_Contacto">
+    <link rel="stylesheet" href="Estilos_Header">
     <title>Contact Form</title>
 	
 </head>
 <body>
+<?php
+    // Inclusión del Header
+    require_once 'Layout/Header.php';
+    ?>
     <div class="container-contacts">
         <div class="form-section-contacts">
             <h1 class="title-contacts">Let's work together<span>.</span></h1>

@@ -18,7 +18,7 @@
     ?>
 
     <!-- Main Content -->
-    <main>
+    <main class="main-content-review">
         <div class="container-review">
             <!-- Feed Section -->
             <div class="feed-section-review">
@@ -221,4 +221,3 @@
     <script src="Script_Resenas"></script>
 </body>
 </html>
-

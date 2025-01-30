@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.getElementById('navToggle');
     const closeMenu = document.getElementById('closeMenu');
     const fullscreenMenu = document.getElementById('fullscreenMenu');
-    const menuItems = document.querySelectorAll('.menu-item');
-    const menuImage = document.querySelector('.menu-image');
-    const languageToggles = document.querySelectorAll('.language-toggle span');
+    const menuItems = document.querySelectorAll('.menu-item-header');
+    const menuImage = document.querySelector('.menu-image-header');
+    const languageToggles = document.querySelectorAll('.language-toggle-header span');
 
     // Abrir menú
     navToggle.addEventListener('click', () => {
