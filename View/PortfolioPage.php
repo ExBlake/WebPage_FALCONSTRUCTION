@@ -23,6 +23,7 @@
 </head>
 
 <body>
+
     <?php
     // Inclusión del Header
     require_once 'Layout/Header.php';

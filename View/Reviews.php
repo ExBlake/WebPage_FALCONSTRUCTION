@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Clone</title>
+    <title>Reseñas</title>
     <link rel="stylesheet" href="Estilos_Header">
     <link rel="stylesheet" href="Estilos_Resenas">
     <!-- Font Awesome para los iconos -->
