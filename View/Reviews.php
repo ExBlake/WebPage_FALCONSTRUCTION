@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="Estilos_Footer">
 </head>
-
 <body>
     <?php
     // Inclusión del Header
@@ -26,12 +25,11 @@
             <div class="feed-section-review">
                 <!-- Stories -->
 
-
                 <!-- Posts -->
                 <div class="posts-review" id="post-Santiago Villada">
                     <div class="post-review">
                         <div class="post-header-review">
-                            <img src="PImageResenas/Retrato1.jpg"
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                                 alt="user" class="profile-pic-review">
                             <span class="username-review">Santiago Villada</span>
 
@@ -39,14 +37,14 @@
                         <div class="post-carousel-review">
                             <div class="carousel-container-review">
                                 <div class="carousel-slide-review">
-                                    <img src="PImageResenas/Retrato1.jpg"
+                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                                         alt="post">
                                 </div>
                                 <div class="carousel-slide-review">
                                     <video class="custom-video" src="PVideoBanner/video2.mp4" autoplay muted loop></video>
                                 </div>
                                 <div class="carousel-slide-review">
-                                    <img src="PImageResenas/Retrato1.jpg"
+                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                                         alt="post">
                                 </div>
                             </div>
@@ -76,7 +74,7 @@
                 <div class="posts-review" id="post-Mateo Villada">
                     <div class="post-review">
                         <div class="post-header-review">
-                            <img src="PImageResenas/Retrato1.jpg"
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                                 alt="user" class="profile-pic-review">
                             <span class="username-review">Mateo Villada</span>
 
@@ -87,11 +85,11 @@
                                     <video class="custom-video" src="PVideoBanner/video2.mp4" autoplay muted loop></video>
                                 </div>
                                 <div class="carousel-slide-review">
-                                    <img src="PImageResenas/Retrato1.jpg"
+                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                                         alt="post">
                                 </div>
                                 <div class="carousel-slide-review">
-                                    <img src="PImageResenas/Retrato1.jpg"
+                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                                         alt="post">
                                 </div>
                             </div>
@@ -121,7 +119,7 @@
                 <div class="posts-review" id="post-Miguel Villada">
                     <div class="post-review">
                         <div class="post-header-review">
-                            <img src="PImageResenas/Retrato1.jpg"
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                                 alt="user" class="profile-pic-review">
                             <span class="username-review">Miguel Villada</span>
 
@@ -129,7 +127,7 @@
                         <div class="post-carousel-review">
                             <div class="carousel-container-review">
                                 <div class="carousel-slide-review">
-                                    <img src="PImageResenas/Retrato1.jpg"
+                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                                         alt="post">
                                 </div>
                                 <div class="carousel-slide-review">
@@ -167,7 +165,7 @@
                 <div class="posts-review">
                     <div class="post-review">
                         <div class="post-header-review">
-                            <img src="PImageResenas/Retrato1.jpg"
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                                 alt="user" class="profile-pic-review">
                             <span class="username-review">Santiago Villada</span>
 
@@ -175,14 +173,14 @@
                         <div class="post-carousel-review">
                             <div class="carousel-container-review">
                                 <div class="carousel-slide-review">
-                                    <img src="PImageResenas/Retrato1.jpg"
+                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                                         alt="post">
                                 </div>
                                 <div class="carousel-slide-review">
                                     <video src="video.mp4" controls></video>
                                 </div>
                                 <div class="carousel-slide-review">
-                                    <img src="PImageResenas/Retrato1.jpg"
+                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                                         alt="post">
                                 </div>
                             </div>
@@ -212,7 +210,7 @@
                 <div class="posts-review">
                     <div class="post-review">
                         <div class="post-header-review">
-                            <img src="PImageResenas/Retrato1.jpg"
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                                 alt="user" class="profile-pic-review">
                             <span class="username-review">Santiago Villada</span>
 
@@ -220,14 +218,14 @@
                         <div class="post-carousel-review">
                             <div class="carousel-container-review">
                                 <div class="carousel-slide-review">
-                                    <img src="PImageResenas/Retrato1.jpg"
+                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                                         alt="post">
                                 </div>
                                 <div class="carousel-slide-review">
                                     <video src="video.mp4" controls></video>
                                 </div>
                                 <div class="carousel-slide-review">
-                                    <img src="PImageResenas/Retrato1.jpg"
+                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                                         alt="post">
                                 </div>
                             </div>
@@ -258,7 +256,7 @@
                 <!-- Sidebar -->
                 <div class="sidebar-review">
                     <div class="profile-section-review">
-                        <img src="PImageResenas/Retrato1.jpg"
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                             alt="profile" class="profile-pic-review">
                         <div class="profile-info-review">
                             <span class="username-review">Santiago Villada</span>
@@ -268,7 +266,7 @@
                                 class="fa-solid fa-eye"></i></button>
                     </div>
                     <div class="profile-section-review">
-                        <img src="PImageResenas/Retrato1.jpg"
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                             alt="profile" class="profile-pic-review">
                         <div class="profile-info-review">
                             <span class="username-review">Mateo Villada</span>
@@ -278,7 +276,7 @@
                                 class="fa-solid fa-eye"></i></button>
                     </div>
                     <div class="profile-section-review">
-                        <img src="PImageResenas/Retrato1.jpg"
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                             alt="profile" class="profile-pic-review">
                         <div class="profile-info-review">
                             <span class="username-review">Miguel Villada</span>
@@ -288,7 +286,7 @@
                                 class="fa-solid fa-eye"></i></button>
                     </div>
                     <div class="profile-section-review">
-                        <img src="PImageResenas/Retrato1.jpg"
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                             alt="profile" class="profile-pic-review">
                         <div class="profile-info-review">
                             <span class="username-review">eloears</span>
@@ -297,7 +295,7 @@
                         <button class="switch-btn-review"><i class="fa-solid fa-eye"></i></button>
                     </div>
                     <div class="profile-section-review">
-                        <img src="PImageResenas/Retrato1.jpg"
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                             alt="profile" class="profile-pic-review">
                         <div class="profile-info-review">
                             <span class="username-review">eloears</span>
