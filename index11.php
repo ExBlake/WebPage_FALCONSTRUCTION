@@ -2586,7 +2586,7 @@ body {
     background-image: radial-gradient(rgba(36, 112, 188, 0.8), rgba(56, 121, 250, 0.8));
   }
 }
-    </style>
+</style>
 </head>
 <body>
     <div class="container">

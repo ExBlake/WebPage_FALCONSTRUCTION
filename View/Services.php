@@ -1,117 +1,146 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Custom Slider with GSAP</title>
-  <link rel='stylesheet' href='https://slater.app/10324/23333.css'>
-  <link rel="stylesheet" href="Estilos_Servicios">
+  <!DOCTYPE html>
+  <html lang="en">
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<section class="cloneable-services">
-    <div class="overlay-services">
-      <div class="overlay-inner-services">
-        <div class="overlay-count-row-services">
-          <div class="count-column-services">
-            <h2 data-slide-count="step" class="count-heading-services">01</h2>
+  <head>
+      <meta charset="UTF-8">
+      <title>Custom Slider with GSAP</title>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+      <link rel="stylesheet" href="Estilos_Header">
+
+      <link rel="stylesheet" href="Estilos_Servicios">
+      <link rel="stylesheet" href="Estilos_Footer">
+      <link rel="stylesheet" href="Estilos_Banner">
+
+  </head>
+
+  <body>
+      <?php
+      // Inclusión del Header
+      require_once 'Layout/Header.php';
+      ?>
+      <div class="fullscreen-container">
+          <section class="fullscreen-section main-content">
+              <div class="content-grid">
+                  <div class="text-content">
+                      <h1 class="main-title">SPACE IS MEANT TO BE SHARED</h1>
+
+                      <div>
+                          <p class="main-description">
+                              Going to space is the kind of life event you'll want your loved ones to be a part of.
+                          </p>
+                          <p class="sub-description">
+                              Bring up to three guests so they can share in the love, wonder and awe of your
+                              spaceflight.
+                          </p>
+                      </div>
+
+                      <div class="image-container-banner">
+                          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ii6IUY4gDMEBjZqZm4fQ9pCWcpzWqH.png"
+                              alt="Astronaut team">
+                      </div>
+                  </div>
+
+                  <div class="image-container-banner">
+                      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ii6IUY4gDMEBjZqZm4fQ9pCWcpzWqH.png"
+                          alt="People sharing a moment">
+                  </div>
+              </div>
+          </section>
+
+          <div class="fullscreen-section start-services">
+              <h1>Con la confianza de más de <span class="highlight">11,4 millones</span> de desarrolladores</h1>
           </div>
-          <div class="count-row-divider-services"></div>
-          <div class="count-column-services">
-            <h2 data-slide-count="total" class="count-heading-services">04</h2>
-          </div>
-        </div>
-        <div class="overlay-nav-row-services"><button aria-label="previous slide" data-slider="button-prev" class="button-services"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 17 12" fill="none" class="button-arrow-services">
-              <path d="M6.28871 12L7.53907 10.9111L3.48697 6.77778H16.5V5.22222H3.48697L7.53907 1.08889L6.28871 0L0.5 6L6.28871 12Z" fill="currentColor"></path>
-            </svg>
-            <div class="button-overlay-services">
-              <div class="overlay-corner-services"></div>
-              <div class="overlay-corner-services top-right-services"></div>
-              <div class="overlay-corner-services bottom-left-services"></div>
-              <div class="overlay-corner-services bottom-right-services"></div>
-            </div>
-          </button><button aria-label="previous slide" data-slider="button-next" class="button-services"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 17 12" fill="none" class="button-arrow-services next-services">
-              <path d="M6.28871 12L7.53907 10.9111L3.48697 6.77778H16.5V5.22222H3.48697L7.53907 1.08889L6.28871 0L0.5 6L6.28871 12Z" fill="currentColor"></path>
-            </svg>
-            <div class="button-overlay-services">
-              <div class="overlay-corner-services"></div>
-              <div class="overlay-corner-services top-right-services"></div>
-              <div class="overlay-corner-services bottom-left-services"></div>
-              <div class="overlay-corner-services bottom-right-services"></div>
-            </div>
-          </button></div>
+
+          <section class="fullscreen-section combined-section">
+              <div class="start-services">
+                  <h1>Con la confianza de más de <span class="highlight">11,4 millones</span> de desarrolladores</h1>
+              </div>
+              <div class="container-section2">
+                  <div class="content-wrapper">
+                      <div class="right-column">
+                          <div class="image-container">
+                              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-tYSBLJcl3bQSYO3QWqrSXehsPcpmwH.png"
+                                  alt="PyCharm IDE" class="active" id="image1">
+                              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ii6IUY4gDMEBjZqZm4fQ9pCWcpzWqH.png"
+                                  alt="Development Tools" id="image2">
+                              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-tYSBLJcl3bQSYO3QWqrSXehsPcpmwH.png"
+                                  alt="Workflow" id="image3">
+                          </div>
+                      </div>
+                      <div class="left-column">
+                          <section class="text-section active" id="section1">
+                              <h2>Listo para usar desde el primer momento</h2>
+                              <p>Las herramientas esenciales y una amplia variedad de lenguajes y marcos de trabajo
+                                  compatibles están al alcance de su mano, sin tener que complicarse la vida con
+                                  complementos.</p>
+                          </section>
+                          <section class="text-section" id="section2">
+                              <h2>Desarrollo inteligente</h2>
+                              <p>Herramientas avanzadas de desarrollo que mejoran tu productividad y experiencia de
+                                  codificación.</p>
+                          </section>
+                          <section class="text-section" id="section3">
+                              <h2>Potencia tu flujo de trabajo</h2>
+                              <p>Integración perfecta con todas las herramientas que necesitas para un desarrollo
+                                  eficiente.</p>
+                          </section>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          <section class="contacts-banner-container">
+              <div class="contacts-banner-promo-card">
+                  <!-- Gradient blob background -->
+                  <div class="contacts-banner-gradient-blob"></div>
+
+                  <!-- Content container -->
+                  <div class="contacts-banner-content">
+                      <!-- Logo -->
+                      <div class="contacts-banner-logo">
+                          <div class="contacts-banner-logo-square"></div>
+                          <span class="contacts-banner-logo-text">JETBRAINS IDE
+                              Services</span>
+                      </div>
+
+                      <!-- Text content -->
+                      <div class="contacts-banner-text-content">
+                          <h1 class="contacts-banner-title">Gestione las herramientas para
+                              desarrolladores a gran escala</h1>
+                          <p class="contacts-banner-description">Gestione los IDE a gran
+                              escala con el aprovisionamiento centralizado a máquinas en toda su
+                              organización.</p>
+                          <button class="contacts-banner-cta-button" onclick="handleClick()">Saber más</button>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <section class="fullscreen-section banner-final">
+              <?php
+            // Inclusión Banner End
+            require_once 'Layout/BannerEnd.php';
+            
+          
+            ?>
+          </section>
+
+          <?php require_once 'Layout/Footer.php';?>
+
+
       </div>
-    </div>
-    <div class="main-services">
-      <div class="slider-wrap-services">
-        <div data-slider="list" class="slider-list-services">
-          <div data-slider="slide" class="slider-slide-services">
-            <div class="slide-inner-services"><img class="img-services"  src="https://cdn.prod.website-files.com/674d847bf8e817966d307714/674d90f74ff2fe8b0b912b97_slide-1.avif" loading="lazy" sizes="(max-width: 479px) 100vw, 560px" alt="Abstract layout By FAKURIANDESIGN through Unsplash">
-              <div class="slide-caption-services">
-                <div class="caption-dot-services"></div>
-                <p class="caption-services">Layout nº001</p>
-              </div>
-            </div>
-          </div>
-          <div data-slider="slide" class="slider-slide-services active-services">
-            <div class="slide-inner-services"><img class="img-services" src="https://cdn.prod.website-files.com/674d847bf8e817966d307714/674d90f7cf52dd961b48a1e2_slide-2.avif" loading="lazy" alt="Abstract layout By FAKURIANDESIGN through Unsplash">
-              <div class="slide-caption-services">
-                <div class="caption-dot-services"></div>
-                <p class="caption-services">Layout nº002</p>
-              </div>
-            </div>
-          </div>
-          <div data-slider="slide" class="slider-slide-services">
-            <div class="slide-inner-services"><img class="img-services" src="https://cdn.prod.website-files.com/674d847bf8e817966d307714/674d90f7f7cce73267703347_slide-3.avif" loading="lazy" sizes="(max-width: 479px) 100vw, 560px" alt="Abstract layout By FAKURIANDESIGN through Unsplash">
-              <div class="slide-caption-services">
-                <div class="caption-dot-services"></div>
-                <p class="caption-services">Layout nº003</p>
-              </div>
-            </div>
-          </div>
-          <div data-slider="slide" class="slider-slide-services">
-            <div class="slide-inner-services"><img class="img-services" src="https://cdn.prod.website-files.com/674d847bf8e817966d307714/674d90f7ccfd203c82a46798_slide-4.avif" loading="lazy" sizes="(max-width: 479px) 100vw, 560px" alt="Abstract layout By FAKURIANDESIGN through Unsplash">
-              <div class="slide-caption-services">
-                <div class="caption-dot-services"></div>
-                <p class="caption-services">Layout nº004</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <main class="main-content">
-        <div class="content-grid">
-            <div class="text-content">
-                <h1 class="main-title">SPACE IS MEANT TO BE SHARED</h1>
-                
-                <div>
-                    <p class="main-description">
-                        Going to space is the kind of life event you'll want your loved ones to be a part of.
-                    </p>
-                    <p class="sub-description">
-                        Bring up to three guests so they can share in the love, wonder and awe of your spaceflight.
-                    </p>
-                </div>
 
-                <div class="image-container">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ii6IUY4gDMEBjZqZm4fQ9pCWcpzWqH.png" alt="Astronaut team">
-                </div>
-            </div>
 
-            <div class="image-container">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ii6IUY4gDMEBjZqZm4fQ9pCWcpzWqH.png" alt="People sharing a moment">
-            </div>
-        </div>
+      <!-- partial -->
+      <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script>
+      <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js'></script>
+      <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script>
+      <script src="Script_Banner"></script>
+      <script src="Script_Services"></script>
 
-    </main> 
-<!-- partial -->
-  <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js'></script>
-<script src='https://cdn.jsdelivr.net/gh/ilja-van-eck/osmo/assets/gsap/InertiaPlugin.min.js'></script>
-<script  src="Script_Services"></script>
+      <script src="Script_Header"></script>
 
-</body>
-</html>
+  </body>
+
+  </html>
