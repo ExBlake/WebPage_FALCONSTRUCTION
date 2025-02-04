@@ -79,6 +79,9 @@ RewriteRule ^Script_Resenas$ View/Layout/js/Script_Reviews.js [L]
 # Reescribe la URL para 'Script_Services.js'
 RewriteRule ^Script_Services$ View/Layout/js/Script_Services.js [L]
 
+# Reescribe la URL para 'Script_Contact.js'
+RewriteRule ^Script_Contactos$ View/Layout/js/Script_Contact.js [L]
+
 # ----------- JS REWRITES -------------
 
 
