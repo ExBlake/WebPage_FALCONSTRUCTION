@@ -32,6 +32,9 @@ RewriteRule ^Servicios$ View/Services.php [L]
 
 # ----------- CSS REWRITES -------------
 
+# Reescribe la URL para 'Style_Index.css'
+RewriteRule ^Estilos_Inicio$ View/Layout/css/Style_Index.css [L]
+
 # Reescribe la URL para 'Style_Footer.css'
 RewriteRule ^Estilos_Footer$ View/Layout/css/Style_Footer.css [L]
 
@@ -60,6 +63,9 @@ RewriteRule ^Estilos_Servicios$ View/Layout/css/Style_Services.css [L]
 
 
 # ----------- JS REWRITES --------------
+
+# Reescribe la URL para 'Script_Index.css'
+RewriteRule ^Script_Inicio$ View/Layout/js/Script_Index.js [L]
 
 # Reescribe la URL para 'Script_PortfolioPage.js'
 RewriteRule ^Script_Portafolio$ View/Layout/js/Script_PortfolioPage.js [L]
