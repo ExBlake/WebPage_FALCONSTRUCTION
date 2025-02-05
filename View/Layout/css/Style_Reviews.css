@@ -74,7 +74,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 4rem 0;
+  padding: 4rem 2rem;
 }
 
 .hero-section-review h1 {
@@ -596,9 +596,12 @@ body {
       margin: 0 auto;
       width: 100%;
   }
+  .scroll-container {
+    bottom: 4.5rem;
+  }
 }
 
-@media (min-width: 300px) and (max-width: 767px) {
+@media (min-width: 200px) and (max-width: 767px) {
 .scroll-container {
   bottom: 4.5rem;
 }
