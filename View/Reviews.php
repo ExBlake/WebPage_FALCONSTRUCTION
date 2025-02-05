@@ -17,6 +17,19 @@
     // Inclusión del Header
     require_once 'Layout/Header.php';
     ?>
+    <div class="background-gradients">
+        <div class="gradient-1"></div>
+        <div class="gradient-2"></div>
+        <div class="gradient-3"></div>
+    </div>
+        <main>
+            <section class="hero-section-review container-section-review">
+                <h1>Innova Más Rápido con<br>Amane Soft</h1>
+                <p>Empoderando negocios con soluciones de software de vanguardia. Desde análisis impulsados por IA hasta integraciones en la nube sin problemas, estamos dando forma al futuro de la tecnología.</p>
+            
+            </section>
+
+        </main>
 
     <!-- Main Content -->
     <main class="main-content-review">
@@ -307,6 +320,7 @@
                 </div>
             </div>
     </main>
+    <div id="cursor-effect"></div>
 
     <?php
     // Inclusión del footer

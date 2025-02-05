@@ -31,13 +31,13 @@
             </div>
             <div class="menu-items-header">
                 <div class="menu-item-wrapper-header">
-                    <a href="#" class="menu-item-header" data-image="PImageProject/project-1.jpg">
+                    <a href="Home" class="menu-item-header" data-image="PImageProject/project-1.jpg">
                         <span class="menu-category-header">Inicio</span>
                         <span class="menu-item-content-header">Bienvenido</span>
                     </a>
                 </div>
                 <div class="menu-item-wrapper-header">
-                    <a href="#" class="menu-item-header" data-image="PImageProject/project-2.jpg">
+                    <a href="Servicios" class="menu-item-header" data-image="PImageProject/project-2.jpg">
                         <span class="menu-category-header">Servicios</span>
                         <span class="menu-item-content-header">Soluciones</span>
                     </a>
@@ -61,7 +61,7 @@
                     </a>
                 </div>
                 <div class="menu-item-wrapper-header">
-                    <a href="#" class="menu-item-header" data-image="PImageProject/project-0.jpg">
+                    <a href="Contacto" class="menu-item-header" data-image="PImageProject/project-0.jpg">
                         <span class="menu-category-header">Contacto</span>
                         <span class="menu-item-content-header">Conectemos</span>
                     </a>

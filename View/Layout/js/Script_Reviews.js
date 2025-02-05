@@ -89,36 +89,43 @@ document.addEventListener("DOMContentLoaded", () => {
         showSlide(currentIndex);
     });
 
-    // Funcionalidad para la sidebar
     const sidebar = document.querySelector(".sidebar-review");
     const postsContainer = document.querySelector(".feed-section-review");
-
+    
     function updateSidebarPosition() {
         if (!sidebar || !postsContainer) return;
-
+    
         const postsRect = postsContainer.getBoundingClientRect();
         const sidebarHeight = sidebar.offsetHeight;
         const viewportHeight = window.innerHeight;
-
+    
+        // Posición inicial de la barra lateral (ajusta según tu diseño)
+        const sidebarInitialTop = 100; // Por ejemplo, 100px desde el top
+    
         // Calcula hasta dónde puede bajar la sidebar
         const maxSidebarTop = postsRect.bottom - sidebarHeight;
-
-        if (postsRect.bottom > viewportHeight) {
+    
+        // Lógica adicional para evitar que desaparezca arriba
+        const minSidebarTop = Math.max(postsRect.top, sidebarInitialTop);
+    
+        if (postsRect.top >= sidebarInitialTop) {
+            // Cuando el contenedor de posts está en su posición inicial, la barra lateral no debe estar fija
+            sidebar.style.position = "absolute";
+            sidebar.style.top = `${postsContainer.offsetTop}px`; // La coloca en la parte superior del contenedor
+        } else if (postsRect.bottom > viewportHeight) {
             // Mantiene fixed mientras haya contenido
             sidebar.style.position = "fixed";
-            sidebar.style.top = "100px";
+            sidebar.style.top = `${minSidebarTop}px`; // Usa minSidebarTop para evitar que desaparezca
         } else {
             // Se detiene en su última posición visible sin desaparecer
             sidebar.style.position = "fixed";
-            sidebar.style.top = `${Math.min(maxSidebarTop, 90)}px`;
+            sidebar.style.top = `${Math.min(maxSidebarTop, sidebarInitialTop)}px`;
         }
     }
-
+    
     window.addEventListener("scroll", updateSidebarPosition);
     window.addEventListener("resize", updateSidebarPosition);
     updateSidebarPosition();
-
-
     // Seleccionamos todos los botones
     const buttons = document.querySelectorAll(".switch-btn-review");
 
@@ -154,3 +161,30 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+//Cursor effect
+document.addEventListener("DOMContentLoaded", () => {
+    const cursorEffect = document.getElementById("cursor-effect")
+    let mouseX = 0
+    let mouseY = 0
+  
+    document.addEventListener("mousemove", (e) => {
+      mouseX = e.clientX
+      mouseY = e.clientY
+    })
+  
+    function updateCursorEffect() {
+      const gradientSize = 400
+      cursorEffect.style.background = `
+              radial-gradient(
+                  circle ${gradientSize}px at ${mouseX}px ${mouseY}px,
+                  rgba(59, 130, 246, 0.15),
+                  transparent 80%
+              )
+          `
+      requestAnimationFrame(updateCursorEffect)
+    }
+  
+    updateCursorEffect()
+  })

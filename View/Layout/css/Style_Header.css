@@ -5,11 +5,7 @@
     --color-text-header: #545e69;
     --color-highlight-header: #7c8c8c;
 }
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
+
 
 /* Animación de fade in */
 @keyframes fadeIn {
@@ -358,22 +354,22 @@ body {
 
 @media (max-width: 400px) {
     .navbar-header {
-        padding: 0.6rem 1rem;
+        padding: 1rem 2rem;
     }
 
     .logo-falcon-header {
-        height: 35px;
+        height: 60px;
         margin-top: 5px;
     }
 
     .sign-up-header {
-        padding: 0.4rem 0.8rem;
+        padding: 0.6rem 1rem;
         font-size: 0.7rem;
     }
 
     .menu-icon-header {
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         top: 33px !important; 
         right: 32px !important;
     }
