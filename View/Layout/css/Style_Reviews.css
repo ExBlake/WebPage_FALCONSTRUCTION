@@ -556,7 +556,7 @@ body {
 /* Scroll container styles */
 .scroll-container {
   position: absolute;
-  bottom: 8rem;
+  bottom: 2.5rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
