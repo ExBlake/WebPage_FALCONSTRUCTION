@@ -603,6 +603,6 @@ body {
 
 @media (min-width: 200px) and (max-width: 767px) {
 .scroll-container {
-  bottom: 4.5rem;
+  bottom: 1rem;
 }
 }
