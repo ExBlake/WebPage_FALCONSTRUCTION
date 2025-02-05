@@ -253,4 +253,3 @@ wrap.style.transform = "rotateX(" + (newY += .11) + "deg) rotateZ(" + (newX += .
 /***********************/
 /* Script para casa 3D */
 /***********************/
-});
