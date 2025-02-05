@@ -1,4 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Loading animation
+    const loading = document.createElement('div');
+    loading.classList.add('loading');
+  
+    const loadingContainer = document.createElement('div');
+    loadingContainer.classList.add('loading-container');
+  
+    const image = document.createElement('img');
+    image.src = 'View/img/Logo_Phone.png';
+    image.classList.add('loading-image');
+  
+    loadingContainer.appendChild(image);
+    loading.appendChild(loadingContainer);
+    document.body.appendChild(loading);
+  
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loading.style.opacity = '0';
+            setTimeout(() => {
+                loading.remove();
+            }, 500);
+        }, 1000);
+    });
+
+document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.getElementById('navToggle');
     const closeMenu = document.getElementById('closeMenu');
     const fullscreenMenu = document.getElementById('fullscreenMenu');
@@ -228,3 +253,4 @@ wrap.style.transform = "rotateX(" + (newY += .11) + "deg) rotateZ(" + (newX += .
 /***********************/
 /* Script para casa 3D */
 /***********************/
+});
