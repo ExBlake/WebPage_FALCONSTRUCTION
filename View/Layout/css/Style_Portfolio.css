@@ -21,26 +21,6 @@ body {
     background-blend-mode: overlay;
 }
 
-/* Estilización del scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: rgb(255, 255, 255);
-    border-radius: 5px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: rgb(0, 60, 109);
-    border-radius: 5px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(0, 31, 56);
-  }
-  
-
 
 .hero-portfolio {
     min-height: 100vh;
@@ -461,16 +441,6 @@ body {
     color: rgba(255, 255, 255, 0.9);
 }
 
-.progress-bar--Projects--Portfolio-Attachment {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 4px;
-    background: linear-gradient(135deg, #041b3a 0%, #ffffff 100%) fixed;
-    z-index: 1000;
-    transition: width 0.1s ease;
-}
 
 /* Modal styles */
 .modal--Projects--Portfolio-Attachment {
@@ -608,8 +578,7 @@ body {
 
 .projects-section {
     position: relative;
-    z-index: 2;
-    background-color: var(--color-dark);
+    background-color: transparent;
     transform: translateY(100vh);
     transition: transform 0.5s ease-out;
 }
@@ -641,38 +610,9 @@ body {
     text-align: center;
     position: relative;
     overflow: hidden;
-    background-image: url("PImageProject/project-0.jpg");
-    background-size: cover;
     background-position: center center;
-    background-attachment: fixed;
     transition: all 0.5s ease;
     /* Transición suave para todo el contenedor */
-}
-
-/* Capa de overlay */
-.content-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Aumenté la opacidad para oscurecer más */
-    filter: blur(20px);
-    /* Desenfoque moderado */
-    opacity: 1;
-    /* Mantener la opacidad completa */
-    transition: all 1s ease-in-out;
-    /* Animación suave */
-}
-
-/* Hover: menos desenfoque y opacidad reducida */
-.content-wrapper:hover::before {
-    filter: blur(30px);
-    /* Aumento del desenfoque */
-    opacity: 0.5;
-    /* Menos opacidad para que se vea un poco la imagen */
 }
 
 /* Transición suave de zoom (cuando el mouse entra y sale) */
@@ -687,19 +627,6 @@ body {
 .content-wrapper:hover {
     transform: scale(1.05);
     /* Aumento sutil de la escala */
-}
-
-/* Fondo de transición */
-.content-wrapper::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, #041b3a 0%, #000000 100%);
-    opacity: 0.5;
-    /* Semi-transparente para suavizar la transición */
 }
 
 .text-content {

@@ -14,8 +14,7 @@
     display: flex;
     position: relative;
     font-size: 16px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 21, 36, 0.9) 100%);
-
+    /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 21, 36, 0.9) 100%); */
 }
 
 .tab-layout-ForAll {
