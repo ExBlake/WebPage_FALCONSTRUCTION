@@ -598,7 +598,7 @@ body {
   }
 }
 
-@media (min-width: 300px) and (max-width: 430px) {
+@media (min-width: 300px) and (max-width: 767px) {
 .scroll-container {
   bottom: 4.5rem;
 }
