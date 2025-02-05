@@ -188,3 +188,23 @@ document.addEventListener("DOMContentLoaded", () => {
   
     updateCursorEffect()
   })
+
+
+  function animateCounter(element, start, end, duration) {
+    let range = end - start;
+    let current = start;
+    let increment = end > start ? 1 : -1;
+    let stepTime = Math.abs(Math.floor(duration / range));
+    let timer = setInterval(() => {
+        current += increment;
+        element.textContent = "+" + current ;
+        if (current === end) {
+            clearInterval(timer);
+        }
+    }, stepTime);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    let counterElement = document.querySelector(".counter");
+    animateCounter(counterElement, 0, 99, 2000);
+});

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="Estilos_Footer">
 </head>
+
 <body>
     <?php
     // Inclusión del Header
@@ -22,22 +23,33 @@
         <div class="gradient-2"></div>
         <div class="gradient-3"></div>
     </div>
-        <main>
-            <section class="hero-section-review container-section-review">
-                <h1>Innova Más Rápido con<br>Amane Soft</h1>
-                <p>Empoderando negocios con soluciones de software de vanguardia. Desde análisis impulsados por IA hasta integraciones en la nube sin problemas, estamos dando forma al futuro de la tecnología.</p>
-            
-            </section>
+    <main>
+        <section class="hero-section-review container-section-review">
+            <h1>Over <span class="counter">0</span> Reasons to Build with Confidencet</h1>
+            <p>At Falconstruction, we don't just build structures, we build strong relationships with our clients. Every
+                review is a testament to our commitment to excellence, transparency and quality. Find out why hundreds
+                of clients trust us to make their dreams come true - your project, in the best hands!</p>
 
-        </main>
+        </section>
+        <!-- Scroll indicator -->
+        <div class="scroll-container">
+            <div class="mouse-icon">
+                <div class="mouse-wheel"></div>
+            </div>
+            <div class="arrow-container">
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+            </div>
+        </div>
+
+    </main>
 
     <!-- Main Content -->
     <main class="main-content-review">
         <div class="container-review">
             <!-- Feed Section -->
             <div class="feed-section-review">
-                <!-- Stories -->
-
                 <!-- Posts -->
                 <div class="posts-review" id="post-Santiago Villada">
                     <div class="post-review">
@@ -54,7 +66,8 @@
                                         alt="post">
                                 </div>
                                 <div class="carousel-slide-review">
-                                    <video class="custom-video" src="PVideoBanner/video2.mp4" autoplay muted loop></video>
+                                    <video class="custom-video" src="PVideoBanner/video2.mp4" autoplay muted
+                                        loop></video>
                                 </div>
                                 <div class="carousel-slide-review">
                                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
@@ -95,7 +108,8 @@
                         <div class="post-carousel-review">
                             <div class="carousel-container-review">
                                 <div class="carousel-slide-review">
-                                    <video class="custom-video" src="PVideoBanner/video2.mp4" autoplay muted loop></video>
+                                    <video class="custom-video" src="PVideoBanner/video2.mp4" autoplay muted
+                                        loop></video>
                                 </div>
                                 <div class="carousel-slide-review">
                                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
