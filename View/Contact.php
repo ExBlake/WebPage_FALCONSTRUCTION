@@ -69,6 +69,7 @@
             <img src="PImageContact/logo para camilo.jpg" alt="Workspace with laptop and coffee">
         </div>
     </div>
+    <div id="cursor-effect"></div>
     <script src="Script_Header"></script>
     <script src="Script_Contactos"></script>
 </body>
