@@ -6,6 +6,33 @@
   --background-bg: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(0, 21, 36) 100%);
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Evita el scroll predeterminado */
+}
+
+.fullscreen-container {
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.fullscreen-section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.footer-section {
+  height: auto; /* Ajusta la altura según sea necesario */
+  scroll-snap-align: none !important; /* Evita que el footer tenga scroll snapping */
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +44,6 @@ body {
   background-color: var(--dark-bg);
   color: var(--text-color);
   line-height: 1.6;
-
 }
 /* Estilización del scrollbar */
 ::-webkit-scrollbar {
@@ -38,7 +64,46 @@ body {
   background: rgb(0, 31, 56);
 }
 
+.background-gradients {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
 
+.gradient-1 {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 21, 36, 0.84) 100%);
+}
+
+.gradient-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(59, 131, 246, 0.18) 0%, rgba(59, 130, 246, 0) 70%);
+}
+
+.gradient-3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(138, 92, 246, 0.12) 0%, rgba(139, 92, 246, 0) 70%);
+}
+
+#cursor-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
 
 
 
@@ -47,11 +112,18 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .content-grid {
   display: grid;
   gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .text-content {
@@ -95,6 +167,10 @@ body {
   justify-content: flex-start;
   align-items: center;
   padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .start-services {
@@ -118,7 +194,9 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  min-height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Left Column */
@@ -269,7 +347,6 @@ body {
   height: auto;
 }
 
-
 /* Media Queries */
 @media (min-width: 768px) {
   .nav-text {
@@ -327,6 +404,10 @@ body {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contacts-banner-promo-card {
@@ -335,9 +416,12 @@ body {
   max-width: 1000px;
   overflow: hidden;
   border-radius: 2rem;
-  background: linear-gradient(135deg, #2D1A45, #1A0F29);
+  background: linear-gradient(135deg, #1a3045, #0f1929);
   padding: 2rem;
-}
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+} 
 
 /* Gradient blob effect */
 .contacts-banner-gradient-blob {
@@ -346,11 +430,7 @@ body {
   right: 0;
   width: 70%;
   height: 100%;
-  background: linear-gradient(135deg, 
-      rgba(255, 87, 34, 0.4),
-      rgba(192, 38, 211, 0.4),
-      transparent
-  );
+  background: linear-gradient(135deg, rgba(192, 34, 255, 0.581), rgba(38, 124, 211, 0.526), transparent);
   transform: translateX(25%);
   border-radius: 50%;
   filter: blur(50px);
@@ -372,7 +452,7 @@ body {
 .contacts-banner-logo-square {
   width: 2rem;
   height: 2rem;
-  background-color: #FF5722;
+  background-color: #ff5722;
   border-radius: 0.25rem;
 }
 
@@ -403,7 +483,7 @@ body {
 
 .contacts-banner-cta-button {
   background-color: white;
-  color: #2D1A45;
+  color: #2d1a45;
   border: none;
   border-radius: 9999px;
   padding: 1rem 2rem;
@@ -420,36 +500,36 @@ body {
 /* Responsive design */
 @media (max-width: 768px) {
   .contacts-banner-promo-card {
-      padding: 1.5rem;
+    padding: 1.5rem;
   }
 
   .contacts-banner-title {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .contacts-banner-description {
-      font-size: 1.125rem;
+    font-size: 1.125rem;
   }
 
   .contacts-banner-logo-square {
-      width: 1.5rem;
-      height: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .contacts-banner-logo-text {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 }
 
 /* Añadimos animación al cargar la página */
 @keyframes contacts-banner-fadeIn {
   from {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -460,13 +540,13 @@ body {
 /* Efecto de brillo en el blob */
 @keyframes contacts-banner-glowEffect {
   0% {
-      filter: blur(50px) brightness(1);
+    filter: blur(50px) brightness(1);
   }
   50% {
-      filter: blur(45px) brightness(1.2);
+    filter: blur(45px) brightness(1.2);
   }
   100% {
-      filter: blur(50px) brightness(1);
+    filter: blur(50px) brightness(1);
   }
 }
 
@@ -474,3 +554,45 @@ body {
   animation: contacts-banner-glowEffect 5s infinite;
 }
 
+
+.fullscreen-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.fullscreen-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.banner-final {
+  min-height: auto;
+  height: auto;
+}
+
+.main-content,
+.combined-section,
+.contacts-banner-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-grid,
+.content-wrapper,
+.contacts-banner-promo-card {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.cloneable-ForAll{
+  background: transparent !important;
+}

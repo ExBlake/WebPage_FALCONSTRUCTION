@@ -19,6 +19,12 @@
       // Inclusión del Header
       require_once 'Layout/Header.php';
       ?>
+
+      <div class="background-gradients">
+          <div class="gradient-1"></div>
+          <div class="gradient-2"></div>
+          <div class="gradient-3"></div>
+      </div>
       <div class="fullscreen-container">
           <section class="fullscreen-section main-content">
               <div class="content-grid">
@@ -28,10 +34,6 @@
                       <div>
                           <p class="main-description">
                               Going to space is the kind of life event you'll want your loved ones to be a part of.
-                          </p>
-                          <p class="sub-description">
-                              Bring up to three guests so they can share in the love, wonder and awe of your
-                              spaceflight.
                           </p>
                       </div>
 
@@ -89,7 +91,7 @@
                   </div>
               </div>
           </section>
-          <section class="contacts-banner-container">
+          <section class="fullscreen-section contacts-banner-container">
               <div class="contacts-banner-promo-card">
                   <!-- Gradient blob background -->
                   <div class="contacts-banner-gradient-blob"></div>
@@ -98,20 +100,20 @@
                   <div class="contacts-banner-content">
                       <!-- Logo -->
                       <div class="contacts-banner-logo">
-                          <div class="contacts-banner-logo-square"></div>
-                          <span class="contacts-banner-logo-text">JETBRAINS IDE
-                              Services</span>
+
+                          <span class="contacts-banner-logo-text">Falconstruction</span>
                       </div>
 
                       <!-- Text content -->
                       <div class="contacts-banner-text-content">
-                          <h1 class="contacts-banner-title">Gestione las herramientas para
-                              desarrolladores a gran escala</h1>
-                          <p class="contacts-banner-description">Gestione los IDE a gran
-                              escala con el aprovisionamiento centralizado a máquinas en toda su
-                              organización.</p>
-                          <button class="contacts-banner-cta-button" onclick="handleClick()">Saber más</button>
+                          <h1 class="contacts-banner-title">Contact us to learn more about our services</h1>
+                          <p class="contacts-banner-description">
+                              Discover how our solutions can optimize your workflow and enhance your team's efficiency.
+                              Let's talk about what you need.
+                          </p>
+                          <button class="contacts-banner-cta-button" onclick="handleClick()">Learn More</button>
                       </div>
+
                   </div>
               </div>
           </section>
@@ -124,11 +126,16 @@
           
             ?>
           </section>
-
-          <?php require_once 'Layout/Footer.php';?>
-
+          
+            
 
       </div>
+
+      <footer class="footer-section">
+                <?php require_once 'Layout/Footer.php';?>
+            </foote>
+
+      <div id="cursor-effect"></div>
 
 
 
@@ -136,10 +143,27 @@
       <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script>
       <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js'></script>
       <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js'></script>
       <script src="Script_Banner"></script>
       <script src="Script_Services"></script>
 
       <script src="Script_Header"></script>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+  // Selecciona el footer
+  const footer = document.querySelector('.footer-section');
+
+  // Desactiva el scroll snapping para el footer
+  if (footer) {
+    footer.style.scrollSnapAlign = 'none';
+  }
+});
+      </script>
+
+
+
+ 
 
   </body>
 
