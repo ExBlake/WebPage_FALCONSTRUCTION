@@ -208,3 +208,31 @@ document.addEventListener("DOMContentLoaded", () => {
     let counterElement = document.querySelector(".counter");
     animateCounter(counterElement, 0, 99, 2000);
 });
+
+
+// Loader Script
+document.addEventListener('DOMContentLoaded', () => {
+    // Loading animation
+    const loading = document.createElement('div');
+    loading.classList.add('loading');
+  
+    const loadingContainer = document.createElement('div');
+    loadingContainer.classList.add('loading-container');
+  
+    const image = document.createElement('img');
+    image.src = 'View/img/Logo_Phone.png';
+    image.classList.add('loading-image');
+  
+    loadingContainer.appendChild(image);
+    loading.appendChild(loadingContainer);
+    document.body.appendChild(loading);
+  
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loading.style.opacity = '0';
+            setTimeout(() => {
+                loading.remove();
+            }, 500);
+        }, 1000);
+    });
+});

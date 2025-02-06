@@ -12,7 +12,7 @@ RewriteRule ^Encabezado$ View/Layout/Header.php [L]
 RewriteRule ^Footer$ View/Layout/Footer.php [L]
 
 # Reescribe la URL para 'PortfolioPage.php'
-RewriteRule ^Portafolio$ View/PortfolioPage.php [L]
+RewriteRule ^Portafolio$ View/Portfolio.php [L]
 
 # Reescribe la URL para 'Contact.php'
 RewriteRule ^Contacto$ View/Contact.php [L]
@@ -67,8 +67,8 @@ RewriteRule ^Estilos_Servicios$ View/Layout/css/Style_Services.css [L]
 # Reescribe la URL para 'Script_Index.css'
 RewriteRule ^Script_Inicio$ View/Layout/js/Script_Index.js [L]
 
-# Reescribe la URL para 'Script_PortfolioPage.js'
-RewriteRule ^Script_Portafolio$ View/Layout/js/Script_PortfolioPage.js [L]
+# Reescribe la URL para 'Script_Portfolio.js'
+RewriteRule ^Script_Portafolio$ View/Layout/js/Script_Portfolio.js [L]
 
 # Reescribe la URL para 'Script_AboutUs.js'
 RewriteRule ^Script_Nosotros$ View/Layout/js/Script_AboutUs.js [L]
