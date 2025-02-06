@@ -27,10 +27,6 @@ body, html {
   position: relative;
 }
 
-.footer-section {
-  height: auto; /* Ajusta la altura según sea necesario */
-  scroll-snap-align: none !important; /* Evita que el footer tenga scroll snapping */
-}
 
 
 * {
@@ -678,4 +674,32 @@ body {
 
 .cloneable-ForAll{
   background: transparent !important;
+}
+
+/* Estilos para el carrusel en móviles y tablets */
+@media (max-width: 1024px) {
+  .content-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .text-content {
+    order: 1; /* El texto va arriba */
+    text-align: center;
+  }
+
+  .image-container-banner {
+    order: 2; /* Las imágenes van abajo */
+    width: 100%;
+    height: 300px; /* Ajusta la altura según sea necesario */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel-container {
+    width: 100%;
+    height: 100%;
+  }
 }

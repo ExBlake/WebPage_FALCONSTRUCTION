@@ -199,3 +199,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 1000);
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const bannerend = document.querySelector('.banner-final');
+  const container = document.querySelector('.fullscreen-container');
+
+  if (bannerend && container) {
+      container.addEventListener('scroll', function() {
+          const footerRect = bannerend.getBoundingClientRect();
+          if (footerRect.top <= window.innerHeight && footerRect.bottom >= 0) {
+              container.style.scrollSnapType = 'none';
+          } else {
+              container.style.scrollSnapType = 'y mandatory';
+          }
+      });
+  }
+});
