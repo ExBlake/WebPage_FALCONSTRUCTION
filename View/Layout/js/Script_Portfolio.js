@@ -174,3 +174,65 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(element);
     });
 });
+
+// Modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all modals and buttons
+    const modals = document.querySelectorAll('.modal');
+    const btns = document.querySelectorAll('.ver-mas-btn');
+    const closeBtns = document.querySelectorAll('.close-modal');
+
+    // Open modal function
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.style.display = 'flex';
+        setTimeout(() => {
+            modal.classList.add('show');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Close modal function
+    function closeModal(modal) {
+        modal.classList.remove('show');
+        setTimeout(() => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
+
+    // Add click events to buttons
+    btns.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            openModal(`modal${index + 1}`);
+        });
+    });
+
+    // Add click events to close buttons
+    closeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const modal = btn.closest('.modal');
+            closeModal(modal);
+        });
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (e) => {
+        modals.forEach(modal => {
+            if (e.target === modal) {
+                closeModal(modal);
+            }
+        });
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            modals.forEach(modal => {
+                if (modal.classList.contains('show')) {
+                    closeModal(modal);
+                }
+            });
+        }
+    });
+});

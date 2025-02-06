@@ -97,6 +97,7 @@
                 <div class="text-left">
                     <h2>Going to space is the kind of life event you'll want your loved ones to be a part of.</h2>
                     <p>Bring up to three guests so they can share in the love, wonder and awe of your spaceflight.</p>
+                    <button class="ver-mas-btn">Ver Más</button>
                 </div>
                 <p class="caption-left">UNITY 25 SPACEFLIGHT CELEBRATION</p>
             </div>
@@ -105,6 +106,7 @@
                 <div class="text-right">
                     <p>While you participate in pre-flight readiness, your loved ones will enjoy curated activities,
                         top-tier amenities, and most importantly, a front row seat on flight day.</p>
+                    <button class="ver-mas-btn">Ver Más</button>
                 </div>
                 <img src="PImageProject/project-1.jpg" alt="White Sands" class="image-left">
                 <p class="caption-right">TRIP TO WHITE SANDS NATIONAL PARK</p>
@@ -114,8 +116,8 @@
                 <div class="content-block animate-on-scroll">
                     <img src="PImageProject/project-2.jpg" alt="Unity 25" class="image-right-2">
                     <div class="text-left">
-                        <p>Bring up to three guests so they can share in the love, wonder and awe of your spaceflight.
-                        </p>
+                        <p>Bring up to three guests so they can share in the love, wonder and awe of your spaceflight.</p>
+                        <button class="ver-mas-btn">Ver Más</button>
                     </div>
                     <p class="caption-left">UNITY 25 SPACEFLIGHT CELEBRATION</p>
                 </div>
@@ -143,6 +145,66 @@
         <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script>
         <script src="Script_Banner"></script>
         <script src="Script_Header"></script>
+
+        <!-- Primer modal -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Experiencia Espacial Compartida</h2>
+                <div class="modal-body">
+                    <img src="PImageProject/project-0.jpg" alt="Experiencia Espacial" class="modal-image">
+                    <div class="modal-text">
+                        <p>Comparte la emoción del espacio con tus seres queridos. Nuestro programa especial para invitados incluye:</p>
+                        <ul>
+                            <li>Acceso VIP a las instalaciones de lanzamiento</li>
+                            <li>Programa de orientación familiar</li>
+                            <li>Experiencias exclusivas de observación</li>
+                            <li>Alojamiento de lujo para tres invitados</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segundo modal -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Amenidades Premium</h2>
+                <div class="modal-body">
+                    <img src="PImageProject/project-1.jpg" alt="Amenidades Premium" class="modal-image">
+                    <div class="modal-text">
+                        <p>Mientras te preparas para tu viaje espacial, tus invitados disfrutarán de:</p>
+                        <ul>
+                            <li>Spa y servicios de bienestar</li>
+                            <li>Restaurantes de clase mundial</li>
+                            <li>Actividades personalizadas</li>
+                            <li>Tours exclusivos por las instalaciones</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tercer modal -->
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Programa de Acompañantes</h2>
+                <div class="modal-body">
+                    <img src="PImageProject/project-2.jpg" alt="Programa de Acompañantes" class="modal-image">
+                    <div class="modal-text">
+                        <p>Un viaje espacial es mejor cuando se comparte. Tu experiencia incluye:</p>
+                        <ul>
+                            <li>Ceremonias de despedida personalizadas</li>
+                            <li>Área de observación privilegiada</li>
+                            <li>Comunicación en tiempo real durante el vuelo</li>
+                            <li>Celebración post-aterrizaje exclusiva</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
