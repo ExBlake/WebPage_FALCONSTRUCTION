@@ -33,6 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectsSection = document.querySelector('.projects-section');
     const sections = document.querySelectorAll('.section--Projects--Portfolio-Attachment');
 
+    // Verificar si los elementos existen antes de continuar
+    if (!heroSection || !projectsSection) {
+        console.error("Error: No se encontraron 'hero-section' o 'projects-section' en el DOM.");
+    }
+
     const handleScroll = () => {
         const scrollPosition = window.pageYOffset;
         const windowHeight = window.innerHeight;
@@ -176,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Modal functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Get all modals and buttons
     const modals = document.querySelectorAll('.modal');
     const btns = document.querySelectorAll('.ver-mas-btn');
@@ -238,14 +243,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Galería de imágenes modal
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const imageModal = document.getElementById('imageModal');
     const modalImage = imageModal.querySelector('.modal-image');
     const closeBtn = imageModal.querySelector('.close-modal-gallery');
     const prevBtn = imageModal.querySelector('.prev-btn');
     const nextBtn = imageModal.querySelector('.next-btn');
     const counter = imageModal.querySelector('.image-counter');
-    
+
     let currentImageIndex = 0;
     let currentImages = [];
 
@@ -253,21 +258,21 @@ document.addEventListener('DOMContentLoaded', function() {
     function openImageFromBentoItem(bentoItem) {
         const img = bentoItem.querySelector('img');
         if (!img) return;
-        
+
         const currentBentogrid = bentoItem.closest('.modal-bentogrid');
         currentImages = Array.from(currentBentogrid.querySelectorAll('.bento-item img'))
-                           .map(img => img.src);
+            .map(img => img.src);
         currentImageIndex = currentImages.indexOf(img.src);
-        
+
         openImageModal();
     }
 
     // Manejar clicks tanto en el bento-item como en sus elementos
     document.querySelectorAll('.modal .bento-item').forEach(bentoItem => {
         bentoItem.style.cursor = 'pointer';
-        
+
         // Click en el bento-item (incluyendo el ::after)
-        bentoItem.addEventListener('click', function(e) {
+        bentoItem.addEventListener('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
             openImageFromBentoItem(this);
@@ -276,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Click en la imagen dentro del bento-item
         const img = bentoItem.querySelector('img');
         if (img) {
-            img.addEventListener('click', function(e) {
+            img.addEventListener('click', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
                 openImageFromBentoItem(bentoItem);
@@ -284,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Touch events para dispositivos móviles
-        bentoItem.addEventListener('touchend', function(e) {
+        bentoItem.addEventListener('touchend', function (e) {
             e.preventDefault();
             e.stopPropagation();
             openImageFromBentoItem(this);
@@ -327,7 +332,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event Listeners
     nextBtn.addEventListener('click', nextImage);
     prevBtn.addEventListener('click', prevImage);
-    
+
     closeBtn.addEventListener('click', () => {
         imageModal.classList.remove('show');
         setTimeout(() => {
@@ -339,8 +344,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Navegación con teclado
     document.addEventListener('keydown', (e) => {
         if (!imageModal.classList.contains('show')) return;
-        
-        switch(e.key) {
+
+        switch (e.key) {
             case 'ArrowLeft':
                 prevImage();
                 break;
@@ -368,13 +373,13 @@ document.addEventListener('DOMContentLoaded', function() {
 document.querySelectorAll('.accordion-header-final-modal').forEach(button => {
     button.addEventListener('click', () => {
         const accordionItem = button.parentElement;
-        
+
         document.querySelectorAll('.accordion-item-final-modal').forEach(item => {
             if (item !== accordionItem && item.classList.contains('active')) {
                 item.classList.remove('active');
             }
         });
-        
+
         accordionItem.classList.toggle('active');
     });
 });
