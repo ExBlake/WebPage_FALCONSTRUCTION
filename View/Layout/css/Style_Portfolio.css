@@ -1478,6 +1478,32 @@ p:hover {
     transform: rotate(45deg) translate(50%, 50%);
 }
 
+
+@media (max-width: 2000px) {
+
+    /* Estilos para el botón de cierre del modal principal */
+    .modal:not(.image-modal) .close-modal {
+        top: 50px !important;
+        right: 90px !important;
+    }
+
+    .modal-header h2 {
+        font-size: 70px !important;
+        /* Mantener el tamaño del texto en móviles */
+    }
+
+    .modal-header h2::before,
+    .modal-header h2::after {
+        width: 30px;
+    }
+
+    .modal-header:hover h2::before,
+    .modal-header:hover h2::after {
+        width: 60px;
+    }
+
+}
+
 @media (max-width: 1024px) {
 
     /* Estilos para el botón de cierre del modal principal */
