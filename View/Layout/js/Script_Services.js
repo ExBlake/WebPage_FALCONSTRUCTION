@@ -145,6 +145,33 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCursorEffect()
 })
 
+//Cursor effect
+document.addEventListener("DOMContentLoaded", () => {
+  const cursorEffect = document.getElementById("cursor-effect")
+  let mouseX = 0
+  let mouseY = 0
+
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX
+    mouseY = e.clientY
+  })
+
+  function updateCursorEffect() {
+    const gradientSize = 400
+    cursorEffect.style.background = `
+            radial-gradient(
+                circle ${gradientSize}px at ${mouseX}px ${mouseY}px,
+                rgba(59, 130, 246, 0.15),
+                transparent 80%
+            )
+        `
+    requestAnimationFrame(updateCursorEffect)
+  }
+
+  updateCursorEffect()
+})
+
+
 
 // Loader Script
 document.addEventListener('DOMContentLoaded', () => {
@@ -171,4 +198,20 @@ document.addEventListener('DOMContentLoaded', () => {
           }, 500);
       }, 1000);
   });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const bannerend = document.querySelector('.banner-final');
+  const container = document.querySelector('.fullscreen-container');
+
+  if (bannerend && container) {
+      container.addEventListener('scroll', function() {
+          const footerRect = bannerend.getBoundingClientRect();
+          if (footerRect.top <= window.innerHeight && footerRect.bottom >= 0) {
+              container.style.scrollSnapType = 'none';
+          } else {
+              container.style.scrollSnapType = 'y mandatory';
+          }
+      });
+  }
 });
