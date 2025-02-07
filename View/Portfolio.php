@@ -147,7 +147,7 @@
 
                 <!-- Sección del título -->
                 <div class="modal-header">
-                    <h2>Experiencia Espacial Compartida</h2>
+                    <h2 class="impact-title">Experiencia Espacial Compartida</h2>
                 </div>
 
                 <!-- Sección del bentogrid -->
@@ -183,15 +183,44 @@
 
                 <!-- Sección de descripción -->
                 <div class="modal-description">
-                    <h3 class="modal-subtitle">Descripción del Proyecto</h3>
-                    <p class="description-text">Embárcate en una experiencia única que te conecta con la grandeza del espacio. Nuestro programa especial para invitados está diseñado para ofrecerte momentos inolvidables, donde cada detalle ha sido cuidadosamente pensado para maximizar tu disfrute y asombro. Desde el acceso exclusivo a las instalaciones de lanzamiento hasta experiencias personalizadas, cada aspecto de tu visita será excepcional.</p>
-                    <p class="description-text">Los beneficios de nuestro programa incluyen:</p>
-                    <ul class="project-features">
-                        <li>Acceso VIP a las instalaciones de lanzamiento</li>
-                        <li>Programa de orientación familiar</li>
-                        <li>Experiencias exclusivas de observación</li>
-                        <li>Alojamiento de lujo para tres invitados</li>
-                    </ul>
+                    <div class="description-container">
+                        <h3 class="modal-subtitle modern-title">Transformamos <br> ideas en resultados: <br>El proceso
+                        </h3>
+
+                        <div class="accordion-final-modal">
+                            <div class="accordion-item-final-modal">
+                                <div class="accordion-header-final-modal">Diseño</div>
+                                <div class="accordion-content-final-modal">
+                                    <p class="accordion-text">Explora nuestro innovador enfoque de diseño que combina
+                                        estética y funcionalidad.
+                                        Creamos soluciones visuales que no solo son atractivas, sino que también mejoran
+                                        la
+                                        experiencia del usuario.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item-final-modal">
+                                <div class="accordion-header-final-modal">Colaborar para recolectar</div>
+                                <div class="accordion-content-final-modal">
+                                    <p class="accordion-text">Únete a nuestra iniciativa de colaboración para la
+                                        recolección de datos. Juntos,
+                                        podemos crear un impacto significativo y desarrollar soluciones más efectivas
+                                        basadas en información precisa y actualizada.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item-final-modal">
+                                <div class="accordion-header-final-modal">Objetivo para empaques</div>
+                                <div class="accordion-content-final-modal">
+                                    <p class="accordion-text">Nuestro objetivo es revolucionar la industria del
+                                        empaquetado con soluciones
+                                        sostenibles y eficientes. Trabajamos en la creación de empaques que no solo
+                                        protegen
+                                        los productos, sino que también cuidan nuestro planeta.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -326,7 +355,7 @@
         <script src="Script_Banner"></script>
         <script src="Script_Header"></script>
         <script>
-            
+
         </script>
 </body>
 

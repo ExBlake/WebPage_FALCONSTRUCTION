@@ -1053,12 +1053,9 @@ p:hover {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        90deg,z
-        transparent,
-        rgba(59, 130, 246, 0.1),
-        transparent
-    );
+    background: linear-gradient(90deg, z transparent,
+            rgba(59, 130, 246, 0.1),
+            transparent);
     transition: left 0.7s ease;
 }
 
@@ -1165,12 +1162,24 @@ p:hover {
 
 .modal-header h2 {
     color: #ffffff;
-    font-size: 48px;
-    font-weight: 300;
-    letter-spacing: 3px;
+    font-size: 64px;
+    /* Aumentar el tamaño del texto */
+    font-weight: 400;
+    /* Cambiar el peso de la fuente para más impacto */
+    letter-spacing: 5px;
+    /* Aumentar el espaciado entre letras */
     margin: 0;
     position: relative;
     animation: titleReveal 1s ease forwards;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    /* Agregar sombra al texto */
+    transition: color 0.3s ease;
+    /* Transición suave para el color */
+}
+
+.modal-header h2:hover {
+    color: var(--secondary);
+    /* Cambiar el color al pasar el mouse */
 }
 
 .modal-header h2::before,
@@ -1180,7 +1189,8 @@ p:hover {
     width: 50px;
     height: 2px;
     background: linear-gradient(90deg, transparent, var(--primary), transparent);
-    transition: width 0.3s ease;
+    transition: width 0.3s ease, background 0.3s ease;
+    /* Transición suave para el ancho y el fondo */
 }
 
 .modal-header h2::before {
@@ -1195,8 +1205,24 @@ p:hover {
 
 .modal-header:hover h2::before,
 .modal-header:hover h2::after {
-    width: 100px;
+    width: 120px;
+    /* Aumentar el ancho al pasar el mouse */
+    background: var(--primary);
+    /* Cambiar el fondo al pasar el mouse */
 }
+
+.modal-header:hover h2::before,
+.modal-header:hover h2::after {
+    transition: width 0.3s ease, background 0.3s ease;
+    /* Asegurarse de que la transición sea suave */
+}
+
+/* Agregar un efecto de escala al título al pasar el mouse */
+.modal-header h2:hover {
+    transform: scale(1.05);
+    /* Aumentar ligeramente el tamaño al pasar el mouse */
+}
+
 
 /* Decoración de fondo para el header */
 .modal-header::before {
@@ -1389,6 +1415,7 @@ p:hover {
         opacity: 0;
         transform: translateY(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1399,6 +1426,7 @@ p:hover {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -1409,6 +1437,7 @@ p:hover {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1420,6 +1449,7 @@ p:hover {
         opacity: 0;
         transform: translateX(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1434,12 +1464,10 @@ p:hover {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(
-        45deg,
-        transparent,
-        rgba(255, 255, 255, 0.1),
-        transparent
-    );
+    background: linear-gradient(45deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent);
     transform: rotate(45deg);
     transition: 0.5s;
     opacity: 0;
@@ -1450,10 +1478,17 @@ p:hover {
     transform: rotate(45deg) translate(50%, 50%);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+
+    /* Estilos para el botón de cierre del modal principal */
+    .modal:not(.image-modal) .close-modal {
+        top: 90px !important;
+        right: 55px !important;
+    }
+
     .modal-header h2 {
-        font-size: 32px;
+        font-size: 70px !important;
+        /* Mantener el tamaño del texto en móviles */
     }
 
     .modal-header h2::before,
@@ -1466,10 +1501,81 @@ p:hover {
         width: 60px;
     }
 
-    .modal-description ul {
-        grid-template-columns: 1fr;
+}
+
+@media (max-width: 700px) {
+
+    /* Estilos para el botón de cierre del modal principal */
+    .modal:not(.image-modal) .close-modal {
+        top: 30px !important;
+        right: 30px !important;
+    }
+
+    .modal-header h2 {
+        font-size: 30px !important;
+        /* Mantener el tamaño del texto en móviles */
+    }
+
+    .modal-header h2::before,
+    .modal-header h2::after {
+        width: 30px;
+    }
+
+    .modal-header:hover h2::before,
+    .modal-header:hover h2::after {
+        width: 60px;
     }
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    /* Estilos para el botón de cierre del modal principal */
+    .modal:not(.image-modal) .close-modal {
+        top: 75px !important;
+        right: 45px !important;
+    }
+
+    .modal-header h2 {
+        font-size: 58px !important;
+        /* Mantener el tamaño del texto en móviles */
+    }
+
+    .modal-header h2::before,
+    .modal-header h2::after {
+        width: 30px;
+    }
+
+    .modal-header:hover h2::before,
+    .modal-header:hover h2::after {
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Estilos para el botón de cierre del modal principal */
+    .modal:not(.image-modal) .close-modal {
+        top: 25px !important;
+        right: 25px !important;
+    }
+
+    .modal-header h2 {
+        font-size: 25px !important;
+        /* Mantener el tamaño del texto en móviles */
+    }
+
+    .modal-header h2::before,
+    .modal-header h2::after {
+        width: 30px;
+    }
+
+    .modal-header:hover h2::before,
+    .modal-header:hover h2::after {
+        width: 60px;
+    }
+}
+
 
 /* Estilos para el modal de imágenes */
 .image-modal .modal-content {
@@ -1503,32 +1609,28 @@ p:hover {
     align-items: center;
     justify-content: center;
     /* Creamos una máscara compuesta para todos los bordes */
-    -webkit-mask: 
-        linear-gradient(to right, 
-            transparent,
-            black 15%,
-            black 85%,
-            transparent
-        ),
-        linear-gradient(to bottom,
-            transparent,
-            black 15%,
-            black 85%,
-            transparent
-        );
-    mask: 
+    -webkit-mask:
         linear-gradient(to right,
             transparent,
             black 15%,
             black 85%,
-            transparent
-        ),
+            transparent),
         linear-gradient(to bottom,
             transparent,
             black 15%,
             black 85%,
-            transparent
-        );
+            transparent);
+    mask:
+        linear-gradient(to right,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent),
+        linear-gradient(to bottom,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent);
     -webkit-mask-composite: intersect;
     mask-composite: intersect;
 }
@@ -1590,11 +1692,11 @@ p:hover {
         height: 40px;
         font-size: 1.2rem;
     }
-    
+
     .prev-btn {
         left: 10px;
     }
-    
+
     .next-btn {
         right: 10px;
     }
@@ -1602,9 +1704,9 @@ p:hover {
 
 /* Estilos para el botón de cierre del modal principal */
 .modal:not(.image-modal) .close-modal {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    position: fixed;
+    top: 40px;
+    right: 90px;
     width: 40px;
     height: 40px;
     margin: 0;
@@ -1683,9 +1785,11 @@ p:hover {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.2);
     }
+
     100% {
         transform: scale(1);
     }
@@ -1715,23 +1819,6 @@ p:hover {
         padding: 20px;
         gap: 15px;
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .modal-description {
-        padding: 30px 20px;
-    }
-
-    .modal-description p {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
-    .modal-description ul {
-        gap: 12px;
-    }
-
-    .modal-description li {
-        font-size: 15px;
     }
 
     /* Ajustes para el modal de imágenes */
@@ -1779,23 +1866,6 @@ p:hover {
         min-height: 200px;
     }
 
-    .modal-description {
-        padding: 25px 15px;
-    }
-
-    .modal-description p {
-        font-size: 15px;
-        line-height: 1.5;
-    }
-
-    .modal-description ul {
-        gap: 10px;
-    }
-
-    .modal-description li {
-        font-size: 14px;
-    }
-
     /* Ajustes para el modal de imágenes */
     .image-modal .modal-content {
         width: 100%;
@@ -1840,19 +1910,6 @@ p:hover {
 
     .bento-item {
         min-height: 180px;
-    }
-
-    .modal-description {
-        padding: 20px 10px;
-    }
-
-    .modal-description p {
-        font-size: 14px;
-        line-height: 1.4;
-    }
-
-    .modal-description li {
-        font-size: 13px;
     }
 
     /* Ajustes para el modal de imágenes */
@@ -1922,34 +1979,30 @@ p:hover {
     .modal-image-container {
         padding: 3% 5%;
     }
-    
+
     .image-wrapper {
-        -webkit-mask: 
+        -webkit-mask:
             linear-gradient(to right,
                 transparent,
                 black 10%,
                 black 90%,
-                transparent
-            ),
+                transparent),
             linear-gradient(to bottom,
                 transparent,
                 black 10%,
                 black 90%,
-                transparent
-            );
-        mask: 
+                transparent);
+        mask:
             linear-gradient(to right,
                 transparent,
                 black 10%,
                 black 90%,
-                transparent
-            ),
+                transparent),
             linear-gradient(to bottom,
                 transparent,
                 black 10%,
                 black 90%,
-                transparent
-            );
+                transparent);
     }
 }
 
@@ -1957,82 +2010,165 @@ p:hover {
     .modal-image-container {
         padding: 2% 3%;
     }
-    
+
     .modal-image {
         min-width: 200px;
         min-height: 150px;
     }
 }
 
-.modal-description {
-    animation: fadeIn 0.5s ease-out forwards; /* Animación de entrada */
-    padding: 30px;
-    border: 1px solid rgba(59, 130, 246, 0.3);
-    border-radius: 10px;
-    background: rgba(4, 27, 58, 0.95); /* Fondo más oscuro y elegante */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px; /* Espaciado inferior */
+.description-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    /* Permitir que los elementos se envuelvan */
 }
 
-.modal-subtitle {
-    font-size: 26px; /* Tamaño de fuente más grande */
-    font-weight: bold;
-    color: var(--primary);
-    margin-bottom: 15px; /* Espaciado inferior */
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease; /* Efecto hover */
-}
-
-.modal-subtitle:hover {
-    color: rgba(255, 255, 255, 0.8); /* Color al hacer hover */
-}
-
-.description-text {
-    font-size: 18px; /* Tamaño de fuente */
-    margin-bottom: 15px; /* Espaciado inferior */
-    line-height: 1.6; /* Espaciado entre líneas */
-}
-
-.project-features {
-    list-style-type: none; /* Sin viñetas */
-    padding: 0;
-}
-
-.project-features li {
-    font-size: 18px; /* Tamaño de fuente más grande */
-    margin: 10px 0; /* Espaciado entre ítems */
-    position: relative;
-    padding-left: 20px; /* Espacio para el decorado */
-    transition: background 0.3s ease, transform 0.3s ease; /* Efecto hover */
-}
-
-.project-features li:hover {
-    background: rgba(59, 130, 246, 0.2); /* Fondo al hacer hover */
-    transform: translateX(5px); /* Desplazamiento al hacer hover */
-}
-
-.project-features li::before {
-    content: '✔'; /* Decoración con un ícono */
-    position: absolute;
-    left: 0;
-    color: var(--primary);
-    font-size: 20px; /* Tamaño del ícono */
-}
-
-/* Media Queries para ajustar el tamaño en dispositivos móviles */
+/* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
-    .modal-subtitle {
-        font-size: 22px; /* Tamaño de fuente más pequeño en móviles */
+    .description-container {
+        flex-direction: column;
+        /* Cambiar a columna en pantallas pequeñas */
+        align-items: center;
+        /* Alinear a la izquierda */
     }
 
-    .description-text {
-        font-size: 16px; /* Tamaño de fuente más pequeño en móviles */
+    .modern-title {
+        margin-right: 0 !important;
+        /* Eliminar margen derecho en pantallas pequeñas */
+        text-align: center !important;
+        /* Centrar el texto */
+        margin-bottom: 40px !important;
+        /* Añadir margen inferior */
     }
 
-    .project-features li {
-        font-size: 16px; /* Tamaño de fuente más pequeño en móviles */
+    .accordion-final-modal {
+        width: 100%;
+        /* Asegurar que el acordeón ocupe el 100% del ancho */
     }
 }
 
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .modern-title {
+        margin-right: 0 !important;
+        font-size: 1.6rem;
+        /* Reducir tamaño de fuente un poco más */
+    }
+
+    .accordion-header-final-modal {
+        font-size: 16px;
+        /* Reducir tamaño de fuente del encabezado */
+    }
+
+    .accordion-content-final-modal p {
+        font-size: 14px;
+        /* Reducir tamaño de fuente del contenido */
+    }
+}
+
+.modern-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #a8a8a8;
+    text-align: center;
+    margin-right: 40px;
+    transition: color 0.3s ease;
+}
+
+.modern-title::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #cfcfcf;
+    bottom: -10px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.modern-title:hover {
+    color: #ffffff;
+}
+
+.modern-title:hover::after {
+    transform: scaleX(1);
+}
+
+.accordion-final-modal {
+    flex: 1;
+    max-width: 600px;
+    animation: fadeIn 0.5s ease;
+}
+
+.accordion-item-final-modal {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.accordion-header-final-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    background: transparent;
+}
+
+.accordion-header-final-modal:hover {
+    color: white;
+    font-weight: 800;
+}
+
+.accordion-header-final-modal::after {
+    content: '\002B';
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item-final-modal.active .accordion-header-final-modal::after {
+    transform: rotate(45deg);
+}
+
+.accordion-content-final-modal {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0 20px;
+}
+
+.accordion-item-final-modal.active .accordion-content-final-modal {
+    max-height: 1000px;
+    transition: max-height 1s ease-in-out;
+    padding: 20px;
+}
+
+.accordion-content-final-modal p {
+    padding: 20px;
+    color: #ddd;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.accordion-item-final-modal.active .accordion-content-final-modal p {
+    animation: fadeIn 0.5s ease-out;
+}

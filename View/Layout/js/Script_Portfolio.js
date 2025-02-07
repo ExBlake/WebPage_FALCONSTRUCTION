@@ -360,3 +360,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+/***********************/
+/* Accordion Modal end */
+/***********************/
+
+document.querySelectorAll('.accordion-header-final-modal').forEach(button => {
+    button.addEventListener('click', () => {
+        const accordionItem = button.parentElement;
+        
+        document.querySelectorAll('.accordion-item-final-modal').forEach(item => {
+            if (item !== accordionItem && item.classList.contains('active')) {
+                item.classList.remove('active');
+            }
+        });
+        
+        accordionItem.classList.toggle('active');
+    });
+});
+
+/***********************/
+/* Accordion Modal end */
+/***********************/
