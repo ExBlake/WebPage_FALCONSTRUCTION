@@ -236,3 +236,127 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Galería de imágenes modal
+document.addEventListener('DOMContentLoaded', function() {
+    const imageModal = document.getElementById('imageModal');
+    const modalImage = imageModal.querySelector('.modal-image');
+    const closeBtn = imageModal.querySelector('.close-modal-gallery');
+    const prevBtn = imageModal.querySelector('.prev-btn');
+    const nextBtn = imageModal.querySelector('.next-btn');
+    const counter = imageModal.querySelector('.image-counter');
+    
+    let currentImageIndex = 0;
+    let currentImages = [];
+
+    // Función para abrir el modal con la imagen correspondiente
+    function openImageFromBentoItem(bentoItem) {
+        const img = bentoItem.querySelector('img');
+        if (!img) return;
+        
+        const currentBentogrid = bentoItem.closest('.modal-bentogrid');
+        currentImages = Array.from(currentBentogrid.querySelectorAll('.bento-item img'))
+                           .map(img => img.src);
+        currentImageIndex = currentImages.indexOf(img.src);
+        
+        openImageModal();
+    }
+
+    // Manejar clicks tanto en el bento-item como en sus elementos
+    document.querySelectorAll('.modal .bento-item').forEach(bentoItem => {
+        bentoItem.style.cursor = 'pointer';
+        
+        // Click en el bento-item (incluyendo el ::after)
+        bentoItem.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            openImageFromBentoItem(this);
+        });
+
+        // Click en la imagen dentro del bento-item
+        const img = bentoItem.querySelector('img');
+        if (img) {
+            img.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                openImageFromBentoItem(bentoItem);
+            });
+        }
+
+        // Touch events para dispositivos móviles
+        bentoItem.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            openImageFromBentoItem(this);
+        }, { passive: false });
+    });
+
+    function openImageModal() {
+        const modalImageContainer = imageModal.querySelector('.modal-image-container');
+        modalImageContainer.innerHTML = `
+            <div class="image-wrapper">
+                <img src="${currentImages[currentImageIndex]}" class="modal-image" alt="Image">
+            </div>
+        `;
+        updateModalImage();
+        imageModal.style.display = 'flex';
+        imageModal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function updateModalImage() {
+        const modalImage = imageModal.querySelector('.modal-image');
+        modalImage.style.opacity = '0';
+        setTimeout(() => {
+            modalImage.src = currentImages[currentImageIndex];
+            modalImage.style.opacity = '1';
+            counter.textContent = `${currentImageIndex + 1} / ${currentImages.length}`;
+        }, 300);
+    }
+
+    function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+        updateModalImage();
+    }
+
+    function prevImage() {
+        currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+        updateModalImage();
+    }
+
+    // Event Listeners
+    nextBtn.addEventListener('click', nextImage);
+    prevBtn.addEventListener('click', prevImage);
+    
+    closeBtn.addEventListener('click', () => {
+        imageModal.classList.remove('show');
+        setTimeout(() => {
+            imageModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }, 300);
+    });
+
+    // Navegación con teclado
+    document.addEventListener('keydown', (e) => {
+        if (!imageModal.classList.contains('show')) return;
+        
+        switch(e.key) {
+            case 'ArrowLeft':
+                prevImage();
+                break;
+            case 'ArrowRight':
+                nextImage();
+                break;
+            case 'Escape':
+                closeBtn.click();
+                break;
+        }
+    });
+
+    // Cerrar al hacer clic fuera de la imagen
+    imageModal.addEventListener('click', (e) => {
+        if (e.target === imageModal) {
+            closeBtn.click();
+        }
+    });
+});
