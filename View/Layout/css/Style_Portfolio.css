@@ -1042,8 +1042,8 @@ p:hover {
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .ver-mas-btn::before {
