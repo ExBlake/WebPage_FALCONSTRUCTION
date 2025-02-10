@@ -816,7 +816,7 @@ p {
 @media (max-width: 750px) {
     .hero-portfolio {
         -webkit-mask-image: radial-gradient(ellipse 100% 80% at 50% -50%, black 60%, transparent 100%);
-        mask-image: radial-gradient(ellipse 100% 80% at 50% 1%, black 88%, transparent 100%);
+        mask-image: radial-gradient(ellipse 100% 85% at 50% 2%, black 88%, transparent 100%);
     }
 }
 
