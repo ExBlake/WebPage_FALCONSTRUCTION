@@ -151,35 +151,7 @@
                 </div>
 
                 <!-- Sección del bentogrid -->
-                <div class="modal-bentogrid">
-                    <div class="bento-item text" id="item1">
-                        <img src="PImageProject/project-0.jpg" alt="Vista Principal">
-                    </div>
-                    <div class="bento-item" id="item2">
-                        <img src="PImageProject/project-1.jpg" alt="Vista 2">
-                    </div>
-                    <div class="bento-item" id="item3">
-                        <img src="PImageProject/project-2.jpg" alt="Vista 3">
-                    </div>
-                    <div class="bento-item" id="item4">
-                        <img src="PImageProject/project-3.jpg" alt="Vista 4">
-                    </div>
-                    <div class="bento-item" id="item5">
-                        <img src="PImageProject/project-4.jpg" alt="Vista 5">
-                    </div>
-                    <div class="bento-item" id="item6">
-                        <img src="PImageProject/project-5.jpg" alt="Vista 6">
-                    </div>
-                    <div class="bento-item" id="item7">
-                        <img src="PImageProject/project-0.jpg" alt="Vista 7">
-                    </div>
-                    <div class="bento-item" id="item8">
-                        <img src="PImageProject/project-1.jpg" alt="Vista 8">
-                    </div>
-                    <div class="bento-item text" id="item9">
-                        <img src="PImageProject/project-2.jpg" alt="Vista 9">
-                    </div>
-                </div>
+                <div id="content"></div>
 
                 <!-- Sección de descripción -->
                 <div class="modal-description">
@@ -236,35 +208,7 @@
                 </div>
 
                 <!-- Sección del bentogrid -->
-                <div class="modal-bentogrid">
-                    <div class="bento-item text" id="item1">
-                        <img src="PImageProject/project-0.jpg" alt="Vista Principal">
-                    </div>
-                    <div class="bento-item" id="item2">
-                        <img src="PImageProject/project-1.jpg" alt="Vista 2">
-                    </div>
-                    <div class="bento-item" id="item3">
-                        <img src="PImageProject/project-2.jpg" alt="Vista 3">
-                    </div>
-                    <div class="bento-item" id="item4">
-                        <img src="PImageProject/project-3.jpg" alt="Vista 4">
-                    </div>
-                    <div class="bento-item" id="item5">
-                        <img src="PImageProject/project-4.jpg" alt="Vista 5">
-                    </div>
-                    <div class="bento-item" id="item6">
-                        <img src="PImageProject/project-5.jpg" alt="Vista 6">
-                    </div>
-                    <div class="bento-item" id="item7">
-                        <img src="PImageProject/project-0.jpg" alt="Vista 7">
-                    </div>
-                    <div class="bento-item" id="item8">
-                        <img src="PImageProject/project-1.jpg" alt="Vista 8">
-                    </div>
-                    <div class="bento-item text" id="item9">
-                        <img src="PImageProject/project-2.jpg" alt="Vista 9">
-                    </div>
-                </div>
+                <div id="content"></div>
 
                 <!-- Sección de descripción -->
                 <div class="modal-description">
@@ -291,35 +235,7 @@
                 </div>
 
                 <!-- Sección del bentogrid -->
-                <div class="modal-bentogrid">
-                    <div class="bento-item text" id="item1">
-                        <img src="PImageProject/project-0.jpg" alt="Vista Principal">
-                    </div>
-                    <div class="bento-item" id="item2">
-                        <img src="PImageProject/project-1.jpg" alt="Vista 2">
-                    </div>
-                    <div class="bento-item" id="item3">
-                        <img src="PImageProject/project-2.jpg" alt="Vista 3">
-                    </div>
-                    <div class="bento-item" id="item4">
-                        <img src="PImageProject/project-3.jpg" alt="Vista 4">
-                    </div>
-                    <div class="bento-item" id="item5">
-                        <img src="PImageProject/project-4.jpg" alt="Vista 5">
-                    </div>
-                    <div class="bento-item" id="item6">
-                        <img src="PImageProject/project-5.jpg" alt="Vista 6">
-                    </div>
-                    <div class="bento-item" id="item7">
-                        <img src="PImageProject/project-0.jpg" alt="Vista 7">
-                    </div>
-                    <div class="bento-item" id="item8">
-                        <img src="PImageProject/project-1.jpg" alt="Vista 8">
-                    </div>
-                    <div class="bento-item text" id="item9">
-                        <img src="PImageProject/project-2.jpg" alt="Vista 9">
-                    </div>
-                </div>
+                <div id="content"></div>
 
                 <!-- Sección de descripción -->
                 <div class="modal-description">
