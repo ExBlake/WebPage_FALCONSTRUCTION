@@ -33,6 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectsSection = document.querySelector('.projects-section');
     const sections = document.querySelectorAll('.section--Projects--Portfolio-Attachment');
 
+    // Verificar si los elementos existen antes de continuar
+    if (!heroSection || !projectsSection) {
+        console.error("Error: No se encontraron 'hero-section' o 'projects-section' en el DOM.");
+    }
+
     const handleScroll = () => {
         const scrollPosition = window.pageYOffset;
         const windowHeight = window.innerHeight;
