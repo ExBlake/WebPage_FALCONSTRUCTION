@@ -255,11 +255,21 @@
         <div id="imageModal" class="modal image-modal">
             <div class="modal-content image-modal-content">
                 <span class="close-modal-gallery"></span>
-                <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn prev-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6"></path>
+                    </svg>
+                </button>
                 <div class="modal-image-container">
                     <img src="" alt="Imagen ampliada" class="modal-image">
                 </div>
-                <button class="nav-btn next-btn">&gt;</button>
+                <button class="nav-btn next-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6"></path>
+                    </svg>
+                </button>
                 <div class="image-counter">1 / 9</div>
             </div>
         </div>
