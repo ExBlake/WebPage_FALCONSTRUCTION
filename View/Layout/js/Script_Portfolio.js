@@ -2,63 +2,79 @@
 /* SCRIPT PARA CAMBIAR BENTOGRID POR CARRUSEL */
 /**********************************************/
 function displayContent() {
-    const contentDiv = document.getElementById('content');
+    // Seleccionar todos los elementos con la clase modal-content-grid
+    const contentDivs = document.querySelectorAll('.modal-content-grid');
+    
     if (window.innerWidth > 1200) {
-        contentDiv.innerHTML = `
-            <div class="modal-bentogrid">
-                <div class="bento-item text" id="item1">
-                    <img src="PImageProject/project-0.jpg" alt="Vista Principal">
-                </div>
-                <div class="bento-item" id="item2">
-                    <img src="PImageProject/project-1.jpg" alt="Vista 2">
-                </div>
-                <div class="bento-item" id="item3">
-                    <img src="PImageProject/project-2.jpg" alt="Vista 3">
-                </div>
-                <div class="bento-item" id="item4">
-                    <img src="PImageProject/project-3.jpg" alt="Vista 4">
-                </div>
-                <div class="bento-item" id="item5">
-                    <img src="PImageProject/project-4.jpg" alt="Vista 5">
-                </div>
-                <div class="bento-item" id="item6">
-                    <img src="PImageProject/project-5.jpg" alt="Vista 6">
-                </div>
-                <div class="bento-item" id="item7">
-                    <img src="PImageProject/project-0.jpg" alt="Vista 7">
-                </div>
-                <div class="bento-item" id="item8">
-                    <img src="PImageProject/project-1.jpg" alt="Vista 8">
-                </div>
-                <div class="bento-item text" id="item9">
-                    <img src="PImageProject/project-2.jpg" alt="Vista 9">
-                </div>
-            </div>`;
-    } else {
-        contentDiv.innerHTML = `
-            <div class="modal-bentogrid">
-                <div class="carousel-wrapper">
-                    <div class="carousel-container">
-                        <div class="carousel">
-                            <div class="carousel-track">
-                                <img src="PImageProject/project-0.jpg" alt="Imagen 1" class="carousel-item">
-                                <img src="PImageProject/project-1.jpg" alt="Imagen 2" class="carousel-item">
-                                <img src="PImageProject/project-2.jpg" alt="Imagen 3" class="carousel-item">
-                                <img src="PImageProject/project-3.jpg" alt="Imagen 4" class="carousel-item">
-                                <img src="PImageProject/project-4.jpg" alt="Imagen 5" class="carousel-item">
-                                <img src="PImageProject/project-5.jpg" alt="Imagen 6" class="carousel-item">
-                                <img src="PImageProject/project-0.jpg" alt="Imagen 7" class="carousel-item">
-                                <img src="PImageProject/project-1.jpg" alt="Imagen 8" class="carousel-item">
-                                <img src="PImageProject/project-2.jpg" alt="Imagen 9" class="carousel-item">
-                            </div>
-                        </div>
-                        <button class="carousel-button prev" aria-label="Anterior">&lt;</button>
-                        <button class="carousel-button next" aria-label="Siguiente">&gt;</button>
-                        <div class="carousel-progress"></div>
+        contentDivs.forEach(contentDiv => {
+            contentDiv.innerHTML = `
+                <div class="modal-bentogrid">
+                    <div class="bento-item text" id="item1">
+                        <img src="PImageProject/project-0.jpg" alt="Vista Principal">
                     </div>
-                    <div class="carousel-indicators"></div>
-                </div>
-            </div>`;
+                    <div class="bento-item" id="item2">
+                        <img src="PImageProject/project-1.jpg" alt="Vista 2">
+                    </div>
+                    <div class="bento-item" id="item3">
+                        <img src="PImageProject/project-2.jpg" alt="Vista 3">
+                    </div>
+                    <div class="bento-item" id="item4">
+                        <img src="PImageProject/project-3.jpg" alt="Vista 4">
+                    </div>
+                    <div class="bento-item" id="item5">
+                        <img src="PImageProject/project-4.jpg" alt="Vista 5">
+                    </div>
+                    <div class="bento-item" id="item6">
+                        <img src="PImageProject/project-5.jpg" alt="Vista 6">
+                    </div>
+                    <div class="bento-item" id="item7">
+                        <img src="PImageProject/project-0.jpg" alt="Vista 7">
+                    </div>
+                    <div class="bento-item" id="item8">
+                        <img src="PImageProject/project-1.jpg" alt="Vista 8">
+                    </div>
+                    <div class="bento-item text" id="item9">
+                        <img src="PImageProject/project-2.jpg" alt="Vista 9">
+                    </div>
+                </div>`;
+        });
+    } else {
+        contentDivs.forEach(contentDiv => {
+            contentDiv.innerHTML = `
+                <div class="modal-bentogrid">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <div class="carousel-track">
+                                    <img src="PImageProject/project-0.jpg" alt="Imagen 1" class="carousel-item">
+                                    <img src="PImageProject/project-1.jpg" alt="Imagen 2" class="carousel-item">
+                                    <img src="PImageProject/project-2.jpg" alt="Imagen 3" class="carousel-item">
+                                    <img src="PImageProject/project-3.jpg" alt="Imagen 4" class="carousel-item">
+                                    <img src="PImageProject/project-4.jpg" alt="Imagen 5" class="carousel-item">
+                                    <img src="PImageProject/project-5.jpg" alt="Imagen 6" class="carousel-item">
+                                    <img src="PImageProject/project-0.jpg" alt="Imagen 7" class="carousel-item">
+                                    <img src="PImageProject/project-1.jpg" alt="Imagen 8" class="carousel-item">
+                                    <img src="PImageProject/project-2.jpg" alt="Imagen 9" class="carousel-item">
+                                </div>
+                            </div>
+                            <button class="carousel-button prev" aria-label="Anterior">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 18l-6-6 6-6"></path>
+                        </svg>
+                        </button>
+                            <button class="carousel-button next" aria-label="Siguiente">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18l6-6-6-6"></path>
+                        </svg>
+                            </button>
+                            <div class="carousel-progress"></div>
+                        </div>
+                        <div class="carousel-indicators"></div>
+                    </div>
+                </div>`;
+        });
 
         // Esperar a que el DOM se actualice y volver a inicializar eventos
         setTimeout(() => {
@@ -70,46 +86,127 @@ function displayContent() {
 
 // Función para abrir el modal con la imagen correspondiente
 function openImageFromCarousel(carouselItem) {
-    const img = carouselItem.src;
-    const modalImage = document.querySelector('.modal-image');
+    // Verificar que el elemento existe
+    if (!carouselItem) return;
+
+    const imageModal = document.getElementById('imageModal');
+    const modalImageContainer = imageModal.querySelector('.modal-image-container');
     const counter = document.querySelector('.image-counter');
     const closeBtn = document.querySelector('.close-modal-gallery');
     const nextBtn = document.querySelector('.next-btn');
     const prevBtn = document.querySelector('.prev-btn');
 
-    modalImage.src = img;
-    counter.textContent = `1 / ${document.querySelectorAll('.carousel-item').length}`;
+    let currentIndex = Array.from(document.querySelectorAll('.carousel-item')).indexOf(carouselItem);
+    const items = document.querySelectorAll('.carousel-item');
+    const totalImages = items.length;
 
-    const imageModal = document.getElementById('imageModal');
+    // Variables para el control del swipe
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let isDragging = false;
+    let startTranslateX = 0;
+    let currentTranslateX = 0;
+
+    function updateImage(index, transition = true) {
+        const currentImg = items[index];
+        if (currentImg) {
+            modalImageContainer.innerHTML = `
+                <div class="image-wrapper">
+                    <img src="${currentImg.src}" class="modal-image" alt="Image" 
+                         onerror="this.src='View/Img/Projects/default.jpg'"
+                         style="transform: translateX(${currentTranslateX}px);
+                                transition: ${transition ? 'transform 0.3s ease' : 'none'}">
+                </div>
+            `;
+            counter.textContent = `${index + 1} / ${totalImages}`;
+        }
+    }
+
+    function handleTouchStart(e) {
+        isDragging = true;
+        touchStartX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
+        startTranslateX = currentTranslateX;
+
+        // Deshabilitar transición durante el arrastre
+        const modalImage = modalImageContainer.querySelector('.modal-image');
+        if (modalImage) {
+            modalImage.style.transition = 'none';
+        }
+    }
+
+    function handleTouchMove(e) {
+        if (!isDragging) return;
+
+        e.preventDefault();
+        const currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
+        const diff = currentX - touchStartX;
+        currentTranslateX = startTranslateX + diff;
+
+        // Aplicar resistencia en los extremos
+        if (currentIndex === 0 && diff > 0 || currentIndex === totalImages - 1 && diff < 0) {
+            currentTranslateX = startTranslateX + (diff * 0.3);
+        }
+
+        const modalImage = modalImageContainer.querySelector('.modal-image');
+        if (modalImage) {
+            modalImage.style.transform = `translateX(${currentTranslateX}px)`;
+        }
+    }
+
+    function handleTouchEnd(e) {
+        if (!isDragging) return;
+        isDragging = false;
+
+        const diff = currentTranslateX - startTranslateX;
+        const threshold = modalImageContainer.offsetWidth * 0.3;
+
+        if (Math.abs(diff) > threshold) {
+            if (diff > 0 && currentIndex > 0) {
+                currentIndex--;
+            } else if (diff < 0 && currentIndex < totalImages - 1) {
+                currentIndex++;
+            }
+        }
+
+        currentTranslateX = 0;
+        updateImage(currentIndex, true);
+    }
+
+    // Inicializar modal y eventos
+    updateImage(currentIndex);
     imageModal.style.display = 'flex';
     imageModal.classList.add('show');
     document.body.style.overflow = 'hidden';
 
-    closeBtn.addEventListener('click', () => {
+    // Eventos para mouse y touch
+    modalImageContainer.addEventListener('mousedown', handleTouchStart);
+    modalImageContainer.addEventListener('mousemove', handleTouchMove);
+    modalImageContainer.addEventListener('mouseup', handleTouchEnd);
+    modalImageContainer.addEventListener('mouseleave', handleTouchEnd);
+    modalImageContainer.addEventListener('touchstart', handleTouchStart);
+    modalImageContainer.addEventListener('touchmove', handleTouchMove);
+    modalImageContainer.addEventListener('touchend', handleTouchEnd);
+
+    // Event listeners existentes
+    nextBtn.onclick = () => {
+        currentIndex = (currentIndex + 1) % totalImages;
+        currentTranslateX = 0;
+        updateImage(currentIndex);
+    };
+
+    prevBtn.onclick = () => {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        currentTranslateX = 0;
+        updateImage(currentIndex);
+    };
+
+    closeBtn.onclick = () => {
         imageModal.classList.remove('show');
         setTimeout(() => {
             imageModal.style.display = 'none';
             document.body.style.overflow = 'auto';
         }, 300);
-    });
-
-    let currentIndex = Array.from(document.querySelectorAll('.carousel-item')).indexOf(carouselItem);
-    const totalImages = document.querySelectorAll('.carousel-item').length;
-
-    function updateImage(index) {
-        modalImage.src = document.querySelectorAll('.carousel-item')[index].src;
-        counter.textContent = `${index + 1} / ${totalImages}`;
-    }
-
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % totalImages;
-        updateImage(currentIndex);
-    });
-
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-        updateImage(currentIndex);
-    });
+    };
 }
 
 // Función para inicializar el carrusel después de cambiar el contenido

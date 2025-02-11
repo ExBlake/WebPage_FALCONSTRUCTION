@@ -151,7 +151,7 @@
                 </div>
 
                 <!-- Sección del bentogrid -->
-                <div id="content"></div>
+                <div class="modal-content-grid"></div>
 
                 <!-- Sección de descripción -->
                 <div class="modal-description">
@@ -204,49 +204,109 @@
 
                 <!-- Sección del título -->
                 <div class="modal-header">
-                    <h2>Amenidades Premium</h2>
+                    <h2 class="impact-title">Experiencia Espacial Compartida</h2>
                 </div>
 
                 <!-- Sección del bentogrid -->
-                <div id="content"></div>
+                <div class="modal-content-grid"></div>
 
                 <!-- Sección de descripción -->
                 <div class="modal-description">
-                    <h3 class="modal-subtitle">Descripción del Proyecto</h3>
-                    <p>Disfruta de nuestras exclusivas amenidades mientras te preparas para tu experiencia:</p>
-                    <ul class="project-features">
-                        <li>Spa y servicios de bienestar de clase mundial</li>
-                        <li>Restaurantes con chefs premiados</li>
-                        <li>Actividades personalizadas y experiencias únicas</li>
-                        <li>Tours exclusivos por las instalaciones</li>
-                    </ul>
+                    <div class="description-container">
+                        <h3 class="modal-subtitle modern-title">Transformamos <br> ideas en resultados: <br>El proceso
+                        </h3>
+
+                        <div class="accordion-final-modal">
+                            <div class="accordion-item-final-modal">
+                                <div class="accordion-header-final-modal">Diseño</div>
+                                <div class="accordion-content-final-modal">
+                                    <p class="accordion-text">Explora nuestro innovador enfoque de diseño que combina
+                                        estética y funcionalidad.
+                                        Creamos soluciones visuales que no solo son atractivas, sino que también mejoran
+                                        la
+                                        experiencia del usuario.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item-final-modal">
+                                <div class="accordion-header-final-modal">Colaborar para recolectar</div>
+                                <div class="accordion-content-final-modal">
+                                    <p class="accordion-text">Únete a nuestra iniciativa de colaboración para la
+                                        recolección de datos. Juntos,
+                                        podemos crear un impacto significativo y desarrollar soluciones más efectivas
+                                        basadas en información precisa y actualizada.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item-final-modal">
+                                <div class="accordion-header-final-modal">Objetivo para empaques</div>
+                                <div class="accordion-content-final-modal">
+                                    <p class="accordion-text">Nuestro objetivo es revolucionar la industria del
+                                        empaquetado con soluciones
+                                        sostenibles y eficientes. Trabajamos en la creación de empaques que no solo
+                                        protegen
+                                        los productos, sino que también cuidan nuestro planeta.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Tercer modal -->
-        <div id="modal3" class="modal">
+         <div id="modal3" class="modal">
             <div class="modal-content">
                 <span class="close-modal"></span>
 
                 <!-- Sección del título -->
                 <div class="modal-header">
-                    <h2>Programa de Acompañantes</h2>
+                    <h2 class="impact-title">Experiencia Espacial Compartida</h2>
                 </div>
 
                 <!-- Sección del bentogrid -->
-                <div id="content"></div>
+                <div class="modal-content-grid"></div>
 
                 <!-- Sección de descripción -->
                 <div class="modal-description">
-                    <h3 class="modal-subtitle">Descripción del Proyecto</h3>
-                    <p>Un viaje espacial es mejor cuando se comparte. Tu experiencia incluye:</p>
-                    <ul class="project-features">
-                        <li>Ceremonias de despedida personalizadas</li>
-                        <li>Área de observación privilegiada para invitados</li>
-                        <li>Comunicación en tiempo real durante el vuelo</li>
-                        <li>Celebración post-aterrizaje exclusiva</li>
-                    </ul>
+                    <div class="description-container">
+                        <h3 class="modal-subtitle modern-title">Transformamos <br> ideas en resultados: <br>El proceso
+                        </h3>
+
+                        <div class="accordion-final-modal">
+                            <div class="accordion-item-final-modal">
+                                <div class="accordion-header-final-modal">Diseño</div>
+                                <div class="accordion-content-final-modal">
+                                    <p class="accordion-text">Explora nuestro innovador enfoque de diseño que combina
+                                        estética y funcionalidad.
+                                        Creamos soluciones visuales que no solo son atractivas, sino que también mejoran
+                                        la
+                                        experiencia del usuario.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item-final-modal">
+                                <div class="accordion-header-final-modal">Colaborar para recolectar</div>
+                                <div class="accordion-content-final-modal">
+                                    <p class="accordion-text">Únete a nuestra iniciativa de colaboración para la
+                                        recolección de datos. Juntos,
+                                        podemos crear un impacto significativo y desarrollar soluciones más efectivas
+                                        basadas en información precisa y actualizada.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item-final-modal">
+                                <div class="accordion-header-final-modal">Objetivo para empaques</div>
+                                <div class="accordion-content-final-modal">
+                                    <p class="accordion-text">Nuestro objetivo es revolucionar la industria del
+                                        empaquetado con soluciones
+                                        sostenibles y eficientes. Trabajamos en la creación de empaques que no solo
+                                        protegen
+                                        los productos, sino que también cuidan nuestro planeta.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -280,9 +340,6 @@
         <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script>
         <script src="Script_Banner"></script>
         <script src="Script_Header"></script>
-        <script>
-
-        </script>
 </body>
 
 </html>

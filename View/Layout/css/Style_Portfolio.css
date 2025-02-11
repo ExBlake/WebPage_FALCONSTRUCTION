@@ -1833,6 +1833,45 @@ p:hover {
 
 /* Tablets y pantallas medianas (768px - 1024px) */
 @media screen and (max-width: 1024px) {
+
+    .modal-image-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 5% 10%;
+        overflow: hidden;
+        touch-action: none; /* Previene el scroll en móviles durante el swipe */
+        user-select: none; /* Previene la selección de texto durante el arrastre */
+    }
+    
+    .image-wrapper {
+        position: relative;
+        width: 80vw;
+        height: 80vh;
+        max-width: 1200px;
+        max-height: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: all;
+        cursor: grab;
+    }
+    
+    .image-wrapper:active {
+        cursor: grabbing;
+    }
+    
+    .modal-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+        will-change: transform;
+    }
+
     .modal .modal-content {
         width: 95%;
         height: 90vh;
@@ -1918,11 +1957,11 @@ p:hover {
     }
 
     .prev-btn {
-        left: 10px;
+        left: 25px;
     }
 
     .next-btn {
-        right: 10px;
+        right: 25px;
     }
 }
 
@@ -2264,7 +2303,7 @@ p:hover {
         min-width: 100%;
         box-sizing: border-box;
         border-radius: 15px;
-        height: 500px;
+        height: 400px;
         /* Altura fija para las imágenes */
         object-fit: cover;
         filter: brightness(0.9);
