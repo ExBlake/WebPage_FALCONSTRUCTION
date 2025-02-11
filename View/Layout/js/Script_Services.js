@@ -215,3 +215,97 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const timelineItems = document.querySelectorAll(".timeline-item")
+
+  const timelineImage = document.getElementById("timeline-image")
+  const timeline = document.querySelector(".timeline")
+
+  let activeIndex = 0
+
+  const setActiveItem = (index) => {
+      timelineItems.forEach((item, i) => {
+          if (i === index) {
+              item.classList.add("active")
+              const imageSrc = item.dataset.image
+              if (window.innerWidth <= 768) {
+                  item.style.setProperty("--bg-image", `url(${imageSrc})`)
+              } else {
+                  timelineImage.src = imageSrc
+                  timelineImage.style.opacity = "0"
+                  timelineImage.style.transform = "scale(1.1)"
+                  setTimeout(() => {
+                      timelineImage.style.opacity = "1"
+                      timelineImage.style.transform = "scale(1)"
+                  }, 50)
+              }
+          } else {
+              item.classList.remove("active")
+          }
+      })
+  }
+
+  
+
+  const handleScroll = () => {
+      const scrollY = timeline.scrollTop
+      const maxScroll = timeline.scrollHeight - timeline.clientHeight
+      const viewportHeight = window.innerHeight
+
+      let found = false
+
+      timelineItems.forEach((item, index) => {
+          const rect = item.getBoundingClientRect()
+          const itemTop = rect.top + scrollY - timeline.offsetTop
+          const itemCenter = itemTop + rect.height / 2
+
+          // Condición ajustada para mejorar la detección del último elemento
+          if (itemCenter > scrollY && itemCenter < scrollY + viewportHeight * 0.6) {
+              if (activeIndex !== index) {
+                  activeIndex = index
+                  setActiveItem(activeIndex)
+              }
+              found = true
+          }
+      })
+
+      // Si el usuario ha llegado al final, forzar activación del último ítem
+      if (!found && scrollY >= maxScroll) {
+          activeIndex = timelineItems.length - 1
+          setActiveItem(activeIndex)
+      }
+  }
+
+  timeline.addEventListener("scroll", handleScroll)
+
+  // Inicializar la primera sección como activa
+  setActiveItem(0)
+
+})

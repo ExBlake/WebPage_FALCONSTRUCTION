@@ -26,6 +26,10 @@ RewriteRule ^Resenas$ View/Reviews.php [L]
 # Reescribe la URL para 'Reviews.php'
 RewriteRule ^Servicios$ View/Services.php [L]
 
+# Reescribe la URL para 'Reviews.php'
+RewriteRule ^Servicios2$ View/Servicescopy.php [L]
+
+
 
 # ----------- PHP REWRITES -------------
 
@@ -104,6 +108,9 @@ RewriteRule ^PImageContact/(.*)$ View/Img/Contacts/$1 [L]
 
 # Reescribe 'PImageResenas' a 'Contacts'
 RewriteRule ^PImageResenas/(.*)$ View/Img/Review/$1 [L]
+
+# Reescribe 'PImageServicios' a 'Services'
+RewriteRule ^PImageServicios/(.*)$ View/Img/Services/$1 [L]
 
 # ----------- IMG REWRITES -------------
 

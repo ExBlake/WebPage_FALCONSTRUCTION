@@ -703,3 +703,351 @@ body {
     height: 100%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+  --background-color: #0a0118;
+}
+
+
+
+.container-services-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  background: linear-gradient(to right, rgba(10, 1, 24, 0), var(--background-color));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.image-container::before {
+  content: "";
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  background: linear-gradient(to right, #0a0118 20%, rgba(10, 1, 24, 0.7) 50%, rgba(10, 1, 24, 0) 100%);
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+.timeline {
+  overflow-y: scroll; /* Mantiene la funcionalidad del scroll */
+  padding: 2rem;
+  position: relative;
+  scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+  min-height: 100vh;
+}
+
+.timeline::-webkit-scrollbar {
+  display: none; /* Oculta la barra de desplazamiento en Chrome, Edge y Safari */
+}
+
+
+
+.timeline-items {
+  padding-left: 8rem;
+}
+
+.timeline-item {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  opacity: 0.4;
+  transition: opacity 0.5s ease;
+}
+
+.timeline-item.active {
+  opacity: 1;
+}
+
+.icon-circle {
+  position: absolute;
+  left: -5.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba(128, 90, 213, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); } /* Se agranda */
+  100% { transform: scale(1); }
+}
+
+@keyframes pulse-ring {
+  0% {
+      transform: scale(1);
+      opacity: 0.7;
+  }
+  100% {
+      transform: scale(2.5); /* Expansión */
+      opacity: 0; /* Desaparece */
+  }
+}
+.timeline-item.active .icon-circle {
+  background: linear-gradient(to right, #9333ea, #4c1d95);
+  transform: translateY(-50%) scale(1.2);
+  animation: heartbeat 1.5s infinite ease-in-out; 
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #a78bfa;
+  transition: all 0.3s ease;
+}
+
+.timeline-item.active .icon {
+  color: white;
+}
+
+.content-services-section {
+  padding-left: 1rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #a78bfa;
+}
+
+.titulo-services-section {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+}
+
+.parrafo-services-section {
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+
+#timeline-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.cta-button {
+  background: transparent;
+  border: 2px solid #9333ea;
+  color: #9333ea;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #9333ea, transparent);
+  transition: all 0.4s ease;
+}
+
+.cta-button:hover {
+  color: white;
+  border-color: white;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.timeline-item:not(.active) .cta-button {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+.timeline-item.active .cta-button {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Estilos base para dispositivos móviles */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .timeline-items {
+    padding-left: 4rem;
+  }
+
+  .icon-circle {
+    left: -3rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .progress-line {
+    left: 3rem;
+  }
+
+  .titulo-services-section {
+    font-size: 2rem;
+  }
+
+  .parrafo-services-section {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .image-container {
+    display: none;
+  }
+
+  /* Nuevos estilos para el fondo de imagen en móviles */
+  .timeline-item {
+    position: relative;
+    z-index: 1;
+  }
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 580px;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: right bottom; /* Posiciona la imagen en la esquina inferior derecha */
+    opacity: 0.15;
+    z-index: -1;
+    transition: opacity 0.5s ease;
+    mask-image: radial-gradient(ellipse at bottom right, black 10%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at bottom right, black 10%, transparent 70%);
+    border-bottom-right-radius: 100%;
+  }
+
+  .timeline-item.active::before {
+    opacity: 1; /* Reduce la opacidad para hacer la imagen más sutil */
+  }
+
+  .content {
+    background-color: rgba(10, 1, 24, 0.349); /* Aumenta la opacidad del fondo para mejorar la legibilidad */
+    padding: 1rem;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté por encima de la imagen de fondo */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+/* Estilos para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container-services-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .timeline {
+    padding: 1.5rem;
+  }
+
+  .timeline-items {
+    padding-left: 6rem;
+  }
+
+  .titulo-services-section {
+    font-size: 2.5rem;
+  }
+
+  .parrafo-services-section {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .image-container {
+    width: 50%;
+  }
+}
+
+/* Ajustes para pantallas más grandes */
+@media (min-width: 1025px) {
+  .container-services-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .timeline {
+    padding: 2rem;
+  }
+
+  .timeline-items {
+    padding-left: 8rem;
+  }
+}
+
+/* Ajustes generales para mejorar la responsividad */
+.timeline-item {
+  min-height: auto;
+  padding: 2rem 0;
+}
+
+
+
+#timeline-image {
+  object-position: center;
+}
+
