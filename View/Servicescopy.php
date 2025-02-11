@@ -62,7 +62,7 @@
             <div class="timeline-items">
                 <div class="timeline-item" data-image="PImageServicios/kkkk.jpg">
                     <div class="content-services-section">
-                        <h2 class="titulo-services-section">NUESTROS SERVICIOS</h2>
+                        <h2 class="titulo-services-section main">NUESTROS SERVICIOS</h2>
                     </div>
                 </div>
                 <div class="timeline-item" data-image="PImageServicios/kkkk.jpg">
@@ -139,6 +139,7 @@
         </div>
     </div>
         </section>
+
         <section class="fullscreen-section contacts-banner-container">
             <div class="contacts-banner-promo-card">
                 <!-- Gradient blob background -->
