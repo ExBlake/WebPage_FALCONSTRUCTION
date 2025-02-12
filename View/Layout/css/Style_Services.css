@@ -917,38 +917,6 @@ body {
   background: transparent !important;
 }
 
-/* Estilos para el carrusel en móviles y tablets */
-@media (max-width: 1024px) {
-  .content-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .text-content {
-    order: 1;
-    /* El texto va arriba */
-    text-align: center;
-  }
-
-  .image-container-banner {
-    order: 2;
-    /* Las imágenes van abajo */
-    width: 100%;
-    height: 300px;
-    /* Ajusta la altura según sea necesario */
-    position: relative;
-    overflow: hidden;
-  }
-
-  .carousel-container {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-
 
 
 
@@ -1512,7 +1480,6 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: flex-end;
-  margin-left: 65px;
 }
 
 .content-wrapper-banner-services {
@@ -1524,6 +1491,7 @@ body {
 /* Estilos del header */
 .header-banner-services {
   margin-bottom: 2rem;
+  margin-left: 65px;
 }
 
 .title-banner-services {
@@ -1555,6 +1523,7 @@ body {
 /* Sección de compra */
 .purchase-section-banner-services {
   max-width: 600px;
+  margin-left: 65px;
 }
 
 .price-container-banner-services {
@@ -1813,9 +1782,24 @@ body {
   }
 }
 
+@media (max-width: 950px) {
+  .hero__controller {
+    display: none;
+  }
+
+  .hero__game-image {
+    width: 80%;
+  }
+}
+
 @media (max-width: 768px) {
   .hero__content {
     padding: 2rem 0;
+  }
+
+  .header-banner-services,
+  .purchase-section-banner-services {
+    margin-left: 40px;
   }
 
   .hero__text {
@@ -1833,6 +1817,12 @@ body {
   .hero {
     min-height: auto;
   }
+
+  .header-banner-services,
+  .purchase-section-banner-services {
+    margin: 0;
+  }
+
 }
 
 @keyframes scan {

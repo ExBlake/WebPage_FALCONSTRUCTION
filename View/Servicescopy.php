@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <title>Custom Slider with GSAP</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -68,8 +70,7 @@
                                 <button class="contact-banner-services">Contact Us</button>
 
                             </div>
-
-
+                            
                         </div>
                     </div>
                 </div>
