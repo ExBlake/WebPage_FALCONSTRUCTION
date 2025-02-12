@@ -309,3 +309,58 @@ document.addEventListener("DOMContentLoaded", () => {
   setActiveItem(0)
 
 })
+
+
+
+
+// banner --------------------------------------------------------------------------------------
+
+// Asegurarse de que el video se reproduzca correctamente
+document.addEventListener('DOMContentLoaded', function() {
+  const video = document.querySelector('.background-video-banner-services');
+  
+  // Reintentar la reproducción si falla
+  video.addEventListener('error', function() {
+      console.error('Error loading video');
+      video.load();
+  });
+
+
+  // Asegurarse de que el video se reproduzca en dispositivos móviles
+  if (video.paused) {
+      video.play().catch(function(error) {
+          console.log("Video autoplay failed:", error);
+      });
+  }
+});
+
+// Optimización del rendimiento para el video
+let videoQuality = 'high';
+
+// Detectar conexión lenta
+if (navigator.connection) {
+  const connection = navigator.connection;
+  if (connection.effectiveType === '3g' || connection.effectiveType === '2g') {
+      videoQuality = 'low';
+  }
+}
+
+// Función para ajustar la calidad del video según el dispositivo y la conexión
+function adjustVideoQuality() {
+  const video = document.querySelector('.background-video-banner-services');
+  if (videoQuality === 'low') {
+      video.setAttribute('playsinline', '');
+      video.setAttribute('preload', 'none');
+  }
+}
+
+// Manejar el cambio de orientación en dispositivos móviles
+window.addEventListener('orientationchange', function() {
+  // Reajustar el layout después del cambio de orientación
+  setTimeout(function() {
+      window.scrollTo(0, 0);
+  }, 200);
+});
+
+// Llamar a la función de ajuste de calidad
+adjustVideoQuality();
