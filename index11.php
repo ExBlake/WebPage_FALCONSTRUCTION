@@ -2966,6 +2966,9 @@ body {
         </div>
     </div>
 
+
+
+
     <script>
         // Tu script existente para la interactividad de la habitación 3D
         const h = document.querySelector("#h");
