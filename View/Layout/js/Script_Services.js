@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const images = document.querySelectorAll('.image-container img');
   const textSections = document.querySelectorAll('.text-section');
   const scrollContainer = document.querySelector('.left-column');
-  
+
   let currentSection = 0;
   const totalSections = sections.length;
   const scrollDistance = 400; // Distancia de scroll para cambiar imagen
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Evento para el contenedor izquierdo (left-column)
-  scrollContainer.addEventListener('scroll', function() {
+  scrollContainer.addEventListener('scroll', function () {
     let activeSection = Math.floor(scrollContainer.scrollTop / scrollDistance);
 
     // Actualiza las secciones de texto
@@ -73,35 +73,35 @@ document.addEventListener('DOMContentLoaded', () => {
   // Llamada inicial para actualizar el estado de las secciones e imágenes
   updateActiveSection();
 
-  
+
 });
 
 
 // Añadimos efectos de hover más suaves
 document.addEventListener('DOMContentLoaded', () => {
   const button = document.querySelector('.contacts-banner-cta-button');
-  
+
   button.addEventListener('mouseover', () => {
-      button.style.transform = 'scale(1.05)';
-      button.style.transition = 'all 0.3s ease';
+    button.style.transform = 'scale(1.05)';
+    button.style.transition = 'all 0.3s ease';
   });
 
   button.addEventListener('mouseout', () => {
-      button.style.transform = 'scale(1)';
+    button.style.transform = 'scale(1)';
   });
 
   // Efecto de parallax suave en el blob
   const blob = document.querySelector('.contacts-banner-gradient-blob');
   document.addEventListener('mousemove', (e) => {
-      const { clientX, clientY } = e;
-      const centerX = window.innerWidth / 2;
-      const centerY = window.innerHeight / 2;
-      
-      const moveX = (clientX - centerX) * 0.01;
-      const moveY = (clientY - centerY) * 0.01;
+    const { clientX, clientY } = e;
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
 
-      blob.style.transform = `translateX(25%) translate(${moveX}px, ${moveY}px)`;
-      blob.style.transition = 'transform 0.3s ease-out';
+    const moveX = (clientX - centerX) * 0.01;
+    const moveY = (clientY - centerY) * 0.01;
+
+    blob.style.transform = `translateX(25%) translate(${moveX}px, ${moveY}px)`;
+    blob.style.transition = 'transform 0.3s ease-out';
   });
 });
 
@@ -109,10 +109,10 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
   const content = document.querySelector('.contacts-banner-content');
   content.style.opacity = '0';
-  
+
   setTimeout(() => {
-      content.style.transition = 'opacity 1s ease-in-out';
-      content.style.opacity = '1';
+    content.style.transition = 'opacity 1s ease-in-out';
+    content.style.opacity = '1';
   }, 100);
 });
 
@@ -191,28 +191,28 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(loading);
 
   window.addEventListener('load', () => {
+    setTimeout(() => {
+      loading.style.opacity = '0';
       setTimeout(() => {
-          loading.style.opacity = '0';
-          setTimeout(() => {
-              loading.remove();
-          }, 500);
-      }, 1000);
+        loading.remove();
+      }, 500);
+    }, 1000);
   });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const bannerend = document.querySelector('.banner-final');
   const container = document.querySelector('.fullscreen-container');
 
   if (bannerend && container) {
-      container.addEventListener('scroll', function() {
-          const footerRect = bannerend.getBoundingClientRect();
-          if (footerRect.top <= window.innerHeight && footerRect.bottom >= 0) {
-              container.style.scrollSnapType = 'none';
-          } else {
-              container.style.scrollSnapType = 'y mandatory';
-          }
-      });
+    container.addEventListener('scroll', function () {
+      const footerRect = bannerend.getBoundingClientRect();
+      if (footerRect.top <= window.innerHeight && footerRect.bottom >= 0) {
+        container.style.scrollSnapType = 'none';
+      } else {
+        container.style.scrollSnapType = 'y mandatory';
+      }
+    });
   }
 });
 
@@ -251,56 +251,56 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeIndex = 0
 
   const setActiveItem = (index) => {
-      timelineItems.forEach((item, i) => {
-          if (i === index) {
-              item.classList.add("active")
-              const imageSrc = item.dataset.image
-              if (window.innerWidth <= 768) {
-                  item.style.setProperty("--bg-image", `url(${imageSrc})`)
-              } else {
-                  timelineImage.src = imageSrc
-                  timelineImage.style.opacity = "0"
-                  timelineImage.style.transform = "scale(1.1)"
-                  setTimeout(() => {
-                      timelineImage.style.opacity = "1"
-                      timelineImage.style.transform = "scale(1)"
-                  }, 50)
-              }
-          } else {
-              item.classList.remove("active")
-          }
-      })
+    timelineItems.forEach((item, i) => {
+      if (i === index) {
+        item.classList.add("active")
+        const imageSrc = item.dataset.image
+        if (window.innerWidth <= 768) {
+          item.style.setProperty("--bg-image", `url(${imageSrc})`)
+        } else {
+          timelineImage.src = imageSrc
+          timelineImage.style.opacity = "0"
+          timelineImage.style.transform = "scale(1.1)"
+          setTimeout(() => {
+            timelineImage.style.opacity = "1"
+            timelineImage.style.transform = "scale(1)"
+          }, 50)
+        }
+      } else {
+        item.classList.remove("active")
+      }
+    })
   }
 
-  
+
 
   const handleScroll = () => {
-      const scrollY = timeline.scrollTop
-      const maxScroll = timeline.scrollHeight - timeline.clientHeight
-      const viewportHeight = window.innerHeight
+    const scrollY = timeline.scrollTop
+    const maxScroll = timeline.scrollHeight - timeline.clientHeight
+    const viewportHeight = window.innerHeight
 
-      let found = false
+    let found = false
 
-      timelineItems.forEach((item, index) => {
-          const rect = item.getBoundingClientRect()
-          const itemTop = rect.top + scrollY - timeline.offsetTop
-          const itemCenter = itemTop + rect.height / 2
+    timelineItems.forEach((item, index) => {
+      const rect = item.getBoundingClientRect()
+      const itemTop = rect.top + scrollY - timeline.offsetTop
+      const itemCenter = itemTop + rect.height / 2
 
-          // Condición ajustada para mejorar la detección del último elemento
-          if (itemCenter > scrollY && itemCenter < scrollY + viewportHeight * 0.6) {
-              if (activeIndex !== index) {
-                  activeIndex = index
-                  setActiveItem(activeIndex)
-              }
-              found = true
-          }
-      })
-
-      // Si el usuario ha llegado al final, forzar activación del último ítem
-      if (!found && scrollY >= maxScroll) {
-          activeIndex = timelineItems.length - 1
+      // Condición ajustada para mejorar la detección del último elemento
+      if (itemCenter > scrollY && itemCenter < scrollY + viewportHeight * 0.6) {
+        if (activeIndex !== index) {
+          activeIndex = index
           setActiveItem(activeIndex)
+        }
+        found = true
       }
+    })
+
+    // Si el usuario ha llegado al final, forzar activación del último ítem
+    if (!found && scrollY >= maxScroll) {
+      activeIndex = timelineItems.length - 1
+      setActiveItem(activeIndex)
+    }
   }
 
   timeline.addEventListener("scroll", handleScroll)
@@ -309,3 +309,186 @@ document.addEventListener("DOMContentLoaded", () => {
   setActiveItem(0)
 
 })
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".image-container-banner img");
+  const textContent = document.querySelector(".text-content");
+  const imageContainer = document.querySelector(".image-container-banner");
+
+  // Verificar si estamos en móvil o tablet
+  if (window.innerWidth <= 1024 && images.length > 1) {
+    // Convertir las imágenes en un carrusel
+    let currentIndex = 0;
+
+    // Crear un contenedor para el carrusel
+    const carouselContainer = document.createElement("div");
+    carouselContainer.classList.add("carousel-container");
+    carouselContainer.style.position = "relative";
+    carouselContainer.style.width = "100%";
+    carouselContainer.style.height = "300px"; // Ajusta la altura según sea necesario
+
+    // Mover las imágenes al contenedor del carrusel
+    images.forEach((img) => {
+      img.style.position = "absolute";
+      img.style.width = "100%";
+      img.style.height = "100%";
+      img.style.objectFit = "cover";
+      img.style.opacity = "0";
+      img.style.transition = "opacity 0.5s ease";
+      carouselContainer.appendChild(img);
+    });
+
+    // Mostrar la primera imagen
+    images[currentIndex].style.opacity = "1";
+
+    // Reemplazar el contenedor original con el carrusel
+    imageContainer.innerHTML = "";
+    imageContainer.appendChild(carouselContainer);
+
+    // Función para cambiar de imagen
+    function showNextImage() {
+      images[currentIndex].style.opacity = "0";
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].style.opacity = "1";
+    }
+
+    // Cambiar de imagen cada 3 segundos
+    setInterval(showNextImage, 3000);
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".image-container-banner img");
+  const textContent = document.querySelector(".text-content");
+  const imageContainer = document.querySelector(".image-container-banner");
+
+  // Verificar si estamos en móvil o tablet
+  if (window.innerWidth <= 1024 && images.length > 1) {
+    // Convertir las imágenes en un carrusel
+    let currentIndex = 0;
+
+    // Crear un contenedor para el carrusel
+    const carouselContainer = document.createElement("div");
+    carouselContainer.classList.add("carousel-container");
+    carouselContainer.style.position = "relative";
+    carouselContainer.style.width = "100%";
+    carouselContainer.style.height = "300px"; // Ajusta la altura según sea necesario
+
+    // Mover las imágenes al contenedor del carrusel
+    images.forEach((img) => {
+      img.style.position = "absolute";
+      img.style.width = "100%";
+      img.style.height = "100%";
+      img.style.objectFit = "cover";
+      img.style.opacity = "0";
+      img.style.transition = "opacity 0.5s ease";
+      carouselContainer.appendChild(img);
+    });
+
+    // Mostrar la primera imagen
+    images[currentIndex].style.opacity = "1";
+
+    // Reemplazar el contenedor original con el carrusel
+    imageContainer.innerHTML = "";
+    imageContainer.appendChild(carouselContainer);
+
+    // Función para cambiar de imagen
+    function showNextImage() {
+      images[currentIndex].style.opacity = "0";
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].style.opacity = "1";
+    }
+
+    // Cambiar de imagen cada 3 segundos
+    setInterval(showNextImage, 3000);
+  }
+});
+
+
+/******************************/
+/* Script sección 2 servicios */
+/******************************/
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Inicializar partículas
+  particlesJS('particles-js', {
+      particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5, random: false },
+          size: { value: 3, random: true },
+          line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#ffffff",
+              opacity: 0.4,
+              width: 1
+          },
+          move: {
+              enable: true,
+              speed: 2,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+          }
+      },
+      interactivity: {
+          detect_on: "canvas",
+          events: {
+              onhover: { enable: true, mode: "repulse" },
+              onclick: { enable: true, mode: "push" },
+              resize: true
+          },
+          modes: {
+              repulse: { distance: 100, duration: 0.4 },
+              push: { particles_nb: 4 }
+          }
+      },
+      retina_detect: true
+  });
+
+  // Manejar la carga de imágenes
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+      img.addEventListener('load', function() {
+          this.classList.add('loaded');
+      });
+      img.addEventListener('error', function() {
+          console.error('Error loading image:', this.src);
+      });
+  });
+
+  // Efecto de hover en el botón
+  const button = document.querySelector('.button');
+  button.addEventListener('mousemove', function(e) {
+      const x = e.pageX - button.offsetLeft;
+      const y = e.pageY - button.offsetTop;
+      
+      button.style.setProperty('--x', x + 'px');
+      button.style.setProperty('--y', y + 'px');
+  });
+});
+
+// Función para manejar el responsive de manera más suave
+function handleResize() {
+  const heroContent = document.querySelector('.hero__content');
+  const windowWidth = window.innerWidth;
+  
+  if (windowWidth < 1024) {
+      heroContent.style.opacity = '1';
+  }
+}
+
+// Escuchar el evento resize
+window.addEventListener('resize', handleResize);
+
+// Llamar a handleResize inicialmente
+handleResize();
+
+/******************************/
+/* Script sección 2 servicios */
+/******************************/

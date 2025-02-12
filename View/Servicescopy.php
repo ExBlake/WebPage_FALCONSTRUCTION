@@ -77,9 +77,34 @@
         </section>
 
         <div class="fullscreen-section start-services">
-            <h1>Hemos satisfecho a más de <span class="highlight">11,4 millones</span> clientes con construcciones de
-                calidad, seguridad y durabilidad. Transformamos ideas en realidades sólidas. ¡Construyamos juntos el
-                futuro! </h1>
+            <div class="hero">
+                <div class="hero__background">
+                    <div id="particles-js"></div>
+                </div>
+
+                <div class="container">
+                    <div class="hero__content">
+                        <!-- Columna izquierda -->
+                        <div class="hero__text">
+                            <h1 class="title-section-2-service">Satisfacción a Nuestros Clientes</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic deleniti 
+                                rerum cumque eveniet ratione non ullam reprehenderit eius, iure aperiam 
+                                voluptates eaque dolorum, deserunt facere. Molestiae unde corrupti rem non.</p>
+                        </div>
+
+                        <!-- Columna derecha -->
+                        <div class="hero__media">
+                            <div class="hero__monitor">
+                                <img src="PImageProject/project-6.jpg"
+                                    alt="image" class="hero__game-image">
+                                <div class="hero__scanner"></div>
+                            </div>
+                            <img src="PImageProject/project-3.jpg" alt="image"
+                                class="hero__controller">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <section class="fullscreen-section combined-section">
@@ -273,126 +298,23 @@
 
 
         <footer class="footer-section">
-
-            <?php require_once 'Layout/Footer.php';?>
-            </footer>
+            <?php require_once 'Layout/Footer.php'; ?>
+        </footer>
 
     </div>
 
-
     <div id="cursor-effect"></div>
-
-
 
     <!-- partial -->
     <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="Script_Banner"></script>
     <script src="Script_Services"></script>
 
     <script src="Script_Header"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const images = document.querySelectorAll(".image-container-banner img");
-            const textContent = document.querySelector(".text-content");
-            const imageContainer = document.querySelector(".image-container-banner");
-
-            // Verificar si estamos en móvil o tablet
-            if (window.innerWidth <= 1024 && images.length > 1) {
-                // Convertir las imágenes en un carrusel
-                let currentIndex = 0;
-
-                // Crear un contenedor para el carrusel
-                const carouselContainer = document.createElement("div");
-                carouselContainer.classList.add("carousel-container");
-                carouselContainer.style.position = "relative";
-                carouselContainer.style.width = "100%";
-                carouselContainer.style.height = "300px"; // Ajusta la altura según sea necesario
-
-                // Mover las imágenes al contenedor del carrusel
-                images.forEach((img) => {
-                    img.style.position = "absolute";
-                    img.style.width = "100%";
-                    img.style.height = "100%";
-                    img.style.objectFit = "cover";
-                    img.style.opacity = "0";
-                    img.style.transition = "opacity 0.5s ease";
-                    carouselContainer.appendChild(img);
-                });
-
-                // Mostrar la primera imagen
-                images[currentIndex].style.opacity = "1";
-
-                // Reemplazar el contenedor original con el carrusel
-                imageContainer.innerHTML = "";
-                imageContainer.appendChild(carouselContainer);
-
-                // Función para cambiar de imagen
-                function showNextImage() {
-                    images[currentIndex].style.opacity = "0";
-                    currentIndex = (currentIndex + 1) % images.length;
-                    images[currentIndex].style.opacity = "1";
-                }
-
-                // Cambiar de imagen cada 3 segundos
-                setInterval(showNextImage, 3000);
-            }
-        });
-=======
-    document.addEventListener("DOMContentLoaded", function() {
-        const images = document.querySelectorAll(".image-container-banner img");
-        const textContent = document.querySelector(".text-content");
-        const imageContainer = document.querySelector(".image-container-banner");
-
-        // Verificar si estamos en móvil o tablet
-        if (window.innerWidth <= 1024 && images.length > 1) {
-            // Convertir las imágenes en un carrusel
-            let currentIndex = 0;
-
-            // Crear un contenedor para el carrusel
-            const carouselContainer = document.createElement("div");
-            carouselContainer.classList.add("carousel-container");
-            carouselContainer.style.position = "relative";
-            carouselContainer.style.width = "100%";
-            carouselContainer.style.height = "300px"; // Ajusta la altura según sea necesario
-
-            // Mover las imágenes al contenedor del carrusel
-            images.forEach((img) => {
-                img.style.position = "absolute";
-                img.style.width = "100%";
-                img.style.height = "100%";
-                img.style.objectFit = "cover";
-                img.style.opacity = "0";
-                img.style.transition = "opacity 0.5s ease";
-                carouselContainer.appendChild(img);
-            });
-
-            // Mostrar la primera imagen
-            images[currentIndex].style.opacity = "1";
-
-            // Reemplazar el contenedor original con el carrusel
-            imageContainer.innerHTML = "";
-            imageContainer.appendChild(carouselContainer);
-
-            // Función para cambiar de imagen
-            function showNextImage() {
-                images[currentIndex].style.opacity = "0";
-                currentIndex = (currentIndex + 1) % images.length;
-                images[currentIndex].style.opacity = "1";
-            }
-
-            // Cambiar de imagen cada 3 segundos
-            setInterval(showNextImage, 3000);
-        }
-    });
-    </script>
-
-
-
-
 </body>
 
 </html>
