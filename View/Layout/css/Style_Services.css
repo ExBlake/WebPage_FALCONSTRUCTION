@@ -937,7 +937,6 @@ body {
 
 .container-services-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   height: 100vh;
 }
 
@@ -951,12 +950,8 @@ body {
   display: block;
   width: 100%;
   height: auto;
-
-
   -webkit-mask-image: radial-gradient(circle, rgb(13, 37, 46) 60%, rgba(12, 29, 66, 0.932) 100%);
   mask-image: radial-gradient(circle, rgb(13, 37, 46) 60%, rgba(12, 29, 66, 0) 100%);
-
-
 }
 
 
@@ -1415,7 +1410,6 @@ body {
 
 .contacts-banner-title {
   font-size: 2.5rem;
-  color: rgba(255, 255, 255, 0.34);
   margin-bottom: 1rem;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -1833,6 +1827,34 @@ body {
 
   .hero__scanner {
     display: none;
+  }
+
+}
+
+@media (max-width: 443px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .header-banner-services,
+  .purchase-section-banner-services {
+    margin: 0;
+  }
+
+  .hero__scanner {
+    display: none;
+  }
+
+  .hero__text h1{
+    font-size: 2rem;
+  }
+
+  .hero__text p{
+    font-size: 0.8rem;
+  }
+
+  .hero__game-image{
+    height: 70%;
   }
 
 }
