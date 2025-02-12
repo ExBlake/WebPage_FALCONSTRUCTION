@@ -27,29 +27,58 @@
     </div>
 
     <div class="fullscreen-container">
-        <section class="fullscreen-section main-content">
-            <div class="content-grid">
-                <div class="text-content">
-                    <h1 class="main-title">SPACE IS MEANT TO BE SHARED</h1>
+        <section class="fullscreen-section">
+            <div class="hero-banner-services">
+                <!-- Video Background -->
+                <video autoplay loop muted playsinline class="background-video-banner-services">
+                    <source src="PVideoBanner/video2 copy.mp4" type="video/mp4">
+                </video>
 
-                    <div>
-                        <p class="main-description">
-                            Going to space is the kind of life event you'll want your loved ones to be a part of.
-                        </p>
+                <!-- Overlay con gradiente -->
+                <div class="overlay-banner-services"></div>
+
+                <!-- Contenido principal -->
+                <div class="content-banner-services">
+                    <div class="content-wrapper-banner-services">
+                        <div class="header-banner-services">
+                            <h1 class="title-banner-services">Services</h1>
+                            <p class="publisher-banner-services"> Interactive Entertainment</p>
+
+                            <div class="platforms-banner-services">
+                                <span class="platform-badge-banner-services">X</span>
+                                <span class="platform-badge-banner-services">XX</span>
+                                <span class="platform-badge-banner-services">XXX</span>
+                            </div>
+                        </div>
+
+                        <div class="purchase-section-banner-services">
+                            <div class="price-container-banner-services">
+                                <div class="price-banner-services">
+                                    <span>Todo con nosotros</span>
+                                </div>
+                            </div>
+
+                            <p class="subscription-note-banner-services">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio natus laboriosam
+                                dolorem, placeat dolorum, nesciunt iste eos, est quos dolores officiis saepe? Officiis,
+                                architecto aut facilis iure nobis nulla at!
+                            </p>
+
+                            <div class="buttons-banner-services">
+                                <button class="contact-banner-services">Contact Us</button>
+
+                            </div>
+
+
+                        </div>
                     </div>
-
-                    <div class="image-container-banner">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ii6IUY4gDMEBjZqZm4fQ9pCWcpzWqH.png"
-                            alt="Astronaut team">
-                    </div>
-                </div>
-
-                <div class="image-container-banner">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ii6IUY4gDMEBjZqZm4fQ9pCWcpzWqH.png"
-                        alt="People sharing a moment">
                 </div>
             </div>
         </section>
+
+        <div class="fullscreen-section start-services">
+            <h1>Hemos satisfecho a más de <span class="highlight">11,4 millones</span> clientes con construcciones de calidad, seguridad y durabilidad. Transformamos ideas en realidades sólidas. ¡Construyamos juntos el futuro! </h1>
+        </div>
 
         <section class="fullscreen-section combined-section">
             <div class="container-services-section">
@@ -242,8 +271,8 @@
 
 
         <footer class="footer-section">
-            <?php require_once 'Layout/Footer.php'; ?>
-            </foote>
+            <?php require_once 'Layout/Footer.php';?>
+        </foote>
 
     </div>
 
@@ -262,54 +291,54 @@
 
     <script src="Script_Header"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const images = document.querySelectorAll(".image-container-banner img");
-            const textContent = document.querySelector(".text-content");
-            const imageContainer = document.querySelector(".image-container-banner");
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".image-container-banner img");
+  const textContent = document.querySelector(".text-content");
+  const imageContainer = document.querySelector(".image-container-banner");
 
-            // Verificar si estamos en móvil o tablet
-            if (window.innerWidth <= 1024 && images.length > 1) {
-                // Convertir las imágenes en un carrusel
-                let currentIndex = 0;
+  // Verificar si estamos en móvil o tablet
+  if (window.innerWidth <= 1024 && images.length > 1) {
+    // Convertir las imágenes en un carrusel
+    let currentIndex = 0;
 
-                // Crear un contenedor para el carrusel
-                const carouselContainer = document.createElement("div");
-                carouselContainer.classList.add("carousel-container");
-                carouselContainer.style.position = "relative";
-                carouselContainer.style.width = "100%";
-                carouselContainer.style.height = "300px"; // Ajusta la altura según sea necesario
+    // Crear un contenedor para el carrusel
+    const carouselContainer = document.createElement("div");
+    carouselContainer.classList.add("carousel-container");
+    carouselContainer.style.position = "relative";
+    carouselContainer.style.width = "100%";
+    carouselContainer.style.height = "300px"; // Ajusta la altura según sea necesario
 
-                // Mover las imágenes al contenedor del carrusel
-                images.forEach((img) => {
-                    img.style.position = "absolute";
-                    img.style.width = "100%";
-                    img.style.height = "100%";
-                    img.style.objectFit = "cover";
-                    img.style.opacity = "0";
-                    img.style.transition = "opacity 0.5s ease";
-                    carouselContainer.appendChild(img);
-                });
+    // Mover las imágenes al contenedor del carrusel
+    images.forEach((img) => {
+      img.style.position = "absolute";
+      img.style.width = "100%";
+      img.style.height = "100%";
+      img.style.objectFit = "cover";
+      img.style.opacity = "0";
+      img.style.transition = "opacity 0.5s ease";
+      carouselContainer.appendChild(img);
+    });
 
-                // Mostrar la primera imagen
-                images[currentIndex].style.opacity = "1";
+    // Mostrar la primera imagen
+    images[currentIndex].style.opacity = "1";
 
-                // Reemplazar el contenedor original con el carrusel
-                imageContainer.innerHTML = "";
-                imageContainer.appendChild(carouselContainer);
+    // Reemplazar el contenedor original con el carrusel
+    imageContainer.innerHTML = "";
+    imageContainer.appendChild(carouselContainer);
 
-                // Función para cambiar de imagen
-                function showNextImage() {
-                    images[currentIndex].style.opacity = "0";
-                    currentIndex = (currentIndex + 1) % images.length;
-                    images[currentIndex].style.opacity = "1";
-                }
+    // Función para cambiar de imagen
+    function showNextImage() {
+      images[currentIndex].style.opacity = "0";
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].style.opacity = "1";
+    }
 
-                // Cambiar de imagen cada 3 segundos
-                setInterval(showNextImage, 3000);
-            }
-        });
-    </script>
+    // Cambiar de imagen cada 3 segundos
+    setInterval(showNextImage, 3000);
+  }
+});
+        </script>
 
 
 
