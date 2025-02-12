@@ -77,7 +77,9 @@
         </section>
 
         <div class="fullscreen-section start-services">
-            <h1>Hemos satisfecho a más de <span class="highlight">11,4 millones</span> clientes con construcciones de calidad, seguridad y durabilidad. Transformamos ideas en realidades sólidas. ¡Construyamos juntos el futuro! </h1>
+            <h1>Hemos satisfecho a más de <span class="highlight">11,4 millones</span> clientes con construcciones de
+                calidad, seguridad y durabilidad. Transformamos ideas en realidades sólidas. ¡Construyamos juntos el
+                futuro! </h1>
         </div>
 
         <section class="fullscreen-section combined-section">
@@ -271,8 +273,9 @@
 
 
         <footer class="footer-section">
+
             <?php require_once 'Layout/Footer.php';?>
-        </foote>
+            </footer>
 
     </div>
 
@@ -291,54 +294,101 @@
 
     <script src="Script_Header"></script>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-  const images = document.querySelectorAll(".image-container-banner img");
-  const textContent = document.querySelector(".text-content");
-  const imageContainer = document.querySelector(".image-container-banner");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll(".image-container-banner img");
+            const textContent = document.querySelector(".text-content");
+            const imageContainer = document.querySelector(".image-container-banner");
 
-  // Verificar si estamos en móvil o tablet
-  if (window.innerWidth <= 1024 && images.length > 1) {
-    // Convertir las imágenes en un carrusel
-    let currentIndex = 0;
+            // Verificar si estamos en móvil o tablet
+            if (window.innerWidth <= 1024 && images.length > 1) {
+                // Convertir las imágenes en un carrusel
+                let currentIndex = 0;
 
-    // Crear un contenedor para el carrusel
-    const carouselContainer = document.createElement("div");
-    carouselContainer.classList.add("carousel-container");
-    carouselContainer.style.position = "relative";
-    carouselContainer.style.width = "100%";
-    carouselContainer.style.height = "300px"; // Ajusta la altura según sea necesario
+                // Crear un contenedor para el carrusel
+                const carouselContainer = document.createElement("div");
+                carouselContainer.classList.add("carousel-container");
+                carouselContainer.style.position = "relative";
+                carouselContainer.style.width = "100%";
+                carouselContainer.style.height = "300px"; // Ajusta la altura según sea necesario
 
-    // Mover las imágenes al contenedor del carrusel
-    images.forEach((img) => {
-      img.style.position = "absolute";
-      img.style.width = "100%";
-      img.style.height = "100%";
-      img.style.objectFit = "cover";
-      img.style.opacity = "0";
-      img.style.transition = "opacity 0.5s ease";
-      carouselContainer.appendChild(img);
+                // Mover las imágenes al contenedor del carrusel
+                images.forEach((img) => {
+                    img.style.position = "absolute";
+                    img.style.width = "100%";
+                    img.style.height = "100%";
+                    img.style.objectFit = "cover";
+                    img.style.opacity = "0";
+                    img.style.transition = "opacity 0.5s ease";
+                    carouselContainer.appendChild(img);
+                });
+
+                // Mostrar la primera imagen
+                images[currentIndex].style.opacity = "1";
+
+                // Reemplazar el contenedor original con el carrusel
+                imageContainer.innerHTML = "";
+                imageContainer.appendChild(carouselContainer);
+
+                // Función para cambiar de imagen
+                function showNextImage() {
+                    images[currentIndex].style.opacity = "0";
+                    currentIndex = (currentIndex + 1) % images.length;
+                    images[currentIndex].style.opacity = "1";
+                }
+
+                // Cambiar de imagen cada 3 segundos
+                setInterval(showNextImage, 3000);
+            }
+        });
+=======
+    document.addEventListener("DOMContentLoaded", function() {
+        const images = document.querySelectorAll(".image-container-banner img");
+        const textContent = document.querySelector(".text-content");
+        const imageContainer = document.querySelector(".image-container-banner");
+
+        // Verificar si estamos en móvil o tablet
+        if (window.innerWidth <= 1024 && images.length > 1) {
+            // Convertir las imágenes en un carrusel
+            let currentIndex = 0;
+
+            // Crear un contenedor para el carrusel
+            const carouselContainer = document.createElement("div");
+            carouselContainer.classList.add("carousel-container");
+            carouselContainer.style.position = "relative";
+            carouselContainer.style.width = "100%";
+            carouselContainer.style.height = "300px"; // Ajusta la altura según sea necesario
+
+            // Mover las imágenes al contenedor del carrusel
+            images.forEach((img) => {
+                img.style.position = "absolute";
+                img.style.width = "100%";
+                img.style.height = "100%";
+                img.style.objectFit = "cover";
+                img.style.opacity = "0";
+                img.style.transition = "opacity 0.5s ease";
+                carouselContainer.appendChild(img);
+            });
+
+            // Mostrar la primera imagen
+            images[currentIndex].style.opacity = "1";
+
+            // Reemplazar el contenedor original con el carrusel
+            imageContainer.innerHTML = "";
+            imageContainer.appendChild(carouselContainer);
+
+            // Función para cambiar de imagen
+            function showNextImage() {
+                images[currentIndex].style.opacity = "0";
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].style.opacity = "1";
+            }
+
+            // Cambiar de imagen cada 3 segundos
+            setInterval(showNextImage, 3000);
+        }
     });
-
-    // Mostrar la primera imagen
-    images[currentIndex].style.opacity = "1";
-
-    // Reemplazar el contenedor original con el carrusel
-    imageContainer.innerHTML = "";
-    imageContainer.appendChild(carouselContainer);
-
-    // Función para cambiar de imagen
-    function showNextImage() {
-      images[currentIndex].style.opacity = "0";
-      currentIndex = (currentIndex + 1) % images.length;
-      images[currentIndex].style.opacity = "1";
-    }
-
-    // Cambiar de imagen cada 3 segundos
-    setInterval(showNextImage, 3000);
-  }
-});
-        </script>
+    </script>
 
 
 
