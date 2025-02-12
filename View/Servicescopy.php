@@ -70,7 +70,7 @@
                                 <button class="contact-banner-services">Contact Us</button>
 
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -88,20 +88,18 @@
                         <!-- Columna izquierda -->
                         <div class="hero__text">
                             <h1 class="title-section-2-service">Satisfacción a Nuestros Clientes</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic deleniti 
-                                rerum cumque eveniet ratione non ullam reprehenderit eius, iure aperiam 
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic deleniti
+                                rerum cumque eveniet ratione non ullam reprehenderit eius, iure aperiam
                                 voluptates eaque dolorum, deserunt facere. Molestiae unde corrupti rem non.</p>
                         </div>
 
                         <!-- Columna derecha -->
                         <div class="hero__media">
                             <div class="hero__monitor">
-                                <img src="PImageProject/project-6.jpg"
-                                    alt="image" class="hero__game-image">
+                                <img src="PImageProject/project-6.jpg" alt="image" class="hero__game-image">
                                 <div class="hero__scanner"></div>
                             </div>
-                            <img src="PImageProject/project-3.jpg" alt="image"
-                                class="hero__controller">
+                            <img src="PImageProject/project-3.jpg" alt="image" class="hero__controller">
                         </div>
                     </div>
                 </div>
@@ -111,7 +109,7 @@
         <section class="fullscreen-section combined-section">
             <div class="container-services-section">
 
-                <div class="timeline">
+                 <div class="timeline">
 
                     <div class="timeline-items">
                         <div class="timeline-item" data-image="PImageServicios/kkkk.jpg">
@@ -275,6 +273,160 @@
                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zH04rGA73bITXkpags0NsGAUvolSqH.png"
                         alt="Timeline Image" id="timeline-image">
                 </div>
+
+                <div class="carousel-container">
+                    <div class="carousel-item">
+                        <img src="PImageProject/project-3.jpg" alt="Descripción de la imagen 1">
+                        <h2>Adquisición de Propiedades para Flips o Renta/Wholesale</h2>
+                        <p>En Falconstruction, ofrecemos un servicio especializado de adquisición de propiedades
+                            orientado tanto a inversionistas que buscan oportunidades para "flips" (comprar, renovar y
+                            vender rápidamente para obtener beneficios) como a aquellos interesados en la renta o venta
+                            al por mayor (wholesale). Gracias a nuestra vasta experiencia y conocimiento del mercado
+                            inmobiliario, identificamos propiedades con un alto potencial de retorno de inversión.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="PImageProject/project-0.jpg" alt="Descripción de la imagen 2">
+                        <h2>Título 2</h2>
+                        <p>En Falconstruction, ofrecemos un servicio especializado de adquisición de propiedades
+                            orientado tanto a inversionistas que buscan oportunidades para "flips" (comprar, renovar y
+                            vender rápidamente para obtener beneficios) como a aquellos interesados en la renta o venta
+                            al por mayor (wholesale). Gracias a nuestra vasta experiencia y conocimiento del mercado
+                            inmobiliario, identificamos propiedades con un alto potencial de retorno de inversión.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="PImageProject/project-6.jpg" alt="Descripción de la imagen 2">
+                        <h2>Título 3</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Reiciendis culpa error officia nesciunt illo sunt tempore
+                            enim provident asperiores! Similique, quis quisquam quae
+                            maxime assumenda sed consectetur dolor voluptates perspiciatis.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="PImageProject/project-2.jpg" alt="Descripción de la imagen 2">
+                        <h2>Título 4</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Sequi ducimus dignissimos eveniet eaque tenetur saepe quas
+                            debitis repudiandae, temporibus illum mollitia! Repellendus
+                            sunt unde quae similique aliquid. Totam, omnis corporis!</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="PImageProject/project-4.jpg" alt="Descripción de la imagen 2">
+                        <h2>Título 5</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Quas rerum id omnis vel reiciendis, perspiciatis ipsam
+                            molestiae dolore aut sequi inventore maiores eveniet beatae
+                            repellat eaque nostrum sapiente ratione voluptatum!</p>
+                    </div>
+                </div>
+
+
+                <style>
+                    /* ... código existente ... */
+
+                    .carousel-container {
+                        display: none; /* Ocultar el carrusel por defecto */
+                    }
+
+                    .timeline {
+                        display: block; /* Mostrar la línea de tiempo por defecto */
+                    }
+
+                    @media (max-width: 1200px) {
+                        .carousel-container {
+                            display: flex; /* Mostrar el carrusel en pantallas pequeñas */
+                        }
+                        .timeline {
+                            display: none; /* Ocultar la línea de tiempo en pantallas pequeñas */
+                        }
+                    }
+
+                    @media (min-width: 1201px) {
+                        .carousel-container {
+                            display: none; /* Asegurarse de que el carrusel esté oculto en pantallas grandes */
+                        }
+                        .timeline {
+                            display: flex; /* Mostrar la línea de tiempo en pantallas grandes */
+                        }
+                    }
+
+                    .carousel-item {
+                        display: none;
+                        /* Centrado vertical */
+                        width: 100%;
+                        height: 100%;
+                        /* Asegúrate de que el contenedor tenga altura */
+                        overflow: hidden;
+                        transition: transform 0.5s ease;
+                        /* Transición suave */
+                    }
+
+                    .carousel-item img {
+                        width: 100%;
+                        /* Ajustar la imagen al ancho del contenedor */
+                        height: auto;
+                        /* Mantener la proporción de la imagen */
+                        border-radius: 12px;
+                        /* Bordes redondeados */
+                        margin-top: 30px;
+                    }
+
+                    .carousel-item h2 {
+                        font-size: 1.5rem;
+                        /* Tamaño del título */
+                        margin: 1rem 0;
+                        /* Espaciado */
+                    }
+
+                    .carousel-item p {
+                        font-size: 1rem;
+                        /* Tamaño de la descripción */
+                        color: #d1d5db;
+                        /* Color de la descripción */
+                    }
+
+                    /* ... código existente ... */
+                </style>
+
+                <script>
+                    // ... código existente ...
+
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const carouselContainer = document.querySelector(".carousel-container");
+                        const carouselItems = document.querySelectorAll(".carousel-item");
+                        let currentIndex = 0;
+
+                        function showCurrentItem() {
+                            carouselItems.forEach((item, index) => {
+                                item.style.display = index === currentIndex ? "block" : "none";
+                            });
+                        }
+
+                        // Eliminar el cambio automático cada 5 segundos
+                        // setInterval(showNextItem, 5000);
+
+                        // Inicializar el carrusel
+                        showCurrentItem();
+
+                        // Agregar funcionalidad de swipe
+                        let startX;
+                        carouselContainer.addEventListener('touchstart', (e) => {
+                            startX = e.touches[0].clientX;
+                        });
+
+                        carouselContainer.addEventListener('touchmove', (e) => {
+                            const moveX = e.touches[0].clientX;
+                            if (startX - moveX > 50) {
+                                currentIndex = (currentIndex + 1) % carouselItems.length; // Swipe izquierda
+                                showCurrentItem();
+                            } else if (moveX - startX > 50) {
+                                currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length; // Swipe derecha
+                                showCurrentItem();
+                            }
+                        });
+                    });
+
+                    // ... código existente ...
+                </script>
             </div>
         </section>
 
