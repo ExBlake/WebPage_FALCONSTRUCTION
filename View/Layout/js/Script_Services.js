@@ -492,3 +492,154 @@ handleResize();
 /******************************/
 /* Script sección 2 servicios */
 /******************************/
+
+
+/*******************************************************/
+/* Script para el responsive del carrusel y sección 3  */
+/*******************************************************/
+
+const sliderContainer = document.querySelector('.slider-container');
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+const dotsContainer = document.querySelector('.dots');
+
+let isDragging = false;
+let startPos = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+let currentIndex = 0;
+let animationID = 0;
+let slidesPerView = getSlidesPerView();
+
+// Create dots based on number of visible slides
+function createDots() {
+    dotsContainer.innerHTML = '';
+    const numDots = Math.ceil(slides.length / slidesPerView);
+
+    for (let i = 0; i < numDots; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === currentIndex) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    }
+}
+
+function getSlidesPerView() {
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 768) return 2;
+    return 1;
+}
+
+function updateDots() {
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+    });
+}
+
+function goToSlide(index) {
+    currentIndex = index;
+    prevTranslate = currentTranslate = -index * (100 / slidesPerView);
+    setSliderPosition();
+    updateDots();
+}
+
+// Touch events
+slider.addEventListener('touchstart', startDragging);
+slider.addEventListener('touchmove', drag);
+slider.addEventListener('touchend', stopDragging);
+
+// Mouse events
+slider.addEventListener('mousedown', startDragging);
+slider.addEventListener('mousemove', drag);
+slider.addEventListener('mouseup', stopDragging);
+slider.addEventListener('mouseleave', stopDragging);
+
+function startDragging(e) {
+    isDragging = true;
+    slider.classList.add('dragging');
+
+    // Get starting position
+    startPos = getPositionX(e);
+
+    // Cancel any ongoing animation
+    cancelAnimationFrame(animationID);
+}
+
+function drag(e) {
+    if (!isDragging) return;
+
+    e.preventDefault();
+    const currentPosition = getPositionX(e);
+    const diff = currentPosition - startPos;
+    currentTranslate = prevTranslate + (diff / sliderContainer.offsetWidth) * 100;
+
+    // Add boundaries
+    const minTranslate = -((slides.length - slidesPerView) * (100 / slidesPerView));
+    currentTranslate = Math.max(minTranslate, Math.min(0, currentTranslate));
+
+    setSliderPosition();
+}
+
+function stopDragging() {
+    isDragging = false;
+    slider.classList.remove('dragging');
+
+    const movedBy = currentTranslate - prevTranslate;
+
+    // If moved enough negative
+    if (movedBy < -5) {
+        currentIndex = Math.min(
+            Math.ceil(slides.length / slidesPerView) - 1,
+            currentIndex + 1
+        );
+    }
+    // If moved enough positive
+    else if (movedBy > 5) {
+        currentIndex = Math.max(0, currentIndex - 1);
+    }
+
+    currentTranslate = -currentIndex * (100 / slidesPerView);
+    prevTranslate = currentTranslate;
+    setSliderPosition();
+    updateDots();
+}
+
+function getPositionX(e) {
+    return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+}
+
+function setSliderPosition() {
+    slider.style.transform = `translateX(${currentTranslate}%)`;
+}
+
+// Handle window resize
+window.addEventListener('resize', () => {
+    const newSlidesPerView = getSlidesPerView();
+    if (newSlidesPerView !== slidesPerView) {
+        slidesPerView = newSlidesPerView;
+        currentIndex = Math.min(currentIndex, Math.ceil(slides.length / slidesPerView) - 1);
+        createDots();
+        goToSlide(currentIndex);
+    }
+});
+
+// Prevent context menu on long press
+slider.addEventListener('contextmenu', e => e.preventDefault());
+
+// Initialize
+createDots();
+updateDots();
+
+// Agregar evento para evitar conflictos en el contenedor de la descripción
+const slideDescriptions = document.querySelectorAll('.slide-description');
+slideDescriptions.forEach(description => {
+    description.addEventListener('touchstart', (e) => {
+        e.stopPropagation(); // Detener la propagación del evento
+    });
+});
+
+/*******************************************************/
+/* Script para el responsive del carrusel y sección 3  */
+/*******************************************************/

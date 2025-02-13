@@ -1887,3 +1887,156 @@ body {
 /*******************************/
 /* Estilos sección 2 servicios */
 /*******************************/
+
+/*******************************************************/
+/* Estilos para el responsive del carrusel y sección 3 */
+/*******************************************************/
+
+.slider-container {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  touch-action: pan-y pinch-zoom;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.3s ease-out;
+  cursor: grab;
+}
+
+.slider.dragging {
+  transition: none;
+  cursor: grabbing;
+}
+
+.slide {
+  padding: 1rem;
+  flex: 0 0 100%;
+  transition: opacity 0.3s ease;
+  user-select: none;
+}
+
+.slide .cta-button {
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive slide widths */
+@media (min-width: 768px) {
+  .slide {
+      flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slide {
+      flex: 0 0 33.333%;
+  }
+}
+
+.slide-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 55px;
+  margin-bottom: 5px;
+  pointer-events: none;
+}
+
+.slide-subtitle {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.slide-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.slide-description {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-height: 200px;
+  /* Altura máxima para el scroll */
+  overflow-y: auto;
+  /* Habilitar scroll vertical */
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #4b5563;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color:rgb(255, 255, 255);
+}
+
+#slider-container {
+  display: none;
+  /* Ocultar el slider por defecto */
+}
+
+#timeline-container {
+  display: block;
+  /* Mostrar la línea de tiempo por defecto */
+}
+
+#image-container {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  #slider-container {
+      display: block;
+      /* Mostrar el slider en pantallas pequeñas */
+  }
+
+  #timeline-container {
+      display: none;
+      /* Ocultar la línea de tiempo en pantallas pequeñas */
+  }
+
+  #image-container {
+    display: none;
+  }
+}
+
+@media (min-width: 1201px) {
+  #slider-container {
+      display: none;
+      /* Asegurarse de que el slider esté oculto en pantallas grandes */
+  }
+
+  #timeline-container {
+      display: block;
+      /* Mostrar la línea de tiempo en pantallas grandes */
+  }
+
+  #image-container {
+    display: block;
+  }
+}
+
+/*******************************************************/
+/* Estilos para el responsive del carrusel y sección 3 */
+/*******************************************************/
