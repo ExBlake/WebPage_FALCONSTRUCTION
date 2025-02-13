@@ -1,3 +1,6 @@
+/***********************************************************/
+/*Funcionalidad para enviar el mensaje via whatsapp o email*/
+/***********************************************************/
 function sendMessage() {
     let fullName = document.getElementById("fullName").value;
     let phoneNumber = document.getElementById("phoneNumber").value;
@@ -21,8 +24,13 @@ function sendMessage() {
         window.location.href = mailtoLink;
     }
 }
+/***************************************************************/
+/*END Funcionalidad para enviar el mensaje via whatsapp o email*/
+/***************************************************************/
 
-//Cursor effect
+/***************************************/
+/*Efecto del cursor para toda la pagina*/
+/***************************************/
 document.addEventListener("DOMContentLoaded", () => {
     const cursorEffect = document.getElementById("cursor-effect")
     let mouseX = 0
@@ -46,33 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     updateCursorEffect()
-  });
-
-
-  
-// Loader Script
-document.addEventListener('DOMContentLoaded', () => {
-    // Loading animation
-    const loading = document.createElement('div');
-    loading.classList.add('loading');
-  
-    const loadingContainer = document.createElement('div');
-    loadingContainer.classList.add('loading-container');
-  
-    const image = document.createElement('img');
-    image.src = 'View/img/Logo_Phone.png';
-    image.classList.add('loading-image');
-  
-    loadingContainer.appendChild(image);
-    loading.appendChild(loadingContainer);
-    document.body.appendChild(loading);
-  
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            loading.style.opacity = '0';
-            setTimeout(() => {
-                loading.remove();
-            }, 500);
-        }, 1000);
-    });
-  });
+});
+/*******************************************/
+/*END Efecto del cursor para toda la pagina*/
+/*******************************************/

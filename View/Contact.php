@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--For icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Styles -->
     <link rel="stylesheet" href="Estilos_Contacto">
     <link rel="stylesheet" href="Estilos_Header">
-    <title>Contact Form</title>
+    <title>FALCONSTRUCTION | CONTACT</title>
 
 </head>
-
+<!-- Body Page -->
 <body>
+  
     <?php
-    // Inclusión del Header
+    // Llamado del header
     require_once 'Layout/Header.php';
     ?>
     <div class="container-contacts">
@@ -70,8 +72,8 @@
         </div>
     </div>
     <div id="cursor-effect"></div>
+    <!-- Scripts Partial -->
     <script src="Script_Header"></script>
     <script src="Script_Contactos"></script>
 </body>
-
 </html>
