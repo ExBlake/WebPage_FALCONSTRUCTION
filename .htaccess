@@ -63,6 +63,9 @@ RewriteRule ^Estilos_Resenas$ View/Layout/css/Style_Reviews.css [L]
 # Reescribe la URL para 'Style_Services.css'
 RewriteRule ^Estilos_Servicios$ View/Layout/css/Style_Services.css [L]
 
+# Reescribe la URL para 'Style_CursorEffect.css'
+RewriteRule ^Estilos_Cursor$ View/Layout/css/Style_CursorEffect.css [L]
+
 # ----------- CSS REWRITES -------------
 
 
@@ -91,6 +94,9 @@ RewriteRule ^Script_Services$ View/Layout/js/Script_Services.js [L]
 
 # Reescribe la URL para 'Script_Contact.js'
 RewriteRule ^Script_Contactos$ View/Layout/js/Script_Contact.js [L]
+
+# Reescribe la URL para 'Script_CursorEffect.js'
+RewriteRule ^Script_Cursor$ View/Layout/js/Script_CursorEffect.js [L]
 
 # ----------- JS REWRITES -------------
 

@@ -1,3 +1,6 @@
+/***********************************************************/
+/*Funcionalidad para enviar el mensaje via whatsapp o email*/
+/***********************************************************/
 function sendMessage() {
     let fullName = document.getElementById("fullName").value;
     let phoneNumber = document.getElementById("phoneNumber").value;
@@ -21,58 +24,6 @@ function sendMessage() {
         window.location.href = mailtoLink;
     }
 }
-
-//Cursor effect
-document.addEventListener("DOMContentLoaded", () => {
-    const cursorEffect = document.getElementById("cursor-effect")
-    let mouseX = 0
-    let mouseY = 0
-  
-    document.addEventListener("mousemove", (e) => {
-      mouseX = e.clientX
-      mouseY = e.clientY
-    })
-  
-    function updateCursorEffect() {
-      const gradientSize = 400
-      cursorEffect.style.background = `
-              radial-gradient(
-                  circle ${gradientSize}px at ${mouseX}px ${mouseY}px,
-                  rgba(59, 130, 246, 0.15),
-                  transparent 80%
-              )
-          `
-      requestAnimationFrame(updateCursorEffect)
-    }
-  
-    updateCursorEffect()
-  });
-
-
-  
-// Loader Script
-document.addEventListener('DOMContentLoaded', () => {
-    // Loading animation
-    const loading = document.createElement('div');
-    loading.classList.add('loading');
-  
-    const loadingContainer = document.createElement('div');
-    loadingContainer.classList.add('loading-container');
-  
-    const image = document.createElement('img');
-    image.src = 'View/img/Logo_Phone.png';
-    image.classList.add('loading-image');
-  
-    loadingContainer.appendChild(image);
-    loading.appendChild(loadingContainer);
-    document.body.appendChild(loading);
-  
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            loading.style.opacity = '0';
-            setTimeout(() => {
-                loading.remove();
-            }, 500);
-        }, 1000);
-    });
-  });
+/***************************************************************/
+/*END Funcionalidad para enviar el mensaje via whatsapp o email*/
+/***************************************************************/
