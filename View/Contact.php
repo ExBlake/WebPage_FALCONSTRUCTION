@@ -8,12 +8,12 @@
     <!-- Styles -->
     <link rel="stylesheet" href="Estilos_Contacto">
     <link rel="stylesheet" href="Estilos_Header">
+    <link rel="stylesheet" href="Estilos_Cursor">
     <title>FALCONSTRUCTION | CONTACT</title>
 
 </head>
 <!-- Body Page -->
 <body>
-  
     <?php
     // Llamado del header
     require_once 'Layout/Header.php';
@@ -75,5 +75,6 @@
     <!-- Scripts Partial -->
     <script src="Script_Header"></script>
     <script src="Script_Contactos"></script>
+    <script src="Script_Cursor"></script>
 </body>
-</html>
+</html> 

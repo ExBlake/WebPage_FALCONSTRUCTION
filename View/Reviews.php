@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reseñas</title>
-    <link rel="stylesheet" href="Estilos_Header">
-    <link rel="stylesheet" href="Estilos_Resenas">
     <!-- Font Awesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="Estilos_Header">
+    <link rel="stylesheet" href="Estilos_Cursor">
+    <link rel="stylesheet" href="Estilos_Resenas">
     <link rel="stylesheet" href="Estilos_Footer">
+    <title>FALCONSTRUCTION | REVIEWS</title>
 </head>
 
 <body>
@@ -42,7 +43,6 @@
                 <div class="arrow"></div>
             </div>
         </div>
-
     </main>
 
     <!-- Main Content -->
@@ -335,13 +335,14 @@
             </div>
     </main>
     <div id="cursor-effect"></div>
-
     <?php
     // Inclusión del footer
     require_once 'Layout/Footer.php';
     ?>
     <script src="Script_Header"></script>
     <script src="Script_Resenas"></script>
+    <script src="Script_Cursor"></script>
+
 </body>
 
 </html>

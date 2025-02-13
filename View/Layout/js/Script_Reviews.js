@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Funcionalidad del carrusel
+    /****************************/
+    /*Funcionalidad del carrusel*/
+    /****************************/
     const carousels = document.querySelectorAll(".post-carousel-review");
+    const sidebar = document.querySelector(".sidebar-review");
+    const postsContainer = document.querySelector(".feed-section-review");
+    const buttons = document.querySelectorAll(".switch-btn-review");
+    const videos = document.querySelectorAll('.custom-video');
 
     carousels.forEach((carousel) => {
         const container = carousel.querySelector(".carousel-container-review");
@@ -88,10 +94,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         showSlide(currentIndex);
     });
+    /********************************/
+    /*END Funcionalidad del carrusel*/
+    /********************************/
 
-    const sidebar = document.querySelector(".sidebar-review");
-    const postsContainer = document.querySelector(".feed-section-review");
-    
+    /************************************************************/
+    /*Funcionalidad de los limites de los fixdes de los usuarios*/
+    /************************************************************/
     function updateSidebarPosition() {
         if (!sidebar || !postsContainer) return;
     
@@ -126,9 +135,10 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", updateSidebarPosition);
     window.addEventListener("resize", updateSidebarPosition);
     updateSidebarPosition();
-    // Seleccionamos todos los botones
-    const buttons = document.querySelectorAll(".switch-btn-review");
 
+    /************************************************************/
+    /*Funcionalidad de los limites de los fixdes de los usuarios*/
+    /************************************************************/
     buttons.forEach(button => {
         button.addEventListener("click", function () {
             // Obtener el username del atributo data-username
@@ -143,9 +153,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+    /******************************************************************/
+    /*END Funcionalidad para hacer click en el objeto he irse al posts*/
+    /******************************************************************/
 
-    const videos = document.querySelectorAll('.custom-video');
 
+    /******************************************************************/
+    /*Funcionalidad para hacer click en el objeto y desmutear el video*/
+    /******************************************************************/
     videos.forEach(video => {
         // Al hacer clic en el video
         video.addEventListener('click', () => {
@@ -160,79 +175,31 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
-});
+    /**********************************************************************/
+    /*END Funcionalidad para hacer click en el objeto y desmutear el video*/
+    /**********************************************************************/
 
-
-//Cursor effect
-document.addEventListener("DOMContentLoaded", () => {
-    const cursorEffect = document.getElementById("cursor-effect")
-    let mouseX = 0
-    let mouseY = 0
-  
-    document.addEventListener("mousemove", (e) => {
-      mouseX = e.clientX
-      mouseY = e.clientY
-    })
-  
-    function updateCursorEffect() {
-      const gradientSize = 400
-      cursorEffect.style.background = `
-              radial-gradient(
-                  circle ${gradientSize}px at ${mouseX}px ${mouseY}px,
-                  rgba(59, 130, 246, 0.15),
-                  transparent 80%
-              )
-          `
-      requestAnimationFrame(updateCursorEffect)
+    /*******************************************************************************/
+    /*Funcionalidad para hacer el efecto de auntoincremento en el numero del banner*/
+    /*******************************************************************************/
+    function animateCounter(element, start, end, duration) {
+        let range = end - start;
+        let current = start;
+        let increment = end > start ? 1 : -1;
+        let stepTime = Math.abs(Math.floor(duration / range));
+        let timer = setInterval(() => {
+            current += increment;
+            element.textContent = "+" + current ;
+            if (current === end) {
+                clearInterval(timer);
+            }
+        }, stepTime);
     }
-  
-    updateCursorEffect()
-  })
 
-
-  function animateCounter(element, start, end, duration) {
-    let range = end - start;
-    let current = start;
-    let increment = end > start ? 1 : -1;
-    let stepTime = Math.abs(Math.floor(duration / range));
-    let timer = setInterval(() => {
-        current += increment;
-        element.textContent = "+" + current ;
-        if (current === end) {
-            clearInterval(timer);
-        }
-    }, stepTime);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
     let counterElement = document.querySelector(".counter");
     animateCounter(counterElement, 0, 99, 2000);
-});
 
-
-// Loader Script
-document.addEventListener('DOMContentLoaded', () => {
-    // Loading animation
-    const loading = document.createElement('div');
-    loading.classList.add('loading');
-  
-    const loadingContainer = document.createElement('div');
-    loadingContainer.classList.add('loading-container');
-  
-    const image = document.createElement('img');
-    image.src = 'View/img/Logo_Phone.png';
-    image.classList.add('loading-image');
-  
-    loadingContainer.appendChild(image);
-    loading.appendChild(loadingContainer);
-    document.body.appendChild(loading);
-  
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            loading.style.opacity = '0';
-            setTimeout(() => {
-                loading.remove();
-            }, 500);
-        }, 1000);
-    });
+    /***********************************************************************************/
+    /*END Funcionalidad para hacer el efecto de auntoincremento en el numero del banner*/
+    /***********************************************************************************/
 });
