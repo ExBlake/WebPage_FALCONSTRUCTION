@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-    /****************************/
-    /*Funcionalidad del carrusel*/
-    /****************************/
+   
     const carousels = document.querySelectorAll(".post-carousel-review");
     const sidebar = document.querySelector(".sidebar-review");
     const postsContainer = document.querySelector(".feed-section-review");
     const buttons = document.querySelectorAll(".switch-btn-review");
     const videos = document.querySelectorAll('.custom-video');
-
+    /****************************/
+    /*Funcionalidad del carrusel*/
+    /****************************/
     carousels.forEach((carousel) => {
         const container = carousel.querySelector(".carousel-container-review");
         const slides = carousel.querySelectorAll(".carousel-slide-review");
@@ -136,9 +136,13 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", updateSidebarPosition);
     updateSidebarPosition();
 
-    /************************************************************/
-    /*Funcionalidad de los limites de los fixdes de los usuarios*/
-    /************************************************************/
+    /****************************************************************/
+    /*END Funcionalidad de los limites de los fixdes de los usuarios*/
+    /****************************************************************/
+
+    /******************************************************************/
+    /*Funcionalidad para hacer click en el objeto he irse al posts*/
+    /******************************************************************/
     buttons.forEach(button => {
         button.addEventListener("click", function () {
             // Obtener el username del atributo data-username
