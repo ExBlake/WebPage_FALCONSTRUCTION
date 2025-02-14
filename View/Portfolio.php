@@ -7,20 +7,21 @@
 
     <title>Proyectos - FALCONSTRUCTIONS</title>
 
+    <!-- Carga de fuentes y estilos -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <!--Iconos-->
-    <link rel="stylesheet" href="Estilos_Header">
-    <link rel="stylesheet" href="Estilos_Portafolio">
-    <link rel="stylesheet" href="Estilos_Footer">
-    <link rel="stylesheet" href="Estilos_Banner">
-
+    <!-- Estilos personalizados para diferentes secciones -->
+    <link rel="stylesheet" href="Estilos_Header"> <!-- Estilos del encabezado -->
+    <link rel="stylesheet" href="Estilos_Portafolio"> <!-- Estilos del portafolio -->
+    <link rel="stylesheet" href="Estilos_Footer"> <!-- Estilos del pie de página -->
+    <link rel="stylesheet" href="Estilos_Banner"> <!-- Estilos del banner -->
 </head>
 
 <body>
 
     <?php
     // Inclusión del Header
+    // Se carga el archivo del encabezado que contiene la navegación y el logo
     require_once 'Layout/Header.php';
     ?>
 
@@ -28,11 +29,11 @@
         <section class="parallax-section hero-section">
             <main class="hero-portfolio">
                 <div class="hero-content-portfolio">
-                    <!-- Decorative elements -->
+                    <!-- Elementos decorativos para la sección hero -->
                     <div class="hero-decorative-line"></div>
                     <div class="hero-side-text">EXCELLENCE IN CONSTRUCTION</div>
 
-                    <!-- Main content -->
+                    <!-- Contenido principal de la sección hero -->
                     <div class="hero-main-content">
                         <div class="spaceport-portfolio">
                             <span class="line-before"></span>
@@ -47,19 +48,20 @@
                         </h1>
 
                         <div class="hero-stats">
+                            <!-- Estadísticas de la empresa -->
                             <div class="stat-item">
-                                <span class="stat-number" data-value="25">0</span>
+                                <span class="stat-number" data-value="25">0</span> <!-- Valor inicial que se animará -->
                                 <span class="stat-label">YEARS OF<br>EXCELLENCE</span>
                             </div>
                             <div class="stat-separator"></div>
                             <div class="stat-item">
-                                <span class="stat-number" data-value="500">0</span>
+                                <span class="stat-number" data-value="500">0</span> <!-- Valor inicial que se animará -->
                                 <span class="stat-label">PROJECTS<br>COMPLETED</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Scroll indicator -->
+                    <!-- Indicador de desplazamiento -->
                     <div class="scroll-container">
                         <div class="mouse-icon">
                             <div class="mouse-wheel"></div>
@@ -72,7 +74,7 @@
                     </div>
                 </div>
 
-                <!-- Blueprint grid overlay -->
+                <!-- Superposición de cuadrícula de plano -->
                 <div class="blueprint-grid"></div>
             </main>
         </section>
@@ -93,12 +95,13 @@
                 TO BE SHARED
             </h1>
 
+            <!-- Bloque de contenido para la experiencia de los invitados -->
             <div class="content-block animate-on-scroll">
                 <img src="PImageProject/project-0.jpg" alt="Unity 25" class="image-right">
                 <div class="text-left">
                     <h2>Going to space is the kind of life event you'll want your loved ones to be a part of.</h2>
                     <p>Bring up to three guests so they can share in the love, wonder and awe of your spaceflight.</p>
-                    <button class="ver-mas-btn">Ver Más</button>
+                    <button class="ver-mas-btn">Ver Más</button> <!-- Botón para más información -->
                 </div>
                 <p class="caption-left">UNITY 25 SPACEFLIGHT CELEBRATION</p>
             </div>
@@ -107,7 +110,7 @@
                 <div class="text-right">
                     <p>While you participate in pre-flight readiness, your loved ones will enjoy curated activities,
                         top-tier amenities, and most importantly, a front row seat on flight day.</p>
-                    <button class="ver-mas-btn">Ver Más</button>
+                    <button class="ver-mas-btn">Ver Más</button> <!-- Botón para más información -->
                 </div>
                 <img src="PImageProject/project-1.jpg" alt="White Sands" class="image-left">
                 <p class="caption-right">TRIP TO WHITE SANDS NATIONAL PARK</p>
@@ -119,7 +122,7 @@
                     <div class="text-left">
                         <p>Bring up to three guests so they can share in the love, wonder and awe of your spaceflight.
                         </p>
-                        <button class="ver-mas-btn">Ver Más</button>
+                        <button class="ver-mas-btn">Ver Más</button> <!-- Botón para más información -->
                     </div>
                     <p class="caption-left">UNITY 25 SPACEFLIGHT CELEBRATION</p>
                 </div>
@@ -129,21 +132,23 @@
         <section class="BannerEnd-Portfolio fade-in-up-element">
             <?php
             // Inclusión Banner End
+            // Se carga el archivo del banner final que puede contener información adicional o promociones
             require_once 'Layout/BannerEnd.php';
             ?>
         </section>
 
-        <div id="cursor-effect"></div>
+        <div id="cursor-effect"></div> <!-- Efecto de cursor personalizado -->
 
         <?php
         // Inclusión del footer
+        // Se carga el archivo del pie de página que contiene información de contacto y enlaces
         require_once 'Layout/Footer.php';
         ?>
 
         <!-- Primer modal -->
         <div id="modal1" class="modal">
             <div class="modal-content">
-                <span class="close-modal"></span>
+                <span class="close-modal"></span> <!-- Botón para cerrar el modal -->
 
                 <!-- Sección del título -->
                 <div class="modal-header">
@@ -151,7 +156,7 @@
                 </div>
 
                 <!-- Sección del bentogrid -->
-                <div class="modal-content-grid"></div>
+                <div class="modal-content-grid"></div> <!-- Contenido dinámico que se llenará con información -->
 
                 <!-- Sección de descripción -->
                 <div class="modal-description">
@@ -160,6 +165,7 @@
                         </h3>
 
                         <div class="accordion-final-modal">
+                            <!-- Elementos del acordeón para mostrar información adicional -->
                             <div class="accordion-item-final-modal">
                                 <div class="accordion-header-final-modal">Diseño</div>
                                 <div class="accordion-content-final-modal">
@@ -200,7 +206,7 @@
         <!-- Segundo modal -->
         <div id="modal2" class="modal">
             <div class="modal-content">
-                <span class="close-modal"></span>
+                <span class="close-modal"></span> <!-- Botón para cerrar el modal -->
 
                 <!-- Sección del título -->
                 <div class="modal-header">
@@ -208,7 +214,7 @@
                 </div>
 
                 <!-- Sección del bentogrid -->
-                <div class="modal-content-grid"></div>
+                <div class="modal-content-grid"></div> <!-- Contenido dinámico que se llenará con información -->
 
                 <!-- Sección de descripción -->
                 <div class="modal-description">
@@ -217,6 +223,7 @@
                         </h3>
 
                         <div class="accordion-final-modal">
+                            <!-- Elementos del acordeón para mostrar información adicional -->
                             <div class="accordion-item-final-modal">
                                 <div class="accordion-header-final-modal">Diseño</div>
                                 <div class="accordion-content-final-modal">
@@ -257,7 +264,7 @@
         <!-- Tercer modal -->
          <div id="modal3" class="modal">
             <div class="modal-content">
-                <span class="close-modal"></span>
+                <span class="close-modal"></span> <!-- Botón para cerrar el modal -->
 
                 <!-- Sección del título -->
                 <div class="modal-header">
@@ -265,7 +272,7 @@
                 </div>
 
                 <!-- Sección del bentogrid -->
-                <div class="modal-content-grid"></div>
+                <div class="modal-content-grid"></div> <!-- Contenido dinámico que se llenará con información -->
 
                 <!-- Sección de descripción -->
                 <div class="modal-description">
@@ -274,6 +281,7 @@
                         </h3>
 
                         <div class="accordion-final-modal">
+                            <!-- Elementos del acordeón para mostrar información adicional -->
                             <div class="accordion-item-final-modal">
                                 <div class="accordion-header-final-modal">Diseño</div>
                                 <div class="accordion-content-final-modal">
@@ -314,32 +322,33 @@
         <!-- Modal para galería de imágenes -->
         <div id="imageModal" class="modal image-modal">
             <div class="modal-content image-modal-content">
-                <span class="close-modal-gallery"></span>
-                <button class="nav-btn prev-btn">
+                <span class="close-modal-gallery"></span> <!-- Botón para cerrar la galería de imágenes -->
+                <button class="nav-btn prev-btn"> <!-- Botón para la imagen anterior -->
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M15 18l-6-6 6-6"></path>
                     </svg>
                 </button>
                 <div class="modal-image-container">
-                    <img src="" alt="Imagen ampliada" class="modal-image">
+                    <img src="" alt="Imagen ampliada" class="modal-image"> <!-- Imagen ampliada que se mostrará -->
                 </div>
-                <button class="nav-btn next-btn">
+                <button class="nav-btn next-btn"> <!-- Botón para la imagen siguiente -->
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M9 18l6-6-6-6"></path>
                     </svg>
                 </button>
-                <div class="image-counter">1 / 9</div>
+                <div class="image-counter">1 / 9</div> <!-- Contador de imágenes -->
             </div>
         </div>
 
-        <script src="Script_Portafolio"></script>
-        <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script>
-        <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js'></script>
-        <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script>
-        <script src="Script_Banner"></script>
-        <script src="Script_Header"></script>
+        <!-- Inclusión de scripts -->
+        <script src="Script_Portafolio"></script> <!-- Script específico para el portafolio -->
+        <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script> <!-- Librería GSAP para animaciones -->
+        <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js'></script> <!-- Efectos de Flip de GSAP -->
+        <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script> <!-- Easing personalizado de GSAP -->
+        <script src="Script_Banner"></script> <!-- Script para el banner -->
+        <script src="Script_Header"></script> <!-- Script para el encabezado -->
 </body>
 
 </html>
