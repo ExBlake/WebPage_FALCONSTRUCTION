@@ -511,41 +511,46 @@ let currentIndex = 0;
 let animationID = 0;
 let slidesPerView = getSlidesPerView();
 
-// Create dots based on number of visible slides
-function createDots() {
-    dotsContainer.innerHTML = '';
-    const numDots = Math.ceil(slides.length / slidesPerView);
+// Variables nuevas para detectar la dirección del swipe
+let startX = 0,
+    startY = 0;
+let swipeDirection = null; // null hasta determinar: "horizontal" o "vertical"
 
-    for (let i = 0; i < numDots; i++) {
-        const dot = document.createElement('span');
-        dot.classList.add('dot');
-        if (i === currentIndex) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(i));
-        dotsContainer.appendChild(dot);
-    }
+// Crea los puntos (dots) según la cantidad de slides visibles
+function createDots() {
+  dotsContainer.innerHTML = '';
+  const numDots = Math.ceil(slides.length / slidesPerView);
+  for (let i = 0; i < numDots; i++) {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === currentIndex) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
 }
 
 function getSlidesPerView() {
-    if (window.innerWidth >= 1024) return 3;
-    if (window.innerWidth >= 768) return 2;
-    return 1;
+  if (window.innerWidth >= 1024) return 3;
+  if (window.innerWidth >= 768) return 2;
+  return 1;
 }
 
 function updateDots() {
-    const dots = document.querySelectorAll('.dot');
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentIndex);
-    });
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === currentIndex);
+  });
 }
 
 function goToSlide(index) {
-    currentIndex = index;
-    prevTranslate = currentTranslate = -index * (100 / slidesPerView);
-    setSliderPosition();
-    updateDots();
+  currentIndex = index;
+  prevTranslate = currentTranslate = -index * (100 / slidesPerView);
+  setSliderPosition();
+  updateDots();
 }
 
 // Touch events
+
 slider.addEventListener('touchstart', startDragging);
 slider.addEventListener('touchmove', drag);
 slider.addEventListener('touchend', stopDragging);
@@ -557,87 +562,104 @@ slider.addEventListener('mouseup', stopDragging);
 slider.addEventListener('mouseleave', stopDragging);
 
 function startDragging(e) {
-    isDragging = true;
-    slider.classList.add('dragging');
-
-    // Get starting position
-    startPos = getPositionX(e);
-
-    // Cancel any ongoing animation
-    cancelAnimationFrame(animationID);
+  isDragging = true;
+  slider.classList.add('dragging');
+  const touchEvent = e.touches ? e.touches[0] : e;
+  startX = touchEvent.clientX;
+  startY = touchEvent.clientY;
+  startPos = touchEvent.clientX;
+  swipeDirection = null; // reiniciamos la dirección en cada nuevo gesto
+  cancelAnimationFrame(animationID);
 }
 
 function drag(e) {
-    if (!isDragging) return;
+  if (!isDragging) return;
 
+  const touchEvent = e.touches ? e.touches[0] : e;
+  const currentX = touchEvent.clientX;
+  const currentY = touchEvent.clientY;
+  const dx = currentX - startX;
+  const dy = currentY - startY;
+
+  // Determinar la dirección del swipe si aún no se ha bloqueado
+  if (swipeDirection === null) {
+    if (Math.abs(dx) > Math.abs(dy)) {
+      swipeDirection = 'horizontal';
+    } else {
+      swipeDirection = 'vertical';
+    }
+  }
+
+  if (swipeDirection === 'vertical') {
+    // Si es un swipe vertical, dejamos pasar el scroll de la página y cancelamos el slider
+    isDragging = false;
+    slider.classList.remove('dragging');
+    return; // No hacemos nada con el slider
+  } else {
+    // Swipe horizontal: evitamos el scroll vertical y aplicamos la lógica del slider
     e.preventDefault();
-    const currentPosition = getPositionX(e);
-    const diff = currentPosition - startPos;
+    const diff = currentX - startPos;
     currentTranslate = prevTranslate + (diff / sliderContainer.offsetWidth) * 100;
 
-    // Add boundaries
+    // Límites para no sobrepasar el contenido
     const minTranslate = -((slides.length - slidesPerView) * (100 / slidesPerView));
     currentTranslate = Math.max(minTranslate, Math.min(0, currentTranslate));
-
     setSliderPosition();
+  }
 }
 
 function stopDragging() {
-    isDragging = false;
-    slider.classList.remove('dragging');
+  if (swipeDirection === 'vertical') {
+    // Si fue vertical, no hacemos nada extra
+    return;
+  }
+  isDragging = false;
+  slider.classList.remove('dragging');
+  const movedBy = currentTranslate - prevTranslate;
 
-    const movedBy = currentTranslate - prevTranslate;
+  // Cambiamos de slide si se movió lo suficiente
+  if (movedBy < -5) {
+    currentIndex = Math.min(
+      Math.ceil(slides.length / slidesPerView) - 1,
+      currentIndex + 1
+    );
+  } else if (movedBy > 5) {
+    currentIndex = Math.max(0, currentIndex - 1);
+  }
 
-    // If moved enough negative
-    if (movedBy < -5) {
-        currentIndex = Math.min(
-            Math.ceil(slides.length / slidesPerView) - 1,
-            currentIndex + 1
-        );
-    }
-    // If moved enough positive
-    else if (movedBy > 5) {
-        currentIndex = Math.max(0, currentIndex - 1);
-    }
-
-    currentTranslate = -currentIndex * (100 / slidesPerView);
-    prevTranslate = currentTranslate;
-    setSliderPosition();
-    updateDots();
-}
-
-function getPositionX(e) {
-    return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+  currentTranslate = -currentIndex * (100 / slidesPerView);
+  prevTranslate = currentTranslate;
+  setSliderPosition();
 }
 
 function setSliderPosition() {
-    slider.style.transform = `translateX(${currentTranslate}%)`;
+  slider.style.transform = `translateX(${currentTranslate}%)`;
 }
 
-// Handle window resize
+// Manejo de resize
 window.addEventListener('resize', () => {
-    const newSlidesPerView = getSlidesPerView();
-    if (newSlidesPerView !== slidesPerView) {
-        slidesPerView = newSlidesPerView;
-        currentIndex = Math.min(currentIndex, Math.ceil(slides.length / slidesPerView) - 1);
-        createDots();
-        goToSlide(currentIndex);
-    }
+  const newSlidesPerView = getSlidesPerView();
+  if (newSlidesPerView !== slidesPerView) {
+    slidesPerView = newSlidesPerView;
+    currentIndex = Math.min(currentIndex, Math.ceil(slides.length / slidesPerView) - 1);
+    createDots();
+    goToSlide(currentIndex);
+  }
 });
 
-// Prevent context menu on long press
+// Prevenir el menú contextual en dispositivos de escritorio
 slider.addEventListener('contextmenu', e => e.preventDefault());
 
-// Initialize
+// Inicializar
 createDots();
 updateDots();
 
-// Agregar evento para evitar conflictos en el contenedor de la descripción
+// Evitar conflictos en el contenedor de descripción
 const slideDescriptions = document.querySelectorAll('.slide-description');
 slideDescriptions.forEach(description => {
-    description.addEventListener('touchstart', (e) => {
-        e.stopPropagation(); // Detener la propagación del evento
-    });
+  description.addEventListener('touchstart', (e) => {
+    e.stopPropagation();
+  });
 });
 
 /*******************************************************/
