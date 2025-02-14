@@ -511,7 +511,11 @@ let currentIndex = 0;
 let animationID = 0;
 let slidesPerView = getSlidesPerView();
 
-// Create dots based on number of visible slides
+// Variables para detectar la dirección del swipe
+let startX = 0, startY = 0;
+let swipeDirection = null; // null hasta determinar: 'horizontal' o 'vertical'
+
+// Crea los dots según la cantidad de slides visibles
 function createDots() {
   dotsContainer.innerHTML = '';
   const numDots = Math.ceil(slides.length / slidesPerView);
@@ -544,10 +548,10 @@ function goToSlide(index) {
   updateDots();
 }
 
-// Touch events
-slider.addEventListener('touchstart', startDragging);
-slider.addEventListener('touchmove', drag);
-slider.addEventListener('touchend', stopDragging);
+// Agregar eventos touch con {passive: false} para iOS
+slider.addEventListener('touchstart', startDragging, { passive: false });
+slider.addEventListener('touchmove', drag, { passive: false });
+slider.addEventListener('touchend', stopDragging, { passive: false });
 
 // Eventos de mouse para escritorio
 slider.addEventListener('mousedown', startDragging);
@@ -556,25 +560,42 @@ slider.addEventListener('mouseup', stopDragging);
 slider.addEventListener('mouseleave', stopDragging);
 
 function startDragging(e) {
-    isDragging = true;
-    slider.classList.add('dragging');
-
-    // Get starting position
-    startPos = getPositionX(e);
-
-    // Cancel any ongoing animation
-    cancelAnimationFrame(animationID);
+  isDragging = true;
+  slider.classList.add('dragging');
+  const event = e.touches ? e.touches[0] : e;
+  startX = event.clientX;
+  startY = event.clientY;
+  startPos = event.clientX;
+  swipeDirection = null; // Reiniciamos la detección en cada gesto nuevo
+  cancelAnimationFrame(animationID);
 }
 
 function drag(e) {
   if (!isDragging) return;
 
-    e.preventDefault();
-    const currentPosition = getPositionX(e);
-    const diff = currentPosition - startPos;
+  const event = e.touches ? e.touches[0] : e;
+  const currentX = event.clientX;
+  const currentY = event.clientY;
+  const dx = currentX - startX;
+  const dy = currentY - startY;
+
+  // Determinar la dirección si aún no se ha fijado
+  if (swipeDirection === null) {
+    swipeDirection = Math.abs(dx) > Math.abs(dy) ? 'horizontal' : 'vertical';
+  }
+
+  if (swipeDirection === 'vertical') {
+    // Si es swipe vertical, permitimos el scroll normal del body
+    isDragging = false;
+    slider.classList.remove('dragging');
+    return; // No hacemos nada con el slider
+  } else {
+    // Swipe horizontal: evitamos el scroll vertical y ejecutamos la lógica del slider
+    e.preventDefault(); // Imprescindible en iOS para bloquear el scroll cuando es horizontal
+    const diff = currentX - startPos;
     currentTranslate = prevTranslate + (diff / sliderContainer.offsetWidth) * 100;
 
-    // Add boundaries
+    // Establecer límites para no sobrepasar el contenido
     const minTranslate = -((slides.length - slidesPerView) * (100 / slidesPerView));
     currentTranslate = Math.max(minTranslate, Math.min(0, currentTranslate));
     setSliderPosition();
@@ -582,31 +603,21 @@ function drag(e) {
 }
 
 function stopDragging() {
-    isDragging = false;
-    slider.classList.remove('dragging');
-
-    const movedBy = currentTranslate - prevTranslate;
-
-    // If moved enough negative
-    if (movedBy < -5) {
-        currentIndex = Math.min(
-            Math.ceil(slides.length / slidesPerView) - 1,
-            currentIndex + 1
-        );
-    }
-    // If moved enough positive
-    else if (movedBy > 5) {
-        currentIndex = Math.max(0, currentIndex - 1);
-    }
-
-    currentTranslate = -currentIndex * (100 / slidesPerView);
-    prevTranslate = currentTranslate;
-    setSliderPosition();
-    updateDots();
-}
-
-function getPositionX(e) {
-    return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+  if (swipeDirection === 'vertical') {
+    return; // Si fue vertical, no se hace nada y se permite el scroll
+  }
+  isDragging = false;
+  slider.classList.remove('dragging');
+  const movedBy = currentTranslate - prevTranslate;
+  if (movedBy < -5) {
+    currentIndex = Math.min(Math.ceil(slides.length / slidesPerView) - 1, currentIndex + 1);
+  } else if (movedBy > 5) {
+    currentIndex = Math.max(0, currentIndex - 1);
+  }
+  currentTranslate = -currentIndex * (100 / slidesPerView);
+  prevTranslate = currentTranslate;
+  setSliderPosition();
+  updateDots();
 }
 
 function setSliderPosition() {
@@ -624,20 +635,20 @@ window.addEventListener('resize', () => {
   }
 });
 
-// Prevent context menu on long press
+// Prevenir menú contextual en escritorio
 slider.addEventListener('contextmenu', e => e.preventDefault());
 
-// Initialize
+// Inicializar dots
 createDots();
 updateDots();
 
-// Agregar evento para evitar conflictos en el contenedor de la descripción
-const slideDescriptions = document.querySelectorAll('.slide-description');
-slideDescriptions.forEach(description => {
-    description.addEventListener('touchstart', (e) => {
-        e.stopPropagation(); // Detener la propagación del evento
-    });
-});
+// // Para evitar conflictos en elementos internos que también tengan touch
+// const slideDescriptions = document.querySelectorAll('.slide-description');
+// slideDescriptions.forEach(description => {
+//   description.addEventListener('touchstart', (e) => {
+//     e.stopPropagation();
+//   }, { passive: false });
+// });
 
 /*******************************************************/
 /* Script para el responsive del carrusel y sección 3  */
