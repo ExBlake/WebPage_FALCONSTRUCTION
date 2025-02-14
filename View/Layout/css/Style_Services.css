@@ -1517,6 +1517,13 @@ body {
 }
 
 /* Responsive Design */
+
+@media (max-width: 767px) {
+  .content-wrapper-banner-services {
+    margin-bottom: 80px;
+  }
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -1543,7 +1550,6 @@ body {
 
   .content-wrapper-banner-services {
     padding: 1rem;
-    margin-bottom: 80px;
   }
 
   .platform-badge-banner-services {
