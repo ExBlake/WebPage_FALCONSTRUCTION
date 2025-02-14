@@ -2,183 +2,179 @@
 /* SCRIPT PARA CAMBIAR BENTOGRID POR CARRUSEL */
 /**********************************************/
 function displayContent() {
-    // Seleccionar todos los elementos con la clase modal-content-grid
+    // Selecciona todos los elementos de contenido del modal
     const contentDivs = document.querySelectorAll('.modal-content-grid');
-    
-    if (window.innerWidth > 1200) {
-        contentDivs.forEach(contentDiv => {
-            contentDiv.innerHTML = `
-                <div class="modal-bentogrid">
-                    <div class="bento-item text" id="item1">
-                        <img src="PImageProject/project-0.jpg" alt="Vista Principal">
-                    </div>
-                    <div class="bento-item" id="item2">
-                        <img src="PImageProject/project-1.jpg" alt="Vista 2">
-                    </div>
-                    <div class="bento-item" id="item3">
-                        <img src="PImageProject/project-2.jpg" alt="Vista 3">
-                    </div>
-                    <div class="bento-item" id="item4">
-                        <img src="PImageProject/project-3.jpg" alt="Vista 4">
-                    </div>
-                    <div class="bento-item" id="item5">
-                        <img src="PImageProject/project-4.jpg" alt="Vista 5">
-                    </div>
-                    <div class="bento-item" id="item6">
-                        <img src="PImageProject/project-5.jpg" alt="Vista 6">
-                    </div>
-                    <div class="bento-item" id="item7">
-                        <img src="PImageProject/project-0.jpg" alt="Vista 7">
-                    </div>
-                    <div class="bento-item" id="item8">
-                        <img src="PImageProject/project-1.jpg" alt="Vista 8">
-                    </div>
-                    <div class="bento-item text" id="item9">
-                        <img src="PImageProject/project-2.jpg" alt="Vista 9">
-                    </div>
-                </div>`;
-        });
-    } else {
-        contentDivs.forEach(contentDiv => {
-            contentDiv.innerHTML = `
-                <div class="modal-bentogrid">
-                    <div class="carousel-wrapper">
-                        <div class="carousel-container">
-                            <div class="carousel">
-                                <div class="carousel-track">
-                                    <img src="PImageProject/project-0.jpg" alt="Imagen 1" class="carousel-item">
-                                    <img src="PImageProject/project-1.jpg" alt="Imagen 2" class="carousel-item">
-                                    <img src="PImageProject/project-2.jpg" alt="Imagen 3" class="carousel-item">
-                                    <img src="PImageProject/project-3.jpg" alt="Imagen 4" class="carousel-item">
-                                    <img src="PImageProject/project-4.jpg" alt="Imagen 5" class="carousel-item">
-                                    <img src="PImageProject/project-5.jpg" alt="Imagen 6" class="carousel-item">
-                                    <img src="PImageProject/project-0.jpg" alt="Imagen 7" class="carousel-item">
-                                    <img src="PImageProject/project-1.jpg" alt="Imagen 8" class="carousel-item">
-                                    <img src="PImageProject/project-2.jpg" alt="Imagen 9" class="carousel-item">
-                                </div>
-                            </div>
-                            <button class="carousel-button prev" aria-label="Anterior">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M15 18l-6-6 6-6"></path>
-                        </svg>
-                        </button>
-                            <button class="carousel-button next" aria-label="Siguiente">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 18l6-6-6-6"></path>
-                        </svg>
-                            </button>
-                            <div class="carousel-progress"></div>
-                        </div>
-                        <div class="carousel-indicators"></div>
-                    </div>
-                </div>`;
-        });
-
-        // Esperar a que el DOM se actualice y volver a inicializar eventos
-        setTimeout(() => {
-            initializeCarousel();
-            addModalEvents();
-        }, 100);
+  
+    contentDivs.forEach(contentDiv => {
+      // Si la ventana es grande, se muestra la vista de bentogrid
+      if (window.innerWidth > 1200) {
+        contentDiv.innerHTML = `
+          <div class="modal-bentogrid">
+            <div class="bento-item text" id="item1">
+              <img src="PImageProject/project-0.jpg" alt="Vista Principal">
+            </div>
+            <div class="bento-item" id="item2">
+              <img src="PImageProject/project-1.jpg" alt="Vista 2">
+            </div>
+            <div class="bento-item" id="item3">
+              <img src="PImageProject/project-2.jpg" alt="Vista 3">
+            </div>
+            <div class="bento-item" id="item4">
+              <img src="PImageProject/project-3.jpg" alt="Vista 4">
+            </div>
+            <div class="bento-item" id="item5">
+              <img src="PImageProject/project-4.jpg" alt="Vista 5">
+            </div>
+            <div class="bento-item" id="item6">
+              <img src="PImageProject/project-5.jpg" alt="Vista 6">
+            </div>
+            <div class="bento-item" id="item7">
+              <img src="PImageProject/project-0.jpg" alt="Vista 7">
+            </div>
+            <div class="bento-item" id="item8">
+              <img src="PImageProject/project-1.jpg" alt="Vista 8">
+            </div>
+            <div class="bento-item text" id="item9">
+              <img src="PImageProject/project-2.jpg" alt="Vista 9">
+            </div>
+          </div>`;
+      } else {
+        // Para pantallas pequeñas, se muestra el carrusel
+        contentDiv.innerHTML = `
+          <div class="modal-bentogrid">
+            <div class="carousel-wrapper">
+              <div class="carousel-container">
+                <div class="carousel">
+                  <div class="carousel-track">
+                    <img src="PImageProject/project-0.jpg" alt="Imagen 1" class="carousel-item">
+                    <img src="PImageProject/project-1.jpg" alt="Imagen 2" class="carousel-item">
+                    <img src="PImageProject/project-2.jpg" alt="Imagen 3" class="carousel-item">
+                    <img src="PImageProject/project-3.jpg" alt="Imagen 4" class="carousel-item">
+                    <img src="PImageProject/project-4.jpg" alt="Imagen 5" class="carousel-item">
+                    <img src="PImageProject/project-5.jpg" alt="Imagen 6" class="carousel-item">
+                    <img src="PImageProject/project-0.jpg" alt="Imagen 7" class="carousel-item">
+                    <img src="PImageProject/project-1.jpg" alt="Imagen 8" class="carousel-item">
+                    <img src="PImageProject/project-2.jpg" alt="Imagen 9" class="carousel-item">
+                  </div>
+                </div>
+                <button class="carousel-button prev" aria-label="Anterior">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 18l-6-6 6-6"></path>
+                  </svg>
+                </button>
+                <button class="carousel-button next" aria-label="Siguiente">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"></path>
+                  </svg>
+                </button>
+                <div class="carousel-progress"></div>
+              </div>
+              <div class="carousel-indicators"></div>
+            </div>
+          </div>`;
+      }
+    });
+  
+    // Si se usa el carrusel, inicializa sus eventos y la asignación de modal
+    if (window.innerWidth <= 1200) {
+      setTimeout(() => {
+        initializeCarousel();
+        addModalEvents();
+      }, 100);
     }
-}
-
-// Función para abrir el modal con la imagen correspondiente
-function openImageFromCarousel(carouselItem) {
-    // Verificar que el elemento existe
+  }
+  
+  // Función para abrir el modal con la imagen seleccionada (solo de ese modal)
+  function openImageFromCarousel(carouselItem) {
     if (!carouselItem) return;
-
-    const imageModal = document.getElementById('imageModal');
-    const modalImageContainer = imageModal.querySelector('.modal-image-container');
-    const counter = document.querySelector('.image-counter');
-    const closeBtn = document.querySelector('.close-modal-gallery');
-    const nextBtn = document.querySelector('.next-btn');
-    const prevBtn = document.querySelector('.prev-btn');
-
-    let currentIndex = Array.from(document.querySelectorAll('.carousel-item')).indexOf(carouselItem);
-    const items = document.querySelectorAll('.carousel-item');
+  
+    // Se obtiene el contenedor del carrusel al que pertenece la imagen clickeada
+    const carouselWrapper = carouselItem.closest('.carousel-wrapper');
+    const items = carouselWrapper.querySelectorAll('.carousel-item');
+    let currentIndex = Array.from(items).indexOf(carouselItem);
     const totalImages = items.length;
-
-    // Variables para el control del swipe
+  
+    // Se asume que el modal de imagen es único (con id "imageModal")
+    const imageModal = document.getElementById('imageModal');
+    // Se buscan los elementos internos del modal (asegúrate de que existen en tu HTML)
+    const modalImageContainer = imageModal.querySelector('.modal-image-container');
+    const counter = imageModal.querySelector('.image-counter');
+    const closeBtn = imageModal.querySelector('.close-modal-gallery');
+    const nextBtn = imageModal.querySelector('.next-btn');
+    const prevBtn = imageModal.querySelector('.prev-btn');
+  
+    // Variables para controlar el swipe
     let touchStartX = 0;
-    let touchEndX = 0;
     let isDragging = false;
     let startTranslateX = 0;
     let currentTranslateX = 0;
-
+  
     function updateImage(index, transition = true) {
-        const currentImg = items[index];
-        if (currentImg) {
-            modalImageContainer.innerHTML = `
-                <div class="image-wrapper">
-                    <img src="${currentImg.src}" class="modal-image" alt="Image" 
-                         onerror="this.src='View/Img/Projects/default.jpg'"
-                         style="transform: translateX(${currentTranslateX}px);
-                                transition: ${transition ? 'transform 0.3s ease' : 'none'}">
-                </div>
-            `;
-            counter.textContent = `${index + 1} / ${totalImages}`;
-        }
+      const currentImg = items[index];
+      if (currentImg) {
+        modalImageContainer.innerHTML = `
+          <div class="image-wrapper">
+            <img src="${currentImg.src}" class="modal-image" alt="Image" 
+                 onerror="this.src='View/Img/Projects/default.jpg'"
+                 style="transform: translateX(${currentTranslateX}px);
+                        transition: ${transition ? 'transform 0.3s ease' : 'none'}">
+          </div>
+        `;
+        counter.textContent = `${index + 1} / ${totalImages}`;
+      }
     }
-
+  
     function handleTouchStart(e) {
-        isDragging = true;
-        touchStartX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
-        startTranslateX = currentTranslateX;
-
-        // Deshabilitar transición durante el arrastre
-        const modalImage = modalImageContainer.querySelector('.modal-image');
-        if (modalImage) {
-            modalImage.style.transition = 'none';
-        }
+      isDragging = true;
+      touchStartX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
+      startTranslateX = currentTranslateX;
+      const modalImage = modalImageContainer.querySelector('.modal-image');
+      if (modalImage) {
+        modalImage.style.transition = 'none';
+      }
     }
-
+  
     function handleTouchMove(e) {
-        if (!isDragging) return;
-
-        e.preventDefault();
-        const currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
-        const diff = currentX - touchStartX;
-        currentTranslateX = startTranslateX + diff;
-
-        // Aplicar resistencia en los extremos
-        if (currentIndex === 0 && diff > 0 || currentIndex === totalImages - 1 && diff < 0) {
-            currentTranslateX = startTranslateX + (diff * 0.3);
-        }
-
-        const modalImage = modalImageContainer.querySelector('.modal-image');
-        if (modalImage) {
-            modalImage.style.transform = `translateX(${currentTranslateX}px)`;
-        }
+      if (!isDragging) return;
+      e.preventDefault();
+      const currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
+      const diff = currentX - touchStartX;
+      currentTranslateX = startTranslateX + diff;
+      // Resistencia en los extremos
+      if ((currentIndex === 0 && diff > 0) || (currentIndex === totalImages - 1 && diff < 0)) {
+        currentTranslateX = startTranslateX + diff * 0.3;
+      }
+      const modalImage = modalImageContainer.querySelector('.modal-image');
+      if (modalImage) {
+        modalImage.style.transform = `translateX(${currentTranslateX}px)`;
+      }
     }
-
-    function handleTouchEnd(e) {
-        if (!isDragging) return;
-        isDragging = false;
-
-        const diff = currentTranslateX - startTranslateX;
-        const threshold = modalImageContainer.offsetWidth * 0.3;
-
-        if (Math.abs(diff) > threshold) {
-            if (diff > 0 && currentIndex > 0) {
-                currentIndex--;
-            } else if (diff < 0 && currentIndex < totalImages - 1) {
-                currentIndex++;
-            }
+  
+    function handleTouchEnd() {
+      if (!isDragging) return;
+      isDragging = false;
+      const diff = currentTranslateX - startTranslateX;
+      const threshold = modalImageContainer.offsetWidth * 0.3;
+      if (Math.abs(diff) > threshold) {
+        if (diff > 0 && currentIndex > 0) {
+          currentIndex--;
+        } else if (diff < 0 && currentIndex < totalImages - 1) {
+          currentIndex++;
         }
-
-        currentTranslateX = 0;
-        updateImage(currentIndex, true);
+      }
+      currentTranslateX = 0;
+      updateImage(currentIndex, true);
     }
-
-    // Inicializar modal y eventos
+  
+    // Inicializa el modal con la imagen correspondiente
     updateImage(currentIndex);
     imageModal.style.display = 'flex';
     imageModal.classList.add('show');
     document.body.style.overflow = 'hidden';
-
-    // Eventos para mouse y touch
+  
+    // Eventos para controlar el swipe (mouse y touch)
     modalImageContainer.addEventListener('mousedown', handleTouchStart);
     modalImageContainer.addEventListener('mousemove', handleTouchMove);
     modalImageContainer.addEventListener('mouseup', handleTouchEnd);
@@ -186,98 +182,99 @@ function openImageFromCarousel(carouselItem) {
     modalImageContainer.addEventListener('touchstart', handleTouchStart);
     modalImageContainer.addEventListener('touchmove', handleTouchMove);
     modalImageContainer.addEventListener('touchend', handleTouchEnd);
-
-    // Event listeners existentes
+  
+    // Eventos de navegación
     nextBtn.onclick = () => {
-        currentIndex = (currentIndex + 1) % totalImages;
-        currentTranslateX = 0;
-        updateImage(currentIndex);
+      currentIndex = (currentIndex + 1) % totalImages;
+      currentTranslateX = 0;
+      updateImage(currentIndex);
     };
-
+  
     prevBtn.onclick = () => {
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-        currentTranslateX = 0;
-        updateImage(currentIndex);
+      currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+      currentTranslateX = 0;
+      updateImage(currentIndex);
     };
-
+  
     closeBtn.onclick = () => {
-        imageModal.classList.remove('show');
-        setTimeout(() => {
-            imageModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }, 300);
+      imageModal.classList.remove('show');
+      setTimeout(() => {
+        imageModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }, 300);
     };
-}
-
-// Función para inicializar el carrusel después de cambiar el contenido
-function initializeCarousel() {
-    const track = document.querySelector(".carousel-track");
-    const items = document.querySelectorAll(".carousel-item");
-    const indicatorsContainer = document.querySelector(".carousel-indicators");
-    const progressLabel = document.querySelector(".carousel-progress");
-    const prevButton = document.querySelector(".carousel-button.prev");
-    const nextButton = document.querySelector(".carousel-button.next");
-
-    let currentIndex = 0;
-    indicatorsContainer.innerHTML = ""; // Limpiar indicadores anteriores
-
-    items.forEach((_, index) => {
+  }
+  
+  // Función para inicializar cada carrusel de forma independiente
+  function initializeCarousel() {
+    // Selecciona cada contenedor de carrusel (dentro de cada modal)
+    const carousels = document.querySelectorAll(".carousel-wrapper");
+    carousels.forEach(carousel => {
+      const track = carousel.querySelector(".carousel-track");
+      const items = carousel.querySelectorAll(".carousel-item");
+      const indicatorsContainer = carousel.querySelector(".carousel-indicators");
+      const progressLabel = carousel.querySelector(".carousel-progress");
+      const prevButton = carousel.querySelector(".carousel-button.prev");
+      const nextButton = carousel.querySelector(".carousel-button.next");
+  
+      let currentIndex = 0;
+      indicatorsContainer.innerHTML = ""; // Limpia indicadores anteriores
+  
+      // Crea indicadores según la cantidad de imágenes
+      items.forEach((_, index) => {
         const indicator = document.createElement("button");
         indicator.classList.add("indicator");
         if (index === 0) indicator.classList.add("active");
         indicator.addEventListener("click", () => goToSlide(index));
         indicatorsContainer.appendChild(indicator);
-    });
-
-    const indicators = document.querySelectorAll(".carousel-indicators button");
-
-    function updateCarousel() {
+      });
+  
+      const indicators = indicatorsContainer.querySelectorAll("button");
+  
+      function updateCarousel() {
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
         indicators.forEach((indicator, index) => {
-            indicator.classList.toggle("active", index === currentIndex);
+          indicator.classList.toggle("active", index === currentIndex);
         });
         progressLabel.textContent = `${currentIndex + 1}/${items.length}`;
-    }
-
-    function goToSlide(index) {
+      }
+  
+      function goToSlide(index) {
         currentIndex = index;
         updateCarousel();
-    }
-
-    function nextSlide() {
+      }
+  
+      function nextSlide() {
         currentIndex = (currentIndex + 1) % items.length;
         updateCarousel();
-    }
-
-    function prevSlide() {
+      }
+  
+      function prevSlide() {
         currentIndex = (currentIndex - 1 + items.length) % items.length;
         updateCarousel();
-    }
-
-    nextButton.addEventListener("click", nextSlide);
-    prevButton.addEventListener("click", prevSlide);
-    updateCarousel();
-}
-
-// Función para volver a asignar eventos al modal
-function addModalEvents() {
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    carouselItems.forEach((item) => {
-        item.addEventListener('click', () => {
-            openImageFromCarousel(item);
-        });
+      }
+  
+      nextButton.addEventListener("click", nextSlide);
+      prevButton.addEventListener("click", prevSlide);
+      updateCarousel();
     });
-}
-
-// Ejecutar al cargar la página
-document.addEventListener("DOMContentLoaded", () => {
-    displayContent();
-});
-
-// Volver a ejecutar al redimensionar la ventana
-window.onresize = displayContent;
-
-
+  }
+  
+  // Función para asignar el evento de apertura del modal a cada imagen del carrusel
+  function addModalEvents() {
+    // Se asigna a cada .carousel-item (en cada modal, serán únicamente las 9 propias)
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    carouselItems.forEach(item => {
+      item.addEventListener('click', () => {
+        openImageFromCarousel(item);
+      });
+    });
+  }
+  
+  // Ejecuta al cargar la página y al redimensionar la ventana
+  document.addEventListener("DOMContentLoaded", displayContent);
+  window.onresize = displayContent;
+  
 /************************************/
 /* Script para la sección de conteo */
 /************************************/
