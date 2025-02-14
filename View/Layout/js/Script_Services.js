@@ -73,9 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Llamada inicial para actualizar el estado de las secciones e imágenes
   updateActiveSection();
 
-
 });
-
 
 // Añadimos efectos de hover más suaves
 document.addEventListener('DOMContentLoaded', () => {
@@ -115,7 +113,6 @@ window.addEventListener('load', () => {
     content.style.opacity = '1';
   }, 100);
 });
-
 
 
 //Fondo del cursor
@@ -170,7 +167,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateCursorEffect()
 })
-
 
 
 // Loader Script
@@ -241,7 +237,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const timelineItems = document.querySelectorAll(".timeline-item")
 
@@ -271,7 +266,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   }
-
 
 
   const handleScroll = () => {
@@ -310,7 +304,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 })
 
-
 document.addEventListener("DOMContentLoaded", function () {
   const images = document.querySelectorAll(".image-container-banner img");
   const textContent = document.querySelector(".text-content");
@@ -404,7 +397,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(showNextImage, 3000);
   }
 });
-
 
 /******************************/
 /* Script sección 2 servicios */
@@ -493,7 +485,6 @@ handleResize();
 /* Script sección 2 servicios */
 /******************************/
 
-
 /*******************************************************/
 /* Script para el responsive del carrusel y sección 3  */
 /*******************************************************/
@@ -508,141 +499,136 @@ let startPos = 0;
 let currentTranslate = 0;
 let prevTranslate = 0;
 let currentIndex = 0;
+let animationID = 0;
 let slidesPerView = getSlidesPerView();
 
-// Variables para detectar la dirección del swipe
-let startX = 0, startY = 0;
-let swipeDirection = null; // Será 'horizontal' o 'vertical' una vez determinado
-
-// Crea los dots según la cantidad de slides visibles
+// Create dots based on number of visible slides
 function createDots() {
-  dotsContainer.innerHTML = '';
-  const numDots = Math.ceil(slides.length / slidesPerView);
-  for (let i = 0; i < numDots; i++) {
-    const dot = document.createElement('span');
-    dot.classList.add('dot');
-    if (i === currentIndex) dot.classList.add('active');
-    dot.addEventListener('click', () => goToSlide(i));
-    dotsContainer.appendChild(dot);
-  }
+    dotsContainer.innerHTML = '';
+    const numDots = Math.ceil(slides.length / slidesPerView);
+
+    for (let i = 0; i < numDots; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === currentIndex) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    }
 }
 
 function getSlidesPerView() {
-  if (window.innerWidth >= 1024) return 3;
-  if (window.innerWidth >= 768) return 2;
-  return 1;
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 768) return 2;
+    return 1;
 }
 
 function updateDots() {
-  const dots = document.querySelectorAll('.dot');
-  dots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === currentIndex);
-  });
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+    });
 }
 
 function goToSlide(index) {
-  currentIndex = index;
-  prevTranslate = currentTranslate = -index * (100 / slidesPerView);
-  setSliderPosition();
-  updateDots();
+    currentIndex = index;
+    prevTranslate = currentTranslate = -index * (100 / slidesPerView);
+    setSliderPosition();
+    updateDots();
 }
 
-// Agregamos eventos touch con { passive: false } para iOS
-slider.addEventListener('touchstart', startDragging, { passive: false });
-slider.addEventListener('touchmove', drag, { passive: false });
-slider.addEventListener('touchend', stopDragging, { passive: false });
+// Touch events
+slider.addEventListener('touchstart', startDragging);
+slider.addEventListener('touchmove', drag);
+slider.addEventListener('touchend', stopDragging);
 
-// Eventos de mouse para escritorio
+// Mouse events
 slider.addEventListener('mousedown', startDragging);
 slider.addEventListener('mousemove', drag);
 slider.addEventListener('mouseup', stopDragging);
 slider.addEventListener('mouseleave', stopDragging);
 
 function startDragging(e) {
-  isDragging = true;
-  slider.classList.add('dragging');
-  const event = e.touches ? e.touches[0] : e;
-  startX = event.clientX;
-  startY = event.clientY;
-  startPos = event.clientX;
-  swipeDirection = null; // Reiniciamos la dirección en cada gesto
+    isDragging = true;
+    slider.classList.add('dragging');
+
+    // Get starting position
+    startPos = getPositionX(e);
+
+    // Cancel any ongoing animation
+    cancelAnimationFrame(animationID);
 }
 
 function drag(e) {
-  if (!isDragging) return;
+    if (!isDragging) return;
 
-  const event = e.touches ? e.touches[0] : e;
-  const currentX = event.clientX;
-  const currentY = event.clientY;
-  const dx = currentX - startX;
-  const dy = currentY - startY;
-
-  // Determinar la dirección del swipe si aún no se ha fijado
-  if (swipeDirection === null) {
-    swipeDirection = Math.abs(dx) > Math.abs(dy) ? 'horizontal' : 'vertical';
-  }
-
-  if (swipeDirection === 'vertical') {
-    // Si es un swipe vertical, se permite el scroll normal del body
-    isDragging = false;
-    slider.classList.remove('dragging');
-    return;
-  } else {
-    // Swipe horizontal: prevenimos el scroll vertical y ejecutamos la lógica del slider
     e.preventDefault();
-    const diff = currentX - startPos;
+    const currentPosition = getPositionX(e);
+    const diff = currentPosition - startPos;
     currentTranslate = prevTranslate + (diff / sliderContainer.offsetWidth) * 100;
+
+    // Add boundaries
     const minTranslate = -((slides.length - slidesPerView) * (100 / slidesPerView));
     currentTranslate = Math.max(minTranslate, Math.min(0, currentTranslate));
+
     setSliderPosition();
-  }
 }
 
 function stopDragging() {
-  if (swipeDirection === 'vertical') {
-    return; // No interferimos en el scroll vertical
-  }
-  isDragging = false;
-  slider.classList.remove('dragging');
-  const movedBy = currentTranslate - prevTranslate;
-  if (movedBy < -5) {
-    currentIndex = Math.min(Math.ceil(slides.length / slidesPerView) - 1, currentIndex + 1);
-  } else if (movedBy > 5) {
-    currentIndex = Math.max(0, currentIndex - 1);
-  }
-  currentTranslate = -currentIndex * (100 / slidesPerView);
-  prevTranslate = currentTranslate;
-  setSliderPosition();
-  updateDots();
+    isDragging = false;
+    slider.classList.remove('dragging');
+
+    const movedBy = currentTranslate - prevTranslate;
+
+    // If moved enough negative
+    if (movedBy < -5) {
+        currentIndex = Math.min(
+            Math.ceil(slides.length / slidesPerView) - 1,
+            currentIndex + 1
+        );
+    }
+    // If moved enough positive
+    else if (movedBy > 5) {
+        currentIndex = Math.max(0, currentIndex - 1);
+    }
+
+    currentTranslate = -currentIndex * (100 / slidesPerView);
+    prevTranslate = currentTranslate;
+    setSliderPosition();
+    updateDots();
+}
+
+function getPositionX(e) {
+    return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
 }
 
 function setSliderPosition() {
-  slider.style.transform = `translateX(${currentTranslate}%)`;
+    slider.style.transform = `translateX(${currentTranslate}%)`;
 }
 
+// Handle window resize
 window.addEventListener('resize', () => {
-  const newSlidesPerView = getSlidesPerView();
-  if (newSlidesPerView !== slidesPerView) {
-    slidesPerView = newSlidesPerView;
-    currentIndex = Math.min(currentIndex, Math.ceil(slides.length / slidesPerView) - 1);
-    createDots();
-    goToSlide(currentIndex);
-  }
+    const newSlidesPerView = getSlidesPerView();
+    if (newSlidesPerView !== slidesPerView) {
+        slidesPerView = newSlidesPerView;
+        currentIndex = Math.min(currentIndex, Math.ceil(slides.length / slidesPerView) - 1);
+        createDots();
+        goToSlide(currentIndex);
+    }
 });
 
-// Prevenir menú contextual en escritorio
+// Prevent context menu on long press
 slider.addEventListener('contextmenu', e => e.preventDefault());
 
-// Inicializar dots
+// Initialize
 createDots();
 updateDots();
 
-// // Para evitar conflictos en elementos internos que también tengan touch
+// Agregar evento para evitar conflictos en el contenedor de la descripción
 // const slideDescriptions = document.querySelectorAll('.slide-description');
 // slideDescriptions.forEach(description => {
-//   description.addEventListener('touchstart', (e) => {
-//     e.stopPropagation();
-//   }, { passive: false });
+//     description.addEventListener('touchstart', (e) => {
+//         e.stopPropagation(); // Detener la propagación del evento
+//     });
 // });
 
 /*******************************************************/
