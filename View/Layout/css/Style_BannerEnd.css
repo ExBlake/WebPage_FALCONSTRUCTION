@@ -1,11 +1,14 @@
 :root {
+    /* Variables de color y tamaño */
     --color-black: #000000;
     --color-light: #ffffff;
     --size-font: 16px;
     --container-padding: 20px;
 }
 
-
+/* ***************************** */
+/* Estilos generales del contenedor */
+/* ***************************** */
 .cloneable-ForAll {
     padding: var(--container-padding);
     justify-content: center;
@@ -13,10 +16,13 @@
     min-height: 100vh;
     display: flex;
     position: relative;
-    font-size: 16px;
+    font-size: var(--size-font);
     /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 21, 36, 0.9) 100%); */
 }
 
+/* ***************************** */
+/* Estilos del layout de las pestañas */
+/* ***************************** */
 .tab-layout-ForAll {
     display: flex;
     flex-direction: column;
@@ -34,6 +40,9 @@
     padding: 1em 0;
 }
 
+/* ***************************** */
+/* Estilos del contenedor de las pestañas */
+/* ***************************** */
 .tab-container-ForAll {
     display: flex;
     flex-direction: column;
@@ -47,6 +56,9 @@
     gap: 1em;
 }
 
+/* ***************************** */
+/* Estilos de los encabezados de las pestañas */
+/* ***************************** */
 .tab-layout-heading-ForAll {
     font-size: 2.5em;
     font-weight: 500;
@@ -54,6 +66,9 @@
     margin: 0;
 }
 
+/* ***************************** */
+/* Estilos de la barra de filtros */
+/* ***************************** */
 .filter-bar-ForAll {
     background-color: rgba(239, 238, 236, 0.06);
     border: 1px solid rgba(239, 238, 236, 0.08);
@@ -64,6 +79,9 @@
     gap: 0.5em;
 }
 
+/* ***************************** */
+/* Estilos de los botones de filtro */
+/* ***************************** */
 .filter-button-ForAll {
     background-color: transparent;
     border: 1px solid transparent;
@@ -78,6 +96,9 @@
     border-radius: 0.25em;
 }
 
+/* ***************************** */
+/* Estilos del texto dentro de los botones de filtro */
+/* ***************************** */
 .filter-button__p-ForAll {
     z-index: 1;
     font-size: 1em;
@@ -85,6 +106,9 @@
     color: var(--color-light);
 }
 
+/* ***************************** */
+/* Estilos del fondo de los botones de pestañas */
+/* ***************************** */
 .tab-button__bg-ForAll {
     z-index: 0;
     background-color: rgba(239, 238, 236, 0.06);
@@ -94,12 +118,18 @@
     inset: 0;
 }
 
+/* ***************************** */
+/* Estilos del contenedor de contenido de las pestañas */
+/* ***************************** */
 .tab-content-wrap-ForAll {
     width: 100%;
     position: relative;
     min-height: 150px;
 }
 
+/* ***************************** */
+/* Estilos de los ítems de contenido de las pestañas */
+/* ***************************** */
 .tab-content-item-ForAll {
     z-index: 1;
     visibility: hidden;
@@ -114,6 +144,9 @@
     opacity: 1;
 }
 
+/* ***************************** */
+/* Estilos de los encabezados de contenido de las pestañas */
+/* ***************************** */
 .tab-content__heading-ForAll {
     font-size: 1.5em;
     font-weight: 500;
@@ -121,23 +154,31 @@
     margin: 0 0 0.5em;
 }
 
+/* ***************************** */
+/* Estilos del contenido de las pestañas */
+/* ***************************** */
 .content-p-ForAll {
     font-size: 1em;
     line-height: 1.4;
     margin: 0;
 }
 
+/* ***************************** */
+/* Estilos del contenedor visual de las pestañas */
+/* ***************************** */
 .tab-visual-wrap-ForAll {
     width: 100%;
     height: 0;
-    padding-bottom: 75%;
-    /* 4:3 aspect ratio */
+    padding-bottom: 75%; /* 4:3 aspect ratio */
     position: relative;
     overflow: hidden;
     border-radius: 0.5em;
     margin-top: 2em;
 }
 
+/* ***************************** */
+/* Estilos de los ítems visuales de las pestañas */
+/* ***************************** */
 .tab-visual-item-ForAll {
     visibility: hidden;
     position: absolute;
@@ -151,12 +192,18 @@
     opacity: 1;
 }
 
+/* ***************************** */
+/* Estilos del video de las pestañas */
+/* ***************************** */
 .tab-video-ForAll {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* ***************************** */
+/* Estilos del botón elegante */
+/* ***************************** */
 .fancy-button {
     display: inline-block;
     padding: 12px 24px;
@@ -172,6 +219,9 @@
     overflow: hidden;
 }
 
+/* ***************************** */
+/* Estilos del pseudo-elemento del botón elegante */
+/* ***************************** */
 .fancy-button::before {
     content: "";
     position: absolute;
@@ -183,6 +233,9 @@
     transition: all 0.4s ease;
 }
 
+/* ***************************** */
+/* Efecto hover del botón elegante */
+/* ***************************** */
 .fancy-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -197,18 +250,27 @@
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* ***************************** */
+/* Estilos del ítem de contenido de las pestañas */
+/* ***************************** */
 .tab-content-item-ForAll {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
+/* ***************************** */
+/* Estilos de los encabezados y contenido de las pestañas */
+/* ***************************** */
 .tab-content__heading-ForAll,
 .content-p-ForAll,
 .fancy-button {
     max-width: 100%;
 }
 
+/* ***************************** */
+/* Estilos responsivos */
+/* ***************************** */
 @media (max-width: 768px) {
     .fancy-button {
         padding: 10px 20px;

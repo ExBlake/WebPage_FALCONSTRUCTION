@@ -18,6 +18,9 @@
   --font-type: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+/* ***************************** */
+/* Estilos Generales */
+/* ***************************** */
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +34,11 @@ body {
   min-height: 100vh;
 }
 /* ***************************** */
-/*El Background de toda la pagina*/
+/* FIN Estilos Generales */
+/* ***************************** */
+
+/* ***************************** */
+/* Estilos del Background de la Página */
 /* ***************************** */
 .background-gradients {
   position: fixed;
@@ -65,7 +72,7 @@ body {
 }
 
 /*************************************/
-/*END El Background de toda la pagina*/
+/* FIN Estilos del Background de la Página */
 /*************************************/
 
 /**********/
@@ -101,9 +108,9 @@ body {
   margin: 0 auto 2rem;
   color: var(--muted-foreground);
 }
-/**************/
-/* END Banner */
-/**************/
+/**************/ 
+/* FIN Banner */
+/**************/ 
 
 /* ***** */
 /* Posts */
@@ -277,11 +284,11 @@ body {
   margin-right: 2px;
 }
 /* ********* */
-/* END Posts */
+/* FIN Posts */
 /* ********* */
 
 /* ************** */
-/* Sidebar Styles */
+/* Estilos de la Sidebar */
 /* ************** */
 .sidebar-review {
   width: 319px;
@@ -414,15 +421,12 @@ body {
 }
 
 /* ****************** */
-/* END Sidebar Styles */
+/* FIN Estilos de la Sidebar */
 /* ****************** */
 
-
-
 /* *********************** */
-/* Scroll container styles */
+/* Estilos del Scroll Container */
 /* *********************** */
-
 .scroll-container {
   position: absolute;
   bottom: 2.5rem;
@@ -470,7 +474,7 @@ body {
   animation: arrow-move 1.5s infinite;
 }
 
-/* Animations */
+/* Animaciones */
 @keyframes expandLine {
   from {
     transform: scaleX(0);
@@ -538,11 +542,11 @@ body {
 }
 
 /* *************************** */
-/* END Scroll container styles */
+/* FIN Estilos del Scroll Container */
 /* *************************** */
 
 /* ***************** */
-/* Responsive Styles */
+/* Estilos Responsivos */
 /* ***************** */
 @media (min-width: 768px) and (max-width: 1023px) {
   .feed-section-review {
@@ -562,8 +566,6 @@ body {
 }
 
 @media (min-width: 768px) {
-
-
   .hero-section-review h1 {
     font-size: 4rem;
   }
@@ -589,8 +591,7 @@ body {
   .feed-section-review {
     width: 100%;
   }
-
 }
 /* ********************* */
-/* END Responsive Styles */
+/* FIN Estilos Responsivos */
 /* ********************* */

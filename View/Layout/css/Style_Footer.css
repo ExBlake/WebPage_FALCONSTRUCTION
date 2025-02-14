@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
+/* ***************************** */
+/* Estilos del Footer */
+/* ***************************** */
 .footer-footer {
     background: linear-gradient(180deg, rgba(0, 21, 36, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%);
     width: 100%;
@@ -7,6 +10,7 @@
     left: 0;
 }
 
+/* Estilos del pseudo-elemento antes del footer */
 .footer-footer::before {
     content: '';
     position: absolute;
@@ -26,14 +30,16 @@
     opacity: 0.5;
 }
 
-
-
+/* ***************************** */
+/* Estilos del contenido del footer */
+/* ***************************** */
 .footer-footer .content-footer {
     max-width: 90%;
     margin: auto;
     padding: 30px 40px 40px 40px;
 }
 
+/* Estilos de la parte superior del footer */
 .footer-footer .content-footer .top-footer {
     display: flex;
     align-items: center;
@@ -41,18 +47,20 @@
     margin-bottom: 50px;
 }
 
+/* Estilos del logo en el footer */
 .content-footer .top-footer .logo-details-footer {
     color: #fff;
     font-size: 30px;
 }
 
+/* Estilos del logo de la imagen */
 .logo-footer {
     width: 200px; 
     height: auto; 
     margin-top: -10px;
 }
 
-
+/* Estilos de los íconos de redes sociales */
 .content-footer .top-footer .media-icons-footer {
     display: flex;
     margin-top: -20px;
@@ -71,6 +79,7 @@
     transition: all 0.4s ease;
 }
 
+/* Estilos de los íconos de redes sociales específicos */
 .top-footer .media-icons-footer a:nth-child(1) {
     background: #4267B2;
 }
@@ -116,6 +125,9 @@
     background: #fff;
 }
 
+/* ***************************** */
+/* Estilos de los enlaces en el footer */
+/* ***************************** */
 .footer-footer .content-footer .link-boxes-footer {
     width: 100%;
     display: flex;
@@ -155,7 +167,7 @@
     font-weight: 400;
     text-decoration: none;
     opacity: 0.8;
-    transition: all 0.4s ease
+    transition: all 0.4s ease;
 }
 
 .content-footer .link-boxes-footer .box-footer li a:hover {
@@ -163,6 +175,9 @@
     text-decoration: underline;
 }
 
+/* ***************************** */
+/* Estilos del cuadro de entrada en el footer */
+/* ***************************** */
 .content-footer .link-boxes-footer .input-box-footer {
     margin-right: 55px;
 }
@@ -201,6 +216,9 @@
     opacity: 1;
 }
 
+/* ***************************** */
+/* Estilos de los detalles en la parte inferior del footer */
+/* ***************************** */
 .footer-footer .bottom-details-footer {
     width: 100%;
 }
@@ -231,8 +249,10 @@
     margin-right: 10px;
 }
 
+/* ***************************** */
+/* Estilos responsivos */
+/* ***************************** */
 @media (max-width: 900px) {
-    
     .footer-footer .content-footer .link-boxes-footer {
         flex-wrap: wrap;
     }
@@ -241,6 +261,7 @@
         width: 40%;
         margin-top: 10px;
     }
+
     .footer-footer::before {
         top: 120px;
     }
@@ -274,6 +295,7 @@
     .bottom-details-footer .bottom-text-footer a {
         font-size: 12px;
     }
+
     .footer-footer::before {
         top: 120px;
     }
