@@ -508,12 +508,11 @@ let startPos = 0;
 let currentTranslate = 0;
 let prevTranslate = 0;
 let currentIndex = 0;
-let animationID = 0;
 let slidesPerView = getSlidesPerView();
 
 // Variables para detectar la dirección del swipe
 let startX = 0, startY = 0;
-let swipeDirection = null; // null hasta determinar: 'horizontal' o 'vertical'
+let swipeDirection = null; // Será 'horizontal' o 'vertical' una vez determinado
 
 // Crea los dots según la cantidad de slides visibles
 function createDots() {
@@ -548,7 +547,7 @@ function goToSlide(index) {
   updateDots();
 }
 
-// Agregar eventos touch con {passive: false} para iOS
+// Agregamos eventos touch con { passive: false } para iOS
 slider.addEventListener('touchstart', startDragging, { passive: false });
 slider.addEventListener('touchmove', drag, { passive: false });
 slider.addEventListener('touchend', stopDragging, { passive: false });
@@ -566,8 +565,7 @@ function startDragging(e) {
   startX = event.clientX;
   startY = event.clientY;
   startPos = event.clientX;
-  swipeDirection = null; // Reiniciamos la detección en cada gesto nuevo
-  cancelAnimationFrame(animationID);
+  swipeDirection = null; // Reiniciamos la dirección en cada gesto
 }
 
 function drag(e) {
@@ -579,23 +577,21 @@ function drag(e) {
   const dx = currentX - startX;
   const dy = currentY - startY;
 
-  // Determinar la dirección si aún no se ha fijado
+  // Determinar la dirección del swipe si aún no se ha fijado
   if (swipeDirection === null) {
     swipeDirection = Math.abs(dx) > Math.abs(dy) ? 'horizontal' : 'vertical';
   }
 
   if (swipeDirection === 'vertical') {
-    // Si es swipe vertical, permitimos el scroll normal del body
+    // Si es un swipe vertical, se permite el scroll normal del body
     isDragging = false;
     slider.classList.remove('dragging');
-    return; // No hacemos nada con el slider
+    return;
   } else {
-    // Swipe horizontal: evitamos el scroll vertical y ejecutamos la lógica del slider
-    e.preventDefault(); // Imprescindible en iOS para bloquear el scroll cuando es horizontal
+    // Swipe horizontal: prevenimos el scroll vertical y ejecutamos la lógica del slider
+    e.preventDefault();
     const diff = currentX - startPos;
     currentTranslate = prevTranslate + (diff / sliderContainer.offsetWidth) * 100;
-
-    // Establecer límites para no sobrepasar el contenido
     const minTranslate = -((slides.length - slidesPerView) * (100 / slidesPerView));
     currentTranslate = Math.max(minTranslate, Math.min(0, currentTranslate));
     setSliderPosition();
@@ -604,7 +600,7 @@ function drag(e) {
 
 function stopDragging() {
   if (swipeDirection === 'vertical') {
-    return; // Si fue vertical, no se hace nada y se permite el scroll
+    return; // No interferimos en el scroll vertical
   }
   isDragging = false;
   slider.classList.remove('dragging');
@@ -624,7 +620,6 @@ function setSliderPosition() {
   slider.style.transform = `translateX(${currentTranslate}%)`;
 }
 
-// Manejo de resize
 window.addEventListener('resize', () => {
   const newSlidesPerView = getSlidesPerView();
   if (newSlidesPerView !== slidesPerView) {
