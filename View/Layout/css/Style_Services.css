@@ -21,6 +21,7 @@
   --color-accent: #bbbdc2;
   --color-text: #545e69;
   --color-highlight: #7c8c8c;
+  --background-color: #0a0118;
 }
 
 body,
@@ -30,7 +31,6 @@ html {
   overflow: hidden;
   /* Evita el scroll predeterminado */
 }
-
 
 .hero-portfolio {
   min-height: 100vh;
@@ -314,8 +314,6 @@ html {
   }
 }
 
-
-
 .fullscreen-container {
   position: relative;
   height: 100vh;
@@ -330,8 +328,6 @@ html {
   scroll-snap-align: start;
   position: relative;
 }
-
-
 
 * {
   margin: 0;
@@ -431,21 +427,23 @@ body {
 
 /* Estilización del scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px; /* Ancho del scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(255, 255, 255);
-  border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo del track */
+    border-radius: 5px; /* Bordes redondeados */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(0, 60, 109);
-  border-radius: 5px;
+    background: linear-gradient(45deg, #6e57e0, #8f84ff); /* Color del thumb */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 2px solid transparent; /* Borde del thumb */
+    background-clip: content-box; /* Para que el borde no se superponga */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(0, 31, 56);
+    background: linear-gradient(45deg, #5a44c9, #7b71ff); /* Color del thumb al pasar el mouse */
 }
 
 .background-gradients {
@@ -489,8 +487,6 @@ body {
   z-index: 9999;
 }
 
-
-
 /* Main Content */
 .main-content {
   padding: 2rem 1.5rem;
@@ -526,7 +522,6 @@ body {
 .sub-description {
   color: #9ca3af;
 }
-
 
 /* Combined Section */
 .combined-section {
@@ -883,7 +878,6 @@ body {
   }
 }
 
-
 .fullscreen-section {
   min-height: 100vh;
   display: flex;
@@ -917,24 +911,6 @@ body {
   background: transparent !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-:root {
-  --background-color: #0a0118;
-}
-
-
-
 .container-services-section {
   display: grid;
   height: 100vh;
@@ -944,8 +920,6 @@ body {
   text-align: center;
 }
 
-
-
 .image-container img {
   display: block;
   width: 100%;
@@ -953,7 +927,6 @@ body {
   -webkit-mask-image: radial-gradient(circle, rgb(13, 37, 46) 60%, rgba(12, 29, 66, 0.932) 100%);
   mask-image: radial-gradient(circle, rgb(13, 37, 46) 60%, rgba(12, 29, 66, 0) 100%);
 }
-
 
 .timeline {
   overflow-y: scroll;
@@ -969,8 +942,6 @@ body {
   display: none;
   /* Oculta la barra de desplazamiento en Chrome, Edge y Safari */
 }
-
-
 
 .timeline-items {
   padding-left: 8rem;
@@ -1082,7 +1053,6 @@ body {
   overflow: hidden;
   opacity: 0.8;
 }
-
 
 #timeline-image {
   width: 100%;
@@ -1274,8 +1244,6 @@ body {
   padding: 2rem 0;
 }
 
-
-
 #timeline-image {
   object-position: center;
 }
@@ -1369,7 +1337,6 @@ body {
   transform: translateY(0);
 }
 
-
 /* Gradient blob effect */
 .contacts-banner-gradient-blob {
   position: absolute;
@@ -1417,25 +1384,7 @@ body {
   letter-spacing: 3px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*baneer ------------------------------------------------------------------------------------------*/
-
-
-
 
 /* Hero container */
 .hero-banner-services {
@@ -1567,11 +1516,6 @@ body {
   background-color: #c2410c;
 }
 
-
-
-
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
   h1 {
@@ -1590,11 +1534,6 @@ body {
   .buttons-banner-services {
     flex-direction: column;
   }
-
-
-
-
-
 }
 
 @media (max-width: 480px) {
@@ -1604,6 +1543,7 @@ body {
 
   .content-wrapper-banner-services {
     padding: 1rem;
+    margin-bottom: 80px;
   }
 
   .platform-badge-banner-services {
@@ -1756,9 +1696,6 @@ body {
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
   animation: scan 3s infinite;
 }
-
-
-
 
 /* Media queries */
 @media (min-width: 1024px) {
@@ -1937,6 +1874,12 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .slider-container {
+    max-width: clamp(300px, calc(28vw + 240px), 1200px);
+  }  
+}
+
 .slide-image {
   width: 100%;
   height: 200px;
@@ -1969,6 +1912,10 @@ body {
   /* Altura máxima para el scroll */
   overflow-y: auto;
   /* Habilitar scroll vertical */
+}
+
+.slide-description::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 .dots {
