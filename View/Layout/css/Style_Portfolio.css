@@ -779,6 +779,10 @@ p {
         padding: 40px 20px;
     }
 
+    .nav-btn {
+        display: none !important;
+    }
+
     h1 {
         font-size: 56px;
         margin-bottom: 100px;
