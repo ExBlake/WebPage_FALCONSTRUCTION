@@ -23,11 +23,11 @@ RewriteRule ^Nosotros$ View/AboutUs.php [L]
 # Reescribe la URL para 'Reviews.php'
 RewriteRule ^Resenas$ View/Reviews.php [L]
 
-# Reescribe la URL para 'Reviews.php'
+# Reescribe la URL para 'Services.php'
 RewriteRule ^Servicios$ View/Services.php [L]
 
-# Reescribe la URL para 'Reviews.php'
-RewriteRule ^Servicios2$ View/Servicescopy.php [L]
+# Reescribe la URL para 'Servicesviejo.php'
+RewriteRule ^Servicios2$ View/Servicesviejo.php [L]
 
 
 
@@ -102,6 +102,9 @@ RewriteRule ^Script_Cursor$ View/Layout/js/Script_CursorEffect.js [L]
 
 
 # ----------- IMG REWRITES -------------
+
+# Reescribe 'PImageProject' a 'Review/Users'
+RewriteRule ^PImageUsers/(.*)$ View/img/Review/Users/$1 [L]
 
 # Reescribe 'PImageProject' a 'Resources'
 RewriteRule ^PImageProject/(.*)$ View/Img/Projects/$1 [L]
