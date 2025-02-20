@@ -108,9 +108,27 @@
             <section class="savings-section-about-us">
                 <div class="background-split-about-us">
                     <div class="background-left-about-us"></div>
-                    <div class="background-right-about-us"></div>
+                    <div class="background-right-about-us">
+                        <div class="content-about-us">
+                            <h2 class="heading-about-us">En Falconstruction, la calidad es nuestra prioridad</h2>
+                            <ul class="benefits-list-about-us">
+                                <li class="benefit-item-about-us">
+                                    Ofrecemos soluciones personalizadas para cada proyecto, garantizando resultados
+                                    excepcionales.
+                                </li>
+                                <li class="benefit-item-about-us">
+                                    Nuestro equipo de expertos trabaja con los mejores materiales y técnicas de
+                                    construcción.
+                                </li>
+                            </ul>
+                            <a href="#" class="cta-button-about-us">
+                                Conoce nuestros servicios
+                                <span class="arrow-about-us">→</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="savings-container-about-us">
+                <!-- <div class="savings-container-about-us">
                     <div class="card-illustration-about-us">
                         <div class="wave-pattern-about-us"></div>
                         <div class="card-bottom-about-us">
@@ -118,60 +136,36 @@
                             <div class="plus-button-about-us">+</div>
                         </div>
                     </div>
-                    <div class="content-about-us">
-                        <h2 class="heading-about-us">En Falconstruction, la calidad es nuestra prioridad</h2>
-                        <ul class="benefits-list-about-us">
-                            <li class="benefit-item-about-us">
-                                Ofrecemos soluciones personalizadas para cada proyecto, garantizando resultados
-                                excepcionales.
-                            </li>
-                            <li class="benefit-item-about-us">
-                                Nuestro equipo de expertos trabaja con los mejores materiales y técnicas de
-                                construcción.
-                            </li>
-                        </ul>
-                        <a href="#" class="cta-button-about-us">
-                            Conoce nuestros servicios
-                            <span class="arrow-about-us">→</span>
-                        </a>
-                    </div>
-                </div>
+                </div> -->
             </section>
+
+
             <section class="savings-section-about-us">
                 <div class="background-split-about-us">
-                    <div class="background-right-about-us"></div>
-                    <div class="background-left-about-us"></div>
-                </div>
-                <div class="savings-container-about-us">
-                    <div class="content-about-us">
-                        <h2 class="heading-about-us">Comprometidos con la sostenibilidad</h2>
-                        <ul class="benefits-list-about-us">
-                            <li class="benefit-item-about-us">
-                                Implementamos prácticas sostenibles en todos nuestros proyectos para cuidar el medio
-                                ambiente.
-                            </li>
-                            <li class="benefit-item-about-us">
-                                Trabajamos con tecnologías innovadoras que minimizan el impacto ambiental.
-                            </li>
-                        </ul>
-                        <a href="#" class="cta-button-about-us">
-                            Descubre nuestras iniciativas
-                            <span class="arrow-about-us">→</span>
-                        </a>
-                    </div>
-
-                    <div class="card-illustration-about-us">
-                        <div class="wave-pattern-about-us"></div>
-                        <div class="card-bottom-about-us">
-                            <div class="card-line-about-us"></div>
-                            <div class="plus-button-about-us">+</div>
+                    <div class="background-right-about-us">
+                        <div class="content-about-us">
+                            <h2 class="heading-about-us left">Comprometidos con la sostenibilidad</h2>
+                            <ul class="benefits-list-about-us">
+                                <li class="benefit-item-about-us">
+                                    Implementamos prácticas sostenibles en todos nuestros proyectos para cuidar el medio
+                                    ambiente.
+                                </li>
+                                <li class="benefit-item-about-us">
+                                    Trabajamos con tecnologías innovadoras que minimizan el impacto ambiental.
+                                </li>
+                            </ul>
+                            <a href="#" class="cta-button-about-us">
+                                Descubre nuestras iniciativas
+                                <span class="arrow-about-us">→</span>
+                            </a>
                         </div>
                     </div>
+                    <div class="background-left-about-us"></div>
                 </div>
             </section>
 
             <h2 class="title-about-us" style="text-align: center; margin-top: 100px;">Nuestro Equipo Profesional</h2>
-            
+
             <section class="profiles" style="display: flex; flex-wrap: wrap; justify-content: center; margin: 40px">
                 <!-- <div class="avatar" style="--bg-img:url(https://picsum.photos/id/112/300/200)"> -->
                 <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
@@ -181,6 +175,29 @@
                     <p>Andrés Martínez</p>
                 </div>
 
+                <!-- 1 Modal - 'Andrés Martínez' -->
+                <div id="modal-1" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modal-body">
+                            <div class="modal-image">
+                                <img src="PImageUsers/fotofelipe.png" alt="Andrés Martínez">
+                            </div>
+                            <div class="modal-info">
+                                <h3>Andrés Martínez</h3>
+                                <p class="role">Director de Proyectos</p>
+                                <div class="info-details">
+                                    <p><strong>Nombre completo:</strong> Andrés Felipe Martínez Rodríguez</p>
+                                    <p><strong>Edad:</strong> 35 años</p>
+                                    <p><strong>Experiencia:</strong> 12 años en el sector construcción</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 1 Modal - 'Andrés Martínez' -->
+
+
                 <!-- <div class="avatar" style="--bg-img:url(https://picsum.photos/id/54/300/200)"> -->
                 <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
                     <div class="avatar-img">
@@ -188,6 +205,28 @@
                     </div>
                     <p>Laura Gómez</p>
                 </div>
+
+                <!-- 2 Modal - 'Laura Gómez' -->
+                <div id="modal-2" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modal-body">
+                            <div class="modal-image">
+                                <img src="PImageUsers/fotofelipe.png" alt="Laura Gómez">
+                            </div>
+                            <div class="modal-info">
+                                <h3>Laura Gómez</h3>
+                                <p class="role">Directora de Proyectos</p>
+                                <div class="info-details">
+                                    <p><strong>Nombre completo:</strong>Laura Daniela Úzuga Gómez</p>
+                                    <p><strong>Edad:</strong> 30 años</p>
+                                    <p><strong>Experiencia:</strong> 10 años en el sector construcción</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 Modal - 'Laura Gómez' -->
 
                 <!-- <div class="avatar" style="--bg-img:url(https://picsum.photos/id/48/300/200)"> -->
                 <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
@@ -197,13 +236,27 @@
                     <p>Javier López</p>
                 </div>
 
-                <!-- <div class="avatar" style="--bg-img:url(https://picsum.photos/id/210/300/200)"> -->
-                <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
-                    <div class="avatar-img">
-                        <img src="PImageUsers/fotofelipe.png">
+                <!-- 3 Modal - 'Javier López' -->
+                <div id="modal-3" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modal-body">
+                            <div class="modal-image">
+                                <img src="PImageUsers/fotofelipe.png" alt="Javier López">
+                            </div>
+                            <div class="modal-info">
+                                <h3>Javier López</h3>
+                                <p class="role">Director de Proyectos</p>
+                                <div class="info-details">
+                                    <p><strong>Nombre completo:</strong>Javier Londoño López</p>
+                                    <p><strong>Edad:</strong> 40 años</p>
+                                    <p><strong>Experiencia:</strong> 20 años en el sector construcción</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p>Carolina Ruiz</p>
                 </div>
+                <!-- 3 Modal - 'Javier López' -->
 
                 <!-- <div class="avatar" style="--bg-img:url(https://picsum.photos/id/210/300/200)"> -->
                 <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
@@ -213,21 +266,117 @@
                     <p>Carolina Ruiz</p>
                 </div>
 
-                <!-- <div class="avatar" style="--bg-img:url(https://picsum.photos/id/210/300/200)"> -->
-                <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
-                    <div class="avatar-img">
-                        <img src="PImageUsers/fotofelipe.png">
+                <!-- 4 Modal - 'Carolina Ruiz' -->
+                <div id="modal-4" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modal-body">
+                            <div class="modal-image">
+                                <img src="PImageUsers/fotofelipe.png" alt="Carolina Ruiz">
+                            </div>
+                            <div class="modal-info">
+                                <h3>Carolina Ruiz</h3>
+                                <p class="role">Director de Proyectos</p>
+                                <div class="info-details">
+                                    <p><strong>Nombre completo:</strong>Carolina Esther Ruiz Quiñones</p>
+                                    <p><strong>Edad:</strong> 27 años</p>
+                                    <p><strong>Experiencia:</strong> 6 años en el sector construcción</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p>Carolina Ruiz</p>
                 </div>
+                <!-- 4 Modal - 'Carolina Ruiz' -->
 
                 <!-- <div class="avatar" style="--bg-img:url(https://picsum.photos/id/210/300/200)"> -->
                 <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
                     <div class="avatar-img">
                         <img src="PImageUsers/fotofelipe.png">
                     </div>
-                    <p>Carolina Ruiz</p>
+                    <p>Juan Moreno</p>
                 </div>
+
+                <!-- 5 Modal - 'Juan Moreno' -->
+                <div id="modal-5" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modal-body">
+                            <div class="modal-image">
+                                <img src="PImageUsers/fotofelipe.png" alt="Juan Moreno">
+                            </div>
+                            <div class="modal-info">
+                                <h3>Juan Moreno</h3>
+                                <p class="role">Director de Proyectos</p>
+                                <div class="info-details">
+                                    <p><strong>Nombre completo:</strong> Juan Pablo Moreno Díaz</p>
+                                    <p><strong>Edad:</strong> 29 años</p>
+                                    <p><strong>Experiencia:</strong> 10 años en el sector construcción</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5 Modal - 'Juan Moreno' -->
+
+                <!-- <div class="avatar" style="--bg-img:url(https://picsum.photos/id/210/300/200)"> -->
+                <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
+                    <div class="avatar-img">
+                        <img src="PImageUsers/fotofelipe.png">
+                    </div>
+                    <p>Daniel Ososrio</p>
+                </div>
+
+                <!-- 6 Modal - 'Daniel Ososrio' -->
+                <div id="modal-6" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modal-body">
+                            <div class="modal-image">
+                                <img src="PImageUsers/fotofelipe.png" alt="Daniel Ososrio">
+                            </div>
+                            <div class="modal-info">
+                                <h3>Daniel Ososrio</h3>
+                                <p class="role">Director de Proyectos</p>
+                                <div class="info-details">
+                                    <p><strong>Nombre completo:</strong> Daniel Ososrio López</p>
+                                    <p><strong>Edad:</strong> 38 años</p>
+                                    <p><strong>Experiencia:</strong> 15 años en el sector construcción</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 6 Modal - 'Daniel Ososrio' -->
+
+                <!-- <div class="avatar" style="--bg-img:url(https://picsum.photos/id/210/300/200)"> -->
+                <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
+                    <div class="avatar-img">
+                        <img src="PImageUsers/fotofelipe.png">
+                    </div>
+                    <p>Santiago Ríos</p>
+                </div>
+
+                <!-- 7 Modal - 'Santiago Ríos' -->
+                <div id="modal-7" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modal-body">
+                            <div class="modal-image">
+                                <img src="PImageUsers/fotofelipe.png" alt="Santiago Ríos">
+                            </div>
+                            <div class="modal-info">
+                                <h3>Santiago Ríos</h3>
+                                <p class="role">Director de Proyectos</p>
+                                <div class="info-details">
+                                    <p><strong>Nombre completo:</strong> Santiago Ríos Pérez</p>
+                                    <p><strong>Edad:</strong> 36 años</p>
+                                    <p><strong>Experiencia:</strong> 14 años en el sector construcción</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 7 Modal - 'Santiago Ríos' -->
             </section>
 
             <section class="steps-section-about-us">
@@ -276,9 +425,16 @@
                     </div>
                 </div>
             </section>
+
             <section class="cards-section-about-us">
                 <div class="container-aa-about-us">
-                    <div class="content-about-us">
+                    <div class="video-background">
+                        <video autoplay muted loop class="fullscreen-video">
+                            <source src="PVideoBanner/video.mp4" type="video/mp4">
+                            Tu navegador no soporta el video.
+                        </video>
+                    </div>
+                    <div class="content-about-us floating-content">
                         <p class="subtitle-about-us">Asesoría personalizada</p>
                         <h2 class="title-about-us">Tu proyecto en manos expertas</h2>
                         <p class="description-about-us">Recibe atención y seguimiento en cada etapa de tu proyecto con
@@ -287,15 +443,6 @@
                             Contáctanos
                             <span class="arrow-about-us">→</span>
                         </a>
-                    </div>
-
-                    <div class="video-and-content">
-                        <div class="video-container-about-us">
-                            <video controls class="responsive-video">
-                                <source src="PVideoBanner/video.mp4" type="video/mp4">
-                                Tu navegador no soporta el video.
-                            </video>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -340,7 +487,7 @@
             </section>
         </div>
 
-        <section class="BannerEnd-Portfolio fade-in-up-element">
+        <section class="BannerEnd-Portfolio">
             <?php
             // Inclusión Banner End
             require_once 'Layout/BannerEnd.php';
@@ -355,7 +502,7 @@
         ?>
 
         <!-- Inclusión de scripts -->
-        <script src="Script_Portafolio"></script>
+        <script src="Script_Nosotros"></script>
         <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script>
         <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js'></script>
         <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script>
