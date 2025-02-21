@@ -35,9 +35,6 @@ RewriteRule ^Inicio66$ View/PIndex.php [L]
 # Reescribe la URL para 'Servicesviejo.php'
 RewriteRule ^Inicio$ index11.php [L]
 
-
-
-
 # ----------- PHP REWRITES -------------
 
 
@@ -113,8 +110,11 @@ RewriteRule ^Script_Cursor$ View/Layout/js/Script_CursorEffect.js [L]
 
 # ----------- IMG REWRITES -------------
 
-# Reescribe 'PImageProject' a 'Review/Users'
-RewriteRule ^PImageUsers/(.*)$ View/img/Review/Users/$1 [L]
+# Reescribe 'PImageHome' a 'Home'
+RewriteRule ^PImageInicio/(.*)$ View/Img/Home/$1 [L]
+
+# Reescribe 'PImageUsers' a 'Review/Users'
+RewriteRule ^PImageUsers/(.*)$ View/Img/Review/Users/$1 [L]
 
 # Reescribe 'PImageProject' a 'Resources'
 RewriteRule ^PImageProject/(.*)$ View/Img/Projects/$1 [L]
@@ -132,6 +132,7 @@ RewriteRule ^PImageResenas/(.*)$ View/Img/Review/$1 [L]
 RewriteRule ^PImageServicios/(.*)$ View/Img/Services/$1 [L]
 
 # ----------- IMG REWRITES -------------
+
 
 # ----------- VIDEO REWRITES -------------
 
