@@ -29,6 +29,13 @@ RewriteRule ^Servicios$ View/Services.php [L]
 # Reescribe la URL para 'Servicesviejo.php'
 RewriteRule ^Servicios2$ View/Servicesviejo.php [L]
 
+# Reescribe la URL para 'Servicesviejo.php'
+RewriteRule ^Inicio66$ View/PIndex.php [L]
+
+# Reescribe la URL para 'Servicesviejo.php'
+RewriteRule ^Inicio$ index11.php [L]
+
+
 
 
 # ----------- PHP REWRITES -------------
@@ -65,6 +72,9 @@ RewriteRule ^Estilos_Servicios$ View/Layout/css/Style_Services.css [L]
 
 # Reescribe la URL para 'Style_CursorEffect.css'
 RewriteRule ^Estilos_Cursor$ View/Layout/css/Style_CursorEffect.css [L]
+
+# Reescribe la URL para 'Style_CursorEffect.css'
+RewriteRule ^Estilos_Ini$ View/Layout/css/Style_Inicio.css [L]
 
 # ----------- CSS REWRITES -------------
 
