@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Testimonial Section</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --neon-green: #c2ff00;
+      --dark: #111111;
+      --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+      background-color: var(--dark);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .testimonial-section {
+      position: relative;
+      width: 100%;
+      max-width: 1400px;
+      height: 100vh;
+      max-height: 800px;
+      margin: 2rem;
+    }
+
+    .shape-bg {
+      position: absolute;
+      right: -2%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 65%;
+      height: 90%;
+      background: var(--neon-green);
+      clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
+      transition: var(--transition);
+      z-index: 1;
+    }
+
+    .shape-bg-2 {
+      position: absolute;
+      right: -60%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 65%;
+      height: 90%;
+      background: var(--neon-green);
+      clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
+      transition: var(--transition);
+      z-index: 1;
+    }
+
+    .testimonial-container {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 4rem;
+    }
+
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 2rem;
+    }
+
+    .client-say {
+      color: var(--neon-green);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeInUp 0.6s forwards;
+    }
+
+    .quote-container {
+      position: relative;
+      opacity: 0;
+      animation: fadeInUp 0.6s 0.2s forwards;
+    }
+
+    .quote-text {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 2rem;
+      position: relative;
+      max-height: 300px;
+      /* Ajusta la altura máxima según sea necesario */
+      overflow-y: auto;
+      /* Habilita el desplazamiento vertical */
+      padding-right: 10px;
+      /* Espacio para evitar que el texto se corte */
+    }
+
+    .quote-marks {
+      position: absolute;
+      top: -40px;
+      left: -40px;
+      font-size: 8rem;
+      color: var(--neon-green);
+      opacity: 0.3;
+      font-family: serif;
+      pointer-events: none;
+    }
+
+    .author {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeInUp 0.6s 0.4s forwards;
+    }
+
+    .view-button {
+      display: inline-flex;
+      align-items: center;
+      color: var(--neon-green);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      opacity: 0;
+      animation: fadeInUp 0.6s 0.6s forwards;
+      transition: var(--transition);
+    }
+
+    .view-button:hover {
+      transform: translateX(10px);
+    }
+
+    .view-button i {
+      margin-left: 0.5rem;
+      transition: var(--transition);
+    }
+
+    .view-button:hover i {
+      transform: translateX(5px);
+    }
+
+    .image-content {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .testimonial-image {
+      position: relative;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(0.9);
+      opacity: 0;
+      animation: scaleIn 0.6s 0.4s forwards;
+      transition: var(--transition);
+    }
+
+    .social-icons {
+      position: fixed;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 10;
+    }
+
+    .social-icon {
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      backdrop-filter: blur(5px);
+      transition: var(--transition);
+      opacity: 0;
+      animation: fadeIn 0.3s forwards;
+    }
+
+    .social-icon:nth-child(1) {
+      animation-delay: 0.6s;
+    }
+
+    .social-icon:nth-child(2) {
+      animation-delay: 0.7s;
+    }
+
+    .social-icon:nth-child(3) {
+      animation-delay: 0.8s;
+    }
+
+    .social-icon:nth-child(4) {
+      animation-delay: 0.9s;
+    }
+
+    .social-icon:hover {
+      background: var(--neon-green);
+      color: var(--dark);
+      transform: translateX(-5px);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .testimonial-container {
+        padding: 2rem;
+      }
+
+      .quote-text {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 968px) {
+      .testimonial-section {
+        height: auto;
+        margin: 1rem;
+      }
+
+      .testimonial-container {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+      }
+
+      .shape-bg {
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      .text-content {
+        padding-right: 0;
+        text-align: center;
+      }
+
+      .quote-marks {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .image-content {
+        grid-row: 1;
+        padding: 2rem 0;
+      }
+
+      .testimonial-image {
+        max-height: 400px;
+      }
+
+      .social-icons {
+        position: relative;
+        flex-direction: row;
+        justify-content: center;
+        right: 0;
+        top: 0;
+        transform: none;
+        margin-top: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="testimonial-section">
+    <div class="shape-bg"></div>
+    <div class="shape-bg-2"></div>
+    <div class="testimonial-container">
+      <div class="text-content">
+        <span class="client-say">What Our Client Say</span>
+        <div class="quote-container">
+          <span class="quote-marks">"</span>
+          <p class="quote-text">Vel accumsan eget elementum neque est, aenean scelerisque nunc mollis nec lacus, lorem
+            facilisis nullam ultricies orci tortor curabitur sit tincidunt aenean sem ultrices.</p>
+        </div>
+        <h3 class="author">Ethan D. Saw</h3>
+        <a href="#" class="view-button">
+          View all testimonial
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="image-content">
+        <!-- <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XkTppUQ08AIk9YOQlcPfsgelT72Cqs.png" alt="Testimonial" class="testimonial-image"> -->
+        <img src="View/img/Review/Users/fotofelipe.png" alt="Testimonial" class="testimonial-image">
+      </div>
+    </div>
+  </section>
+
+  <div class="social-icons">
+    <a href="#" class="social-icon" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" class="social-icon" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#" class="social-icon" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="#" class="social-icon" aria-label="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+
+  <script>
+    // Efecto parallax suave
+    document.addEventListener('mousemove', (e) => {
+      const shape = document.querySelector('.shape-bg');
+      const image = document.querySelector('.testimonial-image');
+
+      const mouseX = e.clientX / window.innerWidth - 0.5;
+      const mouseY = e.clientY / window.innerHeight - 0.5;
+
+      if (window.innerWidth > 968) {
+        shape.style.transform = `translateY(-50%) translate(${mouseX * 20}px, ${mouseY * 20}px)`;
+        image.style.transform = `translate(${mouseX * -30}px, ${mouseY * -30}px)`;
+      }
+    });
+
+    // Sistema de testimonios dinámico
+    const testimonials = [
+      {
+        text: "Vel accumsan eget elementum neque est, aenean scelerisque nunc mollis nec lacus, lorem facilisis nullam ultricies orci tortor curabitur sit tincidunt aenean sem ultrices.",
+        author: "Ethan D. Saw"
+      },
+      {
+        text: "Exceptional service and outstanding results. The team went above and beyond my expectations.",
+        author: "Sarah Johnson"
+      },
+      {
+        text: "Professional, creative, and highly skilled. I couldn't be happier with the outcome.",
+        author: "Michael Chen"
+      }
+    ];
+
+    let currentTestimonial = 0;
+    const quoteText = document.querySelector('.quote-text');
+    const authorText = document.querySelector('.author');
+
+    function updateTestimonial() {
+      const testimonial = testimonials[currentTestimonial];
+
+      quoteText.style.opacity = '0';
+      authorText.style.opacity = '0';
+
+      setTimeout(() => {
+        quoteText.textContent = testimonial.text;
+        authorText.textContent = testimonial.author;
+
+        quoteText.style.opacity = '1';
+        authorText.style.opacity = '1';
+      }, 500);
+
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    }
+
+    // Cambiar testimonio cada 5 segundos
+    setInterval(updateTestimonial, 5000);
+  </script>
+</body>
+
+</html>

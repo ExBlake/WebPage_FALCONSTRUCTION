@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>GAMING 3D ROOM 🔥✨</title>
+  <title>Inicio - Falconstruction</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="Estilos_Ini">
@@ -17,10 +17,10 @@
 
 <body>
 
-    <?php
-    // Inclusión del Header
-    require_once 'View/Layout/Header.php';
-    ?>
+  <?php
+  // Inclusión del Header
+  require_once 'View/Layout/Header.php';
+  ?>
 
   <section class="container">
 
@@ -411,12 +411,100 @@
       </div>
 
     </div>
+
   </section>
+
+  <section class="container-2">
+    <div class="page-container">
+      <div class="image-container">
+        <div class="image back" style="background-image: url(PImageProject/project-5.jpg);"></div>
+        <img src="PImageProject/project-4.jpg" alt="Image2" class="image middle">
+        <img src="PImageProject/project-6.jpg" alt="Image1" class="image front">
+      </div>
+
+      <div class="content-container-text">
+        <h1 class="title">Designing Beautiful, Eco-friendly and Green Structures Around the City!</h1>
+
+        <p class="text">
+          Alias debitis exercitation habitant accusantium sem! Blandit perspiciatis! Sem reprehenderit. Montes cillum,
+          aliquam nonummy pede sociosqu laborum vehicula platea. Arcu. Augue lectus libero alias, tincidunt dolore,
+          pulvinar, congue. Velit dictumst rutrum voluptatibus! Laboriosam ante labore necessitatibus!
+        </p>
+
+        <p class="text">
+          Praesent risus minim distinctio adipisci cubilia auctor sem felis, qui urna facilisis omnis erro.
+        </p>
+
+        <button class="ver-mas-btn">Ver Más →</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-3">
+    <div class="page-container">
+      <div class="content-container-text">
+        <h1 class="title">Construyendo Estructuras Bellas, Ecológicas y Verdes por la Ciudad!</h1>
+
+        <p class="text">
+          Alias debitis exercitation habitant accusantium sem! Blandit perspiciatis! Sem reprehenderit. Montes cillum,
+          aliquam nonummy pede sociosqu laborum vehicula platea. Arcu. Augue lectus libero alias, tincidunt dolore,
+          pulvinar, congue. Velit dictumst rutrum voluptatibus! Laboriosam ante labore necessitatibus!
+        </p>
+
+        <p class="text">
+          Praesent risus minim distinctio adipisci cubilia auctor sem felis, qui urna facilisis omnis erro.
+        </p>
+
+        <button class="ver-mas-btn">Ver Más →</button>
+      </div>
+
+      <div class="image-container">
+        <div class="image back" style="background-image: url(PImageProject/project-5.jpg);"></div>
+        <img src="PImageProject/project-4.jpg" alt="Image2" class="image middle">
+        <img src="PImageProject/project-6.jpg" alt="Image1" class="image front">
+      </div>
+    </div>
+  </section>
+
+  <section class="container-4">
+
+    <h1 class="title">Construyendo Estructuras Bellas, Ecológicas y Verdes por la Ciudad!</h1>
+
+    <div class="wrapper">
+      <div class="items">
+        <div class="item" tabindex="0" style="background-image: url(PImageProject/project-0.jpg)">
+        </div>
+        <div class="item" tabindex="0" style="background-image: url(PImageProject/project-1.jpg)">
+        </div>
+        <div class="item" tabindex="0" style="background-image: url(PImageProject/project-2.jpg)">
+        </div>
+        <div class="item" tabindex="0" style="background-image: url(PImageProject/project-3.jpg)">
+        </div>
+        <div class="item" tabindex="0" style="background-image: url(PImageProject/project-4.jpg)"></div>
+        <div class="item" tabindex="0" style="background-image: url(PImageProject/project-5.jpg)">
+        </div>
+        <div class="item" tabindex="0" style="background-image: url(PImageProject/project-6.jpg)">
+        </div>
+        <div class="item" tabindex="0" style="background-image: url(PImageProject/project-0.jpg)">
+        </div>
+        <div class="item" tabindex="0" style="background-image: url(PImageProject/project-1.jpg)">
+        </div>
+        <div class="item" tabindex="0" style="background-image: url(PImageProject/project-2.jpg)"></div>
+        <div class="item" tabindex="0" style="background-image: url(PImageProject/project-3.jpg)">
+        </div>
+        <div class="item" tabindex="0" style="background-image: url(PImageProject/project-4.jpg)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div id="cursor-effect"></div> <!-- Efecto de cursor personalizado -->
 
   <?php
   // Inclusión del footer
   require_once 'View/Layout/BannerEnd.php';
-
+  
   // Inclusión del footer
   require_once 'View/Layout/Footer.php';
   ?>
@@ -424,6 +512,7 @@
   <script src="Script_Header"></script>
 
   <script>
+    /* Script para la Room 3D */
     const h = document.querySelector("#h");
     const b = document.body;
 
@@ -439,6 +528,47 @@
     }
 
     b.addEventListener("pointermove", base);
+    /* Script para la Room 3D */
+
+    /* Script para la segunda sección Inicio */
+    const images = document.querySelectorAll('.image');
+    let activeImage = null;
+
+    images.forEach(img => {
+      img.addEventListener('mouseenter', function () {
+        if (activeImage && activeImage !== this) {
+          activeImage.style.transform = 'translate(-50%, -50%)';
+          activeImage.style.zIndex = activeImage.classList.contains('back') ? '1' :
+            activeImage.classList.contains('middle') ? '2' : '3';
+        }
+        this.style.zIndex = '4';
+        this.style.transform = 'translate(-50%, -50%) scale(1.05)';
+        activeImage = this;
+      });
+
+      img.addEventListener('mouseleave', function () {
+        if (!this.matches(':hover')) {
+          this.style.transform = 'translate(-50%, -50%)';
+          this.style.zIndex = this.classList.contains('back') ? '1' :
+            this.classList.contains('middle') ? '2' : '3';
+          activeImage = null;
+        }
+      });
+    });
+
+    document.querySelector('.image-container').addEventListener('mouseleave', function () {
+      if (activeImage) {
+        activeImage.style.transform = 'translate(-50%, -50%)';
+        activeImage.style.zIndex = activeImage.classList.contains('back') ? '1' :
+          activeImage.classList.contains('middle') ? '2' : '3';
+        activeImage = null;
+      }
+    });
+
+    document.querySelector('.read-more').addEventListener('click', function () {
+      console.log('Read More clicked!');
+    });
+    /* Script para la segunda sección Inicio */
   </script>
 
 </body>
