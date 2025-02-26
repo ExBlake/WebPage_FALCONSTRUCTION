@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="Estilos_Ini">
     <link rel="stylesheet" href="Estilos_Header">
+    <link rel="stylesheet" href="Estilos_Cursor">
     <link rel="stylesheet" href="Estilos_Footer">
     <link rel="stylesheet" href="Estilos_Banner">
 
@@ -21,6 +22,11 @@
   // Inclusión del Header
   require_once 'View/Layout/Header.php';
   ?>
+    <div class="background-gradients">
+        <div class="gradient-1"></div>
+        <div class="gradient-2"></div>
+        <div class="gradient-3"></div>
+    </div>
 
     <section class="container parallax-section">
 
@@ -491,7 +497,6 @@
             </div>
         </div>
     </section>
-
     <section class="container-5">
         <section class="testimonial-section">
             <div class="shape-bg"></div>
@@ -535,7 +540,7 @@
         </div>
     </section>
 
-    <div id="cursor-effect"></div> <!-- Efecto de cursor personalizado -->
+    <div id="cursor-effect"></div>
 
     <?php
   // Inclusión del footer
@@ -546,6 +551,8 @@
   ?>
 
     <script src="Script_Header"></script>
+    <script src="Script_Cursor"></script>
+
 
     <script>
     /* Script para la Room 3D */

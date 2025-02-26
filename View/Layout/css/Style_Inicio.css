@@ -1,3 +1,9 @@
+:root {
+  --background-gradiend-1: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 21, 36, 0.84) 100%);
+  --background-gradiend-2: radial-gradient(circle, rgba(59, 131, 246, 0.18) 0%, rgba(59, 130, 246, 0) 70%);
+  --background-gradiend-3: radial-gradient(circle, rgba(138, 92, 246, 0.12) 0%, rgba(139, 92, 246, 0) 70%);
+}
+
 *,
 *::after,
 *::before {
@@ -7,18 +13,48 @@
 }
 
 body {
-  background: red;
+  background: radial-gradient(circle, #171424, black);
+  color:white;
+} 
+
+/* ***************************** */
+/* Estilos del Background de la Página */
+/* ***************************** */
+.background-gradients {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
 }
 
-#cursor-effect {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9999;
+.gradient-1 {
+  position: absolute;
+  inset: 0;
+  background: var(--background-gradiend-1);
 }
+
+.gradient-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 700px;
+  height: 700px;
+  background: var(--background-gradiend-2);
+}
+
+.gradient-3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 700px;
+  height: 700px;
+  background: var(--background-gradiend-3);
+}
+
+/*************************************/
+/* FIN Estilos del Background de la Página */
+/*************************************/
+
 
 .house-container,
 .house-container * {
@@ -3028,6 +3064,9 @@ body {
   position: absolute;
   transition: all 0.3s ease;
   cursor: pointer;
+  border-radius: 15px;
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
 }
 
 .back {
@@ -3072,13 +3111,11 @@ body {
 .title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
   margin-bottom: 30px;
   line-height: 1.2;
 }
 
 .text {
-  color: #666;
   margin-bottom: 20px;
   font-size: 1rem;
 }
@@ -3087,7 +3124,7 @@ body {
 .ver-mas-btn {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--text-color);
+  color: gray;
   padding: 12px 30px;
   font-size: 13px;
   letter-spacing: 3px;
@@ -3333,7 +3370,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* Estilización del scrollbar */
@@ -3423,8 +3460,8 @@ body {
   line-height: 1.2;
   margin-bottom: 2rem;
   position: relative;
-  max-height: 300px;
-  overflow-y: auto;
+  max-height: 350px;
+  overflow:hidden;
   padding-right: 10px;
 }
 
