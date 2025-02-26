@@ -583,7 +583,7 @@
             <p class="subtitle">Soluciones de construcción a la vanguardia, combinando innovación tecnológica con la
                 mejor calidad artesanal</p>
 
-            <button class="ver-mas-btn">Descubre Más →</button>
+            <button class="ver-mas-btn discover-more-btn">Descubre Más →</button>
         </div>
 
         <div class="services-container">
@@ -633,48 +633,172 @@
         </div>
     </section>
 
-    <section class="container-6">
-        <section class="testimonial-section">
-            <div class="shape-bg"></div>
-            <div class="shape-bg-2"></div>
-            <div class="testimonial-container">
-                <div class="text-content">
-                    <span class="client-say">What Our Client Say</span>
-                    <div class="quote-container">
-                        <span class="quote-marks">"</span>
-                        <p class="quote-text">
-                            Vel accumsan eget elementum neque est, aenean scelerisque nunc
-                            mollis nec lacus, lorem facilisis nullam ultricies orci tortor
-                            curabitur sit tincidunt aenean sem ultrices.
-                        </p>
-                    </div>
-                    <h3 class="author">Ethan D. Saw</h3>
-                    <a href="#" class="view-button">
-                        View all testimonial
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="image-content">
-                    <img src="View/img/Review/Users/fotofelipe.png" alt="Testimonial" class="testimonial-image" />
-                </div>
-            </div>
-        </section>
+    <section class="container-6 testimonial-section">
 
-        <div class="social-icons">
-            <a href="#" class="social-icon" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="social-icon" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-icon" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#" class="social-icon" aria-label="YouTube">
-                <i class="fab fa-youtube"></i>
+        <div class="shape-bg"></div>
+        <div class="shape-bg-2"></div>
+
+        <div class="testimonial-container"></div>
+
+    </section>
+
+    <div class="container-prev-next-btn">
+        <button class="ver-mas-btn prev-btn" id="prev-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                <path d="M15 18l-6-6 6-6v12z" />
+            </svg>
+        </button>
+
+        <button class="ver-mas-btn next-btn" id="next-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                <path d="M9 18l6-6-6-6v12z" />
+            </svg>
+        </button>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("mousemove", (e) => {
+            const shape = document.querySelector(".shape-bg");
+            const image = document.querySelector(".testimonial-image");
+
+            if (window.innerWidth > 968) {
+                const mouseX = e.clientX / window.innerWidth - 0.5;
+                const mouseY = e.clientY / window.innerHeight - 0.5;
+
+                shape.style.transform = `translateY(-50%) translate(${mouseX * 20}px, ${mouseY * 20}px)`;
+                image.style.transform = `translate(${mouseX * -30}px, ${mouseY * -30}px)`;
+            } else {
+                shape.style.transform = "none";
+                image.style.transform = "none";
+            }
+        });
+
+        const testimonials = [
+            {
+                text: "Vel accumsan eget elementum neque est, aenean scelerisque nunc mollis nec lacus, lorem facilisis nullam ultricies orci tortor curabitur sit tincidunt aenean sem ultrices.",
+                author: "Ethan D. Saw",
+                image: "View/img/Review/Users/fotofelipe.png"
+            },
+            {
+                text: "Exceptional service and outstanding results. The team went above and beyond my expectations.",
+                author: "Sarah Johnson",
+                image: "View/img/Review/Users/fotofelipe.png"
+            },
+            {
+                text: "Professional, creative, and highly skilled. I couldn’t be happier with the outcome.",
+                author: "Michael Chen",
+                image: "View/img/Review/Users/fotofelipe.png"
+            }
+        ];
+
+        let currentTestimonial = 0;
+        const testimonialContainer = document.querySelector(".testimonial-container");
+        let autoSlideInterval;
+
+        function createTestimonialHTML(testimonial) {
+            return `
+        <div class="text-content testimonial-content" style="opacity: 0;">
+            <span class="client-say">What Our Client Say</span>
+            <div class="quote-container">
+                <span class="quote-marks">"</span>
+                <p class="quote-text">${testimonial.text}</p>
+            </div>
+            <h3 class="author">${testimonial.author}</h3>
+            <a href="#" class="view-button">
+                View all testimonial
+                <i class="fas fa-arrow-right"></i>
             </a>
         </div>
-    </section>
+        <div class="image-content">
+            <img src="${testimonial.image}" alt="Testimonial" class="testimonial-image" style="opacity: 0;" />
+        </div>
+    `;
+        }
+
+        function updateTestimonial() {
+            const testimonial = testimonials[currentTestimonial];
+            testimonialContainer.innerHTML = createTestimonialHTML(testimonial);
+
+            const content = testimonialContainer.querySelector(".testimonial-content");
+            const image = testimonialContainer.querySelector(".testimonial-image");
+            setTimeout(() => {
+                content.style.opacity = "1";
+                image.style.opacity = "1";
+            }, 100);
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                fadeOutAndUpdate();
+            }, 5000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        function fadeOutAndUpdate() {
+            const content = testimonialContainer.querySelector(".testimonial-content");
+            const image = testimonialContainer.querySelector(".testimonial-image");
+            if (content && image) {
+                content.style.opacity = "0";
+                image.style.opacity = "0";
+                setTimeout(() => {
+                    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+                    updateTestimonial();
+                }, 500);
+            }
+        }
+
+        function changeTestimonial(direction) {
+            stopAutoSlide(); // Detener el temporizador
+            const content = testimonialContainer.querySelector(".testimonial-content");
+            const image = testimonialContainer.querySelector(".testimonial-image");
+            if (content && image) {
+                content.style.opacity = "0";
+                image.style.opacity = "0";
+                setTimeout(() => {
+                    if (direction === "next") {
+                        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+                    } else if (direction === "prev") {
+                        currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+                    }
+                    updateTestimonial();
+                    startAutoSlide(); // Reiniciar el temporizador
+                }, 500);
+            }
+        }
+
+        // Iniciar el carrusel
+        updateTestimonial();
+        startAutoSlide();
+
+        // Agregar eventos a los botones
+        document.getElementById("next-btn").addEventListener("click", () => {
+            changeTestimonial("next");
+        });
+
+        document.getElementById("prev-btn").addEventListener("click", () => {
+            changeTestimonial("prev");
+        });
+    </script>
+
+    <div class="social-icons">
+        <a href="#" class="social-icon" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-icon" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="social-icon" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
 
     <div id="cursor-effect"></div>
 
@@ -867,66 +991,6 @@
             });
         });
         /* Script para la sección 5 */
-
-        /* Script para la sección 6 de testimonios Inicio */
-        // Efecto parallax suave
-        document.addEventListener("mousemove", (e) => {
-            const shape = document.querySelector(".shape-bg");
-            const image = document.querySelector(".testimonial-image");
-
-            if (window.innerWidth > 968) {
-                const mouseX = e.clientX / window.innerWidth - 0.5;
-                const mouseY = e.clientY / window.innerHeight - 0.5;
-
-                shape.style.transform = `translateY(-50%) translate(${mouseX * 20
-                    }px, ${mouseY * 20}px)`;
-                image.style.transform = `translate(${mouseX * -30}px, ${mouseY * -30
-                    }px)`;
-            } else {
-                shape.style.transform = "none";
-                image.style.transform = "none";
-            }
-        });
-
-        // Sistema de testimonios dinámico
-        const testimonials = [{
-            text: "Vel accumsan eget elementum neque est, aenean scelerisque nunc mollis nec lacus, lorem facilisis nullam ultricies orci tortor curabitur sit tincidunt aenean sem ultrices.",
-            author: "Ethan D. Saw",
-        },
-        {
-            text: "Exceptional service and outstanding results. The team went above and beyond my expectations.",
-            author: "Sarah Johnson",
-        },
-        {
-            text: "Professional, creative, and highly skilled. I couldn't be happier with the outcome.",
-            author: "Michael Chen",
-        },
-        ];
-
-        let currentTestimonial = 0;
-        const quoteText = document.querySelector(".quote-text");
-        const authorText = document.querySelector(".author");
-
-        function updateTestimonial() {
-            const testimonial = testimonials[currentTestimonial];
-
-            quoteText.style.opacity = "0";
-            authorText.style.opacity = "0";
-
-            setTimeout(() => {
-                quoteText.textContent = testimonial.text;
-                authorText.textContent = testimonial.author;
-
-                quoteText.style.opacity = "1";
-                authorText.style.opacity = "1";
-            }, 500);
-
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        }
-
-        // Cambiar testimonio cada 5 segundos
-        setInterval(updateTestimonial, 5000);
-        /* Script para la sección 6 de testimonios Inicio */
     </script>
 
 </body>
