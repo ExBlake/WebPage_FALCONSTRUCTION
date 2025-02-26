@@ -333,6 +333,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-user-select: none;
     user-select: none;
     transform-style: preserve-3d;
     -webkit-tap-highlight-color: transparent;
