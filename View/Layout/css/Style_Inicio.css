@@ -3357,7 +3357,7 @@ body {
 
   .item {
     width: 75vw;
-    height: 45vw;
+    height: 80vw;
     flex-shrink: 0;
     scroll-snap-align: center;
     border-radius: 12px; /* Bordes redondeados */
@@ -3388,6 +3388,20 @@ body {
   text-align: center;
   margin: 60px;
   margin-bottom: 7rem;
+}
+
+.container-4>.ver-mas-btn.pc-btn{
+  margin-top: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container-4>.ver-mas-btn.mobile-btn{
+
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 4rem;
 }
 
 /*********************/
