@@ -412,13 +412,13 @@
 
     <section class="container-2">
         <div class="page-container">
-            <div class="image-container">
+            <div class="image-container img-left">
                 <div class="image back" style="background-image: url(PImageProject/project-5.jpg);"></div>
                 <img src="PImageProject/project-4.jpg" alt="Image2" class="image middle">
                 <img src="PImageProject/project-6.jpg" alt="Image1" class="image front">
             </div>
 
-            <div class="content-container-text">
+            <div class="content-container-text txt-right">
                 <h1 class="title">Designing Beautiful, Eco-friendly and Green Structures Around the City!</h1>
 
                 <p class="text">
@@ -440,7 +440,7 @@
 
     <section class="container-3">
         <div class="page-container">
-            <div class="content-container-text">
+            <div class="content-container-text txt-left">
                 <h1 class="title">Construyendo Estructuras Bellas, Ecológicas y Verdes por la Ciudad!</h1>
 
                 <p class="text">
@@ -458,7 +458,7 @@
                 <button class="ver-mas-btn">Ver Más →</button>
             </div>
 
-            <div class="image-container">
+            <div class="image-container img-right">
                 <div class="image back" style="background-image: url(PImageProject/project-5.jpg);"></div>
                 <img src="PImageProject/project-4.jpg" alt="Image2" class="image middle">
                 <img src="PImageProject/project-6.jpg" alt="Image1" class="image front">
@@ -469,7 +469,9 @@
     <section class="container-4">
 
         <h1 class="title">Construyendo Estructuras Bellas, Ecológicas y Verdes por la Ciudad!</h1>
+
         <button class="ver-mas-btn mobile-btn">Ver Más Proyectos →</button>
+
         <div class="wrapper">
             <div class="items">
                 <div class="item" tabindex="0" style="background-image: url(PImageProject/project-0.jpg)">
@@ -496,78 +498,79 @@
                 </div>
             </div>
         </div>
+
         <button class="ver-mas-btn pc-btn">Ver Más Proyectos →</button>
     </section>
 
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const items = document.querySelector(".items");
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+        document.addEventListener("DOMContentLoaded", function () {
+            const items = document.querySelector(".items");
+            let isDown = false;
+            let startX;
+            let scrollLeft;
 
-        items.addEventListener("touchstart", (e) => {
-            isDown = true;
-            startX = e.touches[0].pageX - items.offsetLeft;
-            scrollLeft = items.scrollLeft;
+            items.addEventListener("touchstart", (e) => {
+                isDown = true;
+                startX = e.touches[0].pageX - items.offsetLeft;
+                scrollLeft = items.scrollLeft;
+            });
+
+            items.addEventListener("touchend", () => {
+                isDown = false;
+            });
+
+            items.addEventListener("touchmove", (e) => {
+                if (!isDown) return;
+                const x = e.touches[0].pageX - items.offsetLeft;
+                const walk = (x - startX) * 2;
+                items.scrollLeft = scrollLeft - walk;
+            });
+
+            items.addEventListener("mousedown", (e) => {
+                isDown = true;
+                startX = e.pageX - items.offsetLeft;
+                scrollLeft = items.scrollLeft;
+            });
+
+            items.addEventListener("mouseleave", () => {
+                isDown = false;
+            });
+
+            items.addEventListener("mouseup", () => {
+                isDown = false;
+            });
+
+            items.addEventListener("mousemove", (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - items.offsetLeft;
+                const walk = (x - startX) * 2;
+                items.scrollLeft = scrollLeft - walk;
+            });
         });
 
-        items.addEventListener("touchend", () => {
-            isDown = false;
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".container-4>.ver-mas-btn");
+
+            function updateButtonVisibility() {
+                if (window.innerWidth <= 1024) {
+                    buttons[0].style.display = "block"; // Muestra el botón de arriba
+                    buttons[1].style.display = "none";  // Oculta el botón de abajo
+                } else {
+                    buttons[0].style.display = "none";  // Oculta el botón de arriba
+                    buttons[1].style.display = "block"; // Muestra el botón de abajo
+                }
+            }
+
+            // Ejecutar la función al cargar la página
+            updateButtonVisibility();
+
+            // Detectar cambios en la ventana para aplicar cambios en tiempo real
+            window.addEventListener("resize", updateButtonVisibility);
         });
-
-        items.addEventListener("touchmove", (e) => {
-            if (!isDown) return;
-            const x = e.touches[0].pageX - items.offsetLeft;
-            const walk = (x - startX) * 2;
-            items.scrollLeft = scrollLeft - walk;
-        });
-
-        items.addEventListener("mousedown", (e) => {
-            isDown = true;
-            startX = e.pageX - items.offsetLeft;
-            scrollLeft = items.scrollLeft;
-        });
-
-        items.addEventListener("mouseleave", () => {
-            isDown = false;
-        });
-
-        items.addEventListener("mouseup", () => {
-            isDown = false;
-        });
-
-        items.addEventListener("mousemove", (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - items.offsetLeft;
-            const walk = (x - startX) * 2;
-            items.scrollLeft = scrollLeft - walk;
-        });
-    });
-
-
-
-
-    document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".container-4>.ver-mas-btn");
-
-    function updateButtonVisibility() {
-        if (window.innerWidth <= 1024) {
-            buttons[0].style.display = "block"; // Muestra el botón de arriba
-            buttons[1].style.display = "none";  // Oculta el botón de abajo
-        } else {
-            buttons[0].style.display = "none";  // Oculta el botón de arriba
-            buttons[1].style.display = "block"; // Muestra el botón de abajo
-        }
-    }
-
-    // Ejecutar la función al cargar la página
-    updateButtonVisibility();
-
-    // Detectar cambios en la ventana para aplicar cambios en tiempo real
-    window.addEventListener("resize", updateButtonVisibility);
-});
 
     </script>
 
@@ -676,121 +679,121 @@
     <div id="cursor-effect"></div>
 
     <?php
-        // Inclusión del footer
-        require_once 'View/Layout/BannerEnd.php';
+    // Inclusión del footer
+    require_once 'View/Layout/BannerEnd.php';
 
-        // Inclusión del footer
-        require_once 'View/Layout/Footer.php';
-        ?>
+    // Inclusión del footer
+    require_once 'View/Layout/Footer.php';
+    ?>
 
     <script src="Script_Header"></script>
     <script src="Script_Cursor"></script>
 
 
     <script>
-    /* Script para la Room 3D */
-    const h = document.querySelector("#h");
-    const b = document.body;
+        /* Script para la Room 3D */
+        const h = document.querySelector("#h");
+        const b = document.body;
 
-    let base = (e) => {
-        var x = e.pageX / window.innerWidth - 0.5;
-        var y = e.pageY / window.innerHeight - 0.5;
-        h.style.transform = `
+        let base = (e) => {
+            var x = e.pageX / window.innerWidth - 0.5;
+            var y = e.pageY / window.innerHeight - 0.5;
+            h.style.transform = `
         perspective(1250px)
         rotateX(${y * 4 + 75}deg)
         rotateZ(${-x * 12 + 45}deg)
         translateZ(-9vw)
     `;
-    }
+        }
 
-    b.addEventListener("pointermove", base);
-    /* Script para la Room 3D */
+        b.addEventListener("pointermove", base);
+        /* Script para la Room 3D */
 
-    /* Script para la segunda sección Inicio */
-    const images = document.querySelectorAll('.image');
-    let activeImage = null;
+        /* Script para la segunda sección Inicio */
+        const images = document.querySelectorAll('.image');
+        let activeImage = null;
 
-    images.forEach(img => {
-        img.addEventListener('mouseenter', function() {
-            if (activeImage && activeImage !== this) {
+        images.forEach(img => {
+            img.addEventListener('mouseenter', function () {
+                if (activeImage && activeImage !== this) {
+                    activeImage.style.transform = 'translate(-50%, -50%)';
+                    activeImage.style.zIndex = activeImage.classList.contains('back') ? '1' :
+                        activeImage.classList.contains('middle') ? '2' : '3';
+                }
+                this.style.zIndex = '4';
+                this.style.transform = 'translate(-50%, -50%) scale(1.05)';
+                activeImage = this;
+            });
+
+            img.addEventListener('mouseleave', function () {
+                if (!this.matches(':hover')) {
+                    this.style.transform = 'translate(-50%, -50%)';
+                    this.style.zIndex = this.classList.contains('back') ? '1' :
+                        this.classList.contains('middle') ? '2' : '3';
+                    activeImage = null;
+                }
+            });
+        });
+
+        document.querySelector('.image-container').addEventListener('mouseleave', function () {
+            if (activeImage) {
                 activeImage.style.transform = 'translate(-50%, -50%)';
                 activeImage.style.zIndex = activeImage.classList.contains('back') ? '1' :
                     activeImage.classList.contains('middle') ? '2' : '3';
-            }
-            this.style.zIndex = '4';
-            this.style.transform = 'translate(-50%, -50%) scale(1.05)';
-            activeImage = this;
-        });
-
-        img.addEventListener('mouseleave', function() {
-            if (!this.matches(':hover')) {
-                this.style.transform = 'translate(-50%, -50%)';
-                this.style.zIndex = this.classList.contains('back') ? '1' :
-                    this.classList.contains('middle') ? '2' : '3';
                 activeImage = null;
             }
         });
-    });
 
-    document.querySelector('.image-container').addEventListener('mouseleave', function() {
-        if (activeImage) {
-            activeImage.style.transform = 'translate(-50%, -50%)';
-            activeImage.style.zIndex = activeImage.classList.contains('back') ? '1' :
-                activeImage.classList.contains('middle') ? '2' : '3';
-            activeImage = null;
-        }
-    });
+        document.querySelector('.read-more').addEventListener('click', function () {
+            console.log('Read More clicked!');
+        });
+        /* Script para la segunda sección Inicio */
 
-    document.querySelector('.read-more').addEventListener('click', function() {
-        console.log('Read More clicked!');
-    });
-    /* Script para la segunda sección Inicio */
+        /* Script para la sección 5 */
+        // Crear efecto de partículas
+        document.addEventListener('DOMContentLoaded', function () {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 20;
 
-    /* Script para la sección 5 */
-    // Crear efecto de partículas
-    document.addEventListener('DOMContentLoaded', function() {
-        const particlesContainer = document.getElementById('particles');
-        const particleCount = 20;
+            // Crear partículas
+            for (let i = 0; i < particleCount; i++) {
+                createParticle();
+            }
 
-        // Crear partículas
-        for (let i = 0; i < particleCount; i++) {
-            createParticle();
-        }
+            function createParticle() {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
 
-        function createParticle() {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
+                // Posición aleatoria
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
 
-            // Posición aleatoria
-            const posX = Math.random() * 100;
-            const posY = Math.random() * 100;
-            particle.style.left = `${posX}%`;
-            particle.style.top = `${posY}%`;
+                // Tamaño aleatorio
+                const size = Math.random() * 5 + 1;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
 
-            // Tamaño aleatorio
-            const size = Math.random() * 5 + 1;
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
+                // Opacidad aleatoria
+                particle.style.opacity = Math.random() * 0.5 + 0.1;
 
-            // Opacidad aleatoria
-            particle.style.opacity = Math.random() * 0.5 + 0.1;
+                // Añadir al contenedor
+                particlesContainer.appendChild(particle);
 
-            // Añadir al contenedor
-            particlesContainer.appendChild(particle);
+                // Animar partícula
+                animateParticle(particle);
+            }
 
-            // Animar partícula
-            animateParticle(particle);
-        }
+            function animateParticle(particle) {
+                // Duración aleatoria
+                const duration = Math.random() * 30 + 15;
 
-        function animateParticle(particle) {
-            // Duración aleatoria
-            const duration = Math.random() * 30 + 15;
+                // Aplicar animación de movimiento
+                particle.style.animation = `float ${duration}s infinite`;
 
-            // Aplicar animación de movimiento
-            particle.style.animation = `float ${duration}s infinite`;
-
-            // Crear keyframes únicos para esta partícula
-            const keyframes = `
+                // Crear keyframes únicos para esta partícula
+                const keyframes = `
           @keyframes float {
             0% {
               transform: translate(0, 0);
@@ -804,89 +807,89 @@
           }
         `;
 
-            // Añadir keyframes al documento
-            const style = document.createElement('style');
-            style.innerHTML = keyframes;
-            document.head.appendChild(style);
-        }
+                // Añadir keyframes al documento
+                const style = document.createElement('style');
+                style.innerHTML = keyframes;
+                document.head.appendChild(style);
+            }
 
-        // Animación al hacer scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
-                }
+            // Animación al hacer scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
             });
-        }, {
-            threshold: 0.1
+
+            // Observar las tarjetas
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(50px)';
+                card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(card);
+
+                // Efecto parallax en las tarjetas
+                document.addEventListener('mousemove', (e) => {
+                    const {
+                        clientX,
+                        clientY
+                    } = e;
+                    const {
+                        left,
+                        top,
+                        width,
+                        height
+                    } = card.getBoundingClientRect();
+
+                    // Ajustar los valores para una rotación más sutil
+                    const x = (clientX - left - width / 2) / 100;
+                    const y = (clientY - top - height / 2) / 100;
+
+                    card.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${-y}deg)`;
+                });
+
+                // Aumentar rotación al pasar el mouse
+                card.addEventListener('mouseenter', () => {
+                    card.style.transition = 'transform 0.3s ease'; // Suavizar transición al entrar
+                    card.style.transform =
+                        'perspective(1000px) rotateY(10deg) rotateX(-10deg)'; // Rotación más evidente
+                });
+
+                // Restablecer al salir
+                card.addEventListener('mouseleave', () => {
+                    card.style.transition = 'transform 0.3s ease'; // Suavizar transición al salir
+                    card.style.transform = 'perspective(1000px) rotateY(0) rotateX(0)';
+                });
+            });
+        });
+        /* Script para la sección 5 */
+
+        /* Script para la sección 6 de testimonios Inicio */
+        // Efecto parallax suave
+        document.addEventListener("mousemove", (e) => {
+            const shape = document.querySelector(".shape-bg");
+            const image = document.querySelector(".testimonial-image");
+
+            if (window.innerWidth > 968) {
+                const mouseX = e.clientX / window.innerWidth - 0.5;
+                const mouseY = e.clientY / window.innerHeight - 0.5;
+
+                shape.style.transform = `translateY(-50%) translate(${mouseX * 20
+                    }px, ${mouseY * 20}px)`;
+                image.style.transform = `translate(${mouseX * -30}px, ${mouseY * -30
+                    }px)`;
+            } else {
+                shape.style.transform = "none";
+                image.style.transform = "none";
+            }
         });
 
-        // Observar las tarjetas
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.style.opacity = 0;
-            card.style.transform = 'translateY(50px)';
-            card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            observer.observe(card);
-
-            // Efecto parallax en las tarjetas
-            document.addEventListener('mousemove', (e) => {
-                const {
-                    clientX,
-                    clientY
-                } = e;
-                const {
-                    left,
-                    top,
-                    width,
-                    height
-                } = card.getBoundingClientRect();
-
-                // Ajustar los valores para una rotación más sutil
-                const x = (clientX - left - width / 2) / 100;
-                const y = (clientY - top - height / 2) / 100;
-
-                card.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${-y}deg)`;
-            });
-
-            // Aumentar rotación al pasar el mouse
-            card.addEventListener('mouseenter', () => {
-                card.style.transition = 'transform 0.3s ease'; // Suavizar transición al entrar
-                card.style.transform =
-                'perspective(1000px) rotateY(10deg) rotateX(-10deg)'; // Rotación más evidente
-            });
-
-            // Restablecer al salir
-            card.addEventListener('mouseleave', () => {
-                card.style.transition = 'transform 0.3s ease'; // Suavizar transición al salir
-                card.style.transform = 'perspective(1000px) rotateY(0) rotateX(0)';
-            });
-        });
-    });
-    /* Script para la sección 5 */
-
-    /* Script para la sección 6 de testimonios Inicio */
-    // Efecto parallax suave
-    document.addEventListener("mousemove", (e) => {
-        const shape = document.querySelector(".shape-bg");
-        const image = document.querySelector(".testimonial-image");
-
-        if (window.innerWidth > 968) {
-            const mouseX = e.clientX / window.innerWidth - 0.5;
-            const mouseY = e.clientY / window.innerHeight - 0.5;
-
-            shape.style.transform = `translateY(-50%) translate(${mouseX * 20
-                        }px, ${mouseY * 20}px)`;
-            image.style.transform = `translate(${mouseX * -30}px, ${mouseY * -30
-                        }px)`;
-        } else {
-            shape.style.transform = "none";
-            image.style.transform = "none";
-        }
-    });
-
-    // Sistema de testimonios dinámico
-    const testimonials = [{
+        // Sistema de testimonios dinámico
+        const testimonials = [{
             text: "Vel accumsan eget elementum neque est, aenean scelerisque nunc mollis nec lacus, lorem facilisis nullam ultricies orci tortor curabitur sit tincidunt aenean sem ultrices.",
             author: "Ethan D. Saw",
         },
@@ -898,32 +901,32 @@
             text: "Professional, creative, and highly skilled. I couldn't be happier with the outcome.",
             author: "Michael Chen",
         },
-    ];
+        ];
 
-    let currentTestimonial = 0;
-    const quoteText = document.querySelector(".quote-text");
-    const authorText = document.querySelector(".author");
+        let currentTestimonial = 0;
+        const quoteText = document.querySelector(".quote-text");
+        const authorText = document.querySelector(".author");
 
-    function updateTestimonial() {
-        const testimonial = testimonials[currentTestimonial];
+        function updateTestimonial() {
+            const testimonial = testimonials[currentTestimonial];
 
-        quoteText.style.opacity = "0";
-        authorText.style.opacity = "0";
+            quoteText.style.opacity = "0";
+            authorText.style.opacity = "0";
 
-        setTimeout(() => {
-            quoteText.textContent = testimonial.text;
-            authorText.textContent = testimonial.author;
+            setTimeout(() => {
+                quoteText.textContent = testimonial.text;
+                authorText.textContent = testimonial.author;
 
-            quoteText.style.opacity = "1";
-            authorText.style.opacity = "1";
-        }, 500);
+                quoteText.style.opacity = "1";
+                authorText.style.opacity = "1";
+            }, 500);
 
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-    }
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        }
 
-    // Cambiar testimonio cada 5 segundos
-    setInterval(updateTestimonial, 5000);
-    /* Script para la sección 6 de testimonios Inicio */
+        // Cambiar testimonio cada 5 segundos
+        setInterval(updateTestimonial, 5000);
+        /* Script para la sección 6 de testimonios Inicio */
     </script>
 
 </body>

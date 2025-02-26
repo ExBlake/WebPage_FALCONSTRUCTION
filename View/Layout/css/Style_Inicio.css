@@ -3237,13 +3237,13 @@ body {
     align-items: center;
     justify-content: center;
   }
-  
+
   .items {
     display: flex;
     gap: 0.4rem;
     perspective: calc(var(--index) * 35);
   }
-  
+
   .item {
     width: calc(var(--index) * 3);
     height: calc(var(--index) * 12);
@@ -3255,7 +3255,7 @@ body {
     transition: transform 1.25s var(--transition), filter 3s var(--transition), width 1.25s var(--transition);
     will-change: transform, filter, rotateY, width;
   }
-  
+
   .item::before,
   .item::after {
     content: '';
@@ -3264,64 +3264,64 @@ body {
     width: 20px;
     right: calc(var(--index) * -1);
   }
-  
+
   .item::after {
     left: calc(var(--index) * -1);
   }
-  
+
   .items .item:hover {
     filter: inherit;
     transform: translateZ(calc(var(--index) * 10));
   }
-  
+
   /*Right*/
-  
+
   .items .item:hover+* {
     filter: inherit;
     transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
     z-index: -1;
   }
-  
+
   .items .item:hover+*+* {
     filter: inherit;
     transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
     z-index: -2;
   }
-  
+
   .items .item:hover+*+*+* {
     filter: inherit;
     transform: translateZ(calc(var(--index) * 2.5)) rotateY(30deg);
     z-index: -3;
   }
-  
+
   .items .item:hover+*+*+*+* {
     filter: inherit;
     transform: translateZ(calc(var(--index) * .6)) rotateY(15deg);
     z-index: -4;
   }
-  
+
   /*Left*/
-  
+
   .items .item:has(+ :hover) {
     filter: inherit;
     transform: translateZ(calc(var(--index) * 8.5)) rotateY(-35deg);
   }
-  
+
   .items .item:has(+ * + :hover) {
     filter: inherit;
     transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
   }
-  
+
   .items .item:has(+ * + * + :hover) {
     filter: inherit;
     transform: translateZ(calc(var(--index) * 2.5)) rotateY(-30deg);
   }
-  
+
   .items .item:has(+ * + * + * + :hover) {
     filter: inherit;
     transform: translateZ(calc(var(--index) * .6)) rotateY(-15deg);
   }
-  
+
   .items .item:active,
   .items .item:focus {
     width: 28vw;
@@ -3330,14 +3330,15 @@ body {
     transform: translateZ(calc(var(--index) * 10));
     margin: 0 .45vw;
   }
-  
 }
+
 @media (max-width: 1024px) {
   .wrapper {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    padding: 10px 0; /* Espaciado arriba y abajo */
+    padding: 10px 0;
+    /* Espaciado arriba y abajo */
   }
 
   .items {
@@ -3346,13 +3347,17 @@ body {
     gap: 10px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Oculta scrollbar en Firefox */
-    -ms-overflow-style: none; /* Oculta scrollbar en IE/Edge */
-    padding: 0 5vw; /* Agrega margen lateral */
+    scrollbar-width: none;
+    /* Oculta scrollbar en Firefox */
+    -ms-overflow-style: none;
+    /* Oculta scrollbar en IE/Edge */
+    padding: 0 5vw;
+    /* Agrega margen lateral */
   }
 
   .items::-webkit-scrollbar {
-    display: none; /* Oculta scrollbar en Chrome/Safari */
+    display: none;
+    /* Oculta scrollbar en Chrome/Safari */
   }
 
   .item {
@@ -3360,9 +3365,11 @@ body {
     height: 80vw;
     flex-shrink: 0;
     scroll-snap-align: center;
-    border-radius: 12px; /* Bordes redondeados */
+    border-radius: 12px;
+    /* Bordes redondeados */
     transition: transform 0.3s ease-in-out;
-    margin: 0 5px; /* Espaciado entre imágenes */
+    margin: 0 5px;
+    /* Espaciado entre imágenes */
   }
 
   .items .item:hover,
@@ -3375,6 +3382,178 @@ body {
 /*********************/
 /* Estilos sección 3 */
 /*********************/
+
+/***********************************/
+/* Estilos Responive Sección 2 y 3 */
+/***********************************/
+
+/* Responsive Adjustments */
+@media (min-width: 821px) and (max-width: 1024px) {
+  .page-container {
+    gap: 30px;
+  }
+
+  .image-container {
+    height: 500px;
+    /* Reduce height slightly */
+  }
+
+  .back {
+    width: 350px;
+    height: 450px;
+  }
+
+  .middle {
+    width: 300px;
+    height: 350px;
+  }
+
+  .front {
+    width: 180px;
+    height: 250px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .ver-mas-btn {
+    padding: 11px 25px;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+  }
+}
+
+@media (max-width: 820px) {
+  .content-container-text {
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 820px) {
+
+  .content-container-text .txt-left {
+    margin-left: 70px;
+  }
+
+  .img-left {
+    margin-left: 85px;
+  }
+
+  .img-right {
+    margin-right: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    flex-direction: column;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+  .image-container,
+  .content-container-text {
+    width: 100%;
+    height: auto;
+    /* Let height adjust naturally */
+  }
+
+  .image-container {
+    height: 400px;
+    /* Adjusted height for tablets */
+    min-width: unset;
+  }
+
+  .back {
+    width: 80vw;
+    max-width: 400px;
+    height: 70vh;
+    max-height: 450px;
+  }
+
+  .middle {
+    width: 70vw;
+    max-width: 350px;
+    height: 60vh;
+    max-height: 400px;
+  }
+
+  .front {
+    width: 50vw;
+    max-width: 200px;
+    height: 40vh;
+    max-height: 300px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .text {
+    font-size: 0.95rem;
+  }
+
+  .ver-mas-btn {
+    padding: 10px 20px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container {
+    margin: 20px auto;
+    padding: 0 10px;
+    gap: 20px;
+  }
+
+  .image-container {
+    height: 400px;
+    /* Smaller height for mobile */
+  }
+
+  .back {
+    width: 90vw;
+    max-width: 350px;
+    height: 60vh;
+    max-height: 400px;
+  }
+
+  .middle {
+    width: 80vw;
+    max-width: 300px;
+    height: 50vh;
+    max-height: 350px;
+  }
+
+  .front {
+    width: 60vw;
+    max-width: 180px;
+    height: 35vh;
+    max-height: 250px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+
+  .ver-mas-btn {
+    padding: 9px 18px;
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    margin-top: 15px;
+  }
+}
+
+/***********************************/
+/* Estilos Responive Sección 2 y 3 */
+/***********************************/
 
 /*********************/
 /* Estilos sección 4 */
@@ -3390,14 +3569,14 @@ body {
   margin-bottom: 7rem;
 }
 
-.container-4>.ver-mas-btn.pc-btn{
+.container-4>.ver-mas-btn .pc-btn {
   margin-top: 100px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.container-4>.ver-mas-btn.mobile-btn{
+.container-4>.ver-mas-btn .mobile-btn {
 
   left: 50%;
   transform: translateX(-50%);
