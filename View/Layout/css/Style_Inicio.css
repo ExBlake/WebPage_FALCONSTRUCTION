@@ -2866,11 +2866,23 @@ body {
   -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% -50%, black 60%, transparent 100%);
   mask-image: radial-gradient(ellipse 95% 90% at 50% 10%, black 88%, transparent 100%);
 }
+/* 
+@media (min-width: 1025px) {
+  .house-container{
 
+  }
+} */
 @media (max-width: 750px) {
   .container {
     -webkit-mask-image: radial-gradient(ellipse 100% 80% at 50% -50%, black 60%, transparent 100%);
-    mask-image: radial-gradient(ellipse 100% 85% at 50% 2%, black 88%, transparent 100%);
+    mask-image: radial-gradient(ellipse 120% 85% at 50% 11%, black 88%, transparent 100%);
+  }
+}
+
+@media (min-width: 401px) and (max-width: 1024px) {
+  .house-container{
+    height: 60vh ;
+    padding-top: 111px !important;
   }
 }
 
@@ -2963,7 +2975,7 @@ body {
 }
 
 /* Responsive para tablets */
-@media (max-width: 1024px) {
+@media (max-width: 1199px) {
   .container {
     flex-direction: column;
     padding: 4rem 2rem;
@@ -2999,6 +3011,7 @@ body {
     justify-content: center;
     padding-right: 0;
     padding-top: 200px;
+    height: 76vh;
   }
 }
 
@@ -3362,7 +3375,7 @@ body {
 
   .item {
     width: 75vw;
-    height: 80vw;
+    height: 57vw;
     flex-shrink: 0;
     scroll-snap-align: center;
     border-radius: 12px;
@@ -3560,7 +3573,7 @@ body {
 /*********************/
 
 .container-4 {
-  height: 100vh;
+  position: relative;
 }
 
 .container-4>.title {
@@ -3569,18 +3582,19 @@ body {
   margin-bottom: 7rem;
 }
 
-.container-4>.ver-mas-btn .pc-btn {
-  margin-top: 100px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.pc-btn {
+  margin-top: 100px; /* Espaciado superior */
+  display: block; /* Asegúrate de que sea un bloque */
+  margin-left: auto; /* Margen automático a la izquierda */
+  margin-right: auto; /* Margen automático a la derecha */
+
 }
 
-.container-4>.ver-mas-btn .mobile-btn {
-
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 4rem;
+.mobile-btn {
+  bottom: 4rem; /* Espaciado superior */
+  display: block; /* Asegúrate de que sea un bloque */
+  margin-left: auto; /* Margen automático a la izquierda */
+  margin-right: auto; /* Margen automático a la derecha */
 }
 
 /*********************/
