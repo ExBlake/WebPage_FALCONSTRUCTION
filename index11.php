@@ -19,9 +19,9 @@
 <body>
 
     <?php
-  // Inclusión del Header
-  require_once 'View/Layout/Header.php';
-  ?>
+    // Inclusión del Header
+    require_once 'View/Layout/Header.php';
+    ?>
     <div class="background-gradients">
         <div class="gradient-1"></div>
         <div class="gradient-2"></div>
@@ -466,7 +466,7 @@
         </div>
     </section>
 
-    <section class="container-4">
+    < class="container-4">
 
         <h1 class="title">Construyendo Estructuras Bellas, Ecológicas y Verdes por la Ciudad!</h1>
 
@@ -497,184 +497,353 @@
             </div>
         </div>
     </section>
+
     <section class="container-5">
-        <section class="testimonial-section">
-            <div class="shape-bg"></div>
-            <div class="shape-bg-2"></div>
-            <div class="testimonial-container">
-                <div class="text-content">
-                    <span class="client-say">What Our Client Say</span>
-                    <div class="quote-container">
-                        <span class="quote-marks">"</span>
-                        <p class="quote-text">
-                            Vel accumsan eget elementum neque est, aenean scelerisque nunc
-                            mollis nec lacus, lorem facilisis nullam ultricies orci tortor
-                            curabitur sit tincidunt aenean sem ultrices.
-                        </p>
+
+            <div class="particles" id="particles"></div>
+
+            <div class="title-container">
+                <h1 class="title">Te ofrecemos</h1>
+                <p class="subtitle">Soluciones de construcción a la vanguardia, combinando innovación tecnológica con la
+                    mejor calidad artesanal</p>
+
+                <button class="ver-mas-btn">Descubre Más →</button>
+            </div>
+
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="service-title">Arquitectura Vanguardista</h3>
+                        <div class="separator"></div>
+                        <p class="service-desc">Diseñamos y construimos edificaciones únicas con estética moderna y
+                            funcionalidad superior. Cada proyecto es una obra maestra que refleja la visión de nuestros
+                            clientes mediante tecnologías de vanguardia y materiales sostenibles.</p>
+                        <a href="#arquitectura" class="service-more">Explorar servicios <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
-                    <h3 class="author">Ethan D. Saw</h3>
-                    <a href="#" class="view-button">
-                        View all testimonial
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
-                <div class="image-content">
-                    <img src="View/img/Review/Users/fotofelipe.png" alt="Testimonial" class="testimonial-image" />
+
+                <div class="service-card">
+                    <div class="service-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-house-user"></i>
+                        </div>
+                        <h3 class="service-title">Espacios Inteligentes</h3>
+                        <div class="separator"></div>
+                        <p class="service-desc">Transformamos propiedades en hogares y oficinas inteligentes mediante
+                            sistemas de domótica avanzada. Integramos tecnología de última generación con diseño
+                            arquitectónico para crear ambientes que responden a sus necesidades.</p>
+                        <a href="#espacios" class="service-more">Explorar servicios <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h3 class="service-title">Proyectos Industriales</h3>
+                        <div class="separator"></div>
+                        <p class="service-desc">Desarrollamos infraestructuras industriales que maximizan la eficiencia
+                            operativa. Nuestros ingenieros especializados diseñan y construyen plantas de producción,
+                            almacenes y centros logísticos con los más altos estándares de seguridad y funcionalidad.
+                        </p>
+                        <a href="#industrial" class="service-more">Explorar servicios <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <div class="social-icons">
-            <a href="#" class="social-icon" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="social-icon" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-icon" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#" class="social-icon" aria-label="YouTube">
-                <i class="fab fa-youtube"></i>
-            </a>
-        </div>
-    </section>
+        <section class="container-6">
+            <section class="testimonial-section">
+                <div class="shape-bg"></div>
+                <div class="shape-bg-2"></div>
+                <div class="testimonial-container">
+                    <div class="text-content">
+                        <span class="client-say">What Our Client Say</span>
+                        <div class="quote-container">
+                            <span class="quote-marks">"</span>
+                            <p class="quote-text">
+                                Vel accumsan eget elementum neque est, aenean scelerisque nunc
+                                mollis nec lacus, lorem facilisis nullam ultricies orci tortor
+                                curabitur sit tincidunt aenean sem ultrices.
+                            </p>
+                        </div>
+                        <h3 class="author">Ethan D. Saw</h3>
+                        <a href="#" class="view-button">
+                            View all testimonial
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="image-content">
+                        <img src="View/img/Review/Users/fotofelipe.png" alt="Testimonial" class="testimonial-image" />
+                    </div>
+                </div>
+            </section>
 
-    <div id="cursor-effect"></div>
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </section>
 
-    <?php
-  // Inclusión del footer
-  require_once 'View/Layout/BannerEnd.php';
-  
-  // Inclusión del footer
-  require_once 'View/Layout/Footer.php';
-  ?>
+        <div id="cursor-effect"></div>
 
-    <script src="Script_Header"></script>
-    <script src="Script_Cursor"></script>
+        <?php
+        // Inclusión del footer
+        require_once 'View/Layout/BannerEnd.php';
+
+        // Inclusión del footer
+        require_once 'View/Layout/Footer.php';
+        ?>
+
+        <script src="Script_Header"></script>
+        <script src="Script_Cursor"></script>
 
 
-    <script>
-    /* Script para la Room 3D */
-    const h = document.querySelector("#h");
-    const b = document.body;
+        <script>
+            /* Script para la Room 3D */
+            const h = document.querySelector("#h");
+            const b = document.body;
 
-    let base = (e) => {
-        var x = e.pageX / window.innerWidth - 0.5;
-        var y = e.pageY / window.innerHeight - 0.5;
-        h.style.transform = `
+            let base = (e) => {
+                var x = e.pageX / window.innerWidth - 0.5;
+                var y = e.pageY / window.innerHeight - 0.5;
+                h.style.transform = `
         perspective(1250px)
         rotateX(${y * 4 + 75}deg)
         rotateZ(${-x * 12 + 45}deg)
         translateZ(-9vw)
     `;
-    }
-
-    b.addEventListener("pointermove", base);
-    /* Script para la Room 3D */
-
-    /* Script para la segunda sección Inicio */
-    const images = document.querySelectorAll('.image');
-    let activeImage = null;
-
-    images.forEach(img => {
-        img.addEventListener('mouseenter', function() {
-            if (activeImage && activeImage !== this) {
-                activeImage.style.transform = 'translate(-50%, -50%)';
-                activeImage.style.zIndex = activeImage.classList.contains('back') ? '1' :
-                    activeImage.classList.contains('middle') ? '2' : '3';
             }
-            this.style.zIndex = '4';
-            this.style.transform = 'translate(-50%, -50%) scale(1.05)';
-            activeImage = this;
-        });
 
-        img.addEventListener('mouseleave', function() {
-            if (!this.matches(':hover')) {
-                this.style.transform = 'translate(-50%, -50%)';
-                this.style.zIndex = this.classList.contains('back') ? '1' :
-                    this.classList.contains('middle') ? '2' : '3';
-                activeImage = null;
+            b.addEventListener("pointermove", base);
+            /* Script para la Room 3D */
+
+            /* Script para la segunda sección Inicio */
+            const images = document.querySelectorAll('.image');
+            let activeImage = null;
+
+            images.forEach(img => {
+                img.addEventListener('mouseenter', function () {
+                    if (activeImage && activeImage !== this) {
+                        activeImage.style.transform = 'translate(-50%, -50%)';
+                        activeImage.style.zIndex = activeImage.classList.contains('back') ? '1' :
+                            activeImage.classList.contains('middle') ? '2' : '3';
+                    }
+                    this.style.zIndex = '4';
+                    this.style.transform = 'translate(-50%, -50%) scale(1.05)';
+                    activeImage = this;
+                });
+
+                img.addEventListener('mouseleave', function () {
+                    if (!this.matches(':hover')) {
+                        this.style.transform = 'translate(-50%, -50%)';
+                        this.style.zIndex = this.classList.contains('back') ? '1' :
+                            this.classList.contains('middle') ? '2' : '3';
+                        activeImage = null;
+                    }
+                });
+            });
+
+            document.querySelector('.image-container').addEventListener('mouseleave', function () {
+                if (activeImage) {
+                    activeImage.style.transform = 'translate(-50%, -50%)';
+                    activeImage.style.zIndex = activeImage.classList.contains('back') ? '1' :
+                        activeImage.classList.contains('middle') ? '2' : '3';
+                    activeImage = null;
+                }
+            });
+
+            document.querySelector('.read-more').addEventListener('click', function () {
+                console.log('Read More clicked!');
+            });
+            /* Script para la segunda sección Inicio */
+
+            /* Script para la sección 5 */
+            // Crear efecto de partículas
+            document.addEventListener('DOMContentLoaded', function () {
+                const particlesContainer = document.getElementById('particles');
+                const particleCount = 20;
+
+                // Crear partículas
+                for (let i = 0; i < particleCount; i++) {
+                    createParticle();
+                }
+
+                function createParticle() {
+                    const particle = document.createElement('div');
+                    particle.classList.add('particle');
+
+                    // Posición aleatoria
+                    const posX = Math.random() * 100;
+                    const posY = Math.random() * 100;
+                    particle.style.left = `${posX}%`;
+                    particle.style.top = `${posY}%`;
+
+                    // Tamaño aleatorio
+                    const size = Math.random() * 5 + 1;
+                    particle.style.width = `${size}px`;
+                    particle.style.height = `${size}px`;
+
+                    // Opacidad aleatoria
+                    particle.style.opacity = Math.random() * 0.5 + 0.1;
+
+                    // Añadir al contenedor
+                    particlesContainer.appendChild(particle);
+
+                    // Animar partícula
+                    animateParticle(particle);
+                }
+
+                function animateParticle(particle) {
+                    // Duración aleatoria
+                    const duration = Math.random() * 30 + 15;
+
+                    // Aplicar animación de movimiento
+                    particle.style.animation = `float ${duration}s infinite`;
+
+                    // Crear keyframes únicos para esta partícula
+                    const keyframes = `
+          @keyframes float {
+            0% {
+              transform: translate(0, 0);
             }
-        });
-    });
+            50% {
+              transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px);
+            }
+            100% {
+              transform: translate(0, 0);
+            }
+          }
+        `;
 
-    document.querySelector('.image-container').addEventListener('mouseleave', function() {
-        if (activeImage) {
-            activeImage.style.transform = 'translate(-50%, -50%)';
-            activeImage.style.zIndex = activeImage.classList.contains('back') ? '1' :
-                activeImage.classList.contains('middle') ? '2' : '3';
-            activeImage = null;
-        }
-    });
+                    // Añadir keyframes al documento
+                    const style = document.createElement('style');
+                    style.innerHTML = keyframes;
+                    document.head.appendChild(style);
+                }
 
-    document.querySelector('.read-more').addEventListener('click', function() {
-        console.log('Read More clicked!');
-    });
-    /* Script para la segunda sección Inicio */
+                // Animación al hacer scroll
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = 1;
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, { threshold: 0.1 });
 
-    /* Script para la sección 5 de testimonios Inicio */
-    // Efecto parallax suave
-    document.addEventListener("mousemove", (e) => {
-        const shape = document.querySelector(".shape-bg");
-        const image = document.querySelector(".testimonial-image");
+                // Observar las tarjetas
+                document.querySelectorAll('.service-card').forEach(card => {
+                    card.style.opacity = 0;
+                    card.style.transform = 'translateY(50px)';
+                    card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                    observer.observe(card);
 
-        if (window.innerWidth > 968) {
-            const mouseX = e.clientX / window.innerWidth - 0.5;
-            const mouseY = e.clientY / window.innerHeight - 0.5;
+                    // Efecto parallax en las tarjetas
+                    document.addEventListener('mousemove', (e) => {
+                        const { clientX, clientY } = e;
+                        const { left, top, width, height } = card.getBoundingClientRect();
 
-            shape.style.transform = `translateY(-50%) translate(${
-            mouseX * 20
-          }px, ${mouseY * 20}px)`;
-            image.style.transform = `translate(${mouseX * -30}px, ${
-            mouseY * -30
-          }px)`;
-        } else {
-            shape.style.transform = "none";
-            image.style.transform = "none";
-        }
-    });
+                        // Ajustar los valores para una rotación más sutil
+                        const x = (clientX - left - width / 2) / 100;
+                        const y = (clientY - top - height / 2) / 100;
 
-    // Sistema de testimonios dinámico
-    const testimonials = [{
-            text: "Vel accumsan eget elementum neque est, aenean scelerisque nunc mollis nec lacus, lorem facilisis nullam ultricies orci tortor curabitur sit tincidunt aenean sem ultrices.",
-            author: "Ethan D. Saw",
-        },
-        {
-            text: "Exceptional service and outstanding results. The team went above and beyond my expectations.",
-            author: "Sarah Johnson",
-        },
-        {
-            text: "Professional, creative, and highly skilled. I couldn't be happier with the outcome.",
-            author: "Michael Chen",
-        },
-    ];
+                        card.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${-y}deg)`;
+                    });
 
-    let currentTestimonial = 0;
-    const quoteText = document.querySelector(".quote-text");
-    const authorText = document.querySelector(".author");
+                    // Aumentar rotación al pasar el mouse
+                    card.addEventListener('mouseenter', () => {
+                        card.style.transition = 'transform 0.3s ease'; // Suavizar transición al entrar
+                        card.style.transform = 'perspective(1000px) rotateY(10deg) rotateX(-10deg)'; // Rotación más evidente
+                    });
 
-    function updateTestimonial() {
-        const testimonial = testimonials[currentTestimonial];
+                    // Restablecer al salir
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transition = 'transform 0.3s ease'; // Suavizar transición al salir
+                        card.style.transform = 'perspective(1000px) rotateY(0) rotateX(0)';
+                    });
+                });
+            });
+            /* Script para la sección 5 */
 
-        quoteText.style.opacity = "0";
-        authorText.style.opacity = "0";
+            /* Script para la sección 6 de testimonios Inicio */
+            // Efecto parallax suave
+            document.addEventListener("mousemove", (e) => {
+                const shape = document.querySelector(".shape-bg");
+                const image = document.querySelector(".testimonial-image");
 
-        setTimeout(() => {
-            quoteText.textContent = testimonial.text;
-            authorText.textContent = testimonial.author;
+                if (window.innerWidth > 968) {
+                    const mouseX = e.clientX / window.innerWidth - 0.5;
+                    const mouseY = e.clientY / window.innerHeight - 0.5;
 
-            quoteText.style.opacity = "1";
-            authorText.style.opacity = "1";
-        }, 500);
+                    shape.style.transform = `translateY(-50%) translate(${mouseX * 20
+                        }px, ${mouseY * 20}px)`;
+                    image.style.transform = `translate(${mouseX * -30}px, ${mouseY * -30
+                        }px)`;
+                } else {
+                    shape.style.transform = "none";
+                    image.style.transform = "none";
+                }
+            });
 
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-    }
+            // Sistema de testimonios dinámico
+            const testimonials = [{
+                text: "Vel accumsan eget elementum neque est, aenean scelerisque nunc mollis nec lacus, lorem facilisis nullam ultricies orci tortor curabitur sit tincidunt aenean sem ultrices.",
+                author: "Ethan D. Saw",
+            },
+            {
+                text: "Exceptional service and outstanding results. The team went above and beyond my expectations.",
+                author: "Sarah Johnson",
+            },
+            {
+                text: "Professional, creative, and highly skilled. I couldn't be happier with the outcome.",
+                author: "Michael Chen",
+            },
+            ];
 
-    // Cambiar testimonio cada 5 segundos
-    setInterval(updateTestimonial, 5000);
-    /* Script para la sección 5 de testimonios Inicio */
-    </script>
+            let currentTestimonial = 0;
+            const quoteText = document.querySelector(".quote-text");
+            const authorText = document.querySelector(".author");
+
+            function updateTestimonial() {
+                const testimonial = testimonials[currentTestimonial];
+
+                quoteText.style.opacity = "0";
+                authorText.style.opacity = "0";
+
+                setTimeout(() => {
+                    quoteText.textContent = testimonial.text;
+                    authorText.textContent = testimonial.author;
+
+                    quoteText.style.opacity = "1";
+                    authorText.style.opacity = "1";
+                }, 500);
+
+                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            }
+
+            // Cambiar testimonio cada 5 segundos
+            setInterval(updateTestimonial, 5000);
+            /* Script para la sección 6 de testimonios Inicio */
+
+        </script>
 
 </body>
 
