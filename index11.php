@@ -497,7 +497,6 @@
             </div>
         </div>
     </section>
-
     <section class="container-5">
 
             <div class="particles" id="particles"></div>
@@ -612,8 +611,8 @@
         require_once 'View/Layout/Footer.php';
         ?>
 
-        <script src="Script_Header"></script>
-        <script src="Script_Cursor"></script>
+    <script src="Script_Header"></script>
+    <script src="Script_Cursor"></script>
 
 
         <script>
