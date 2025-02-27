@@ -4210,7 +4210,7 @@ body {
 @media (max-width: 968px) {
   .testimonial-section {
     height: auto;
-    margin: 1rem;
+    margin: 0;
   }
 
   .testimonial-container {
