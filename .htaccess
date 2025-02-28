@@ -3,7 +3,7 @@ RewriteEngine On
 # ----------- PHP REWRITES -------------
 
 # Reescribe la URL para 'Index.php'
-RewriteRule ^Home$ index.php [L]
+RewriteRule ^Inicio$ index.php [L]
 
 # Reescribe la URL para 'Header.php'
 RewriteRule ^Encabezado$ View/Layout/Header.php [L]
@@ -26,15 +26,6 @@ RewriteRule ^Resenas$ View/Reviews.php [L]
 # Reescribe la URL para 'Services.php'
 RewriteRule ^Servicios$ View/Services.php [L]
 
-# Reescribe la URL para 'Servicesviejo.php'
-RewriteRule ^Servicios2$ View/Servicesviejo.php [L]
-
-# Reescribe la URL para 'Servicesviejo.php'
-RewriteRule ^Inicio66$ View/PIndex.php [L]
-
-# Reescribe la URL para 'Servicesviejo.php'
-RewriteRule ^Inicio$ index11.php [L]
-
 # Reescribe la URL para 'FloatingButton.php'
 RewriteRule ^Boton_Flotante$ View/Layout/FloatingButton.php [L]
 
@@ -43,8 +34,8 @@ RewriteRule ^Boton_Flotante$ View/Layout/FloatingButton.php [L]
 
 # ----------- CSS REWRITES -------------
 
-# Reescribe la URL para 'Style_Index.css'
-RewriteRule ^Estilos_Inicio$ View/Layout/css/Style_Index.css [L]
+# Reescribe la URL para 'Style_Inicio.css'
+RewriteRule ^Estilos_Inicio$ View/Layout/css/Style_Inicio.css [L]
 
 # Reescribe la URL para 'Style_Footer.css'
 RewriteRule ^Estilos_Footer$ View/Layout/css/Style_Footer.css [L]
@@ -72,9 +63,6 @@ RewriteRule ^Estilos_Servicios$ View/Layout/css/Style_Services.css [L]
 
 # Reescribe la URL para 'Style_CursorEffect.css'
 RewriteRule ^Estilos_Cursor$ View/Layout/css/Style_CursorEffect.css [L]
-
-# Reescribe la URL para 'Style_CursorEffect.css'
-RewriteRule ^Estilos_Ini$ View/Layout/css/Style_Inicio.css [L]
 
 # Reescribe la URL para 'Style_FloatingButton.css'
 RewriteRule ^Estilos_Boton_Flotante$ View/Layout/css/Style_FloatingButton.css [L]

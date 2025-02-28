@@ -791,7 +791,7 @@
     </div>
 
     <?php
-    // Inclusión del Boton flotante
+    // Inclusión del Boton flotant"
     require_once 'View/Layout/FloatingButton.php';
     ?>
 

@@ -358,6 +358,8 @@
         <footer class="footer-section">
             <?php require_once 'Layout/Footer.php'; ?>
         </footer>
+
+
     </div>
 
     <div id="cursor-effect"></div>
@@ -371,6 +373,8 @@
     <script src="Script_Banner"></script>
     <script src="Script_Services"></script>
     <script src="Script_Header"></script>
+
+
 </body>
 
 </html>

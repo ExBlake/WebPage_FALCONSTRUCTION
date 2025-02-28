@@ -19,261 +19,252 @@
 /* Estilos de la barra de navegación */
 /* ***************************** */
 .navbar-header {
-    display: flex; /* Flexbox para disposición */
-    justify-content: space-between; /* Espaciado entre elementos */
-    align-items: center; /* Alineación vertical */
-    padding: 2rem 4rem; /* Espaciado interno */
-    position: fixed; /* Fijo en la parte superior */
-    width: 100%; /* Ancho completo */
-    z-index: 100; /* Apilar sobre otros elementos */
-    opacity: 0; /* Inicialmente oculto */
-    animation: fadeIn 2s forwards; /* Animación de entrada */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 2rem 4rem; 
+    position: fixed; 
+    width: 100%; 
+    z-index: 100; 
+    opacity: 0; 
+    animation: fadeIn 2s forwards; 
 }
 
-/* Estilos del menú de navegación a la derecha */
 .nav-right-header {
-    display: flex; /* Flexbox para disposición */
-    align-items: center; /* Alineación vertical */
-    gap: 1rem; /* Espaciado entre elementos */
+    display: flex; 
+    align-items: center; 
+    gap: 1rem; 
 }
 
-/* Estilos del logo */
 .logo-falcon-header {
-    width: auto; /* Ancho automático */
-    height: 70px; /* Altura fija */
-    object-fit: contain; /* Ajuste de imagen */
+    width: auto;
+    height: 70px;
+    object-fit: contain;
 }
 
-/* Estilos del botón de registro */
 .sign-up-header {
-    background: transparent; /* Fondo transparente */
-    color: white; /* Color del texto */
-    padding: 0.8rem 2rem; /* Espaciado interno */
-    border-radius: 50px; /* Bordes redondeados */
-    text-decoration: none; /* Sin subrayado */
-    font-weight: 500; /* Peso de la fuente */
-    transition: all 0.3s; /* Transición suave */
-    border: 2px solid white; /* Borde blanco */
+    background: transparent; 
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px; 
+    text-decoration: none;
+    font-weight: 500; 
+    transition: all 0.3s; 
+    border: 2px solid white; 
 }
 
-/* Efecto hover del botón de registro */
 .sign-up-header:hover {
-    background: white; /* Fondo blanco al pasar el mouse */
-    color: var(--color-dark-header); /* Color del texto al pasar el mouse */
+    background: white; 
+    color: var(--color-dark-header);
 }
 
 /* ***************************** */
 /* Estilos del menú de pantalla completa */
 /* ***************************** */
 .menu-icon-header {
-    width: 40px; /* Ancho fijo */
-    height: 40px; /* Altura fija */
-    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
-    border-radius: 50%; /* Bordes redondeados */
-    display: flex; /* Flexbox para centrar contenido */
-    align-items: center; /* Alineación vertical */
-    justify-content: center; /* Alineación horizontal */
-    cursor: pointer; /* Cursor de puntero */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde semi-transparente */
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Estilos del menú de pantalla completa */
 .fullscreen-menu-header {
-    position: fixed; /* Fijo en la parte superior */
-    top: 0; /* Parte superior */
-    left: 0; /* Parte izquierda */
-    width: 100%; /* Ancho completo */
-    height: 0; /* Altura inicial */
-    background: linear-gradient(135deg, #041b3a 0%, #000000 100%); /* Fondo degradado */
-    opacity: 0; /* Inicialmente oculto */
-    visibility: hidden; /* No visible */
-    transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease; /* Transiciones suaves */
-    overflow: hidden; /* Ocultar desbordamiento */
-    z-index: 1000; /* Apilar sobre otros elementos */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(135deg, #041b3a 0%, #000000 100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+    overflow: hidden;
+    z-index: 1000;
 }
 
-/* Estilos del menú de pantalla completa activo */
 .fullscreen-menu-header.active {
-    height: 100%; /* Altura completa al activarse */
-    opacity: 1; /* Visible */
-    visibility: visible; /* Visible */
-    animation: menuReveal 0.8s ease forwards; /* Animación de revelado */
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    animation: menuReveal 0.8s ease forwards;
 }
 
 /* ***************************** */
 /* Contenido del menú */
 /* ***************************** */
 .menu-content-header {
-    position: relative; /* Posición relativa */
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    display: flex; /* Flexbox para disposición */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    z-index: 2; /* Apilar sobre otros elementos */
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.062) 0%, rgba(0, 0, 0, 0) 80%); /* Fondo degradado radial */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.062) 0%, rgba(0, 0, 0, 0) 80%);
 }
 
-/* Estilos de los elementos del menú */
 .menu-items-header {
-    display: flex; /* Flexbox para disposición */
-    flex-wrap: wrap; /* Permitir envoltura */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    gap: 6rem 8rem; /* Espaciado entre elementos */
-    padding: 2rem; /* Espaciado interno */
-    max-width: 1400px; /* Ancho máximo */
-    margin: 0 auto; /* Centrar horizontalmente */
-    position: relative; /* Posición relativa */
-    z-index: 3; /* Apilar sobre otros elementos */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem 8rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
 }
 
-/* Estilos de los elementos del menú */
 .menu-item-wrapper-header {
-    text-align: center; /* Centrar texto */
-    flex: 0 1 auto; /* Flexbox para tamaño automático */
-    min-width: 200px; /* Ancho mínimo */
-    transition: opacity 0.3s ease; /* Transición suave */
+    text-align: center;
+    flex: 0 1 auto;
+    min-width: 200px;
+    transition: opacity 0.3s ease;
 }
 
-/* Efecto hover en los elementos del menú */
 .menu-items-header:hover .menu-item-wrapper-header {
-    opacity: 0.5; /* Opacidad al pasar el mouse */
+    opacity: 0.5;
 }
 
-/* Efecto hover en el elemento del menú */
 .menu-items-header:hover .menu-item-wrapper-header:hover {
-    opacity: 1; /* Opacidad completa al pasar el mouse */
+    opacity: 1;
 }
 
 /* ***************************** */
 /* Estilos de la categoría del menú */
 /* ***************************** */
 .menu-category-header {
-    text-transform: uppercase; /* Texto en mayúsculas */
-    font-size: 1rem; /* Tamaño de fuente */
-    letter-spacing: 3px; /* Espaciado entre letras */
-    color: var(--color-highlight-header); /* Color de la categoría */
-    margin-bottom: 1rem; /* Margen inferior */
-    opacity: 0.9; /* Opacidad */
-    font-weight: 500; /* Peso de la fuente */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra de texto */
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: var(--color-highlight-header);
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos del ítem del menú */
 .menu-item-header {
-    color: var(--color-accent-header); /* Color del texto */
-    text-decoration: none; /* Sin subrayado */
-    font-size: 1.75rem; /* Tamaño de fuente */
-    transition: all 0.3s ease; /* Transición suave */
-    display: flex; /* Flexbox para disposición */
-    flex-direction: column; /* Disposición en columna */
-    align-items: center; /* Centrar horizontalmente */
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+    color: var(--color-accent-header);
+    text-decoration: none;
+    font-size: 1.75rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Efecto hover en el ítem del menú */
 .menu-item-header:hover {
-    color: #fff; /* Color blanco al pasar el mouse */
+    color: #fff;
 }
 
-/* Contenido del ítem del menú */
 .menu-item-content-header {
-    font-size: 2.5rem; /* Tamaño de fuente */
-    font-weight: 400; /* Peso de la fuente */
-    letter-spacing: 1px; /* Espaciado entre letras */
-    transform: translateY(10px); /* Desplazamiento vertical */
-    opacity: 0; /* Inicialmente oculto */
-    transition: all 0.3s ease; /* Transición suave */
-    color: white; /* Color del texto */
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: white;
 }
 
-/* Efecto hover en el contenido del ítem del menú */
 .menu-item-header:hover .menu-item-content-header {
-    transform: translateY(0); /* Sin desplazamiento al pasar el mouse */
-    opacity: 1; /* Visible */
+    transform: translateY(0);
+    opacity: 1;
 }
+
 
 /* ***************************** */
 /* Estilos de la imagen de fondo */
 /* ***************************** */
 .menu-image-header {
-    position: fixed; /* Fijo en la parte superior */
-    top: 0; /* Parte superior */
-    left: 0; /* Parte izquierda */
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    background-size: cover; /* Cubrir el área */
-    background-position: center; /* Centrar imagen */
-    opacity: 0; /* Inicialmente oculto */
-    transition: opacity 0.5s ease; /* Transición suave */
-    z-index: 1; /* Apilar sobre otros elementos */
-    -webkit-mask-image: radial-gradient(circle at center, black 0%, transparent 75%); /* Máscara radial */
-    mask-image: radial-gradient(circle at center, black 0%, transparent 75%); /* Máscara radial */
-    background-color: rgba(0, 0, 0, 0.2); /* Color de fondo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+    -webkit-mask-image: radial-gradient(circle at center, black 0%, transparent 75%);
+    mask-image: radial-gradient(circle at center, black 0%, transparent 75%);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* ***************************** */
 /* Estilos del pie de página del menú */
 /* ***************************** */
 .menu-footer-header {
-    position: fixed; /* Fijo en la parte inferior */
-    bottom: 2rem; /* Parte inferior */
-    left: 2rem; /* Parte izquierda */
-    right: 2rem; /* Parte derecha */
-    display: flex; /* Flexbox para disposición */
-    justify-content: space-between; /* Espaciado entre elementos */
-    align-items: center; /* Alineación vertical */
-    z-index: 2; /* Apilar sobre otros elementos */
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
 }
 
-/* Estilos del botón de contacto */
 .contact-btn-header {
-    background-color: transparent; /* Fondo transparente */
-    color: var(--color-accent-header); /* Color del texto */
-    border: 1px solid var(--color-accent-header); /* Borde */
-    padding: 0.8rem 2rem; /* Espaciado interno */
-    font-size: 1rem; /* Tamaño de fuente */
-    cursor: pointer; /* Cursor de puntero */
-    transition: all 0.3s ease; /* Transición suave */
-    text-transform: uppercase; /* Texto en mayúsculas */
-    letter-spacing: 1px; /* Espaciado entre letras */
+    background-color: transparent;
+    color: var(--color-accent-header);
+    border: 1px solid var(--color-accent-header);
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Efecto hover en el botón de contacto */
 .contact-btn-header:hover {
-    background-color: var(--color-accent-header); /* Fondo al pasar el mouse */
-    color: var(--color-dark-header); /* Color del texto al pasar el mouse */
+    background-color: var(--color-accent-header);
+    color: var(--color-dark-header);
 }
 
 /* ***************************** */
 /* Estilos del interruptor de idioma */
 /* ***************************** */
 .language-toggle-header {
-    font-size: 1rem; /* Tamaño de fuente */
+    font-size: 1rem;
 }
 
-/* Estilos de los elementos del interruptor de idioma */
 .language-toggle-header span {
-    cursor: pointer; /* Cursor de puntero */
-    transition: color 0.3s ease; /* Transición suave */
-    padding: 0 0.5rem; /* Espaciado interno */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0 0.5rem;
 }
 
-/* Estilo del elemento activo del interruptor de idioma */
 .language-toggle-header span.active {
-    color: #fff; /* Color blanco para el activo */
+    color: #fff;
 }
+
+a.Spanish-page,
+a.English-page {
+    text-decoration: none;
+    color: inherit;
+}
+
+
 
 /* ***************************** */
 /* Animación de revelado del menú */
 /* ***************************** */
 @keyframes menuReveal {
     0% {
-        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); /* Inicial */
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
     }
     100% {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Final */
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }
 
@@ -282,163 +273,163 @@
 /* ***************************** */
 @media (max-width: 1200px) {
     .menu-items-header {
-        gap: 4rem; /* Espaciado entre elementos */
+        gap: 4rem;
     }
 }
 
 @media (max-width: 992px) {
     .navbar-header {
-        padding: 1.5rem 3rem; /* Espaciado interno */
+        padding: 1.5rem 3rem;
     }
 
     .menu-items-header {
-        gap: 3rem; /* Espaciado entre elementos */
+        gap: 3rem;
     }
 
     .menu-item-content-header {
-        font-size: 2rem; /* Tamaño de fuente */
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 768px) {
     .navbar-header {
-        padding: 1rem 2rem; /* Espaciado interno */
+        padding: 1rem 2rem;
     }
 
     .logo-falcon-header {
-        height: 60px; /* Altura del logo */
-        margin-top: 5px; /* Margen superior */
+        height: 60px;
+        margin-top: 5px;
     }
 
     .sign-up-header {
-        padding: 0.6rem 1.3rem; /* Espaciado interno */
-        font-size: 0.9rem; /* Tamaño de fuente */
+        padding: 0.6rem 1.3rem;
+        font-size: 0.9rem;
     }
 
     .menu-items-header {
-        gap: 2rem; /* Espaciado entre elementos */
-        padding: 1rem; /* Espaciado interno */
-        flex-direction: column; /* Disposición en columna */
+        gap: 2rem;
+        padding: 1rem;
+        flex-direction: column;
     }
 
     .menu-item-wrapper-header {
-        min-width: 150px; /* Ancho mínimo */
+        min-width: 150px;
     }
 
     .menu-category-header {
-        font-size: 0.9rem; /* Tamaño de fuente */
+        font-size: 0.9rem;
     }
 
     .menu-item-content-header {
-        font-size: 1.75rem; /* Tamaño de fuente */
+        font-size: 1.75rem;
     }
 
     .menu-footer-header {
-        flex-direction: column; /* Disposición en columna */
-        align-items: center; /* Alineación vertical */
-        gap: 1rem; /* Espaciado entre elementos */
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
 
     .menu-icon-header {
-        width: 35px; /* Ancho del ícono */
-        height: 35px; /* Altura del ícono */
-        top: 33px !important; /* Posición superior */
-        right: 32px !important; /* Posición derecha */
+        width: 35px;
+        height: 35px;
+        top: 33px !important;
+        right: 32px !important;
     }
 }
 
 @media (max-width: 576px) {
     .navbar-header {
-        padding: 1rem 2rem; /* Espaciado interno */
+        padding: 1rem 2rem;
     }
 
     .logo-falcon-header {
-        height: 60px; /* Altura del logo */
-        margin-top: 5px; /* Margen superior */
+        height: 60px;
+        margin-top: 5px;
     }
 
     .sign-up-header {
-        padding: 0.6rem 1.3rem; /* Espaciado interno */
-        font-size: 0.8rem; /* Tamaño de fuente */
+        padding: 0.6rem 1.3rem;
+        font-size: 0.8rem;
     }
 
     .menu-icon-header {
-        width: 35px; /* Ancho del ícono */
-        height: 35px; /* Altura del ícono */
-        top: 33px !important; /* Posición superior */
-        right: 32px !important; /* Posición derecha */
+        width: 35px;
+        height: 35px;
+        top: 33px !important;
+        right: 32px !important;
     }
 
     .menu-items-header {
-        gap: 1.5rem; /* Espaciado entre elementos */
+        gap: 1.5rem;
     }
 
     .menu-item-wrapper-header {
-        min-width: 120px; /* Ancho mínimo */
+        min-width: 120px;
     }
 
     .menu-category-header {
-        font-size: 0.8rem; /* Tamaño de fuente */
+        font-size: 0.8rem;
     }
 
     .menu-item-content-header {
-        font-size: 1.5rem; /* Tamaño de fuente */
+        font-size: 1.5rem;
     }
 
     .contact-btn-header {
-        padding: 0.6rem 1.5rem; /* Espaciado interno */
-        font-size: 0.9rem; /* Tamaño de fuente */
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
     }
 
     .language-toggle-header {
-        font-size: 0.9rem; /* Tamaño de fuente */
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 400px) {
     .navbar-header {
-        padding: 1rem 2rem; /* Espaciado interno */
+        padding: 1rem 2rem;
     }
 
     .logo-falcon-header {
-        height: 60px; /* Altura del logo */
-        margin-top: 5px; /* Margen superior */
+        height: 60px;
+        margin-top: 5px;
     }
 
     .sign-up-header {
-        padding: 0.6rem 1rem; /* Espaciado interno */
-        font-size: 0.7rem; /* Tamaño de fuente */
+        padding: 0.6rem 1rem;
+        font-size: 0.7rem;
     }
 
     .menu-icon-header {
-        width: 35px; /* Ancho del ícono */
-        height: 35px; /* Altura del ícono */
-        top: 33px !important; /* Posición superior */
-        right: 32px !important; /* Posición derecha */
+        width: 35px;
+        height: 35px;
+        top: 33px !important;
+        right: 32px !important;
     }
 
     .menu-items-header {
-        gap: 1rem; /* Espaciado entre elementos */
+        gap: 1rem;
     }
 
     .menu-item-wrapper-header {
-        min-width: 100px; /* Ancho mínimo */
+        min-width: 100px;
     }
 
     .menu-category-header {
-        font-size: 0.7rem; /* Tamaño de fuente */
+        font-size: 0.7rem;
     }
 
     .menu-item-content-header {
-        font-size: 1.25rem; /* Tamaño de fuente */
+        font-size: 1.25rem;
     }
 
     .contact-btn-header {
-        padding: 0.5rem 1rem; /* Espaciado interno */
-        font-size: 0.8rem; /* Tamaño de fuente */
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
     }
 
     .language-toggle-header {
-        font-size: 0.8rem; /* Tamaño de fuente */
+        font-size: 0.8rem;
     }
 }

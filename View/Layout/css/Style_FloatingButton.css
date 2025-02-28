@@ -1,170 +1,169 @@
 
 /* Barra lateral de íconos sociales - oculta por defecto */
 .social-icons-sidebar {
-    position: fixed;
-    left: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    z-index: 10;
-  }
-  
-  /* Botón flotante - visible por defecto */
-  .floating-button {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 1000;
-  }
-  
-  #main-button {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background-color: #111111;
-    color: white;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-    font-size: 24px;
-  }
-  
-  #main-button:hover {
-    background-color: var(--neon-green);
-    color: var(--dark);
-  }
-  
-  #main-button.open {
-    transform: rotate(45deg);
-  }
-  
-  .social-icons-floating {
-    position: absolute;
-    bottom: 70px;
-    right: 5px;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 16px;
-    z-index: 10;
-  }
-  
-  .social-icon {
-    width: 45px;
-    height: 45px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    transition: var(--transition);
-  }
-  
-  /* Ajustar la duración y suavidad de las transiciones */
-  :root {
-    --transition: all 0.5s ease-in-out;
-  }
-  
-  /* Animación para la barra lateral */
-  .social-icons-sidebar .social-icon {
+  position: fixed;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 10;
+}
+
+/* Botón flotante - visible por defecto */
+.floating-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+}
+
+#main-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #111111;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  font-size: 24px;
+}
+
+#main-button:hover {
+  background-color: var(--neon-green);
+  color: var(--dark);
+}
+
+#main-button.open {
+  transform: rotate(45deg);
+}
+
+.social-icons-floating {
+  position: absolute;
+  bottom: 70px;
+  right: 5px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 16px;
+  z-index: 10;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  transition: var(--transition);
+}
+
+/* Ajustar la duración y suavidad de las transiciones */
+:root {
+  --transition: all 0.5s ease-in-out;
+}
+
+/* Animación para la barra lateral */
+.social-icons-sidebar .social-icon {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.social-icons-sidebar .social-icon:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.social-icons-sidebar .social-icon:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.social-icons-sidebar .social-icon:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.social-icons-sidebar .social-icon:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+/* Animación inicial y transición para íconos flotantes */
+.social-icons-floating .social-icon {
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  transition: var(--transition);
+}
+
+.social-icons-floating .social-icon.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.social-icons-floating .social-icon.show:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.social-icons-floating .social-icon.show:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.social-icons-floating .social-icon.show:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.social-icons-floating .social-icon.show:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+/* Hover más suave */
+.social-icons-floating .social-icon:hover,
+.social-icons-sidebar .social-icon:hover {
+  transform: translateY(0) scale(1.05) translateX(-3px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animación más fluida */
+@keyframes fadeIn {
+  from {
     opacity: 0;
-    animation: fadeIn 0.5s ease-in-out forwards;
+    transform: translateY(10px);
   }
-  
-  .social-icons-sidebar .social-icon:nth-child(1) {
-    animation-delay: 0.4s;
-  }
-  
-  .social-icons-sidebar .social-icon:nth-child(2) {
-    animation-delay: 0.5s;
-  }
-  
-  .social-icons-sidebar .social-icon:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-  
-  .social-icons-sidebar .social-icon:nth-child(4) {
-    animation-delay: 0.7s;
-  }
-  
-  /* Animación inicial y transición para íconos flotantes */
-  .social-icons-floating .social-icon {
-    opacity: 0;
-    transform: translateY(20px) scale(0.9);
-    transition: var(--transition);
-  }
-  
-  .social-icons-floating .social-icon.show {
+  to {
     opacity: 1;
-    transform: translateY(0) scale(1);
-    animation: fadeIn 0.5s ease-in-out forwards;
+    transform: translateY(0);
   }
-  
-  .social-icons-floating .social-icon.show:nth-child(1) {
-    animation-delay: 0.4s;
+}
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .social-icons-sidebar {
+    display: flex;
   }
-  
-  .social-icons-floating .social-icon.show:nth-child(2) {
-    animation-delay: 0.5s;
+
+  .floating-button {
+    display: none;
   }
-  
-  .social-icons-floating .social-icon.show:nth-child(3) {
-    animation-delay: 0.6s;
+}
+
+@media (max-width: 767px) {
+  .social-icons-sidebar {
+    display: none;
   }
-  
-  .social-icons-floating .social-icon.show:nth-child(4) {
-    animation-delay: 0.7s;
+
+  .floating-button {
+    display: block;
   }
-  
-  /* Hover más suave */
-  .social-icons-floating .social-icon:hover,
-  .social-icons-sidebar .social-icon:hover {
-    transform: translateY(0) scale(1.05) translateX(-3px);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Animación más fluida */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  
-  /* Media Queries */
-  @media (min-width: 768px) {
-    .social-icons-sidebar {
-      display: flex;
-    }
-  
-    .floating-button {
-      display: none;
-    }
-  }
-  
-  @media (max-width: 767px) {
-    .social-icons-sidebar {
-      display: none;
-    }
-  
-    .floating-button {
-      display: block;
-    }
-  }
-  
+}

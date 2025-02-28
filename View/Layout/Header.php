@@ -2,16 +2,16 @@
     <nav class="navbar-header">
         <!-- Inicio de la sección de navegación -->
         <!-- Logo responsivo usando picture -->
-        <picture>
-            <source media="(max-width: 768px)" 
+        <a href="Inicio">
+            <picture>
+                <source media="(max-width: 768px)"
                     srcset="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Logo_Phone-8VqLm7j1VPi7LUXdt2pDi0ljA4rBgw.png">
-            <img class="logo-falcon-header" 
-                    src="PImageResource/LogoBanner.jpg" 
-                    alt="LogoFalconstructions">
-        </picture>
+                <img class="logo-falcon-header" src="PImageResource/LogoBanner.jpg" alt="LogoFalconstructions">
+            </picture>
+        </a>
 
         <div class="nav-right-header">
-            <a href="#" class="sign-up-header">CONTACT</a>
+            <a href="Contacto" class="sign-up-header">CONTACT</a>
             <div class="menu-icon-header" id="navToggle">
                 <!-- Icono del menú -->
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
@@ -37,7 +37,7 @@
             <div class="menu-items-header">
                 <!-- Inicio de los elementos del menú -->
                 <div class="menu-item-wrapper-header">
-                    <a href="Home" class="menu-item-header" data-image="PImageProject/project-1.jpg">
+                    <a href="Inicio" class="menu-item-header" data-image="PImageProject/project-1.jpg">
                         <span class="menu-category-header">Inicio</span>
                         <span class="menu-item-content-header">Bienvenido</span>
                     </a>
@@ -79,8 +79,8 @@
         <div class="menu-footer-header">
             <div class="language-toggle-header">
                 <!-- Selector de idioma -->
-                <span class="active" data-lang="ES">ES</span> | 
-                <span data-lang="EN">EN</span>
+                <a href="" class="Spanish-page"><span class="active" data-lang="ES">ES</span></a> |
+                <a href="" class="English-page"><span data-lang="EN">EN</span></a>
             </div>
         </div>
     </div>
