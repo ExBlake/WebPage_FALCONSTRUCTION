@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="Estilos_Cursor">
     <link rel="stylesheet" href="Estilos_Footer">
     <link rel="stylesheet" href="Estilos_Banner">
+    <link rel="stylesheet" href="Estilos_Boton_Flotante">
+    
 
 </head>
 
@@ -785,73 +787,13 @@
         });
     </script>
 
-    <!-- Barra lateral de íconos sociales (768px en adelante) -->
-    <div class="social-icons-sidebar">
-        <a href="#" class="social-icon" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="social-icon" aria-label="Twitter">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="social-icon" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="#" class="social-icon" aria-label="YouTube">
-            <i class="fab fa-youtube"></i>
-        </a>
-    </div>
-
-    <!-- Botón flotante (767px hacia abajo) -->
-    <div class="floating-button">
-        <button id="main-button" aria-label="Abrir menú de redes sociales">
-            ➕
-        </button>
-        <div class="social-icons-floating">
-            <a href="#" class="social-icon" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="social-icon" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-icon" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#" class="social-icon" aria-label="YouTube">
-                <i class="fab fa-youtube"></i>
-            </a>
         </div>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const mainButton = document.getElementById("main-button");
-            const socialIcons = document.querySelectorAll(".social-icons-floating .social-icon");
-            let isOpen = false;
-
-            mainButton.addEventListener("click", () => {
-                isOpen = !isOpen;
-                mainButton.classList.toggle("open");
-
-                // Actualizar el símbolo y el aria-label según el estado
-                if (isOpen) {
-                    mainButton.innerHTML = "➕"; // Símbolo de cerrar cuando está abierto
-                    mainButton.setAttribute("aria-label", "Cerrar menú de redes sociales");
-                } else {
-                    mainButton.innerHTML = "➕"; // Símbolo de más cuando está cerrado
-                    mainButton.setAttribute("aria-label", "Abrir menú de redes sociales");
-                }
-
-                socialIcons.forEach((icon, index) => {
-                    setTimeout(
-                        () => {
-                            icon.classList.toggle("show");
-                        },
-                        isOpen ? index * 100 : (socialIcons.length - index - 1) * 100
-                    );
-                });
-            });
-        });
-    </script>
+    <?php
+    // Inclusión del Boton flotante
+    require_once 'View/Layout/FloatingButton.php';
+    ?>
 
     <div id="cursor-effect"></div>
 
@@ -865,6 +807,7 @@
 
     <script src="Script_Header"></script>
     <script src="Script_Cursor"></script>
+    <script src="Script_Boton_Flotante"></script>
 
 
     <script>

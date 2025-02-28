@@ -35,6 +35,9 @@ RewriteRule ^Inicio66$ View/PIndex.php [L]
 # Reescribe la URL para 'Servicesviejo.php'
 RewriteRule ^Inicio$ index11.php [L]
 
+# Reescribe la URL para 'FloatingButton.php'
+RewriteRule ^Boton_Flotante$ View/Layout/FloatingButton.php [L]
+
 # ----------- PHP REWRITES -------------
 
 
@@ -73,6 +76,9 @@ RewriteRule ^Estilos_Cursor$ View/Layout/css/Style_CursorEffect.css [L]
 # Reescribe la URL para 'Style_CursorEffect.css'
 RewriteRule ^Estilos_Ini$ View/Layout/css/Style_Inicio.css [L]
 
+# Reescribe la URL para 'Style_FloatingButton.css'
+RewriteRule ^Estilos_Boton_Flotante$ View/Layout/css/Style_FloatingButton.css [L]
+
 # ----------- CSS REWRITES -------------
 
 
@@ -104,6 +110,9 @@ RewriteRule ^Script_Contactos$ View/Layout/js/Script_Contact.js [L]
 
 # Reescribe la URL para 'Script_CursorEffect.js'
 RewriteRule ^Script_Cursor$ View/Layout/js/Script_CursorEffect.js [L]
+
+# Reescribe la URL para 'Script_FloatingButton.js'
+RewriteRule ^Script_Boton_Flotante$ View/Layout/js/Script_FloatingButton.js [L]
 
 # ----------- JS REWRITES -------------
 

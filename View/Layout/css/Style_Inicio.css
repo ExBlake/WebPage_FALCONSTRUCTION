@@ -3556,6 +3556,8 @@ body {
     font-size: 10px;
     letter-spacing: 1.8px;
     margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -4001,81 +4003,81 @@ body {
   transition: var(--transition);
 }
 
+/* Ajustar la duración y suavidad de las transiciones */
+:root {
+  --transition: all 0.5s ease-in-out;
+}
+
 /* Animación para la barra lateral */
 .social-icons-sidebar .social-icon {
   opacity: 0;
-  animation: fadeIn 0.3s forwards;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
 
 .social-icons-sidebar .social-icon:nth-child(1) {
-  animation-delay: 0.6s;
+  animation-delay: 0.4s;
 }
 
 .social-icons-sidebar .social-icon:nth-child(2) {
-  animation-delay: 0.7s;
+  animation-delay: 0.5s;
 }
 
 .social-icons-sidebar .social-icon:nth-child(3) {
-  animation-delay: 0.8s;
+  animation-delay: 0.6s;
 }
 
 .social-icons-sidebar .social-icon:nth-child(4) {
-  animation-delay: 0.9s;
+  animation-delay: 0.7s;
 }
 
 /* Animación inicial y transición para íconos flotantes */
 .social-icons-floating .social-icon {
   opacity: 0;
-  transform: translateY(20px) scale(0.8);
+  transform: translateY(20px) scale(0.9);
   transition: var(--transition);
 }
 
 .social-icons-floating .social-icon.show {
   opacity: 1;
   transform: translateY(0) scale(1);
-  animation: fadeIn 0.3s forwards;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
 
 .social-icons-floating .social-icon.show:nth-child(1) {
-  animation-delay: 0.6s;
+  animation-delay: 0.4s;
 }
 
 .social-icons-floating .social-icon.show:nth-child(2) {
-  animation-delay: 0.7s;
+  animation-delay: 0.5s;
 }
 
 .social-icons-floating .social-icon.show:nth-child(3) {
-  animation-delay: 0.8s;
+  animation-delay: 0.6s;
 }
 
 .social-icons-floating .social-icon.show:nth-child(4) {
-  animation-delay: 0.9s;
+  animation-delay: 0.7s;
 }
 
-.social-icon:hover {
-  background: var(--neon-green);
-  color: var(--dark);
-}
-
-/* Combinar transform para hover en íconos flotantes */
-.social-icons-floating .social-icon:hover {
-  transform: translateY(0) scale(1) translateX(-5px);
-}
-
-/* Asegurar que el hover en barra lateral también funcione */
+/* Hover más suave */
+.social-icons-floating .social-icon:hover,
 .social-icons-sidebar .social-icon:hover {
-  transform: translateX(-5px);
+  transform: translateY(0) scale(1.05) translateX(-3px);
+  transition: all 0.3s ease-in-out;
 }
 
+/* Animación más fluida */
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(10px);
   }
-
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
+
 
 /* Media Queries */
 @media (min-width: 768px) {
