@@ -60,6 +60,8 @@ body {
   width: 700px;
   height: 700px;
   background: var(--background-gradiend-2);
+  transition: opacity 0.3s ease;
+  animation: gradientPulse 8s infinite alternate;
 }
 
 .gradient-3 {
@@ -69,6 +71,8 @@ body {
   width: 700px;
   height: 700px;
   background: var(--background-gradiend-3);
+  transition: opacity 0.3s ease;
+  animation: gradientPulse 8s infinite alternate;
 }
 
 /*************************************/
@@ -92,6 +96,8 @@ body {
   align-items: center;
   text-align: center;
   padding: 4rem 2rem;
+  opacity: 0;
+  animation: fadeIn 2s 1s forwards;
 }
 
 .hero-section-review h1 {
@@ -101,12 +107,24 @@ body {
   background: linear-gradient(to right, var(--foreground), var(--muted-foreground));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hero-section-review h1:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
 }
 
 .hero-section-review p {
   max-width: 42rem;
   margin: 0 auto 2rem;
   color: var(--muted-foreground);
+  transition: all 0.3s ease;
+}
+
+.hero-section-review p:hover {
+  transform: translateY(-5px);
+  color: var(--foreground);
 }
 /**************/ 
 /* FIN Banner */
@@ -118,6 +136,8 @@ body {
 .main-content-review {
   padding-top: 100px;
   margin-top: 0;
+  opacity: 0;
+  animation: fadeIn 2s 1s forwards;
 }
 
 .container-review {
@@ -132,6 +152,8 @@ body {
 .feed-section-review {
   flex: 1;
   max-width: 614px;
+  opacity: 0;
+  animation: fadeIn 2s 1s forwards;
 }
 
 .post-review {
@@ -139,6 +161,13 @@ body {
   border: 1px solid var(--border-color);
   border-radius: 8px;
   margin-bottom: 24px;
+  transition: all 0.3s ease;
+  animation: fadeIn 2s 1s forwards;
+}
+
+.post-review:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .post-header-review {
@@ -153,12 +182,23 @@ body {
   margin-right: 10px;
   border-radius: 50%;
   object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.post-header-review .profile-pic-review:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
 }
 
 .post-header-review .username-review {
   flex: 1;
   font-weight: 600;
   color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.post-header-review .username-review:hover {
+  color: var(--primary);
 }
 
 .post-image-review img {
@@ -181,6 +221,12 @@ body {
   font-size: 24px;
   cursor: pointer;
   color: var(--icon-color);
+  transition: all 0.3s ease;
+}
+
+.post-actions-review i:hover {
+  transform: scale(1.2);
+  color: var(--primary);
 }
 
 .post-info-review {
@@ -192,10 +238,22 @@ body {
   font-weight: 600;
   margin-bottom: 8px;
   color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.likes-review:hover {
+  transform: scale(1.05);
+  color: var(--primary);
 }
 
 .caption-review {
   margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.caption-review:hover {
+  padding-left: 10px;
+  border-left: 2px solid var(--primary);
 }
 
 .caption-review .username-review {
@@ -208,6 +266,12 @@ body {
   font-size: 10px;
   color: var(--search-text);
   text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.timestamp-review:hover {
+  color: var(--foreground);
+  letter-spacing: 1px;
 }
 
 .post-carousel-review {
@@ -224,6 +288,11 @@ body {
 .carousel-slide-review {
   min-width: 100%;
   height: auto;
+  transition: all 0.5s ease;
+}
+
+.carousel-slide-review:hover {
+  filter: brightness(1.1);
 }
 
 .carousel-slide-review img,
@@ -251,10 +320,12 @@ body {
   transition: background 0.3s ease;
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
 }
 
 .carousel-button-review:hover {
-  background: rgba(0, 0, 0, 0.5);
+  transform: translateY(-50%) scale(1.2);
+  background: rgba(59, 130, 246, 0.5);
 }
 
 .carousel-button-review.prev-review {
@@ -296,6 +367,8 @@ body {
   right: calc((100% - 975px) / 2);
   top: 100px;
   display: none;
+  opacity: 0;
+  animation: fadeIn 2s 1s forwards;
 }
 
 .profile-section-review {
@@ -306,6 +379,12 @@ body {
   padding: 16px;
   border-radius: 12px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.profile-section-review:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.18);
 }
 
 .profile-section-review .profile-pic-review {
@@ -390,12 +469,41 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.suggestions-header-review a:hover {
+  color: var(--primary);
+}
+
+.suggestions-header-review a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.suggestions-header-review a:hover::after {
+  width: 100%;
 }
 
 .suggestion-item-review {
   display: flex;
   align-items: center;
   margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.suggestion-item-review:hover {
+  transform: translateX(10px);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+  border-radius: 8px;
 }
 
 .suggestion-item-review .profile-pic {
@@ -444,6 +552,12 @@ body {
   border: 2px solid white;
   border-radius: 20px;
   position: relative;
+  transition: all 0.3s ease;
+}
+
+.mouse-icon:hover {
+  transform: scale(1.1);
+  border-color: var(--primary);
 }
 
 .mouse-wheel {
@@ -541,6 +655,17 @@ body {
   }
 }
 
+@keyframes gradientPulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
 /* *************************** */
 /* FIN Estilos del Scroll Container */
 /* *************************** */
@@ -595,3 +720,207 @@ body {
 /* ********************* */
 /* FIN Estilos Responsivos */
 /* ********************* */
+
+/* Animaciones globales para secciones principales */
+.hero-section-review,
+.main-content-review,
+.feed-section-review,
+.sidebar-review {
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards;
+}
+
+/* Efectos para el hero section */
+.hero-section-review h1 {
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hero-section-review h1:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.hero-section-review p {
+    transition: all 0.3s ease;
+}
+
+.hero-section-review p:hover {
+    transform: translateY(-5px);
+    color: var(--foreground);
+}
+
+/* Efectos para los posts */
+.post-review {
+    transition: all 0.3s ease;
+    animation: fadeIn 2s 1s forwards;
+}
+
+.post-review:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Efectos para las imágenes de perfil */
+.profile-pic-review {
+    transition: all 0.3s ease;
+}
+
+.profile-pic-review:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+/* Efectos para los nombres de usuario */
+.username-review {
+    transition: color 0.3s ease;
+}
+
+.username-review:hover {
+    color: var(--primary);
+}
+
+/* Efectos para los botones de acción */
+.post-actions-review i {
+    transition: all 0.3s ease;
+}
+
+.post-actions-review i:hover {
+    transform: scale(1.2);
+    color: var(--primary);
+}
+
+/* Efectos para el carrusel */
+.carousel-slide-review {
+    transition: all 0.5s ease;
+}
+
+.carousel-slide-review:hover {
+    filter: brightness(1.1);
+}
+
+/* Efectos para la sidebar */
+.profile-section-review {
+    transition: all 0.3s ease;
+}
+
+.profile-section-review:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Efectos para las sugerencias */
+.suggestion-item-review {
+    transition: all 0.3s ease;
+}
+
+.suggestion-item-review:hover {
+    transform: translateX(10px);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/* Efectos para los gradientes */
+.gradient-2,
+.gradient-3 {
+    transition: opacity 0.3s ease;
+    animation: gradientPulse 8s infinite alternate;
+}
+
+@keyframes gradientPulse {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+/* Efectos para los enlaces */
+a {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* Efectos para el scroll container */
+.mouse-icon {
+    transition: all 0.3s ease;
+}
+
+.mouse-icon:hover {
+    transform: scale(1.1);
+    border-color: var(--primary);
+}
+
+/* Animación para elementos que aparecen en scroll */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efectos para los botones del carrusel */
+.carousel-button-review {
+    transition: all 0.3s ease;
+}
+
+.carousel-button-review:hover {
+    transform: translateY(-50%) scale(1.2);
+    background: rgba(59, 130, 246, 0.5);
+}
+
+/* Efectos para timestamps */
+.timestamp-review {
+    transition: all 0.3s ease;
+}
+
+.timestamp-review:hover {
+    color: var(--foreground);
+    letter-spacing: 1px;
+}
+
+/* Efectos para los likes */
+.likes-review {
+    transition: all 0.3s ease;
+}
+
+.likes-review:hover {
+    transform: scale(1.05);
+    color: var(--primary);
+}
+
+/* Efectos para la caption */
+.caption-review {
+    transition: all 0.3s ease;
+}
+
+.caption-review:hover {
+    padding-left: 10px;
+    border-left: 2px solid var(--primary);
+}

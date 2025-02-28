@@ -1688,3 +1688,181 @@ em {
         padding: 20px;
     }
 }
+
+/* Animaciones globales para todos los elementos principales */
+.banner-container-about-us,
+.savings-section-about-us,
+.security-section-about-us,
+.profiles,
+.steps-section-about-us,
+.cards-section-about-us,
+.philosophy-section-about-us {
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards;
+}
+
+/* Efectos hover para títulos */
+.main-heading-about-us,
+.heading-about-us,
+.title-about-us {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.main-heading-about-us:hover,
+.heading-about-us:hover,
+.title-about-us:hover {
+    transform: scale(1.02);
+    color: var(--text-color-titles);
+}
+
+/* Efectos para subtítulos */
+.subtitle-about-us {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.subtitle-about-us:hover {
+    transform: translateY(-5px);
+    opacity: 0.8;
+}
+
+/* Efectos para las tarjetas de filosofía */
+.philosophy-card-about-us {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.philosophy-card-about-us:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Efectos para las imágenes */
+.background-left-about-us,
+.image-side-about-us {
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.background-left-about-us:hover,
+.image-side-about-us:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+/* Efectos para los elementos de la lista */
+.benefits-list-about-us li,
+.security-list-about-us li {
+    transition: transform 0.3s ease, padding-left 0.3s ease;
+}
+
+.benefits-list-about-us li:hover,
+.security-list-about-us li:hover {
+    transform: translateX(10px);
+    padding-left: 1rem;
+    color: var(--text-color-titles);
+}
+
+/* Efectos para las tarjetas de pasos */
+.step-card-about-us {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card-about-us:hover {
+    transform: translateY(-5px) rotateZ(1deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Efectos para los números de las tarjetas */
+.card-number-about-us {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.philosophy-card-about-us:hover .card-number-about-us {
+    transform: rotate(360deg);
+    opacity: 1;
+}
+
+/* Efectos para los botones del carrusel */
+.carousel-button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Efectos para los avatares */
+.avatar:hover .avatar-img {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Efectos para el contenido flotante */
+.floating-content {
+    transition: transform 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.floating-content:hover {
+    transform: translateY(-5px);
+    backdrop-filter: blur(12px);
+}
+
+/* Efectos para el video de fondo */
+.fullscreen-video {
+    transition: filter 0.3s ease;
+}
+
+.fullscreen-video:hover {
+    filter: brightness(1.2) contrast(1.1);
+}
+
+/* Animación de gradiente para fondos */
+.gradient-2,
+.gradient-3 {
+    animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, 20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Efecto para el scrollbar */
+::-webkit-scrollbar-thumb {
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #4a3bc9, #6258ff);
+}
+
+/* Efectos para los modales */
+.modal-content {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+}

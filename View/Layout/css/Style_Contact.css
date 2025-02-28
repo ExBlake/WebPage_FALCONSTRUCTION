@@ -41,7 +41,8 @@ body {
 .gradient-1 {
     position: absolute;
     inset: 0;
-    background: var(--background-gradiend-1)
+    background: var(--background-gradiend-1);
+    animation: gradientPulse 8s infinite alternate;
 }
 
 .gradient-2 {
@@ -50,7 +51,8 @@ body {
     right: 0;
     width: 700px;
     height: 700px;
-    background: var(--background-gradiend-2)
+    background: var(--background-gradiend-2);
+    animation: gradientPulse 8s infinite alternate;
 }
 
 .gradient-3 {
@@ -59,7 +61,19 @@ body {
     left: 0;
     width: 700px;
     height: 700px;
-    background: var(--background-gradiend-3)
+    background: var(--background-gradiend-3);
+    animation: gradientPulse 8s infinite alternate;
+}
+
+@keyframes gradientPulse {
+    0% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
 }
 
 /*************************************/
@@ -93,7 +107,9 @@ body {
     display: flex;
     min-height: 100vh;
     position: relative;
-    background: var(--background-contact)
+    background: var(--background-contact);
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards;
 }
 
 .form-section-contacts {
@@ -112,6 +128,8 @@ body {
             #000000 0%,
             #000 90%,
             transparent 100%);
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards;
 }
 
 .title-contacts {
@@ -119,10 +137,21 @@ body {
     font-weight: 700;
     margin-bottom: 0.5rem;
     line-height: 1.1;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.title-contacts:hover {
+    transform: translateY(-5px);
+    text-shadow: 0 0 15px rgba(26, 117, 255, 0.5);
 }
 
 .title-contacts span {
     color: var(--title);
+    transition: color 0.3s ease;
+}
+
+.title-contacts:hover span {
+    color: #4a90ff;
 }
 
 .subtitle-contacts {
@@ -134,12 +163,36 @@ body {
 .subtitle-contacts a {
     color: var(--title);
     text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.subtitle-contacts a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--title);
+    transition: width 0.3s ease;
+}
+
+.subtitle-contacts a:hover::after {
+    width: 100%;
 }
 
 .form-group-contacts {
     position: relative;
     margin-bottom: 1rem;
+    opacity: 0;
+    animation: slideUp 0.5s ease forwards;
 }
+
+.form-group-contacts:nth-child(1) { animation-delay: 0.2s; }
+.form-group-contacts:nth-child(2) { animation-delay: 0.4s; }
+.form-group-contacts:nth-child(3) { animation-delay: 0.6s; }
+.form-group-contacts:nth-child(4) { animation-delay: 0.8s; }
 
 .form-group-contacts .title-contacts {
     display: block;
@@ -164,6 +217,7 @@ body {
     color: var(--paragraphs);
     font-size: 1rem;
     font-family: var(--font-type);
+    transition: all 0.3s ease;
 }
 
 .form-control-contacts::placeholder {
@@ -176,6 +230,12 @@ textarea.form-control-contacts {
     resize: vertical;
 }
 
+.form-control-contacts:focus {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 .input-icon-contacts {
     position: absolute;
     right: 1rem;
@@ -183,10 +243,16 @@ textarea.form-control-contacts {
     transform: translateY(-50%);
     color: var(--subtitle);
     font-size: 1.2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .form-group-contacts.with-textarea .input-icon-contacts {
     top: 2.5rem;
+}
+
+.form-group-contacts:hover .input-icon-contacts {
+    transform: translateY(-50%) scale(1.1);
+    color: var(--title);
 }
 
 .form-footer-contacts {
@@ -206,6 +272,13 @@ textarea.form-control-contacts {
     gap: 0.5rem;
     font-size: 0.9rem;
     opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.attachment-btn-contacts:hover {
+    opacity: 1;
+    transform: translateX(5px);
+    color: var(--title);
 }
 
 .radio-inputs {
@@ -239,12 +312,17 @@ textarea.form-control-contacts {
     border: none;
     padding: .5rem 0;
     color: var(--paragraphs);
-    transition: all .15s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 .radio-inputs .radio input:checked+.name {
     background-color: var(--background-contact-effect);
     font-weight: 600;
+}
+
+.radio-inputs .radio .name:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .send-btn-contacts {
@@ -255,11 +333,33 @@ textarea.form-control-contacts {
     border-radius: 2rem;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .send-btn-contacts:hover {
-    background-color: var(--button-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(26, 117, 255, 0.3);
+}
+
+.send-btn-contacts::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.send-btn-contacts:active::after {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
 }
 
 .image-section-contacts {
@@ -277,6 +377,8 @@ textarea.form-control-contacts {
             #000 0%,
             #000 90%,
             transparent 100%);
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards;
 }
 
 .image-section-contacts img {
@@ -284,7 +386,14 @@ textarea.form-control-contacts {
     height: 100%;
     object-fit: cover;
     filter: brightness(50%);
+    transition: all 0.5s ease;
 }
+
+.image-section-contacts:hover img {
+    filter: brightness(60%) contrast(1.1);
+    transform: scale(1.05);
+}
+
 /*************************/
 /*END Cuerpo de la pagina*/
 /*************************/
@@ -334,3 +443,32 @@ textarea.form-control-contacts {
 /***********************/
 /*END Responsive Phones*/
 /***********************/
+
+/* Animación global para elementos principales */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación para mensajes de error o éxito */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Animación al cargar la página */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -798,9 +798,9 @@ body {
 .contacts-banner-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #ffffffaf;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 4px rgba(185, 185, 185, 0.466);
 }
 
 .contacts-banner-description {
@@ -1050,6 +1050,12 @@ body {
   margin-bottom: 1.5rem;
   font-size: 0.8rem;
   line-height: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+.parrafo-services-section:hover {
+  color: var(--foreground);
+  transform: translateX(5px);
 }
 
 .image-container {
@@ -1269,6 +1275,11 @@ body {
   /* Espaciado interno */
   color: #ffffff;
   /* Color del texto */
+  transition: all 0.4s ease;
+}
+
+.contacts-banner-container:hover {
+  transform: translateY(-5px);
 }
 
 .background-logo {
@@ -1383,15 +1394,6 @@ body {
   }
 }
 
-.contacts-banner-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  /* Sombra para mayor legibilidad */
-  letter-spacing: 3px;
-}
-
 /*baneer ------------------------------------------------------------------------------------------*/
 
 /* Hero container */
@@ -1400,6 +1402,8 @@ body {
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 2s 1s forwards;
 }
 
 /* Video de fondo */
@@ -1411,6 +1415,11 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  transition: filter 0.5s ease;
+}
+
+.hero-banner-services:hover .background-video-banner-services {
+  filter: brightness(1.2) contrast(1.1);
 }
 
 /* Overlay con gradiente elíptico */
@@ -1437,6 +1446,7 @@ body {
   width: 100%;
   padding: 2rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  animation: fadeIn 1s ease-out;
 }
 
 /* Estilos del header */
@@ -1449,6 +1459,12 @@ body {
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.title-banner-services:hover {
+  transform: scale(1.02);
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
 }
 
 .publisher-banner-services {
@@ -1469,6 +1485,13 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.platform-badge-banner-services:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
 }
 
 /* Sección de compra */
@@ -1488,6 +1511,12 @@ body {
   background: rgba(255, 255, 255, 0.1);
   padding: 0.5rem 1rem;
   border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+.price-banner-services:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .original-price-banner-services {
@@ -1517,11 +1546,29 @@ body {
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-banner-services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
 }
 
 .contact-banner-services:hover {
-  background-color: #c2410c;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(234, 88, 12, 0.4);
+}
+
+.contact-banner-services:hover::before {
+  left: 100%;
 }
 
 /* Responsive Design */
@@ -1622,6 +1669,11 @@ body {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1s forwards;
+  transition: all 0.4s ease;
+}
+
+.hero__text:hover {
+  transform: translateY(-5px);
 }
 
 .hero__text h1 {
@@ -1685,6 +1737,12 @@ body {
   border-radius: 0.5rem;
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+}
+
+.hero__game-image:hover {
+  transform: scale(1.02);
+  border-color: var(--primary);
 }
 
 .hero__controller {
@@ -1899,6 +1957,12 @@ body {
   margin-top: 55px;
   margin-bottom: 5px;
   pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.slide:hover .slide-image {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .slide-subtitle {
@@ -1913,6 +1977,12 @@ body {
   font-weight: 600;
   margin-bottom: 0.5rem;
   line-height: 1.2;
+  transition: all 0.3s ease;
+}
+
+.slide:hover .slide-title {
+  color: var(--primary);
+  transform: translateX(5px);
 }
 
 .slide-description {
@@ -1942,11 +2012,16 @@ body {
   border-radius: 50%;
   background-color: #4b5563;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .dot.active {
   background-color: rgb(255, 255, 255);
+}
+
+.dot:hover {
+  transform: scale(1.2);
+  background-color: var(--primary);
 }
 
 #slider-container {
@@ -1998,3 +2073,384 @@ body {
 /*******************************************************/
 /* Estilos para el responsive del carrusel y sección 3 */
 /*******************************************************/
+
+/* Animaciones globales */
+.hero-portfolio,
+.hero-banner-services,
+.combined-section,
+.timeline-item,
+.contacts-banner-container {
+  opacity: 0;
+  animation: fadeIn 2s 1s forwards;
+}
+
+/* Efectos para el video de fondo */
+.background-video-banner-services {
+  transition: filter 0.5s ease;
+}
+
+.hero-banner-services:hover .background-video-banner-services {
+  filter: brightness(1.2) contrast(1.1);
+}
+
+/* Efectos para los títulos */
+.title-banner-services {
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.title-banner-services:hover {
+  transform: scale(1.02);
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+/* Efectos para los badges */
+.platform-badge-banner-services {
+  transition: all 0.3s ease;
+}
+
+.platform-badge-banner-services:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
+}
+
+/* Efectos para los precios */
+.price-banner-services {
+  transition: all 0.3s ease;
+}
+
+.price-banner-services:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Efectos para la línea de tiempo */
+.timeline-item {
+  transition: all 0.5s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(10px);
+}
+
+.icon-circle {
+  transition: all 0.4s ease;
+}
+
+.timeline-item:hover .icon-circle {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+/* Efectos para las imágenes del slider */
+.slide-image {
+  transition: all 0.4s ease;
+}
+
+.slide:hover .slide-image {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Efectos para los textos del slider */
+.slide-title {
+  transition: all 0.3s ease;
+}
+
+.slide:hover .slide-title {
+  color: var(--primary);
+  transform: translateX(5px);
+}
+
+/* Efectos para el hero content */
+.hero__text {
+  transition: all 0.4s ease;
+}
+
+.hero__text:hover {
+  transform: translateY(-5px);
+}
+
+/* Efectos para las imágenes del hero */
+.hero__game-image {
+  transition: all 0.5s ease;
+}
+
+.hero__game-image:hover {
+  transform: scale(1.02);
+  border-color: var(--primary);
+}
+
+/* Efectos para los botones */
+.contact-banner-services {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-banner-services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.contact-banner-services:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(234, 88, 12, 0.4);
+}
+
+.contact-banner-services:hover::before {
+  left: 100%;
+}
+
+/* Efectos para el contenedor de contacto */
+.contacts-banner-container {
+  transition: all 0.4s ease;
+}
+
+.contacts-banner-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Efectos para los dots del slider */
+.dot {
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  transform: scale(1.2);
+  background-color: var(--primary);
+}
+
+/* Animación para el scanner */
+.hero__scanner {
+  animation: scan 3s infinite;
+}
+
+@keyframes scan {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+/* Efecto para el scroll del timeline */
+.timeline::-webkit-scrollbar-thumb {
+  transition: background-color 0.3s ease;
+}
+
+.timeline::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
+}
+
+/* Efecto para los párrafos */
+.parrafo-services-section {
+  transition: all 0.3s ease;
+}
+
+.parrafo-services-section:hover {
+  color: var(--foreground);
+  transform: translateX(5px);
+}
+
+/* Efecto para el blob del banner */
+.contacts-banner-gradient-blob {
+  animation: moveBlob 10s ease-in-out infinite;
+}
+
+@keyframes moveBlob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(50px, 20px) scale(1.1);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Efectos para texto y elementos restantes */
+
+/* Efectos para el publisher */
+.publisher-banner-services {
+  transition: all 0.3s ease;
+}
+
+.publisher-banner-services:hover {
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+/* Efectos para la nota de suscripción */
+.subscription-note-banner-services {
+  transition: all 0.3s ease;
+}
+
+.subscription-note-banner-services:hover {
+  color: #ffd700;
+  transform: translateX(5px);
+}
+
+/* Efectos para el precio original */
+.original-price-banner-services {
+  transition: all 0.3s ease;
+}
+
+.original-price-banner-services:hover {
+  opacity: 0.8;
+  text-decoration-color: var(--primary);
+}
+
+/* Efectos para el hero controller */
+.hero__controller {
+  transition: all 0.4s ease;
+}
+
+.hero__controller:hover {
+  transform: translateY(-5px) rotate(-5deg);
+  border-color: var(--primary);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Efectos para el overlay */
+.overlay-banner-services {
+  transition: all 0.5s ease;
+}
+
+.hero-banner-services:hover .overlay-banner-services {
+  background: radial-gradient(ellipse at center,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.9) 100%);
+}
+
+/* Efectos para la descripción del slide */
+.slide-description {
+  transition: all 0.3s ease;
+}
+
+.slide:hover .slide-description {
+  color: #b8b8b8;
+  padding-left: 5px;
+  border-left: 2px solid var(--primary);
+}
+
+/* Efectos para el subtítulo del slide */
+.slide-subtitle {
+  transition: all 0.3s ease;
+}
+
+.slide:hover .slide-subtitle {
+  color: var(--primary);
+  letter-spacing: 1.5px;
+}
+
+/* Efectos para el background logo */
+.background-logo {
+  transition: all 0.5s ease;
+}
+
+.contacts-banner-container:hover .background-logo {
+  transform: translate(-50%, -50%) scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.8));
+}
+
+/* Efectos para los separadores */
+.stat-separator {
+  transition: all 0.3s ease;
+}
+
+.stat-separator:hover {
+  height: 60px;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.2),
+      var(--primary),
+      rgba(255, 255, 255, 0.2));
+}
+
+/* Efectos para el stat label */
+.stat-label {
+  transition: all 0.3s ease;
+}
+
+.stat-label:hover {
+  color: var(--primary);
+  letter-spacing: 1.5px;
+}
+
+/* Efectos para el blueprint grid */
+.blueprint-grid {
+  transition: opacity 0.3s ease;
+}
+
+.hero-portfolio:hover .blueprint-grid {
+  opacity: 0.7;
+}
+
+/* Efectos para el scroll container */
+.scroll-container {
+  transition: all 0.3s ease;
+}
+
+.scroll-container:hover {
+  transform: translateY(-5px) translateX(-50%);
+}
+
+/* Efectos para el mouse wheel */
+.mouse-wheel {
+  transition: all 0.3s ease;
+}
+
+.mouse-icon:hover .mouse-wheel {
+  background-color: var(--primary);
+  height: 15px;
+}
+
+/* Efectos para las flechas */
+.arrow {
+  transition: all 0.3s ease;
+}
+
+.arrow-container:hover .arrow {
+  border-color: var(--primary);
+  transform: rotate(45deg) scale(1.2);
+}
+
+/* Efectos para el contenedor de gradientes */
+.background-gradients {
+  transition: all 0.5s ease;
+}
+
+.background-gradients:hover .gradient-2,
+.background-gradients:hover .gradient-3 {
+  filter: brightness(1.2);
+  transform: scale(1.1);
+}
+
+/* Efectos para textos informativos */
+.subtitle,
+.publisher-banner-services,
+.contacts-banner-description,
+.contacts-banner-invite {
+  transition: all 0.3s ease;
+}
+
+.subtitle:hover,
+.publisher-banner-services:hover,
+.contacts-banner-description:hover,
+.contacts-banner-invite:hover {
+  transform: translateX(5px);
+  color: var(--primary-foreground);
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}

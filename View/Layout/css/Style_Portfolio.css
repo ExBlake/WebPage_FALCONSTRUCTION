@@ -44,6 +44,11 @@ body {
     animation: fadeIn 2s 1s forwards;
     -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% -50%, black 60%, transparent 100%);
     mask-image: radial-gradient(ellipse 100% 90% at 50% 8%, black 88%, transparent 100%);
+    transition: transform 0.3s ease;
+}
+
+.hero-portfolio:hover {
+    transform: scale(1.02);
 }
 
 .hero-portfolio::before {
@@ -70,6 +75,12 @@ body {
     z-index: 2;
     pointer-events: none;
     opacity: 0.5;
+    animation: gridFade 2s ease-in-out infinite alternate;
+}
+
+@keyframes gridFade {
+    from { opacity: 0.3; }
+    to { opacity: 0.7; }
 }
 
 .hero-content-portfolio {
@@ -81,6 +92,11 @@ body {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 0 2rem;
+    transition: transform 0.3s ease;
+}
+
+.hero-content-portfolio:hover {
+    transform: translateY(-5px);
 }
 
 /* Decorative elements */
@@ -139,6 +155,12 @@ body {
     margin-bottom: 3rem;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.main-title-portfolio:hover {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transform: scale(1.02);
 }
 
 .title-line {
@@ -166,12 +188,23 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    color: var(--primary);
 }
 
 .stat-number {
     font-size: 3rem;
     font-weight: 600;
     color: #fff;
+    transition: color 0.3s ease;
+}
+
+.stat-number:hover {
+    color: var(--primary);
 }
 
 .stat-label {
@@ -196,6 +229,12 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 .mouse-icon {
@@ -348,6 +387,7 @@ body {
     background-position: center center;
     transition: all 0.5s ease;
     /* Transición suave para todo el contenedor */
+    animation: fadeIn 1s ease forwards;
 }
 
 /* Transición suave de zoom (cuando el mouse entra y sale) */
@@ -360,8 +400,8 @@ body {
 
 /* Hover: aumentar el zoom */
 .content-wrapper:hover {
-    transform: scale(1.05);
-    /* Aumento sutil de la escala */
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .text-content {
@@ -377,6 +417,12 @@ body {
     letter-spacing: 2px;
     margin-bottom: 1rem;
     animation: fadeIn 1.2s ease-in-out;
+    transition: all 0.3s ease;
+}
+
+.phase-label:hover {
+    color: var(--primary);
+    letter-spacing: 3px;
 }
 
 /* Media Queries Mejorados */
@@ -608,10 +654,11 @@ body {
 ::-webkit-scrollbar-thumb {
     background: rgb(0, 60, 109);
     border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(0, 31, 56);
+    background: linear-gradient(45deg, #4a3bc9, #6258ff);
 }
 
 
@@ -635,6 +682,8 @@ body {
     width: 700px;
     height: 700px;
     background: radial-gradient(circle, rgba(59, 131, 246, 0.18) 0%, rgba(59, 130, 246, 0) 70%);
+    transition: opacity 0.3s ease;
+    animation: gradientPulse 8s infinite alternate;
 }
 
 .gradient-3 {
@@ -644,6 +693,19 @@ body {
     width: 700px;
     height: 700px;
     background: radial-gradient(circle, rgba(138, 92, 246, 0.12) 0%, rgba(139, 92, 246, 0) 70%);
+    transition: opacity 0.3s ease;
+    animation: gradientPulse 8s infinite alternate;
+}
+
+@keyframes gradientPulse {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
 }
 
 #cursor-effect {
@@ -680,6 +742,12 @@ h1 {
     font-weight: 300;
     line-height: 1.1;
     margin-bottom: 120px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h1:hover {
+    color: var(--primary);
+    transform: translateX(5px);
 }
 
 .content-block {
@@ -700,11 +768,23 @@ h2 {
     font-weight: 400;
     margin-bottom: 20px;
     line-height: 1.2;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h2:hover {
+    color: var(--primary);
+    transform: translateX(5px);
 }
 
 p {
     color: #A0AEC0;
     line-height: 1.6;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+p:hover {
+    color: var(--primary);
+    transform: translateX(5px);
 }
 
 .image-right {
@@ -968,6 +1048,12 @@ p:hover {
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    animation: loadingFade 0.5s ease-in-out;
+}
+
+@keyframes loadingFade {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
 
 .loading-container {
@@ -1011,7 +1097,7 @@ p:hover {
 .fade-in-up-element {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: all 0.6s ease;
     visibility: hidden;
 }
 
@@ -1136,6 +1222,18 @@ p:hover {
     overflow-x: hidden;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    animation: modalSlideIn 0.5s ease forwards;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Estilos base para todas las secciones del modal */
@@ -1677,10 +1775,12 @@ p:hover {
     justify-content: center;
     transition: background-color 0.3s ease;
     z-index: 1;
+    transition: all 0.3s ease;
 }
 
 .nav-btn:hover {
-    background: rgba(0, 0, 0, 0.637);
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
 }
 
 .prev-btn {
@@ -2293,6 +2393,12 @@ p:hover {
         filter: brightness(0.9);
         animation: fadeIn 0.5s ease-in-out;
         /* Mover la animación aquí */
+        transition: all 0.5s ease;
+    }
+
+    .carousel-item:hover {
+        filter: brightness(1.2) contrast(1.1);
+        transform: scale(1.02);
     }
 
     /* Botones de navegación */
@@ -2398,3 +2504,110 @@ p:hover {
 /************************************/
 /* Estilos responsive para carrusel */
 /************************************/
+
+/* Animaciones y efectos para elementos principales */
+
+/* Efectos para el contenedor de contenido */
+.content-wrapper {
+    transition: all 0.5s ease;
+    animation: fadeIn 1s ease forwards;
+}
+
+.content-wrapper:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Efectos para los gradientes de fondo */
+.gradient-2, .gradient-3 {
+    transition: opacity 0.3s ease;
+    animation: gradientPulse 8s infinite alternate;
+}
+
+@keyframes gradientPulse {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+/* Efectos para el modal */
+.modal-content {
+    animation: modalSlideIn 0.5s ease forwards;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efectos para las imágenes del carrusel */
+.carousel-item {
+    transition: all 0.5s ease;
+}
+
+.carousel-item:hover {
+    filter: brightness(1.2) contrast(1.1);
+    transform: scale(1.02);
+}
+
+/* Efectos para los botones de navegación */
+.nav-btn {
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+/* Animación para el loading */
+.loading {
+    animation: loadingFade 0.5s ease-in-out;
+}
+
+@keyframes loadingFade {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Efectos para el scrollbar */
+::-webkit-scrollbar-thumb {
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #4a3bc9, #6258ff);
+}
+
+/* Animaciones para elementos en scroll */
+.fade-in-up-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.fade-in-up-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efecto para textos y párrafos */
+p, h1, h2 {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+p:hover, h1:hover, h2:hover {
+    color: var(--primary);
+    transform: translateX(5px);
+}

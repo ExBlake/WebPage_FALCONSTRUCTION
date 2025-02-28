@@ -402,66 +402,66 @@ document.addEventListener("DOMContentLoaded", function () {
 /* Script sección 2 servicios */
 /******************************/
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Inicializar partículas
   particlesJS('particles-js', {
-      particles: {
-          number: { value: 80, density: { enable: true, value_area: 800 } },
-          color: { value: "#ffffff" },
-          shape: { type: "circle" },
-          opacity: { value: 0.5, random: false },
-          size: { value: 3, random: true },
-          line_linked: {
-              enable: true,
-              distance: 150,
-              color: "#ffffff",
-              opacity: 0.4,
-              width: 1
-          },
-          move: {
-              enable: true,
-              speed: 2,
-              direction: "none",
-              random: false,
-              straight: false,
-              out_mode: "out",
-              bounce: false,
-          }
+    particles: {
+      number: { value: 80, density: { enable: true, value_area: 800 } },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5, random: false },
+      size: { value: 3, random: true },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: "#ffffff",
+        opacity: 0.4,
+        width: 1
       },
-      interactivity: {
-          detect_on: "canvas",
-          events: {
-              onhover: { enable: true, mode: "repulse" },
-              onclick: { enable: true, mode: "push" },
-              resize: true
-          },
-          modes: {
-              repulse: { distance: 100, duration: 0.4 },
-              push: { particles_nb: 4 }
-          }
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "none",
+        random: false,
+        straight: false,
+        out_mode: "out",
+        bounce: false,
+      }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "repulse" },
+        onclick: { enable: true, mode: "push" },
+        resize: true
       },
-      retina_detect: true
+      modes: {
+        repulse: { distance: 100, duration: 0.4 },
+        push: { particles_nb: 4 }
+      }
+    },
+    retina_detect: true
   });
 
   // Manejar la carga de imágenes
   const images = document.querySelectorAll('img');
   images.forEach(img => {
-      img.addEventListener('load', function() {
-          this.classList.add('loaded');
-      });
-      img.addEventListener('error', function() {
-          console.error('Error loading image:', this.src);
-      });
+    img.addEventListener('load', function () {
+      this.classList.add('loaded');
+    });
+    img.addEventListener('error', function () {
+      console.error('Error loading image:', this.src);
+    });
   });
 
   // Efecto de hover en el botón
   const button = document.querySelector('.button');
-  button.addEventListener('mousemove', function(e) {
-      const x = e.pageX - button.offsetLeft;
-      const y = e.pageY - button.offsetTop;
-      
-      button.style.setProperty('--x', x + 'px');
-      button.style.setProperty('--y', y + 'px');
+  button.addEventListener('mousemove', function (e) {
+    const x = e.pageX - button.offsetLeft;
+    const y = e.pageY - button.offsetTop;
+
+    button.style.setProperty('--x', x + 'px');
+    button.style.setProperty('--y', y + 'px');
   });
 });
 
@@ -469,9 +469,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function handleResize() {
   const heroContent = document.querySelector('.hero__content');
   const windowWidth = window.innerWidth;
-  
+
   if (windowWidth < 1024) {
-      heroContent.style.opacity = '1';
+    heroContent.style.opacity = '1';
   }
 }
 
@@ -504,36 +504,36 @@ let slidesPerView = getSlidesPerView();
 
 // Create dots based on number of visible slides
 function createDots() {
-    dotsContainer.innerHTML = '';
-    const numDots = Math.ceil(slides.length / slidesPerView);
+  dotsContainer.innerHTML = '';
+  const numDots = Math.ceil(slides.length / slidesPerView);
 
-    for (let i = 0; i < numDots; i++) {
-        const dot = document.createElement('span');
-        dot.classList.add('dot');
-        if (i === currentIndex) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(i));
-        dotsContainer.appendChild(dot);
-    }
+  for (let i = 0; i < numDots; i++) {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === currentIndex) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
 }
 
 function getSlidesPerView() {
-    if (window.innerWidth >= 1024) return 3;
-    if (window.innerWidth >= 768) return 2;
-    return 1;
+  if (window.innerWidth >= 1024) return 3;
+  if (window.innerWidth >= 768) return 2;
+  return 1;
 }
 
 function updateDots() {
-    const dots = document.querySelectorAll('.dot');
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentIndex);
-    });
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === currentIndex);
+  });
 }
 
 function goToSlide(index) {
-    currentIndex = index;
-    prevTranslate = currentTranslate = -index * (100 / slidesPerView);
-    setSliderPosition();
-    updateDots();
+  currentIndex = index;
+  prevTranslate = currentTranslate = -index * (100 / slidesPerView);
+  setSliderPosition();
+  updateDots();
 }
 
 // Touch events
@@ -548,72 +548,72 @@ slider.addEventListener('mouseup', stopDragging);
 slider.addEventListener('mouseleave', stopDragging);
 
 function startDragging(e) {
-    isDragging = true;
-    slider.classList.add('dragging');
+  isDragging = true;
+  slider.classList.add('dragging');
 
-    // Get starting position
-    startPos = getPositionX(e);
+  // Get starting position
+  startPos = getPositionX(e);
 
-    // Cancel any ongoing animation
-    cancelAnimationFrame(animationID);
+  // Cancel any ongoing animation
+  cancelAnimationFrame(animationID);
 }
 
 function drag(e) {
-    if (!isDragging) return;
+  if (!isDragging) return;
 
-    e.preventDefault();
-    const currentPosition = getPositionX(e);
-    const diff = currentPosition - startPos;
-    currentTranslate = prevTranslate + (diff / sliderContainer.offsetWidth) * 100;
+  e.preventDefault();
+  const currentPosition = getPositionX(e);
+  const diff = currentPosition - startPos;
+  currentTranslate = prevTranslate + (diff / sliderContainer.offsetWidth) * 100;
 
-    // Add boundaries
-    const minTranslate = -((slides.length - slidesPerView) * (100 / slidesPerView));
-    currentTranslate = Math.max(minTranslate, Math.min(0, currentTranslate));
+  // Add boundaries
+  const minTranslate = -((slides.length - slidesPerView) * (100 / slidesPerView));
+  currentTranslate = Math.max(minTranslate, Math.min(0, currentTranslate));
 
-    setSliderPosition();
+  setSliderPosition();
 }
 
 function stopDragging() {
-    isDragging = false;
-    slider.classList.remove('dragging');
+  isDragging = false;
+  slider.classList.remove('dragging');
 
-    const movedBy = currentTranslate - prevTranslate;
+  const movedBy = currentTranslate - prevTranslate;
 
-    // If moved enough negative
-    if (movedBy < -5) {
-        currentIndex = Math.min(
-            Math.ceil(slides.length / slidesPerView) - 1,
-            currentIndex + 1
-        );
-    }
-    // If moved enough positive
-    else if (movedBy > 5) {
-        currentIndex = Math.max(0, currentIndex - 1);
-    }
+  // If moved enough negative
+  if (movedBy < -5) {
+    currentIndex = Math.min(
+      Math.ceil(slides.length / slidesPerView) - 1,
+      currentIndex + 1
+    );
+  }
+  // If moved enough positive
+  else if (movedBy > 5) {
+    currentIndex = Math.max(0, currentIndex - 1);
+  }
 
-    currentTranslate = -currentIndex * (100 / slidesPerView);
-    prevTranslate = currentTranslate;
-    setSliderPosition();
-    updateDots();
+  currentTranslate = -currentIndex * (100 / slidesPerView);
+  prevTranslate = currentTranslate;
+  setSliderPosition();
+  updateDots();
 }
 
 function getPositionX(e) {
-    return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+  return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
 }
 
 function setSliderPosition() {
-    slider.style.transform = `translateX(${currentTranslate}%)`;
+  slider.style.transform = `translateX(${currentTranslate}%)`;
 }
 
 // Handle window resize
 window.addEventListener('resize', () => {
-    const newSlidesPerView = getSlidesPerView();
-    if (newSlidesPerView !== slidesPerView) {
-        slidesPerView = newSlidesPerView;
-        currentIndex = Math.min(currentIndex, Math.ceil(slides.length / slidesPerView) - 1);
-        createDots();
-        goToSlide(currentIndex);
-    }
+  const newSlidesPerView = getSlidesPerView();
+  if (newSlidesPerView !== slidesPerView) {
+    slidesPerView = newSlidesPerView;
+    currentIndex = Math.min(currentIndex, Math.ceil(slides.length / slidesPerView) - 1);
+    createDots();
+    goToSlide(currentIndex);
+  }
 });
 
 // Prevent context menu on long press
@@ -623,14 +623,25 @@ slider.addEventListener('contextmenu', e => e.preventDefault());
 createDots();
 updateDots();
 
-// Agregar evento para evitar conflictos en el contenedor de la descripción
-// const slideDescriptions = document.querySelectorAll('.slide-description');
-// slideDescriptions.forEach(description => {
-//     description.addEventListener('touchstart', (e) => {
-//         e.stopPropagation(); // Detener la propagación del evento
-//     });
-// });
-
 /*******************************************************/
 /* Script para el responsive del carrusel y sección 3  */
 /*******************************************************/
+
+/*********************************/
+/* Script para efecto del título */
+/*********************************/
+
+document.addEventListener("mousemove", (event) => {
+  const title = document.querySelector(".contacts-banner-title");
+  const rect = title.getBoundingClientRect();
+
+  // Calculamos la diferencia entre la posición del cursor y el centro del texto
+  const offsetX = (event.clientX - (rect.left + rect.width / 2)) * 0.01;
+  const offsetY = (event.clientY - (rect.top + rect.height / 2)) * 0.01;
+
+  title.style.transform = `translate(${-offsetX}px, ${-offsetY}px)`;
+});
+
+/*********************************/
+/* Script para efecto del título */
+/*********************************/
