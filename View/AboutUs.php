@@ -10,11 +10,16 @@
     <!-- Carga de fuentes y estilos -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <!-- Estilos personalizados para diferentes secciones -->
     <link rel="stylesheet" href="Estilos_Header"> <!-- Estilos del encabezado -->
     <link rel="stylesheet" href="Estilos_Nosotros"> <!-- Estilos del portafolio -->
     <link rel="stylesheet" href="Estilos_Footer"> <!-- Estilos del pie de página -->
     <link rel="stylesheet" href="Estilos_Banner"> <!-- Estilos del banner -->
+    <link rel="stylesheet" href="Estilos_Boton_Flotante">
+
+    
     <style>
         .video-and-content {
             display: flex;
@@ -495,7 +500,10 @@
         </section>
 
         <div id="cursor-effect"></div>
-
+        <?php
+    // Inclusión del Boton flotant"
+    require_once 'Layout/FloatingButton.php';
+    ?>
         <?php
         // Inclusión del footer
         require_once 'Layout/Footer.php';
@@ -508,6 +516,8 @@
         <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script>
         <script src="Script_Banner"></script>
         <script src="Script_Header"></script>
+        <script src="Script_Boton_Flotante"></script>
+
 </body>
 
 </html>

@@ -8,10 +8,14 @@
     <title>Servicios - Falconstruction</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="Estilos_Header">
     <link rel="stylesheet" href="Estilos_Servicios">
     <link rel="stylesheet" href="Estilos_Footer">
     <link rel="stylesheet" href="Estilos_Banner">
+    <link rel="stylesheet" href="Estilos_Boton_Flotante">
+
+
 
 </head>
 
@@ -363,6 +367,10 @@
     </div>
 
     <div id="cursor-effect"></div>
+    <?php
+    // Inclusión del Boton flotant"
+    require_once 'Layout/FloatingButton.php';
+    ?>
 
     <!-- partial -->
     <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script>
@@ -373,6 +381,9 @@
     <script src="Script_Banner"></script>
     <script src="Script_Services"></script>
     <script src="Script_Header"></script>
+    <script src="Script_Boton_Flotante"></script>
+
+    
 
 
 </body>

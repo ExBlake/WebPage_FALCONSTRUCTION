@@ -10,11 +10,15 @@
     <!-- Carga de fuentes y estilos -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <!-- Estilos personalizados para diferentes secciones -->
     <link rel="stylesheet" href="Estilos_Header"> <!-- Estilos del encabezado -->
     <link rel="stylesheet" href="Estilos_Portafolio"> <!-- Estilos del portafolio -->
     <link rel="stylesheet" href="Estilos_Footer"> <!-- Estilos del pie de página -->
     <link rel="stylesheet" href="Estilos_Banner"> <!-- Estilos del banner -->
+    <link rel="stylesheet" href="Estilos_Boton_Flotante">
+
 </head>
 
 <body>
@@ -138,7 +142,10 @@
         </section>
 
         <div id="cursor-effect"></div> <!-- Efecto de cursor personalizado -->
-
+        <?php
+    // Inclusión del Boton flotant"
+    require_once 'Layout/FloatingButton.php';
+    ?>
         <?php
         // Inclusión del footer
         // Se carga el archivo del pie de página que contiene información de contacto y enlaces
@@ -349,6 +356,9 @@
         <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script> <!-- Easing personalizado de GSAP -->
         <script src="Script_Banner"></script> <!-- Script para el banner -->
         <script src="Script_Header"></script> <!-- Script para el encabezado -->
+        <script src="Script_Boton_Flotante"></script>
+
+        
 </body>
 
 </html>

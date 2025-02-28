@@ -1563,7 +1563,7 @@ em {
     /* Añadido */
 }
 
-.modal.show {
+.modal.show-users {
     opacity: 1;
     visibility: visible;
 }
@@ -1581,7 +1581,7 @@ em {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.modal.show .modal-content {
+.modal.show-users .modal-content {
     transform: translateY(0);
     opacity: 1;
 }

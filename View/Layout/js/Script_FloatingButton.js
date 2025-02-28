@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     mainButton.addEventListener("click", () => {
         isOpen = !isOpen;
-        mainButton.classList.toggle("open");
+        mainButton.classList.toggle("open-flotante");
 
         // Actualizar el icono y el aria-label según el estado
         if (isOpen) {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         socialIcons.forEach((icon, index) => {
             setTimeout(() => {
-                icon.classList.toggle("show");
+                icon.classList.toggle("show-flotante");
             }, isOpen ? index * 100 : (socialIcons.length - index - 1) * 100);
         });
     });

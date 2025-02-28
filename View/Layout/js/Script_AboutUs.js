@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const modal = document.getElementById(modalId);
             if (modal) {
                 modal.style.display = 'flex'; // Cambiado de 'block' a 'flex'
-                modal.classList.add('show'); // Añadimos la clase show
+                modal.classList.add('show-users'); // Añadimos la clase show
                 document.body.style.overflow = 'hidden';
             }
         });
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {
             const modal = button.closest('.modal');
-            modal.classList.remove('show'); // Removemos la clase show
+            modal.classList.remove('show-users'); // Removemos la clase show
             setTimeout(() => {
                 modal.style.display = 'none';
             }, 300); // Esperar a que termine la animación
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('click', (e) => {
         if (e.target.classList.contains('modal')) {
             const modal = e.target;
-            modal.classList.remove('show');
+            modal.classList.remove('show-users');
             setTimeout(() => {
                 modal.style.display = 'none';
             }, 300);
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.key === 'Escape') {
             const modals = document.querySelectorAll('.modal');
             modals.forEach(modal => {
-                modal.classList.remove('show');
+                modal.classList.remove('show-users');
                 setTimeout(() => {
                     modal.style.display = 'none';
                 }, 300);
