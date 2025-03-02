@@ -410,7 +410,7 @@
     <section class="container-2">
         <div class="page-container">
             <div class="image-container img-left">
-                <div class="image back" style="background-image: url(PImageProject/project-5.jpg);"></div>
+                <div class="image back" style="background-image: url(PImageProject/project-1.jpg);"></div>
                 <img src="PImageProject/project-4.jpg" alt="Image2" class="image middle">
                 <img src="PImageProject/project-6.jpg" alt="Image1" class="image front">
             </div>
