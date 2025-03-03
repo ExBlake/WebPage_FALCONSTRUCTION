@@ -1,6 +1,6 @@
 :root {
     --background-gradient: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 21, 36, 0.979) 100%);
-    --text-color-titles: #00e0d5;
+    --text-color-titles: #007cdc;
     --text-color: #ffffff;
     --border-color: #1e3a5f;
     --post-background: rgba(4, 27, 58, 0.5);
@@ -13,6 +13,10 @@
     --muted: #6b7280;
     --muted-foreground: #9ca3af;
     --border: #1f2937;
+    --clr-bg: #222;
+    --clr-primary: #f5f5f5;
+    --clr-secondary: #075985;
+    --clr-cta: rgb(175, 208, 84);
 }
 
 * {
@@ -1096,14 +1100,6 @@ p:hover {
     transform: translateY(-5px);
 }
 
-/* general styling not related to this demo */
-:root {
-    --clr-bg: #222;
-    --clr-primary: #f5f5f5;
-    --clr-secondary: #075985;
-    --clr-cta: rgb(175, 208, 84);
-}
-
 h1 {
     font-size: clamp(1rem, 2.5vw + 0.25rem, 1.2rem);
     font-weight: 500;
@@ -1222,7 +1218,6 @@ em {
 }
 
 .subtitle-about-us {
-    color: #1A2138;
     font-size: 1.1rem;
     line-height: 1.5;
     max-width: 700px;
@@ -1365,7 +1360,7 @@ em {
     /* Reducido de 1.1rem */
     margin-bottom: 0.75rem;
     /* Reducido de 1rem */
-    color: var(--text-color-titles);
+    color: var(--text-color);
 }
 
 .title-about-us {
@@ -1392,7 +1387,7 @@ em {
     align-items: center;
     gap: 0.5rem;
     background-color: var(--text-color-titles);
-    color: #1A2138;
+    color: var(--text-color);
     padding: 0.75rem 1.5rem;
     /* Reducido de 1rem 2rem */
     border-radius: 2rem;
@@ -1865,4 +1860,46 @@ em {
 .modal-content:hover {
     transform: scale(1.02);
     box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+}
+
+/* Modificar los efectos hover para crear efecto neón */
+
+/* Efectos hover para títulos */
+.main-heading-about-us:hover,
+.heading-about-us:hover,
+.title-about-us {
+    transform: scale(1.02);
+    color: #ffffff;
+    text-shadow: 0 0 10px var(--text-color-titles),
+                 0 0 20px var(--text-color-titles),
+                 0 0 30px var(--text-color-titles);
+}
+
+/* Efectos para elementos de la lista */
+.benefits-list-about-us li:hover,
+.security-list-about-us li:hover {
+    transform: translateX(10px);
+    padding-left: 1rem;
+    color: #ffffff;
+    text-shadow: 0 0 8px var(--text-color-titles),
+                 0 0 15px var(--text-color-titles);
+}
+
+/* Modificar cualquier otro elemento que use color: var(--text-color-titles) en hover */
+h1,
+h2,
+.subtitle-about-us:hover,
+.philosophy-card-about-us:hover .card-title-about-us,
+.step-card-about-us:hover .step-title-about-us {
+    color: #ffffff;
+    text-shadow: 0 0 10px var(--text-color-titles),
+                 0 0 20px var(--text-color-titles),
+                 0 0 30px var(--text-color-titles);
+}
+
+/* Para elementos con fondo que necesiten el efecto neón */
+.floating-content:hover,
+.card-content:hover {
+    box-shadow: 0 0 15px var(--text-color-titles),
+                0 0 30px var(--text-color-titles);
 }

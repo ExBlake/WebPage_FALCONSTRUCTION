@@ -102,7 +102,7 @@
         <div class="container">
             <div class="banner-container-about-us">
                 <h1 class="main-heading-about-us">
-                    Conoce a <span class="highlight-about-us">Falconstruction</span> y nuestros proyectos<br>
+                    Conoce a Falconstruction y nuestros proyectos<br>
                     innovadores en construcción.
                 </h1>
                 <p class="subtitle-about-us">
