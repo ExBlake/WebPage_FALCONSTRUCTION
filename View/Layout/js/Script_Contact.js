@@ -35,13 +35,13 @@ function sendMessage() {
         let mailtoLink = `mailto:commercial@falconstructs.com?subject=${encodeURIComponent(emailSubject)}&body=${emailBody}`;
         window.location.href = mailtoLink;
     } else if (contactMethod === "sms") {
-        let smsMessage = `Hello, my name is *${encodeURIComponent(fullName)}*.%0A%0A` +
-                         `I am very interested in your services and would love to have more details it.%0A%0A` +
+        let smsMessage = `Hello, my name is ${encodeURIComponent(fullName)}.%0A%0A` +
+                         `I am very interested in your services and would love to have more details.%0A%0A` +
                          `Message: ${encodeURIComponent(message)}%0A%0A` +
-                         `Please give me a call at your earliest convenience.%0A`+
+                         `Please give me a call at your earliest convenience.%0A` +
                          `Phone: ${encodeURIComponent(phoneNumber)}%0A%0A` +
                          `Looking forward to your response. Thank you!`;
-        let smsURL = `sms:904898800?body=${smsMessage}`;
+        let smsURL = `sms:+19048988000?&body=${smsMessage}`;
         window.location.href = smsURL;
     }
 }
