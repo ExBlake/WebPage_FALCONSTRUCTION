@@ -108,28 +108,28 @@ RewriteRule ^Script_Boton_Flotante$ View/Layout/js/Script_FloatingButton.js [L]
 # ----------- IMG REWRITES -------------
 
 # Reescribe 'PImageHome' a 'Home'
-RewriteRule ^PImageInicio/(.*)$ View/Img/Home/$1 [L]
+RewriteRule ^PImageInicio/(.*)$ View/img/Home/$1 [L]
 
 # Reescribe 'PImageUsers' a 'Review/Users'
-RewriteRule ^PImageUsers/(.*)$ View/Img/Review/Users/$1 [L]
+RewriteRule ^PImageUsers/(.*)$ View/img/Review/Users/$1 [L]
 
 # Reescribe 'PImageProject' a 'Resources'
-RewriteRule ^PImageProject/(.*)$ View/Img/Projects/$1 [L]
+RewriteRule ^PImageProject/(.*)$ View/img/Project/$1 [L]
 
 # Reescribe 'PImageResource' a 'Projects'
-RewriteRule ^PImageResource/(.*)$ View/Img/Resources/$1 [L]
+RewriteRule ^PImageResource/(.*)$ View/img/Resources/$1 [L]
 
 # Reescribe 'PImageContact' a 'Contacts'
-RewriteRule ^PImageContact/(.*)$ View/Img/Contacts/$1 [L]
+RewriteRule ^PImageContact/(.*)$ View/img/Contacts/$1 [L]
 
 # Reescribe 'PImageResenas' a 'Review'
-RewriteRule ^PImageResenas/(.*)$ View/Img/Review/$1 [L]
+RewriteRule ^PImageResenas/(.*)$ View/img/Review/$1 [L]
 
 # Reescribe 'PImageServicios' a 'Services'
-RewriteRule ^PImageServicios/(.*)$ View/Img/Services/$1 [L]
+RewriteRule ^PImageServicios/(.*)$ View/img/Services/$1 [L]
 
 # Reescribe 'PImageIconos' a 'Icons'
-RewriteRule ^PImageIconos/(.*)$ View/Img/Icons/$1 [L]
+RewriteRule ^PImageIconos/(.*)$ View/img/Icons/$1 [L]
 
 # ----------- IMG REWRITES -------------
 
