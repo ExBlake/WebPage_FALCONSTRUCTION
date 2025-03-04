@@ -41,7 +41,7 @@ function sendMessage() {
                          `Please give me a call at your earliest convenience.%0A`+
                          `Phone: ${encodeURIComponent(phoneNumber)}%0A%0A` +
                          `Looking forward to your response. Thank you!`;
-        let smsURL = `sms:+1904898800?body=${smsMessage}`;
+        let smsURL = `sms:904898800?body=${smsMessage}`;
         window.location.href = smsURL;
     }
 }

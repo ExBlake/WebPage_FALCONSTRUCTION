@@ -52,13 +52,13 @@
                                 <input type="radio" name="contactMethod" value="email" checked>
                                 <span class="name">Email</span>
                             </label>
-                            <label class="radio">
-                                <input type="radio" name="contactMethod" value="whatsapp">
-                                <span class="name">WhatsApp</span>
-                            </label>
                             <label class="radio sms">
                                 <input type="radio" name="contactMethod" value="sms">
                                 <span class="name">SMS</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="contactMethod" value="whatsapp">
+                                <span class="name">WhatsApp</span>
                             </label>
                         </div>
                     </div>
