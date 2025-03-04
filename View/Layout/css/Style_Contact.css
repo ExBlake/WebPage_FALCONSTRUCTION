@@ -246,6 +246,13 @@ textarea.form-control-contacts {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
+/* Para quitar el auto inremento del input number Para navegadores WebKit (Chrome, Safari, Edge) */
+#phoneNumber::-webkit-outer-spin-button,
+#phoneNumber::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}                       
+
 .form-group-contacts.with-textarea .input-icon-contacts {
     top: 2.5rem;
 }
@@ -323,6 +330,28 @@ textarea.form-control-contacts {
 .radio-inputs .radio .name:hover {
     transform: scale(1.05);
     background-color: rgba(255, 255, 255, 0.05);
+}
+
+.radio.sms:hover::after {
+    content: "Solo aplica para celulares";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.radio.sms:hover::after {
+    opacity: 1;
 }
 
 .send-btn-contacts {

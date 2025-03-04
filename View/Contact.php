@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="Estilos_Header">
     <link rel="stylesheet" href="Estilos_Cursor">
 </head>
+
 <body>
     <?php
         require_once 'Layout/Header.php';
@@ -19,7 +21,8 @@
     <div class="container-contacts">
         <div class="form-section-contacts">
             <h1 class="title-contacts">Let's work together<span>.</span></h1>
-            <p class="subtitle-contacts">Or reach us via : <a href="mailto:Publius@mail.com">Publius@mail.com</a></p>
+            <p class="subtitle-contacts">Or reach us via : <a
+                    href="mailto:commercial@falconstructs.com">commercial@falconstructs.com</a></p>
             <form id="contactForm">
                 <div class="input-grid-contacts">
                     <div class="form-group-contacts">
@@ -27,9 +30,12 @@
                         <input type="text" class="form-control-contacts" id="fullName" placeholder="Complete name here"
                             required>
                     </div>
+                    <style>
+
+                    </style>
                     <div class="form-group-contacts">
                         <label class="title-contacts">Phone Number</label>
-                        <input type="text" class="form-control-contacts" id="phoneNumber" placeholder="Your phone"
+                        <input type="number" class="form-control-contacts" id="phoneNumber" placeholder="Your phone"
                             required>
                     </div>
                 </div>
@@ -43,12 +49,16 @@
                         <label class="title-contacts">Select a medium</label>
                         <div class="radio-inputs">
                             <label class="radio">
-                                <input type="radio" name="contactMethod" value="whatsapp" checked>
-                                <span class="name">WhatsApp</span>
+                                <input type="radio" name="contactMethod" value="email" checked>
+                                <span class="name">Email</span>
                             </label>
                             <label class="radio">
-                                <input type="radio" name="contactMethod" value="email">
-                                <span class="name">Email</span>
+                                <input type="radio" name="contactMethod" value="whatsapp">
+                                <span class="name">WhatsApp</span>
+                            </label>
+                            <label class="radio sms">
+                                <input type="radio" name="contactMethod" value="sms">
+                                <span class="name">SMS</span>
                             </label>
                         </div>
                     </div>
@@ -61,7 +71,7 @@
         </div>
 
         <div class="image-section-contacts">
-            <img src="PImageContact/logo para camilo.jpg" alt="Workspace with laptop and coffee">
+            <img src="PImageContact/logo para camilo.jpg" alt="Falconstruction">
         </div>
     </div>
 
@@ -71,4 +81,5 @@
     <script src="Script_Contactos"></script>
     <script src="Script_Cursor"></script>
 </body>
-</html> 
+
+</html>
