@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Falconstruction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>FALCONSTRUCTION SERVICES</title>
+    <link rel="icon" href="PImageIconos/Icono.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="Estilos_Inicio">
     <link rel="stylesheet" href="Estilos_Header">
@@ -26,7 +26,6 @@
     </div>
 
     <section class="container parallax-section">
-
         <div class="h11">
             <h1>Falconstruction <br> Company</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nostrum placeat tempora deleniti.
@@ -37,9 +36,7 @@
                 <a href="#" class="btn btn-outline">Contacto</a>
             </div>
         </div>
-
         <div class="house-container">
-            <!-- partial:index.partial.html -->
             <div class="house" id="h">
                 <div class="h-lights">
                     <div class="h-light"></div>
@@ -402,9 +399,7 @@
                     <div class="tablet__bottom face"> </div>
                 </div>
             </div>
-
         </div>
-
     </section>
 
     <section class="container-2">
@@ -414,10 +409,8 @@
                 <img src="PImageProject/project-4.jpg" alt="Image2" class="image middle">
                 <img src="PImageProject/project-6.jpg" alt="Image1" class="image front">
             </div>
-
             <div class="content-container-text txt-right">
                 <h1 class="title">Designing Beautiful, Eco-friendly and Green Structures Around the City!</h1>
-
                 <p class="text">
                     Alias debitis exercitation habitant accusantium sem! Blandit perspiciatis! Sem reprehenderit. Montes
                     cillum,
@@ -425,11 +418,9 @@
                     dolore,
                     pulvinar, congue. Velit dictumst rutrum voluptatibus! Laboriosam ante labore necessitatibus!
                 </p>
-
                 <p class="text">
                     Praesent risus minim distinctio adipisci cubilia auctor sem felis, qui urna facilisis omnis erro.
                 </p>
-
                 <button class="ver-mas-btn">Ver Más →</button>
             </div>
         </div>
@@ -439,7 +430,6 @@
         <div class="page-container">
             <div class="content-container-text txt-left">
                 <h1 class="title">Construyendo Estructuras Bellas, Ecológicas y Verdes por la Ciudad!</h1>
-
                 <p class="text">
                     Alias debitis exercitation habitant accusantium sem! Blandit perspiciatis! Sem reprehenderit. Montes
                     cillum,
@@ -447,14 +437,11 @@
                     dolore,
                     pulvinar, congue. Velit dictumst rutrum voluptatibus! Laboriosam ante labore necessitatibus!
                 </p>
-
                 <p class="text">
                     Praesent risus minim distinctio adipisci cubilia auctor sem felis, qui urna facilisis omnis erro.
                 </p>
-
                 <button class="ver-mas-btn">Ver Más →</button>
             </div>
-
             <div class="image-container img-right">
                 <div class="image back" style="background-image: url(PImageProject/project-5.jpg);"></div>
                 <img src="PImageProject/project-4.jpg" alt="Image2" class="image middle">
@@ -464,45 +451,29 @@
     </section>
 
     <section class="container-4">
-
         <h1 class="title">Construyendo Estructuras Bellas, Ecológicas y Verdes por la Ciudad!</h1>
-
         <button class="ver-mas-btn mobile-btn">Ver Más Proyectos →</button>
-
         <div class="wrapper">
             <div class="items">
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-0.jpg)">
-                </div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-1.jpg)">
-                </div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-2.jpg)">
-                </div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-3.jpg)">
-                </div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-4.jpg)"></div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-5.jpg)">
-                </div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-6.jpg)">
-                </div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-0.jpg)">
-                </div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-1.jpg)">
-                </div>
+                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-0.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-1.jpg)"></div>
                 <div class="item" tabindex="0" style="background-image: url(PImageProject/project-2.jpg)"></div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-3.jpg)">
-                </div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-4.jpg)">
-                </div>
+                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-3.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-4.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-5.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-6.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-0.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-1.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-2.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-3.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-4.jpg)"></div>
             </div>
         </div>
-
         <button class="ver-mas-btn pc-btn">Ver Más Proyectos →</button>
     </section>
 
     <section class="container-5">
-
         <div class="particles" id="particles"></div>
-
         <div class="title-container">
             <h1 class="title">Te ofrecemos</h1>
             <p class="subtitle">Soluciones de construcción a la vanguardia, combinando innovación tecnológica con la
@@ -510,7 +481,6 @@
 
             <button class="ver-mas-btn discover-more-btn">Descubre Más →</button>
         </div>
-
         <div class="services-container">
             <div class="service-card">
                 <div class="service-inner">
@@ -522,11 +492,9 @@
                     <p class="service-desc">Diseñamos y construimos edificaciones únicas con estética moderna y
                         funcionalidad superior. Cada proyecto es una obra maestra que refleja la visión de nuestros
                         clientes mediante tecnologías de vanguardia y materiales sostenibles.</p>
-                    <a href="#arquitectura" class="service-more">Explorar servicios <i
-                            class="fas fa-arrow-right"></i></a>
+                    <a href="#arquitectura" class="service-more">Explorar servicios <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-
             <div class="service-card">
                 <div class="service-inner">
                     <div class="service-icon">
@@ -540,7 +508,6 @@
                     <a href="#espacios" class="service-more">Explorar servicios <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-
             <div class="service-card">
                 <div class="service-inner">
                     <div class="service-icon">
@@ -559,12 +526,9 @@
     </section>
 
     <section class="container-6 testimonial-section">
-
         <div class="shape-bg"></div>
         <div class="shape-bg-2"></div>
-
         <div class="testimonial-container"></div>
-
     </section>
 
     <div class="container-prev-next-btn">
@@ -573,7 +537,6 @@
                 <path d="M15 18l-6-6 6-6v12z" />
             </svg>
         </button>
-
         <button class="ver-mas-btn next-btn" id="next-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                 <path d="M9 18l6-6-6-6v12z" />
@@ -581,158 +544,23 @@
         </button>
     </div>
 
-    <script>
-        
-document.addEventListener("mousemove", (e) => {
-    const shape = document.querySelector(".shape-bg");
-    const image = document.querySelector(".testimonial-image");
-
-    if (window.innerWidth > 968) {
-        const mouseX = e.clientX / window.innerWidth - 0.5;
-        const mouseY = e.clientY / window.innerHeight - 0.5;
-
-        shape.style.transform = `translateY(-50%) translate(${mouseX * 20}px, ${mouseY * 20}px)`;
-        image.style.transform = `translate(${mouseX * -30}px, ${mouseY * -30}px)`;
-    } else {
-        shape.style.transform = "none";
-        image.style.transform = "none";
-    }
-});
-
-const testimonials = [
-    {
-        text: "Vel accumsan eget elementum neque est, aenean scelerisque nunc mollis nec lacus, lorem facilisis nullam ultricies orci tortor curabitur sit tincidunt aenean sem ultrices.",
-        author: "Ethan D. Saw",
-        image: "View/img/Review/Users/fotofelipe.png"
-    },
-    {
-        text: "Exceptional service and outstanding results. The team went above and beyond my expectations.",
-        author: "Sarah Johnson",
-        image: "View/img/Review/Users/fotofelipe.png"
-    },
-    {
-        text: "Professional, creative, and highly skilled. I couldn’t be happier with the outcome.",
-        author: "Michael Chen",
-        image: "View/img/Review/Users/fotofelipe.png"
-    }
-];
-
-let currentTestimonial = 0;
-const testimonialContainer = document.querySelector(".testimonial-container");
-let autoSlideInterval;
-
-function createTestimonialHTML(testimonial) {
-    return `
-<div class="text-content testimonial-content" style="opacity: 0;">
-    <span class="client-say">What Our Client Say</span>
-    <div class="quote-container">
-        <span class="quote-marks">"</span>
-        <p class="quote-text">${testimonial.text}</p>
-    </div>
-    <h3 class="author">${testimonial.author}</h3>
-    <a href="#" class="view-button">
-        View all testimonial
-        <i class="fas fa-arrow-right"></i>
-    </a>
-</div>
-<div class="image-content">
-    <img src="${testimonial.image}" alt="Testimonial" class="testimonial-image" style="opacity: 0;" />
-</div>
-`;
-}
-
-function updateTestimonial() {
-    const testimonial = testimonials[currentTestimonial];
-    testimonialContainer.innerHTML = createTestimonialHTML(testimonial);
-
-    const content = testimonialContainer.querySelector(".testimonial-content");
-    const image = testimonialContainer.querySelector(".testimonial-image");
-    setTimeout(() => {
-        content.style.opacity = "1";
-        image.style.opacity = "1";
-    }, 100);
-}
-
-function startAutoSlide() {
-    autoSlideInterval = setInterval(() => {
-        fadeOutAndUpdate();
-    }, 5000);
-}
-
-function stopAutoSlide() {
-    clearInterval(autoSlideInterval);
-}
-
-function fadeOutAndUpdate() {
-    const content = testimonialContainer.querySelector(".testimonial-content");
-    const image = testimonialContainer.querySelector(".testimonial-image");
-    if (content && image) {
-        content.style.opacity = "0";
-        image.style.opacity = "0";
-        setTimeout(() => {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            updateTestimonial();
-        }, 500);
-    }
-}
-
-function changeTestimonial(direction) {
-    stopAutoSlide(); // Detener el temporizador
-    const content = testimonialContainer.querySelector(".testimonial-content");
-    const image = testimonialContainer.querySelector(".testimonial-image");
-    if (content && image) {
-        content.style.opacity = "0";
-        image.style.opacity = "0";
-        setTimeout(() => {
-            if (direction === "next") {
-                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            } else if (direction === "prev") {
-                currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-            }
-            updateTestimonial();
-            startAutoSlide(); // Reiniciar el temporizador
-        }, 500);
-    }
-}
-
-// Iniciar el carrusel
-updateTestimonial();
-startAutoSlide();
-
-// Agregar eventos a los botones
-document.getElementById("next-btn").addEventListener("click", () => {
-    changeTestimonial("next");
-});
-
-document.getElementById("prev-btn").addEventListener("click", () => {
-    changeTestimonial("prev");
-});
-    </script>
-
-    </div>
-    </div>
-
-    <?php
-    // Inclusión del Boton flotant"
-    require_once 'View/Layout/FloatingButton.php';
-    ?>
-
     <div id="cursor-effect"></div>
 
     <?php
-    // Inclusión del footer
-    require_once 'View/Layout/BannerEnd.php';
-
-    // Inclusión del footer
-    require_once 'View/Layout/Footer.php';
+        require_once 'View/Layout/FloatingButton.php';
+        require_once 'View/Layout/BannerEnd.php';
+        require_once 'View/Layout/Footer.php';
     ?>
+    <!-- Banner Final -->
+    <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script>
+    <script src="Script_Banner"></script>
+     <!-- End Banner Final -->
 
     <script src="Script_Header"></script>
     <script src="Script_Inicio"></script>
     <script src="Script_Cursor"></script>
     <script src="Script_Boton_Flotante"></script>
-    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
-
 </body>
-
 </html>

@@ -1,37 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>REVIEWS</title>
+    <link rel="icon" href="PImageIconos/Icono.png" type="image/png">
     <!-- Font Awesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-
     <!-- Styles -->
     <link rel="stylesheet" href="Estilos_Header">
     <link rel="stylesheet" href="Estilos_Cursor">
     <link rel="stylesheet" href="Estilos_Resenas">
     <link rel="stylesheet" href="Estilos_Footer">
     <link rel="stylesheet" href="Estilos_Boton_Flotante">
-
-
-
-    <title>FALCONSTRUCTION | REVIEWS</title>
 </head>
-
 <body>
     <?php
-    // Inclusión del Header
-    require_once 'Layout/Header.php';
+        require_once 'Layout/Header.php';
     ?>
     <div class="background-gradients">
         <div class="gradient-1"></div>
         <div class="gradient-2"></div>
         <div class="gradient-3"></div>
     </div>
+
     <main>
         <section class="hero-section-review container-section-review">
             <h1>Over <span class="counter">0</span> Reasons to Build with Confidencet</h1>
@@ -342,21 +335,17 @@
                 </div>
             </div>
     </main>
+
     <div id="cursor-effect"></div>
+
     <?php
-    // Inclusión del Boton flotant"
-    require_once 'Layout/FloatingButton.php';
+        require_once 'Layout/FloatingButton.php';
+        require_once 'Layout/Footer.php';
     ?>
-    <?php
-    // Inclusión del footer
-    require_once 'Layout/Footer.php';
-    ?>
+
     <script src="Script_Header"></script>
     <script src="Script_Resenas"></script>
     <script src="Script_Cursor"></script>
     <script src="Script_Boton_Flotante"></script>
-
-
 </body>
-
 </html>

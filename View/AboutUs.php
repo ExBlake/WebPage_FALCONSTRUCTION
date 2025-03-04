@@ -1,49 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Proyectos - Falconstruction</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ABOUT US</title>
+    <link rel="icon" href="PImageIconos/Icono.png" type="image/png">
     <!-- Carga de fuentes y estilos -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
     <!-- Estilos personalizados para diferentes secciones -->
-    <link rel="stylesheet" href="Estilos_Header"> <!-- Estilos del encabezado -->
-    <link rel="stylesheet" href="Estilos_Nosotros"> <!-- Estilos del portafolio -->
-    <link rel="stylesheet" href="Estilos_Footer"> <!-- Estilos del pie de página -->
-    <link rel="stylesheet" href="Estilos_Banner"> <!-- Estilos del banner -->
+    <link rel="stylesheet" href="Estilos_Header">
+    <link rel="stylesheet" href="Estilos_Nosotros">
+    <link rel="stylesheet" href="Estilos_Footer">
+    <link rel="stylesheet" href="Estilos_Banner">
+    <link rel="stylesheet" href="Estilos_Cursor">
     <link rel="stylesheet" href="Estilos_Boton_Flotante">
-
-    
-    <style>
-        .video-and-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .responsive-video {
-            width: 100%;
-            /* O el tamaño que desees */
-            max-width: 600px;
-            /* Ajusta según sea necesario */
-            height: auto;
-        }
-    </style>
 </head>
-
 <body>
-
     <?php
-    // Inclusión del Header
-    require_once 'Layout/Header.php';
+        require_once 'Layout/Header.php';
     ?>
-
     <div class="parallax-container">
         <section class="parallax-section hero-section">
             <main class="hero-portfolio">
@@ -133,17 +110,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="savings-container-about-us">
-                    <div class="card-illustration-about-us">
-                        <div class="wave-pattern-about-us"></div>
-                        <div class="card-bottom-about-us">
-                            <div class="card-line-about-us"></div>
-                            <div class="plus-button-about-us">+</div>
-                        </div>
-                    </div>
-                </div> -->
             </section>
-
 
             <section class="savings-section-about-us">
                 <div class="background-split-about-us">
@@ -172,7 +139,6 @@
             <h2 class="title-about-us" style="text-align: center; margin-top: 100px;">Nuestro Equipo Profesional</h2>
 
             <section class="profiles" style="display: flex; flex-wrap: wrap; justify-content: center; margin: 40px">
-                <!-- <div class="avatar" style="--bg-img:url(https://picsum.photos/id/112/300/200)"> -->
                 <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
                     <div class="avatar-img">
                         <img src="PImageUsers/fotofelipe.png">
@@ -494,30 +460,24 @@
 
         <section class="BannerEnd-Portfolio">
             <?php
-            // Inclusión Banner End
-            require_once 'Layout/BannerEnd.php';
+                require_once 'Layout/BannerEnd.php';
             ?>
         </section>
 
         <div id="cursor-effect"></div>
         <?php
-    // Inclusión del Boton flotant"
-    require_once 'Layout/FloatingButton.php';
-    ?>
-        <?php
-        // Inclusión del footer
-        require_once 'Layout/Footer.php';
+            require_once 'Layout/FloatingButton.php';
+            require_once 'Layout/Footer.php';
         ?>
-
-        <!-- Inclusión de scripts -->
-        <script src="Script_Nosotros"></script>
+        <!-- Banner Final -->
         <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script>
         <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js'></script>
         <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script>
         <script src="Script_Banner"></script>
+        <!-- End Banner Final -->
+        <script src="Script_Nosotros"></script>
         <script src="Script_Header"></script>
+        <script src="Script_Cursor"></script>
         <script src="Script_Boton_Flotante"></script>
-
 </body>
-
 </html>

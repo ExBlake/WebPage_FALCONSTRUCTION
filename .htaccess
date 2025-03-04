@@ -84,7 +84,7 @@ RewriteRule ^Script_Nosotros$ View/Layout/js/Script_AboutUs.js [L]
 # Reescribe la URL para 'Script_BannerEnd.js'
 RewriteRule ^Script_Banner$ View/Layout/js/Script_BannerEnd.js [L]
 
-# Reescribe la URL para 'Script_BannerEnd.js'
+# Reescribe la URL para 'Script_Header.js'
 RewriteRule ^Script_Header$ View/Layout/js/Script_Header.js [L]
 
 # Reescribe la URL para 'Script_Reviews.js'
@@ -122,18 +122,21 @@ RewriteRule ^PImageResource/(.*)$ View/Img/Resources/$1 [L]
 # Reescribe 'PImageContact' a 'Contacts'
 RewriteRule ^PImageContact/(.*)$ View/Img/Contacts/$1 [L]
 
-# Reescribe 'PImageResenas' a 'Contacts'
+# Reescribe 'PImageResenas' a 'Review'
 RewriteRule ^PImageResenas/(.*)$ View/Img/Review/$1 [L]
 
 # Reescribe 'PImageServicios' a 'Services'
 RewriteRule ^PImageServicios/(.*)$ View/Img/Services/$1 [L]
+
+# Reescribe 'PImageIconos' a 'Icons'
+RewriteRule ^PImageIconos/(.*)$ View/Img/Icons/$1 [L]
 
 # ----------- IMG REWRITES -------------
 
 
 # ----------- VIDEO REWRITES -------------
 
-# Reescribe 'PVideoBanner' a 'Resources'
+# Reescribe 'PVideoBanner' a 'Videos/Banners'
 RewriteRule ^PVideoBanner/(.*)$ View/Videos/Banners/$1 [L]
 
 # ----------- VIDEO REWRITES -------------

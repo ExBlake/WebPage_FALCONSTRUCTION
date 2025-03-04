@@ -1,34 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Proyectos - FALCONSTRUCTIONS</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PORTFOLIO</title>
+    <link rel="icon" href="PImageIconos/Icono.png" type="image/png">
     <!-- Carga de fuentes y estilos -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
     <!-- Estilos personalizados para diferentes secciones -->
-    <link rel="stylesheet" href="Estilos_Header"> <!-- Estilos del encabezado -->
-    <link rel="stylesheet" href="Estilos_Portafolio"> <!-- Estilos del portafolio -->
-    <link rel="stylesheet" href="Estilos_Footer"> <!-- Estilos del pie de página -->
-    <link rel="stylesheet" href="Estilos_Banner"> <!-- Estilos del banner -->
+    <link rel="stylesheet" href="Estilos_Header">
+    <link rel="stylesheet" href="Estilos_Portafolio">
+    <link rel="stylesheet" href="Estilos_Footer">
+    <link rel="stylesheet" href="Estilos_Banner">
+    <link rel="stylesheet" href="Estilos_Cursor">
     <link rel="stylesheet" href="Estilos_Boton_Flotante">
-
 </head>
-
 <body>
-
     <?php
-    // Inclusión del Header
-    // Se carga el archivo del encabezado que contiene la navegación y el logo
-    require_once 'Layout/Header.php';
+        require_once 'Layout/Header.php';
     ?>
-
     <div class="parallax-container">
         <section class="parallax-section hero-section">
             <main class="hero-portfolio">
@@ -135,21 +127,14 @@
 
         <section class="BannerEnd-Portfolio fade-in-up-element">
             <?php
-            // Inclusión Banner End
-            // Se carga el archivo del banner final que puede contener información adicional o promociones
-            require_once 'Layout/BannerEnd.php';
+                require_once 'Layout/BannerEnd.php';
             ?>
         </section>
 
         <div id="cursor-effect"></div> <!-- Efecto de cursor personalizado -->
         <?php
-    // Inclusión del Boton flotant"
-    require_once 'Layout/FloatingButton.php';
-    ?>
-        <?php
-        // Inclusión del footer
-        // Se carga el archivo del pie de página que contiene información de contacto y enlaces
-        require_once 'Layout/Footer.php';
+            require_once 'Layout/FloatingButton.php';
+            require_once 'Layout/Footer.php';
         ?>
 
         <!-- Primer modal -->
@@ -349,16 +334,15 @@
             </div>
         </div>
 
-        <!-- Inclusión de scripts -->
-        <script src="Script_Portafolio"></script> <!-- Script específico para el portafolio -->
-        <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script> <!-- Librería GSAP para animaciones -->
-        <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js'></script> <!-- Efectos de Flip de GSAP -->
-        <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script> <!-- Easing personalizado de GSAP -->
-        <script src="Script_Banner"></script> <!-- Script para el banner -->
-        <script src="Script_Header"></script> <!-- Script para el encabezado -->
+        <!-- Banner Final -->
+        <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script>
+        <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js'></script>
+        <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script>
+        <script src="Script_Banner"></script> 
+        <!-- Banner Final -->
+        <script src="Script_Portafolio"></script>
+        <script src="Script_Header"></script>
+        <script src="Script_Cursor"></script>
         <script src="Script_Boton_Flotante"></script>
-
-        
 </body>
-
 </html>

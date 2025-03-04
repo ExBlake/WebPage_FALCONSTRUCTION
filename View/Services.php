@@ -1,30 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <title>Servicios - Falconstruction</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>SERVICES</title>
+    <link rel="icon" href="PImageIconos/Icono.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="Estilos_Header">
     <link rel="stylesheet" href="Estilos_Servicios">
     <link rel="stylesheet" href="Estilos_Footer">
     <link rel="stylesheet" href="Estilos_Banner">
+    <link rel="stylesheet" href="Estilos_Cursor">
     <link rel="stylesheet" href="Estilos_Boton_Flotante">
-
-
-
 </head>
-
 <body>
     <?php
-    // Inclusión del Header
-    require_once 'Layout/Header.php';
+        require_once 'Layout/Header.php';
     ?>
-
     <div class="background-gradients">
         <div class="gradient-1"></div>
         <div class="gradient-2"></div>
@@ -368,24 +360,18 @@
 
     <div id="cursor-effect"></div>
     <?php
-    // Inclusión del Boton flotant"
-    require_once 'Layout/FloatingButton.php';
+        require_once 'Layout/FloatingButton.php';
     ?>
-
-    <!-- partial -->
+    <!-- Banner Final -->
     <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script>
-    <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js'></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="Script_Banner"></script>
+    <!-- End Banner Final -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="Script_Services"></script>
     <script src="Script_Header"></script>
+    <script src="Script_Cursor"></script>
     <script src="Script_Boton_Flotante"></script>
-
-    
-
-
 </body>
-
 </html>

@@ -1,222 +1,231 @@
-// Selección de elementos del DOM
-const h = document.querySelector("#h"); // Elemento de la habitación 3D
-const b = document.body; // Cuerpo del documento
-const interactiveCursorDot = document.querySelector('.cursor-dot'); // Punto del cursor interactivo
-const animatedRevealElements = document.querySelectorAll('.reveal-animation'); // Elementos con animación de revelado
-const skillProgressBars = document.querySelectorAll('.skill-bar-fill'); // Barras de progreso de habilidades
-const statisticsElements = document.querySelectorAll('.statistic-number'); // Elementos de estadísticas animadas
+/***************************************/
+/*Script para la seccion de Tertimonial*/
+/***************************************/
+document.addEventListener("mousemove", (e) => {
+    const shape = document.querySelector(".shape-bg");
+    const image = document.querySelector(".testimonial-image");
 
-// Variables de control para la interacción
-let isMoving = false; // Estado de movimiento
-let lastTouch = { x: 0, y: 0 }; // Última posición del toque
+    if (window.innerWidth > 968) {
+        const mouseX = e.clientX / window.innerWidth - 0.5;
+        const mouseY = e.clientY / window.innerHeight - 0.5;
 
-// Función para calcular la transformación de la habitación 3D
-const base = (x, y) => {
-    const normalizedX = x / window.innerWidth - 0.5; // Normaliza la posición X
-    const normalizedY = y / window.innerHeight - 0.5; // Normaliza la posición Y
-    h.style.transform = `
-        perspective(90vw)
-        rotateX(${normalizedY * 180}deg)
-        rotateY(${normalizedX * 360}deg)
-        translateZ(-9vw)
-    `; // Aplica la transformación 3D
-};
-
-// Función para manejar el movimiento del mouse/touch
-const handleMove = (e) => {
-    if (!isMoving) return; // Si no se está moviendo, salir
-
-    let x, y;
-    if (e.touches) { // Si hay toques (en pantallas táctiles)
-        x = e.touches[0].clientX; // Obtener la posición X
-        y = e.touches[0].clientY; // Obtener la posición Y
-    } else { // Para mouse
-        x = e.pageX; // Obtener la posición X
-        y = e.pageY; // Obtener la posición Y
+        shape.style.transform = `translateY(-50%) translate(${mouseX * 20}px, ${mouseY * 20}px)`;
+        image.style.transform = `translate(${mouseX * -30}px, ${mouseY * -30}px)`;
+    } else {
+        shape.style.transform = "none";
+        image.style.transform = "none";
     }
-
-    base(x, y); // Aplicar la transformación
-};
-
-// Eventos de movimiento del mouse/touch
-b.addEventListener("pointermove", handleMove); // Manejar el movimiento del puntero
-b.addEventListener("mousedown", () => { isMoving = true; }); // Iniciar movimiento con el mouse
-b.addEventListener("mouseup", () => { isMoving = false; }); // Detener movimiento con el mouse
-b.addEventListener("touchstart", (e) => {
-    isMoving = true; // Iniciar movimiento con el toque
-    lastTouch.x = e.touches[0].clientX; // Guardar posición del toque
-    lastTouch.y = e.touches[0].clientY; // Guardar posición del toque
-});
-b.addEventListener("touchmove", handleMove); // Manejar el movimiento del toque
-b.addEventListener("touchend", () => { isMoving = false; }); // Detener movimiento al levantar el toque
-
-// Cursor Interactive Dot - Mueve el punto del cursor al mover el mouse
-document.addEventListener('mousemove', (event) => {
-    interactiveCursorDot.style.transform = `translate(${event.clientX}px, ${event.clientY}px) translate(-50%, -50%)`;
 });
 
-// Reveal Animations - Animación de revelado al entrar en vista
-const observerConfig = {
-    threshold: 0.1 // Umbral de visibilidad para el observador
-};
-
-const revealAnimationObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active'); // Agregar clase 'active' al elemento visible
-        }
-    });
-}, observerConfig);
-
-animatedRevealElements.forEach(element => {
-    revealAnimationObserver.observe(element); // Observar cada elemento para la animación
-});
-
-// Parallax Effect - Efecto de paralaje al hacer scroll
-window.addEventListener('scroll', () => {
-    const parallaxSections = document.querySelectorAll('.parallax-section'); // Secciones con efecto de paralaje
-    parallaxSections.forEach(section => {
-        const background = section.querySelector('.parallax-bg'); // Fondo de la sección
-        const scrollPos = window.pageYOffset; // Posición del scroll
-        background.style.transform = `translateY(${scrollPos * 0.5}px)`; // Aplicar transformación de paralaje
-    });
-});
-
-// Skill Bar Animation - Animación de las barras de habilidad
-const skillBarObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const progressBar = entry.target; // Obtener la barra de progreso
-            const initialWidth = progressBar.style.width; // Guardar el ancho inicial
-            progressBar.style.width = '0'; // Reiniciar el ancho a 0
-            setTimeout(() => {
-                progressBar.style.width = initialWidth; // Restaurar el ancho inicial
-            }, 50);
-        }
-    });
-}, observerConfig);
-
-skillProgressBars.forEach(bar => {
-    skillBarObserver.observe(bar); // Observar cada barra de habilidad
-});
-
-// Animated Statistics - Contador animado de estadísticas
-const statisticsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const statElement = entry.target; // Obtener el elemento de estadística
-            const targetValue = parseInt(statElement.getAttribute('data-target')); // Obtener el valor objetivo
-            let currentValue = 0; // Valor actual del contador
-
-            const updateStatisticCounter = () => {
-                if (currentValue < targetValue) {
-                    currentValue++; // Incrementar el valor actual
-                    statElement.textContent = currentValue; // Actualizar el contenido del elemento
-                    requestAnimationFrame(updateStatisticCounter); // Continuar la animación
-                }
-            };
-
-            updateStatisticCounter(); // Iniciar el contador
-        }
-    });
-}, observerConfig);
-
-statisticsElements.forEach(element => {
-    statisticsObserver.observe(element); // Observar cada elemento de estadística
-});
-
-
-/**************************************/
-/* Script para el carrusel responsive */
-/**************************************/
-
-document.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelector('.items');
-    let isDragging = false;
-    let startX;
-    let scrollLeft;
-
-    // Opcional: definir cursor para mejorar la experiencia
-    items.style.cursor = 'grab';
-
-    // Evento cuando se inicia la acción (mouse, touch, stylus)
-    items.addEventListener('pointerdown', (e) => {
-        isDragging = true;
-        // Registrar la posición inicial (relativa al contenedor)
-        startX = e.pageX - items.offsetLeft;
-        scrollLeft = items.scrollLeft;
-        items.style.cursor = 'grabbing';
-        // Capturar el pointer para recibir todos los eventos relacionados
-        items.setPointerCapture(e.pointerId);
-    });
-
-    // Evento cuando se termina la acción
-    items.addEventListener('pointerup', (e) => {
-        isDragging = false;
-        items.style.cursor = 'grab';
-        items.releasePointerCapture(e.pointerId);
-    });
-
-    // Si el pointer sale del área del contenedor
-    items.addEventListener('pointerleave', (e) => {
-        isDragging = false;
-        items.style.cursor = 'grab';
-    });
-
-    // Evento de movimiento
-    items.addEventListener('pointermove', (e) => {
-        if (!isDragging) return;
-        // Prevenir comportamientos por defecto
-        e.preventDefault();
-        // Calcular la nueva posición y la distancia recorrida
-        const x = e.pageX - items.offsetLeft;
-        const walk = (x - startX) * 2; // Puedes ajustar el multiplicador para mayor o menor velocidad
-        items.scrollLeft = scrollLeft - walk;
-    });
-});
-
-// Script para mostrar/ocultar botones según el tamaño de la ventana
-document.addEventListener('DOMContentLoaded', function () {
-    const buttons = document.querySelectorAll(".container-4 > .ver-mas-btn");
-
-    function updateButtonVisibility() {
-        if (window.innerWidth <= 1024) {
-            buttons[0].style.display = "block"; // Muestra el botón de arriba
-            buttons[1].style.display = "none";  // Oculta el botón de abajo
-        } else {
-            buttons[0].style.display = "none";  // Oculta el botón de arriba
-            buttons[1].style.display = "block"; // Muestra el botón de abajo
-        }
+const testimonials = [
+    {
+        text: "Vel accumsan eget elementum neque est, aenean scelerisque nunc mollis nec lacus, lorem facilisis nullam ultricies orci tortor curabitur sit tincidunt aenean sem ultrices.",
+        author: "Ethan D. Saw",
+        image: "View/img/Review/Users/fotofelipe.png"
+    },
+    {
+        text: "Exceptional service and outstanding results. The team went above and beyond my expectations.",
+        author: "Sarah Johnson",
+        image: "View/img/Review/Users/fotofelipe.png"
+    },
+    {
+        text: "Professional, creative, and highly skilled. I couldn’t be happier with the outcome.",
+        author: "Michael Chen",
+        image: "View/img/Review/Users/fotofelipe.png"
     }
+];
 
-    // Ejecutar la función al cargar la página y al redimensionar la ventana
-    updateButtonVisibility();
-    window.addEventListener("resize", updateButtonVisibility);
-});
+let currentTestimonial = 0;
+const testimonialContainer = document.querySelector(".testimonial-container");
+let autoSlideInterval;
 
-/**************************************/
-/* Script para el carrusel responsive */
-/**************************************/
-
-/* Script para la Room 3D */
-const h = document.querySelector("#h");
-const b = document.body;
-
-let base = (e) => {
-    var x = e.pageX / window.innerWidth - 0.5;
-    var y = e.pageY / window.innerHeight - 0.5;
-    h.style.transform = `
-perspective(1250px)
-rotateX(${y * 4 + 75}deg)
-rotateZ(${-x * 12 + 45}deg)
-translateZ(-9vw)
+function createTestimonialHTML(testimonial) {
+    return `
+<div class="text-content testimonial-content" style="opacity: 0;">
+    <span class="client-say">What Our Client Say</span>
+    <div class="quote-container">
+        <span class="quote-marks">"</span>
+        <p class="quote-text">${testimonial.text}</p>
+    </div>
+    <h3 class="author">${testimonial.author}</h3>
+    <a href="#" class="view-button">
+        View all testimonial
+        <i class="fas fa-arrow-right"></i>
+    </a>
+</div>
+<div class="image-content">
+    <img src="${testimonial.image}" alt="Testimonial" class="testimonial-image" style="opacity: 0;" />
+</div>
 `;
 }
 
-b.addEventListener("pointermove", base);
-/* Script para la Room 3D */
+function updateTestimonial() {
+    const testimonial = testimonials[currentTestimonial];
+    testimonialContainer.innerHTML = createTestimonialHTML(testimonial);
 
+    const content = testimonialContainer.querySelector(".testimonial-content");
+    const image = testimonialContainer.querySelector(".testimonial-image");
+    setTimeout(() => {
+        content.style.opacity = "1";
+        image.style.opacity = "1";
+    }, 100);
+}
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        fadeOutAndUpdate();
+    }, 5000);
+}
+
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
+function fadeOutAndUpdate() {
+    const content = testimonialContainer.querySelector(".testimonial-content");
+    const image = testimonialContainer.querySelector(".testimonial-image");
+    if (content && image) {
+        content.style.opacity = "0";
+        image.style.opacity = "0";
+        setTimeout(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            updateTestimonial();
+        }, 500);
+    }
+}
+
+function changeTestimonial(direction) {
+    stopAutoSlide(); // Detener el temporizador
+    const content = testimonialContainer.querySelector(".testimonial-content");
+    const image = testimonialContainer.querySelector(".testimonial-image");
+    if (content && image) {
+        content.style.opacity = "0";
+        image.style.opacity = "0";
+        setTimeout(() => {
+            if (direction === "next") {
+                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            } else if (direction === "prev") {
+                currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+            }
+            updateTestimonial();
+            startAutoSlide(); // Reiniciar el temporizador
+        }, 500);
+    }
+}
+
+// Iniciar el carrusel
+updateTestimonial();
+startAutoSlide();
+
+    // Agregar eventos a los botones
+document.getElementById("next-btn").addEventListener("click", () => {
+    changeTestimonial("next");
+});
+
+document.getElementById("prev-btn").addEventListener("click", () => {
+    changeTestimonial("prev");
+});
+
+/*******************************************/
+/*End Script para la seccion de Tertimonial*/
+/*******************************************/
+
+/**************************************/
+/* Script para el carrusel responsive */
+/**************************************/
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const items = document.querySelector('.items');
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
+
+        // Opcional: definir cursor para mejorar la experiencia
+        items.style.cursor = 'grab';
+
+        // Evento cuando se inicia la acción (mouse, touch, stylus)
+        items.addEventListener('pointerdown', (e) => {
+            isDragging = true;
+            // Registrar la posición inicial (relativa al contenedor)
+            startX = e.pageX - items.offsetLeft;
+            scrollLeft = items.scrollLeft;
+            items.style.cursor = 'grabbing';
+            // Capturar el pointer para recibir todos los eventos relacionados
+            items.setPointerCapture(e.pointerId);
+        });
+
+        // Evento cuando se termina la acción
+        items.addEventListener('pointerup', (e) => {
+            isDragging = false;
+            items.style.cursor = 'grab';
+            items.releasePointerCapture(e.pointerId);
+        });
+
+        // Si el pointer sale del área del contenedor
+        items.addEventListener('pointerleave', (e) => {
+            isDragging = false;
+            items.style.cursor = 'grab';
+        });
+
+        // Evento de movimiento
+        items.addEventListener('pointermove', (e) => {
+            if (!isDragging) return;
+            // Prevenir comportamientos por defecto
+            e.preventDefault();
+            // Calcular la nueva posición y la distancia recorrida
+            const x = e.pageX - items.offsetLeft;
+            const walk = (x - startX) * 2; // Puedes ajustar el multiplicador para mayor o menor velocidad
+            items.scrollLeft = scrollLeft - walk;
+        });
+    });
+
+    // Script para mostrar/ocultar botones según el tamaño de la ventana
+    document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll(".container-4 > .ver-mas-btn");
+
+        function updateButtonVisibility() {
+            if (window.innerWidth <= 1024) {
+                buttons[0].style.display = "block"; // Muestra el botón de arriba
+                buttons[1].style.display = "none";  // Oculta el botón de abajo
+            } else {
+                buttons[0].style.display = "none";  // Oculta el botón de arriba
+                buttons[1].style.display = "block"; // Muestra el botón de abajo
+            }
+        }
+
+        // Ejecutar la función al cargar la página y al redimensionar la ventana
+        updateButtonVisibility();
+        window.addEventListener("resize", updateButtonVisibility);
+    });
+
+/******************************************/
+/* End Script para el carrusel responsive */
+/******************************************/
+
+/**************************/
+/* Script para la Room 3D */
+/**************************/
+
+    const h = document.querySelector("#h");
+    const b = document.body;
+    let base = (e) => {
+        var x = e.pageX / window.innerWidth - 0.5;
+        var y = e.pageY / window.innerHeight - 0.5;
+        h.style.transform = `
+    perspective(1250px)
+    rotateX(${y * 4 + 75}deg)
+    rotateZ(${-x * 12 + 45}deg)
+    translateZ(-9vw)
+    `;
+    }
+    b.addEventListener("pointermove", base);
+
+/******************************/
+/* End Script para la Room 3D */
+/******************************/
+/*****************************************/
 /* Script para la segunda sección Inicio */
+/*****************************************/
 const images = document.querySelectorAll('.image');
 let activeImage = null;
 
@@ -254,9 +263,14 @@ document.querySelector('.image-container').addEventListener('mouseleave', functi
 document.querySelector('.read-more').addEventListener('click', function () {
     console.log('Read More clicked!');
 });
-/* Script para la segunda sección Inicio */
+/*********************************************/
+/* End Script para la segunda sección Inicio */
+/*********************************************/
 
+/****************************/
 /* Script para la sección 5 */
+/****************************/
+
 // Crear efecto de partículas
 document.addEventListener('DOMContentLoaded', function () {
     const particlesContainer = document.getElementById('particles');
@@ -301,18 +315,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Crear keyframes únicos para esta partícula
         const keyframes = `
-  @keyframes float {
-    0% {
-      transform: translate(0, 0);
-    }
-    50% {
-      transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px);
-    }
-    100% {
-      transform: translate(0, 0);
-    }
-  }
-`;
+            @keyframes float {
+                0% {
+                transform: translate(0, 0);
+                }
+                50% {
+                transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px);
+                }
+                100% {
+                transform: translate(0, 0);
+                }
+            }
+            `;
 
         // Añadir keyframes al documento
         const style = document.createElement('style');
@@ -373,8 +387,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-/* Script para la sección 5 */
-
-/*************************/
-/*************************/
-/*************************/
+/********************************/
+/* End Script para la sección 5 */
+/********************************/

@@ -33,6 +33,19 @@ body {
     background: linear-gradient(135deg, #041b3a 0%, #000000 100%);
     background-blend-mode: overlay;
 }
+.video-and-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.responsive-video {
+    width: 100%;
+    /* O el tamaño que desees */
+    max-width: 600px;
+    /* Ajusta según sea necesario */
+    height: auto;
+}
 
 .hero-portfolio {
     min-height: 100vh;
