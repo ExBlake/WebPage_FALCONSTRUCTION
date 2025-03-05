@@ -131,6 +131,10 @@ RewriteRule ^PImageServicios/(.*)$ View/img/Services/$1 [L]
 # Reescribe 'PImageIconos' a 'Icons'
 RewriteRule ^PImageIconos/(.*)$ View/img/Icons/$1 [L]
 
+# Reescribe 'PImageMenu' a 'Menu'
+RewriteRule ^PImageMenu/(.*)$ View/img/Menu/$1 [L]
+
+
 # ----------- IMG REWRITES -------------
 
 

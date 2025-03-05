@@ -360,7 +360,7 @@ textarea.form-control-contacts {
 }
 
 .radio.sms:hover::after {
-    content: "Solo aplica para celulares";
+    content: "Applies only to cell phones";
     position: absolute;
     background: rgba(0, 0, 0, 0.8);
     color: #fff;

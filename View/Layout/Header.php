@@ -4,8 +4,7 @@
         <!-- Logo responsivo usando picture -->
         <a href="Inicio">
             <picture>
-                <source media="(max-width: 768px)"
-                    srcset="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Logo_Phone-8VqLm7j1VPi7LUXdt2pDi0ljA4rBgw.png">
+                <source media="(max-width: 768px)">
                 <img class="logo-falcon-header" src="PImageResource/LogoBanner.jpg" alt="LogoFalconstructions">
             </picture>
         </a>
@@ -67,7 +66,7 @@
                     </a>
                 </div>
                 <div class="menu-item-wrapper-header">
-                    <a href="Contacto" class="menu-item-header" data-image="PImageProject/project-0.jpg">
+                    <a href="Contacto" class="menu-item-header" data-image="PImageMenu/ContactUs.jpg">
                         <span class="menu-category-header">Contacto</span>
                         <span class="menu-item-content-header">Conectemos</span>
                     </a>
