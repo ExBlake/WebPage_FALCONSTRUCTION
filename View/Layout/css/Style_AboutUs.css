@@ -41,9 +41,7 @@ body {
 
 .responsive-video {
     width: 100%;
-    /* O el tamaño que desees */
     max-width: 600px;
-    /* Ajusta según sea necesario */
     height: auto;
 }
 
@@ -1010,8 +1008,6 @@ p:hover {
 /********************************/
 /* Estilos Avatares - Sección 4 */
 /********************************/
-
-/*@import url(https://fonts.bunny.net/css?family=khand:300);*/
 @import url(https://fonts.bunny.net/css?family=roboto:300);
 
 .profiles {
@@ -1145,66 +1141,6 @@ em {
 /* Estilos Avatares - Sección 4 */
 /********************************/
 
-/* Estilos para el carrusel */
-.profiles-carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 20px 0;
-}
-
-.profiles-carousel .profiles {
-    display: flex;
-    transition: transform 0.3s ease;
-    margin: 0;
-    padding: 0 40px;
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-    display: none;
-    color: var(--text-color);
-    font-size: 20px;
-}
-
-.carousel-button:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.carousel-prev {
-    left: 10px;
-}
-
-.carousel-next {
-    right: 10px;
-}
-
-/* Media queries para activar el carrusel */
-@media (max-width: 992px) {
-    .profiles-carousel .profiles {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        width: max-content;
-    }
-
-    .carousel-button {
-        display: block;
-    }
-
-    .profiles .avatar {
-        flex: 0 0 auto;
-        margin: 0 10px;
-    }
-}
 
 /* Sección 5 start */
 .steps-section-about-us {
@@ -1592,6 +1528,7 @@ em {
 .modal.show-users .modal-content {
     transform: translateY(0);
     opacity: 1;
+    z-index: 5;
 }
 
 .modal-body {

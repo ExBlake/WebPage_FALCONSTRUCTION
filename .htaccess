@@ -128,6 +128,9 @@ RewriteRule ^PImageResenas/(.*)$ View/img/Review/$1 [L]
 # Reescribe 'PImageServicios' a 'Services'
 RewriteRule ^PImageServicios/(.*)$ View/img/Services/$1 [L]
 
+# Reescribe 'PImageNosotros' a 'AboutUs'
+RewriteRule ^PImageNosotros/(.*)$ View/img/AboutUs/$1 [L]
+
 # Reescribe 'PImageIconos' a 'Icons'
 RewriteRule ^PImageIconos/(.*)$ View/img/Icons/$1 [L]
 

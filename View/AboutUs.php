@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -17,6 +18,7 @@
     <link rel="stylesheet" href="Estilos_Cursor">
     <link rel="stylesheet" href="Estilos_Boton_Flotante">
 </head>
+
 <body>
     <?php
         require_once 'Layout/Header.php';
@@ -26,30 +28,30 @@
             <main class="hero-portfolio">
                 <div class="hero-content-portfolio">
                     <div class="hero-decorative-line"></div>
-                    <div class="hero-side-text">EXCELENCIA EN CONSTRUCCIÓN</div>
+                    <div class="hero-side-text">EXCELLENCE IN DRYWALL AND FLOOING</div>
 
                     <div class="hero-main-content">
                         <div class="spaceport-portfolio">
                             <span class="line-before"></span>
-                            FALCONSTRUCTION PRESENTA
+                            FALCONSTRUCTION PRESENTS
                             <span class="line-after"></span>
                         </div>
 
                         <h1 class="main-title-portfolio">
-                            <span class="title-line">CONSTRUYENDO NUEVAS</span>
-                            <span class="title-line">HISTORIAS DE</span>
-                            <span class="title-line">ÉXITO</span>
+                            <span class="title-line">BUILDING NEW</span>
+                            <span class="title-line">SUCCESS</span>
+                            <span class="title-line">STORIES</span>
                         </h1>
 
                         <div class="hero-stats">
                             <div class="stat-item">
-                                <span class="stat-number" data-value="15">0</span>
-                                <span class="stat-label">AÑOS DE<br>EXCELENCIA</span>
+                                <span class="stat-number" data-value="100">0</span>
+                                <span class="stat-label">QUALITY <br>AND EXCELLENCE</span>
                             </div>
                             <div class="stat-separator"></div>
                             <div class="stat-item">
-                                <span class="stat-number" data-value="300">0</span>
-                                <span class="stat-label">PROYECTOS<br>COMPLETADOS</span>
+                                <span class="stat-number" data-value="122">0</span>
+                                <span class="stat-label">COMPLETED<br>PROJECTS</span>
                             </div>
                         </div>
                     </div>
@@ -79,32 +81,42 @@
         <div class="container">
             <div class="banner-container-about-us">
                 <h1 class="main-heading-about-us">
-                    Conoce a Falconstruction y nuestros proyectos<br>
-                    innovadores en construcción.
+                    Excellence in every structure, trust in every project.
                 </h1>
                 <p class="subtitle-about-us">
-                    Desde nuestra fundación, hemos estado comprometidos con la calidad y la satisfacción del cliente.
+                    With a commitment to quality and customer satisfaction, Falconstruction builds with integrity and
+                    expertise.
                 </p>
             </div>
 
+
             <section class="savings-section-about-us">
                 <div class="background-split-about-us">
                     <div class="background-left-about-us"></div>
                     <div class="background-right-about-us">
                         <div class="content-about-us">
-                            <h2 class="heading-about-us">En Falconstruction, la calidad es nuestra prioridad</h2>
+                            <h2 class="heading-about-us">At Falconstruction, Quality is Our Priority</h2>
+                            <p class="description-about-us">
+                                We are a specialized organization in Construction Consulting, Contracting, and
+                                Subcontracting. We provide comprehensive solutions for complete project development-from
+                                the initial planning stage to the execution of new constructions and remodels.
+                            </p>
+                            <p class="description-about-us">
+                                Our expertise covers both interior and exterior finishes, including flooring, bathrooms,
+                                and swimming pools. We pride ourselves on delivering reliable, efficient, and
+                                high-quality service, ensuring that every project is completed on time and within
+                                budget.
+                            </p>
                             <ul class="benefits-list-about-us">
                                 <li class="benefit-item-about-us">
-                                    Ofrecemos soluciones personalizadas para cada proyecto, garantizando resultados
-                                    excepcionales.
+                                    Personalized solutions tailored to each project, guaranteeing exceptional results.
                                 </li>
                                 <li class="benefit-item-about-us">
-                                    Nuestro equipo de expertos trabaja con los mejores materiales y técnicas de
-                                    construcción.
+                                    A team of experts using premium materials and advanced construction techniques.
                                 </li>
                             </ul>
                             <a href="#" class="cta-button-about-us">
-                                Conoce nuestros servicios
+                                Discover Our Services
                                 <span class="arrow-about-us">→</span>
                             </a>
                         </div>
@@ -112,22 +124,32 @@
                 </div>
             </section>
 
+
             <section class="savings-section-about-us">
                 <div class="background-split-about-us">
                     <div class="background-right-about-us">
                         <div class="content-about-us">
-                            <h2 class="heading-about-us left">Comprometidos con la sostenibilidad</h2>
+                            <h2 class="heading-about-us left">Unleash Your Project's Potential</h2>
+                            <p class="description-about-us">
+                                At Falconstruction, we fuse visionary strategy with expert execution to transform your
+                                project into a resounding success.
+                            </p>
                             <ul class="benefits-list-about-us">
                                 <li class="benefit-item-about-us">
-                                    Implementamos prácticas sostenibles en todos nuestros proyectos para cuidar el medio
-                                    ambiente.
+                                    <strong>Consulting & Management:</strong> Strategic planning, cost control, and
+                                    seamless project execution.
                                 </li>
                                 <li class="benefit-item-about-us">
-                                    Trabajamos con tecnologías innovadoras que minimizan el impacto ambiental.
+                                    <strong>Turnkey Construction:</strong> Complete builds, renovations, and premium
+                                    finishes from design to delivery.
+                                </li>
+                                <li class="benefit-item-about-us">
+                                    <strong>Specialized Labor:</strong> Expert teams ensuring efficiency, compliance,
+                                    and top-quality craftsmanship.
                                 </li>
                             </ul>
                             <a href="#" class="cta-button-about-us">
-                                Descubre nuestras iniciativas
+                                Transform Your Project Now
                                 <span class="arrow-about-us">→</span>
                             </a>
                         </div>
@@ -136,17 +158,19 @@
                 </div>
             </section>
 
-            <h2 class="title-about-us" style="text-align: center; margin-top: 100px;">Nuestro Equipo Profesional</h2>
+
+
+            <h2 class="title-about-us" style="text-align: center; margin-top: 100px;">Our Professional Team</h2>
 
             <section class="profiles" style="display: flex; flex-wrap: wrap; justify-content: center; margin: 40px">
                 <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
                     <div class="avatar-img">
-                        <img src="PImageUsers/fotofelipe.png">
+                        <img src="PImageNosotros/FelipeHernandez.png">
                     </div>
-                    <p>Andrés Martínez</p>
+                    <p>Juan Felipe</p>
                 </div>
 
-                <!-- 1 Modal - 'Andrés Martínez' -->
+                <!-- 1 Modal - 'Juan Felipe Hernandez Zapata' -->
                 <div id="modal-1" class="modal">
                     <div class="modal-content">
                         <span class="close-modal">&times;</span>
@@ -166,18 +190,17 @@
                         </div>
                     </div>
                 </div>
-                <!-- 1 Modal - 'Andrés Martínez' -->
+                <!-- 1 Modal - 'Juan Felipe Hernandez Zapata' -->
 
 
-                <!-- <div class="avatar" style="--bg-img:url(https://picsum.photos/id/54/300/200)"> -->
                 <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
                     <div class="avatar-img">
                         <img src="PImageUsers/fotofelipe.png">
                     </div>
-                    <p>Laura Gómez</p>
+                    <p>Juan Camilo</p>
                 </div>
 
-                <!-- 2 Modal - 'Laura Gómez' -->
+                <!-- 2 Modal - 'Juan Camilo' -->
                 <div id="modal-2" class="modal">
                     <div class="modal-content">
                         <span class="close-modal">&times;</span>
@@ -199,7 +222,6 @@
                 </div>
                 <!-- 2 Modal - 'Laura Gómez' -->
 
-                <!-- <div class="avatar" style="--bg-img:url(https://picsum.photos/id/48/300/200)"> -->
                 <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
                     <div class="avatar-img">
                         <img src="PImageUsers/fotofelipe.png">
@@ -229,136 +251,18 @@
                 </div>
                 <!-- 3 Modal - 'Javier López' -->
 
-                <!-- <div class="avatar" style="--bg-img:url(https://picsum.photos/id/210/300/200)"> -->
-                <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
-                    <div class="avatar-img">
-                        <img src="PImageUsers/fotofelipe.png">
-                    </div>
-                    <p>Carolina Ruiz</p>
-                </div>
-
-                <!-- 4 Modal - 'Carolina Ruiz' -->
-                <div id="modal-4" class="modal">
-                    <div class="modal-content">
-                        <span class="close-modal">&times;</span>
-                        <div class="modal-body">
-                            <div class="modal-image">
-                                <img src="PImageUsers/fotofelipe.png" alt="Carolina Ruiz">
-                            </div>
-                            <div class="modal-info">
-                                <h3>Carolina Ruiz</h3>
-                                <p class="role">Director de Proyectos</p>
-                                <div class="info-details">
-                                    <p><strong>Nombre completo:</strong>Carolina Esther Ruiz Quiñones</p>
-                                    <p><strong>Edad:</strong> 27 años</p>
-                                    <p><strong>Experiencia:</strong> 6 años en el sector construcción</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 4 Modal - 'Carolina Ruiz' -->
-
-                <!-- <div class="avatar" style="--bg-img:url(https://picsum.photos/id/210/300/200)"> -->
-                <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
-                    <div class="avatar-img">
-                        <img src="PImageUsers/fotofelipe.png">
-                    </div>
-                    <p>Juan Moreno</p>
-                </div>
-
-                <!-- 5 Modal - 'Juan Moreno' -->
-                <div id="modal-5" class="modal">
-                    <div class="modal-content">
-                        <span class="close-modal">&times;</span>
-                        <div class="modal-body">
-                            <div class="modal-image">
-                                <img src="PImageUsers/fotofelipe.png" alt="Juan Moreno">
-                            </div>
-                            <div class="modal-info">
-                                <h3>Juan Moreno</h3>
-                                <p class="role">Director de Proyectos</p>
-                                <div class="info-details">
-                                    <p><strong>Nombre completo:</strong> Juan Pablo Moreno Díaz</p>
-                                    <p><strong>Edad:</strong> 29 años</p>
-                                    <p><strong>Experiencia:</strong> 10 años en el sector construcción</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 5 Modal - 'Juan Moreno' -->
-
-                <!-- <div class="avatar" style="--bg-img:url(https://picsum.photos/id/210/300/200)"> -->
-                <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
-                    <div class="avatar-img">
-                        <img src="PImageUsers/fotofelipe.png">
-                    </div>
-                    <p>Daniel Ososrio</p>
-                </div>
-
-                <!-- 6 Modal - 'Daniel Ososrio' -->
-                <div id="modal-6" class="modal">
-                    <div class="modal-content">
-                        <span class="close-modal">&times;</span>
-                        <div class="modal-body">
-                            <div class="modal-image">
-                                <img src="PImageUsers/fotofelipe.png" alt="Daniel Ososrio">
-                            </div>
-                            <div class="modal-info">
-                                <h3>Daniel Ososrio</h3>
-                                <p class="role">Director de Proyectos</p>
-                                <div class="info-details">
-                                    <p><strong>Nombre completo:</strong> Daniel Ososrio López</p>
-                                    <p><strong>Edad:</strong> 38 años</p>
-                                    <p><strong>Experiencia:</strong> 15 años en el sector construcción</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 6 Modal - 'Daniel Ososrio' -->
-
-                <!-- <div class="avatar" style="--bg-img:url(https://picsum.photos/id/210/300/200)"> -->
-                <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
-                    <div class="avatar-img">
-                        <img src="PImageUsers/fotofelipe.png">
-                    </div>
-                    <p>Santiago Ríos</p>
-                </div>
-
-                <!-- 7 Modal - 'Santiago Ríos' -->
-                <div id="modal-7" class="modal">
-                    <div class="modal-content">
-                        <span class="close-modal">&times;</span>
-                        <div class="modal-body">
-                            <div class="modal-image">
-                                <img src="PImageUsers/fotofelipe.png" alt="Santiago Ríos">
-                            </div>
-                            <div class="modal-info">
-                                <h3>Santiago Ríos</h3>
-                                <p class="role">Director de Proyectos</p>
-                                <div class="info-details">
-                                    <p><strong>Nombre completo:</strong> Santiago Ríos Pérez</p>
-                                    <p><strong>Edad:</strong> 36 años</p>
-                                    <p><strong>Experiencia:</strong> 14 años en el sector construcción</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 7 Modal - 'Santiago Ríos' -->
             </section>
 
             <section class="steps-section-about-us">
                 <div class="container-about-us">
                     <div class="header-about-us">
-                        <h2 class="title-about-us">Con Falconstruction, todo es fácil.</h2>
+                        <h2 class="title-about-us">At Falconstruction, success is built effortlessly.</h2>
                         <p class="subtitle-about-us">
-                            Nuestro proceso es sencillo. Solo necesitas contactarnos y nosotros nos encargamos del
-                            resto.
+                            Say goodbye to hassles. Just reach out, and we'll transform your vision into a masterpiece
+                            with a seamless process.
                         </p>
                     </div>
+
 
                     <div class="steps-grid-about-us">
                         <div class="step-card-about-us">
@@ -402,16 +306,18 @@
                     <div class="video-background">
                         <video autoplay muted loop class="fullscreen-video">
                             <source src="PVideoBanner/video.mp4" type="video/mp4">
-                            Tu navegador no soporta el video.
+                            Your browser does not support the video.
                         </video>
                     </div>
                     <div class="content-about-us floating-content">
-                        <p class="subtitle-about-us">Asesoría personalizada</p>
-                        <h2 class="title-about-us">Tu proyecto en manos expertas</h2>
-                        <p class="description-about-us">Recibe atención y seguimiento en cada etapa de tu proyecto con
-                            Falconstruction.</p>
+                        <p class="subtitle-about-us">Tailored Guidance</p>
+                        <h2 class="title-about-us">Your Vision, Expertly Delivered</h2>
+                        <p class="description-about-us">
+                            At Falconstruction, we provide dedicated support at every stage transforming your ideas into
+                            a striking reality.
+                        </p>
                         <a href="#" class="cta-button-about-us">
-                            Contáctanos
+                            Build With Us Today
                             <span class="arrow-about-us">→</span>
                         </a>
                     </div>
@@ -420,42 +326,44 @@
 
             <section class="philosophy-section-about-us">
                 <div class="container-about-us">
-                    <h2 class="title-about-us">Nuestra filosofía</h2>
-
+                    <h2 class="title-about-us">Our Core Values</h2>
                     <div class="philosophy-grid-about-us">
                         <div class="philosophy-card-about-us card-1-about-us">
                             <span class="card-number-about-us">1</span>
-                            <h3 class="card-title-about-us">Compromiso con la calidad</h3>
-                            <p class="card-description-about-us">Cada proyecto es una oportunidad para demostrar nuestra
-                                excelencia.</p>
+                            <h3 class="card-title-about-us">Unwavering Commitment</h3>
+                            <p class="card-description-about-us">
+                                We approach every project with unmatched dedication, ensuring responsible and efficient
+                                execution.
+                            </p>
                         </div>
-
                         <div class="philosophy-card-about-us card-2-about-us">
                             <span class="card-number-about-us">2</span>
-                            <h3 class="card-title-about-us">Transparencia total</h3>
-                            <p class="card-description-about-us">Mantenemos una comunicación clara y abierta con
-                                nuestros
-                                clientes.</p>
+                            <h3 class="card-title-about-us">Uncompromising Quality</h3>
+                            <p class="card-description-about-us">
+                                Excellence is our standard; we guarantee superior craftsmanship at every phase of
+                                construction.
+                            </p>
                         </div>
-
                         <div class="philosophy-card-about-us card-3-about-us">
                             <span class="card-number-about-us">3</span>
-                            <h3 class="card-title-about-us">Innovación constante</h3>
-                            <p class="card-description-about-us">Utilizamos las últimas tecnologías para mejorar
-                                nuestros
-                                servicios.</p>
+                            <h3 class="card-title-about-us">Dependable Reliability</h3>
+                            <p class="card-description-about-us">
+                                Our clients trust us for steadfast support and security, ensuring peace of mind with
+                                every project.
+                            </p>
                         </div>
-
                         <div class="philosophy-card-about-us card-4-about-us">
                             <span class="card-number-about-us">4</span>
-                            <h3 class="card-title-about-us">Satisfacción del cliente</h3>
-                            <p class="card-description-about-us">Nuestro objetivo es superar las expectativas de
-                                nuestros
-                                clientes.</p>
+                            <h3 class="card-title-about-us">Peak Efficiency</h3>
+                            <p class="card-description-about-us">
+                                We optimize time and resources to deliver profitable outcomes, maximizing every
+                                opportunity.
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
+
         </div>
 
         <section class="BannerEnd-Portfolio">
@@ -480,4 +388,5 @@
         <script src="Script_Cursor"></script>
         <script src="Script_Boton_Flotante"></script>
 </body>
+
 </html>

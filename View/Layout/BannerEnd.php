@@ -84,7 +84,7 @@
                     <video src="PVideoBanner/video.mp4" class="tab-video-ForAll" autoplay loop muted playsinline></video>
                 </div>
                 <div data-tabs="visual-item" class="tab-visual-item-ForAll">
-                    <video src="PVideoBanner/video.mp4" class="tab-video-ForAll" autoplay loop muted playsinline></video>
+                    <video src="PVideoBanner/ContactUs.mp4" class="tab-video-ForAll" autoplay loop muted playsinline></video>
                 </div>
                 <!-- Fin de los elementos visuales -->
             </div>
