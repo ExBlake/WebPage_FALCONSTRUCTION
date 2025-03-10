@@ -102,7 +102,7 @@
                                 the initial planning stage to the execution of new constructions and remodels.
                             </p>
                             <p class="description-about-us">
-                                Our expertise covers both interior and exterior finishes, including flooring, bathrooms,
+                                Our expertise covers both residential and commercial interior and exterior finishes, including drywall, flooring, bathrooms,
                                 and swimming pools. We pride ourselves on delivering reliable, efficient, and
                                 high-quality service, ensuring that every project is completed on time and within
                                 budget.
@@ -154,7 +154,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="background-left-about-us"></div>
+                    <div class="background-left-about-us other"></div>
                 </div>
             </section>
 
@@ -163,7 +163,7 @@
             <h2 class="title-about-us" style="text-align: center; margin-top: 100px;">Our Professional Team</h2>
 
             <section class="profiles" style="display: flex; flex-wrap: wrap; justify-content: center; margin: 40px">
-                <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
+                <div class="avatar" style="--bg-img:url(PImageNosotros/FondoFelipeHernandez.jpg)">
                     <div class="avatar-img">
                         <img src="PImageNosotros/FelipeHernandez.png">
                     </div>
@@ -193,9 +193,9 @@
                 <!-- 1 Modal - 'Juan Felipe Hernandez Zapata' -->
 
 
-                <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
+                <div class="avatar" style="--bg-img:url(PImageNosotros/FondoJuanCamilo.jpg)">
                     <div class="avatar-img">
-                        <img src="PImageUsers/fotofelipe.png">
+                        <img src="PImageNosotros/JuanCamilo.png">
                     </div>
                     <p>Juan Camilo</p>
                 </div>
@@ -206,7 +206,7 @@
                         <span class="close-modal">&times;</span>
                         <div class="modal-body">
                             <div class="modal-image">
-                                <img src="PImageUsers/fotofelipe.png" alt="Laura Gómez">
+                                <img src="PImageNosotros/JuanCamilo.png" alt="Laura Gómez">
                             </div>
                             <div class="modal-info">
                                 <h3>Laura Gómez</h3>
@@ -256,7 +256,7 @@
             <section class="steps-section-about-us">
                 <div class="container-about-us">
                     <div class="header-about-us">
-                        <h2 class="title-about-us">At Falconstruction, success is built effortlessly.</h2>
+                        <h2 class="title-about-us">At Falconstruction, success is built With facility.</h2>
                         <p class="subtitle-about-us">
                             Say goodbye to hassles. Just reach out, and we'll transform your vision into a masterpiece
                             with a seamless process.
@@ -267,7 +267,7 @@
                     <div class="steps-grid-about-us">
                         <div class="step-card-about-us">
                             <div class="step-image-about-us">
-                                <img src="PImageProject/project-6.jpg" alt="Paso 1: Consulta inicial">
+                                <img src="PImageNosotros/Section-3-1.jpeg" alt="Paso 1: Consulta inicial">
                             </div>
                             <div class="step-content-about-us">
                                 <h3 class="step-title-about-us">
@@ -278,7 +278,7 @@
 
                         <div class="step-card-about-us">
                             <div class="step-image-about-us">
-                                <img src="PImageProject/project-5.jpg" alt="Paso 2: Planificación del proyecto">
+                                <img src="PImageNosotros/Section-3-2.jpeg" alt="Paso 2: Planificación del proyecto">
                             </div>
                             <div class="step-content-about-us">
                                 <h3 class="step-title-about-us">
@@ -289,7 +289,7 @@
 
                         <div class="step-card-about-us">
                             <div class="step-image-about-us">
-                                <img src="PImageProject/project-4.jpg" alt="Paso 3: Ejecución de la obra">
+                                <img src="PImageNosotros/Section-3-3.jpeg" alt="Paso 3: Ejecución de la obra">
                             </div>
                             <div class="step-content-about-us">
                                 <h3 class="step-title-about-us">

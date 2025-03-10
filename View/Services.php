@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="Estilos_Cursor">
     <link rel="stylesheet" href="Estilos_Boton_Flotante">
 </head>
+
 <body>
     <?php
         require_once 'Layout/Header.php';
@@ -33,42 +35,40 @@
 
                 <!-- Overlay con gradiente -->
                 <div class="overlay-banner-services"></div>
-
-                <!-- Contenido principal -->
+                <!-- Main content -->
                 <div class="content-banner-services">
                     <div class="content-wrapper-banner-services">
                         <div class="header-banner-services">
-                            <h1 class="title-banner-services">Services</h1>
-                            <p class="publisher-banner-services"> Interactive Entertainment</p>
+                            <h1 class="title-banner-services">Our Services</h1>
+                            <p class="publisher-banner-services"></p>
 
                             <div class="platforms-banner-services">
-                                <span class="platform-badge-banner-services">X</span>
-                                <span class="platform-badge-banner-services">XX</span>
-                                <span class="platform-badge-banner-services">XXX</span>
+                                <span class="platform-badge-banner-services">Consulting</span>
+                                <span class="platform-badge-banner-services">Contracting</span>
+                                <span class="platform-badge-banner-services">Subcontracting</span>
                             </div>
                         </div>
 
                         <div class="purchase-section-banner-services">
                             <div class="price-container-banner-services">
                                 <div class="price-banner-services">
-                                    <span>Todo con nosotros</span>
+                                    <span>Everything with us</span>
                                 </div>
                             </div>
 
                             <p class="subscription-note-banner-services">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio natus laboriosam
-                                dolorem, placeat dolorum, nesciunt iste eos, est quos dolores officiis saepe? Officiis,
-                                architecto aut facilis iure nobis nulla at!
+                                At FALCONSTRUCTION SERVICES LLC, we transform ideas into realities. We manage every
+                                phase of the project, from feasibility study to final delivery, ensuring quality,
+                                efficiency, and results that exceed expectations.
                             </p>
 
                             <div class="buttons-banner-services">
                                 <button class="contact-banner-services">Contact Us</button>
-
                             </div>
-
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -82,11 +82,14 @@
                     <div class="hero__content">
                         <!-- Columna izquierda -->
                         <div class="hero__text">
-                            <h1 class="title-section-2-service">Satisfacción a Nuestros Clientes</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic deleniti
-                                rerum cumque eveniet ratione non ullam reprehenderit eius, iure aperiam
-                                voluptates eaque dolorum, deserunt facere. Molestiae unde corrupti rem non.</p>
+                            <h1 class="title-section-2-service">Exceeding Expectations, Building Trust</h1>
+                            <p>
+                                We pride ourselves on our unwavering responsibility and commitment to surpassing our
+                                customers’ expectations at every step. With ethical practices, personalized service, and
+                                exceptional quality, we create lasting trust and ensure complete satisfaction.
+                            </p>
                         </div>
+
 
                         <!-- Columna derecha -->
                         <div class="hero__media">
@@ -109,7 +112,7 @@
                     <div class="timeline-items">
                         <div class="timeline-item" data-image="PImageServicios/kkkk.jpg">
                             <div class="content-services-section">
-                                <h2 class="titulo-services-section main">NUESTROS SERVICIOS</h2>
+                                <h2 class="titulo-services-section main">OUR SERVICES</h2>
                             </div>
                         </div>
                         <div class="timeline-item" data-image="PImageServicios/kkkk.jpg">
@@ -123,16 +126,12 @@
                                 </svg>
                             </div>
                             <div class="content-services-section">
-                                <span class="subtitle">L-5 DAYS</span>
-                                <h2 class="titulo-services-section">Adquisición de Propiedades para Flips o
-                                    Renta/Wholesale</h2>
-                                <p class="parrafo-services-section">En Falconstruction, ofrecemos un servicio
-                                    especializado de adquisición de propiedades orientado tanto a inversionistas que
-                                    buscan oportunidades para "flips" (comprar, renovar y vender rápidamente para
-                                    obtener beneficios) como a aquellos interesados en la renta o venta al por mayor
-                                    (wholesale). Gracias a nuestra vasta experiencia y conocimiento del mercado
-                                    inmobiliario, identificamos propiedades con un alto potencial de retorno de
-                                    inversión.</p>
+                                <span class="subtitle">S-1 SVS</span>
+                                <h2 class="titulo-services-section">Project Consulting and Management</h2>
+                                <p class="parrafo-services-section">We provide advisory and comprehensive project
+                                    management, covering financial feasibility studies, strategic planning, budgeting
+                                    and cost control, permits and regulations management, and on-site supervision to
+                                    ensure efficient and optimized execution.</p>
                                 <button class="cta-button">Get Ready</button>
                             </div>
                         </div>
@@ -147,16 +146,12 @@
                                 </svg>
                             </div>
                             <div class="content-services-section">
-                                <span class="subtitle">L-4 DAYS</span>
-                                <h2 class="titulo-services-section">Adquisición de Propiedades para Flips o
-                                    Renta/Wholesale</h2>
-                                <p class="parrafo-services-section">En Falconstruction, ofrecemos un servicio
-                                    especializado de adquisición de propiedades orientado tanto a inversionistas que
-                                    buscan oportunidades para "flips" (comprar, renovar y vender rápidamente para
-                                    obtener beneficios) como a aquellos interesados en la renta o venta al por mayor
-                                    (wholesale). Gracias a nuestra vasta experiencia y conocimiento del mercado
-                                    inmobiliario, identificamos propiedades con un alto potencial de retorno de
-                                    inversión.</p>
+                                <span class="subtitle">S-2 SVS</span>
+                                <h2 class="titulo-services-section">Construction Contracting</h2>
+                                <p class="parrafo-services-section">We execute complete projects as primary contractors,
+                                    from design to final delivery. We manage remodeling, construction, high-quality
+                                    interior finishes, pool construction and renovation, supplier and materials
+                                    management, as well as quality control and compliance.</p>
                                 <button class="cta-button">Plan Arrival</button>
                             </div>
                         </div>
@@ -176,68 +171,16 @@
                                 </svg>
                             </div>
                             <div class="content-services-section">
-                                <span class="subtitle">L-3 DAYS</span>
-                                <h2 class="titulo-services-section">Adquisición de Propiedades para Flips o
-                                    Renta/Wholesale</h2>
-                                <p class="parrafo-services-section">En Falconstruction, ofrecemos un servicio
-                                    especializado de adquisición de propiedades orientado tanto a inversionistas que
-                                    buscan oportunidades para "flips" (comprar, renovar y vender rápidamente para
-                                    obtener beneficios) como a aquellos interesados en la renta o venta al por mayor
-                                    (wholesale). Gracias a nuestra vasta experiencia y conocimiento del mercado
-                                    inmobiliario, identificamos propiedades con un alto potencial de retorno de
-                                    inversión.</p>
+                                <span class="subtitle">S-3 SVS</span>
+                                <h2 class="titulo-services-section">Specialized Workforce Subcontracting</h2>
+                                <p class="parrafo-services-section">We supply highly skilled personnel for contractors
+                                    who require efficient and reliable execution. We handle the selection, hiring, and
+                                    management of specialized workforce, including payroll, taxes, Social Security, and
+                                    Medicare, ensuring regulatory compliance and reducing administrative burdens.</p>
                                 <button class="cta-button">Learn More</button>
                             </div>
                         </div>
-                        <div class="timeline-item"
-                            data-image="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zH04rGA73bITXkpags0NsGAUvolSqH.png">
-                            <div class="icon-circle">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="icon">
-                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                </svg>
-                            </div>
-                            <div class="content-services-section">
-                                <span class="subtitle">L-2 DAYS</span>
-                                <h2 class="titulo-services-section">Adquisición de Propiedades para Flips o
-                                    Renta/Wholesale</h2>
-                                <p class="parrafo-services-section">En Falconstruction, ofrecemos un servicio
-                                    especializado de adquisición de propiedades orientado tanto a inversionistas que
-                                    buscan oportunidades para "flips" (comprar, renovar y vender rápidamente para
-                                    obtener beneficios) como a aquellos interesados en la renta o venta al por mayor
-                                    (wholesale). Gracias a nuestra vasta experiencia y conocimiento del mercado
-                                    inmobiliario, identificamos propiedades con un alto potencial de retorno de
-                                    inversión.</p>
-                                <button class="cta-button">Start Training</button>
-                            </div>
-                        </div>
-                        <div class="timeline-item" data-image="PImageServicios/wallpaper-758922_1280.webp">
-                            <div class="icon-circle">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="icon">
-                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                                </svg>
-                            </div>
-                            <div class="content-services-section">
-                                <span class="subtitle">L-1 DAYS</span>
-                                <h2 class="titulo-services-section">Adquisición de Propiedades para Flips o
-                                    Renta/Wholesale</h2>
-                                <p class="parrafo-services-section">En Falconstruction, ofrecemos un servicio
-                                    especializado de adquisición de propiedades orientado tanto a inversionistas que
-                                    buscan oportunidades para "flips" (comprar, renovar y vender rápidamente para
-                                    obtener beneficios) como a aquellos interesados en la renta o venta al por mayor
-                                    (wholesale). Gracias a nuestra vasta experiencia y conocimiento del mercado
-                                    inmobiliario, identificamos propiedades con un alto potencial de retorno de
-                                    inversión.</p>
-                                <button class="cta-button">Prepare for Launch</button>
-                            </div>
-                        </div>
+                        
                         <div class="timeline-item" data-image="PImageServicios/wallpaper-758922_1280.webp">
                             <div class="icon-circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -336,8 +279,7 @@
             <div class="contacts-banner-promo-card">
                 <div class="contacts-banner-gradient-blob"></div>
                 <div class="contacts-banner-content">
-                    <h1 class="contacts-banner-title" id="contacts-title">CONTÁCTANOS PARA SABER MÁS SOBRE NUESTROS
-                        SERVICIOS</h1>
+                    <h1 class="contacts-banner-title" id="contacts-title">BUILD THE FUTURE: CONNECT WITH US TODAY AND TURN YOUR VISION INTO REALITY!</h1>
                 </div>
                 <button class="cta-button luxurious-button">¡Contáctanos!</button>
             </div>
@@ -374,4 +316,5 @@
     <script src="Script_Cursor"></script>
     <script src="Script_Boton_Flotante"></script>
 </body>
+
 </html>

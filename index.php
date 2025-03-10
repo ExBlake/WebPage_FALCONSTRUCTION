@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -27,13 +28,11 @@
 
     <section class="container parallax-section">
         <div class="h11">
-            <h1>Falconstruction <br> Company</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nostrum placeat tempora deleniti.
-                Ut, quo
-                in.</p>
+            <h1>FALCONSTRUCTION <br> SERVICES</h1>
+            <p>Every project is a promise. We Build Trust, We Build Futures committed to excellence and integrity in every step.</p>
             <div class="buttons">
-                <a href="#" class="btn">Servicios</a>
-                <a href="#" class="btn btn-outline">Contacto</a>
+                <a href="#" class="btn">Services</a>
+                <a href="#" class="btn btn-outline">Contact</a>
             </div>
         </div>
         <div class="house-container">
@@ -410,18 +409,18 @@
                 <img src="PImageProject/project-6.jpg" alt="Image1" class="image front">
             </div>
             <div class="content-container-text txt-right">
-                <h1 class="title">Designing Beautiful, Eco-friendly and Green Structures Around the City!</h1>
+                <h1 class="title">Our DNA: Quality, Efficiency, and Trust</h1>
                 <p class="text">
-                    Alias debitis exercitation habitant accusantium sem! Blandit perspiciatis! Sem reprehenderit. Montes
-                    cillum,
-                    aliquam nonummy pede sociosqu laborum vehicula platea. Arcu. Augue lectus libero alias, tincidunt
-                    dolore,
-                    pulvinar, congue. Velit dictumst rutrum voluptatibus! Laboriosam ante labore necessitatibus!
+                    FALCONSTRUCTION SERVICES LLC is a company specialized in consulting, contracting, and subcontracting
+                    within the construction sector. We offer comprehensive solutions for project development, ensuring
+                    quality, efficiency, and adherence to deadlines at every stage.
+
                 </p>
                 <p class="text">
-                    Praesent risus minim distinctio adipisci cubilia auctor sem felis, qui urna facilisis omnis erro.
+                    With a highly skilled team and extensive experience in renovations and new constructions, we
+                    transform ideas into lasting realities. To learn more about our history and values
                 </p>
-                <button class="ver-mas-btn">Ver Más →</button>
+                <button class="ver-mas-btn">About Us →</button>
             </div>
         </div>
     </section>
@@ -429,18 +428,17 @@
     <section class="container-3">
         <div class="page-container">
             <div class="content-container-text txt-left">
-                <h1 class="title">Construyendo Estructuras Bellas, Ecológicas y Verdes por la Ciudad!</h1>
+                <h1 class="title">Ignite Your Project: Let's Connect!</h1>
                 <p class="text">
-                    Alias debitis exercitation habitant accusantium sem! Blandit perspiciatis! Sem reprehenderit. Montes
-                    cillum,
-                    aliquam nonummy pede sociosqu laborum vehicula platea. Arcu. Augue lectus libero alias, tincidunt
-                    dolore,
-                    pulvinar, congue. Velit dictumst rutrum voluptatibus! Laboriosam ante labore necessitatibus!
+                    At FALCONSTRUCTION SERVICES LLC, we believe every great project begins with a conversation. Our team
+                    of dedicated experts is ready to listen to your ideas, answer your questions, and provide innovative
+                    solutions that bring your vision to life.
                 </p>
                 <p class="text">
-                    Praesent risus minim distinctio adipisci cubilia auctor sem felis, qui urna facilisis omnis erro.
+                    Whether you're planning a new build or a transformative renovation, we're here to guide you every
+                    step of the way. Reach out today and take the first step towards creating something extraordinary.
                 </p>
-                <button class="ver-mas-btn">Ver Más →</button>
+                <button class="ver-mas-btn">Contact Us →</button>
             </div>
             <div class="image-container img-right">
                 <div class="image back" style="background-image: url(PImageProject/project-5.jpg);"></div>
@@ -451,8 +449,8 @@
     </section>
 
     <section class="container-4">
-        <h1 class="title">Construyendo Estructuras Bellas, Ecológicas y Verdes por la Ciudad!</h1>
-        <button class="ver-mas-btn mobile-btn">Ver Más Proyectos →</button>
+        <h1 class="title">We Transform Spaces: Discover Our Projects!</h1>
+        <button class="ver-mas-btn mobile-btn">Our Portfolio →</button>
         <div class="wrapper">
             <div class="items">
                 <div class="item" tabindex="0" style="background-image: url(PImageProject/project-0.jpg)"></div>
@@ -469,17 +467,18 @@
                 <div class="item" tabindex="0" style="background-image: url(PImageProject/project-4.jpg)"></div>
             </div>
         </div>
-        <button class="ver-mas-btn pc-btn">Ver Más Proyectos →</button>
+        <button class="ver-mas-btn pc-btn">Our Portfolio →</button>
     </section>
 
     <section class="container-5">
         <div class="particles" id="particles"></div>
         <div class="title-container">
-            <h1 class="title">Te ofrecemos</h1>
-            <p class="subtitle">Soluciones de construcción a la vanguardia, combinando innovación tecnológica con la
-                mejor calidad artesanal</p>
+            <h1 class="title">We offer.</h1>
+            <p class="subtitle">At FALCONSTRUCTION SERVICES LLC, we combine experience, innovation, and commitment to
+                transform your ideas into concrete realities. Discover how our personalized solutions can make a
+                difference at every stage, ensuring quality, efficiency, and exceptional results.</p>
 
-            <button class="ver-mas-btn discover-more-btn">Descubre Más →</button>
+            <button class="ver-mas-btn discover-more-btn">Discover more →</button>
         </div>
         <div class="services-container">
             <div class="service-card">
@@ -487,12 +486,12 @@
                     <div class="service-icon">
                         <i class="fas fa-building"></i>
                     </div>
-                    <h3 class="service-title">Arquitectura Vanguardista</h3>
+                    <h3 class="service-title">Project Consulting and Management</h3>
                     <div class="separator"></div>
-                    <p class="service-desc">Diseñamos y construimos edificaciones únicas con estética moderna y
-                        funcionalidad superior. Cada proyecto es una obra maestra que refleja la visión de nuestros
-                        clientes mediante tecnologías de vanguardia y materiales sostenibles.</p>
-                    <a href="#arquitectura" class="service-more">Explorar servicios <i class="fas fa-arrow-right"></i></a>
+                    <p class="service-desc">We support you from feasibility studies to final supervision, optimizing
+                        resources and ensuring on-time delivery. Our strategic guidance transforms challenges into
+                        opportunities to maximize the profitability of your investment.</p>
+                    <a href="#arquitectura" class="service-more">Browse services <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="service-card">
@@ -500,12 +499,12 @@
                     <div class="service-icon">
                         <i class="fas fa-house-user"></i>
                     </div>
-                    <h3 class="service-title">Espacios Inteligentes</h3>
+                    <h3 class="service-title">Construction Contracting</h3>
                     <div class="separator"></div>
-                    <p class="service-desc">Transformamos propiedades en hogares y oficinas inteligentes mediante
-                        sistemas de domótica avanzada. Integramos tecnología de última generación con diseño
-                        arquitectónico para crear ambientes que responden a sus necesidades.</p>
-                    <a href="#espacios" class="service-more">Explorar servicios <i class="fas fa-arrow-right"></i></a>
+                    <p class="service-desc">We handle every detail from design to delivery to turn your ideas into
+                        robust and aesthetically pleasing structures. Our team of experts guarantees precise and
+                        efficient execution, delivering high-quality results at every phase of the project.</p>
+                    <a href="#espacios" class="service-more">Browse services <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="service-card">
@@ -513,13 +512,13 @@
                     <div class="service-icon">
                         <i class="fas fa-hard-hat"></i>
                     </div>
-                    <h3 class="service-title">Proyectos Industriales</h3>
+                    <h3 class="service-title">Specialized Workforce Subcontracting</h3>
                     <div class="separator"></div>
-                    <p class="service-desc">Desarrollamos infraestructuras industriales que maximizan la eficiencia
-                        operativa. Nuestros ingenieros especializados diseñan y construyen plantas de producción,
-                        almacenes y centros logísticos con los más altos estándares de seguridad y funcionalidad.
+                    <p class="service-desc">We provide highly qualified professionals to deliver impeccable service. We
+                        take care of selecting, hiring, and managing specialized personnel, ensuring regulatory
+                        compliance and operational excellence in every project.
                     </p>
-                    <a href="#industrial" class="service-more">Explorar servicios <i class="fas fa-arrow-right"></i></a>
+                    <a href="#industrial" class="service-more">Browse services <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -556,11 +555,12 @@
     <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script>
     <script src="Script_Banner"></script>
-     <!-- End Banner Final -->
+    <!-- End Banner Final -->
 
     <script src="Script_Header"></script>
     <script src="Script_Inicio"></script>
     <script src="Script_Cursor"></script>
     <script src="Script_Boton_Flotante"></script>
 </body>
+
 </html>

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="Estilos_Footer">
     <link rel="stylesheet" href="Estilos_Boton_Flotante">
 </head>
+
 <body>
     <?php
         require_once 'Layout/Header.php';
@@ -27,12 +28,15 @@
 
     <main>
         <section class="hero-section-review container-section-review">
-            <h1>Over <span class="counter">0</span> Reasons to Build with Confidencet</h1>
-            <p>At Falconstruction, we don't just build structures, we build strong relationships with our clients. Every
-                review is a testament to our commitment to excellence, transparency and quality. Find out why hundreds
-                of clients trust us to make their dreams come true - your project, in the best hands!</p>
-
+            <h1>OVER <span class="counter">0</span> REASONS TO BUILD WITH CONFIDENCE</h1>
+            <p>
+                At Falconstruction, we don’t just erect structures we forge lasting relationships built on trust,
+                excellence, and transparency. Every testimonial reflects our dedication to meticulous craftsmanship and
+                unparalleled service. Discover why hundreds of clients have chosen us to turn their visions into
+                reality.
+            </p>
         </section>
+
         <!-- Scroll indicator -->
         <div class="scroll-container">
             <div class="mouse-icon">
@@ -348,4 +352,5 @@
     <script src="Script_Cursor"></script>
     <script src="Script_Boton_Flotante"></script>
 </body>
+
 </html>
