@@ -30,7 +30,7 @@
             <div class="hero-banner-services">
                 <!-- Video Background -->
                 <video autoplay loop muted playsinline class="background-video-banner-services">
-                    <source src="PVideoBanner/video2 copy.mp4" type="video/mp4">
+                    <source src="PImageServicios/Banner.mp4" type="video/mp4">
                 </video>
 
                 <!-- Overlay con gradiente -->
@@ -94,10 +94,10 @@
                         <!-- Columna derecha -->
                         <div class="hero__media">
                             <div class="hero__monitor">
-                                <img src="PImageProject/project-6.jpg" alt="image" class="hero__game-image">
+                                <img src="PImageServicios/Section-2.jpg" alt="image" class="hero__game-image">
                                 <div class="hero__scanner"></div>
                             </div>
-                            <img src="PImageProject/project-3.jpg" alt="image" class="hero__controller">
+                            <img src="PImageServicios/Section-2-1.jpg" alt="image" class="hero__controller">
                         </div>
                     </div>
                 </div>
@@ -110,12 +110,12 @@
                 <div class="timeline" id="timeline-container">
 
                     <div class="timeline-items">
-                        <div class="timeline-item" data-image="PImageServicios/kkkk.jpg">
+                        <div class="timeline-item" data-image="PImageServicios/Service_1.jpg">
                             <div class="content-services-section">
                                 <h2 class="titulo-services-section main">OUR SERVICES</h2>
                             </div>
                         </div>
-                        <div class="timeline-item" data-image="PImageServicios/kkkk.jpg">
+                        <div class="timeline-item" data-image="PImageServicios/Service_1.jpg">
                             <div class="icon-circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -135,7 +135,7 @@
                                 <button class="cta-button">Get Ready</button>
                             </div>
                         </div>
-                        <div class="timeline-item" data-image="PImageServicios/pexels-iriser-1366957.jpg">
+                        <div class="timeline-item" data-image="PImageServicios/Service_2.jpg">
                             <div class="icon-circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -149,13 +149,13 @@
                                 <span class="subtitle">S-2 SVS</span>
                                 <h2 class="titulo-services-section">Construction Contracting</h2>
                                 <p class="parrafo-services-section">We execute complete projects as primary contractors,
-                                    from design to final delivery. We manage remodeling, construction, high-quality
-                                    interior finishes, pool construction and renovation, supplier and materials
-                                    management, as well as quality control and compliance.</p>
-                                <button class="cta-button">Plan Arrival</button>
+                                    from design to final delivery. We specialize in residential and commercial flooring for remodeling, new construction, premium
+                                    interior and exterior finishes, bathrooms, pools,  
+                                    as well as rigorous quality control and compliance management.</p>
+                                <button class="cta-button">Start Your Project</button>
                             </div>
                         </div>
-                        <div class="timeline-item" data-image="PImageServicios/photo-1559583985-c80d8ad9b29f.jpeg">
+                        <div class="timeline-item" data-image="PImageServicios/Service_3.jpg">
                             <div class="icon-circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -173,15 +173,14 @@
                             <div class="content-services-section">
                                 <span class="subtitle">S-3 SVS</span>
                                 <h2 class="titulo-services-section">Specialized Workforce Subcontracting</h2>
-                                <p class="parrafo-services-section">We supply highly skilled personnel for contractors
+                                <p class="parrafo-services-section">We supply highly skilled personnel for framing and drywall contractors
                                     who require efficient and reliable execution. We handle the selection, hiring, and
-                                    management of specialized workforce, including payroll, taxes, Social Security, and
-                                    Medicare, ensuring regulatory compliance and reducing administrative burdens.</p>
-                                <button class="cta-button">Learn More</button>
+                                    management of specialized workforce, including payroll and insurance, securing regulatory compliance and reducing administrative burdens.</p>
+                                <button class="cta-button">Power Your Project</button>
                             </div>
                         </div>
                         
-                        <div class="timeline-item" data-image="PImageServicios/wallpaper-758922_1280.webp">
+                        <div class="timeline-item" data-image="PImageServicios/Service_3.jpg">
                             <div class="icon-circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round"

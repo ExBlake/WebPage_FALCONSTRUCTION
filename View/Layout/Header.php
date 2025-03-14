@@ -36,31 +36,31 @@
             <div class="menu-items-header">
                 <!-- Inicio de los elementos del menú -->
                 <div class="menu-item-wrapper-header">
-                    <a href="Inicio" class="menu-item-header" data-image="PImageProject/project-1.jpg">
+                    <a href="Inicio" class="menu-item-header" data-image="PImageMenu/Home.jpg">
                         <span class="menu-category-header">Inicio</span>
                         <span class="menu-item-content-header">Bienvenido</span>
                     </a>
                 </div>
                 <div class="menu-item-wrapper-header">
-                    <a href="Servicios" class="menu-item-header" data-image="PImageProject/project-2.jpg">
+                    <a href="Servicios" class="menu-item-header" data-image="PImageMenu/Services.jpg">
                         <span class="menu-category-header">Servicios</span>
                         <span class="menu-item-content-header">Soluciones</span>
                     </a>
                 </div>
                 <div class="menu-item-wrapper-header">
-                    <a href="Portafolio" class="menu-item-header" data-image="PImageProject/project-3.jpg">
+                    <a href="Portafolio" class="menu-item-header" data-image="PImageMenu/Projects.jpg">
                         <span class="menu-category-header">Proyectos</span>
                         <span class="menu-item-content-header">Portafolio</span>
                     </a>
                 </div>
                 <div class="menu-item-wrapper-header">
-                    <a href="Nosotros" class="menu-item-header" data-image="PImageProject/project-4.jpg">
+                    <a href="Nosotros" class="menu-item-header" data-image="PImageMenu/AboutUs.jpg">
                         <span class="menu-category-header">Nosotros</span>
                         <span class="menu-item-content-header">Historia</span>
                     </a>
                 </div>
                 <div class="menu-item-wrapper-header">
-                    <a href="Resenas" class="menu-item-header" data-image="PImageProject/project-5.jpg">
+                    <a href="Resenas" class="menu-item-header" data-image="PImageMenu/Reviews.jpg">
                         <span class="menu-category-header">Reseñas</span>
                         <span class="menu-item-content-header">Testimonios</span>
                     </a>

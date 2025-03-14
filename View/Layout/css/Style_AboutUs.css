@@ -821,7 +821,7 @@ p:hover {
 
 .background-left-about-us {
     width: 50%;
-    background-image: url(PImageNosotros/Section-1.jpeg);
+    background-image: url(PImageNosotros/Section-1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -829,7 +829,7 @@ p:hover {
 
 .background-left-about-us.other {
     width: 50%;
-    background-image: url(PImageNosotros/Section-2.jpeg);
+    background-image: url(PImageNosotros/Section-2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

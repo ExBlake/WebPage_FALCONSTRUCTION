@@ -267,7 +267,7 @@
                     <div class="steps-grid-about-us">
                         <div class="step-card-about-us">
                             <div class="step-image-about-us">
-                                <img src="PImageNosotros/Section-3-1.jpeg" alt="Paso 1: Consulta inicial">
+                                <img src="PImageNosotros/Step_1.jpg" alt="Paso 1: Consulta inicial">
                             </div>
                             <div class="step-content-about-us">
                                 <h3 class="step-title-about-us">
@@ -278,7 +278,7 @@
 
                         <div class="step-card-about-us">
                             <div class="step-image-about-us">
-                                <img src="PImageNosotros/Section-3-2.jpeg" alt="Paso 2: Planificación del proyecto">
+                                <img src="PImageNosotros/Step_2.jpg" alt="Paso 2: Planificación del proyecto">
                             </div>
                             <div class="step-content-about-us">
                                 <h3 class="step-title-about-us">
@@ -289,7 +289,7 @@
 
                         <div class="step-card-about-us">
                             <div class="step-image-about-us">
-                                <img src="PImageNosotros/Section-3-3.jpeg" alt="Paso 3: Ejecución de la obra">
+                                <img src="PImageNosotros/Step_3.jpg" alt="Paso 3: Ejecución de la obra">
                             </div>
                             <div class="step-content-about-us">
                                 <h3 class="step-title-about-us">
@@ -305,7 +305,7 @@
                 <div class="container-aa-about-us">
                     <div class="video-background">
                         <video autoplay muted loop class="fullscreen-video">
-                            <source src="PVideoBanner/video.mp4" type="video/mp4">
+                            <source src="PImageServicios/Banner.mp4" type="video/mp4">
                             Your browser does not support the video.
                         </video>
                     </div>

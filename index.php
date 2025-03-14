@@ -29,7 +29,7 @@
     <section class="container parallax-section">
         <div class="h11">
             <h1>FALCONSTRUCTION <br> SERVICES</h1>
-            <p>Every project is a promise. We Build Trust, We Build Futures committed to excellence and integrity in every step.</p>
+            <p>Every project is a promise. We Build Trust, We Build Futures, We are committed to excellence and integrity in every step.</p>
             <div class="buttons">
                 <a href="#" class="btn">Services</a>
                 <a href="#" class="btn btn-outline">Contact</a>
@@ -404,15 +404,15 @@
     <section class="container-2">
         <div class="page-container">
             <div class="image-container img-left">
-                <div class="image back" style="background-image: url(PImageProject/project-1.jpg);"></div>
-                <img src="PImageProject/project-4.jpg" alt="Image2" class="image middle">
-                <img src="PImageProject/project-6.jpg" alt="Image1" class="image front">
+                <div class="image back" style="background-image: url(PImageInicio/Section_1-1.jpg);"></div>
+                <img src="PImageInicio/Section_1-2.jpg" alt="Image2" class="image middle">
+                <img src="PImageInicio/Section_1-3.jpg" alt="Image1" class="image front">
             </div>
             <div class="content-container-text txt-right">
                 <h1 class="title">Our DNA: Quality, Efficiency, and Trust</h1>
                 <p class="text">
                     FALCONSTRUCTION SERVICES LLC is a company specialized in consulting, contracting, and subcontracting
-                    within the construction sector. We offer comprehensive solutions for project development, ensuring
+                    within the construction sector. We deliver comprehensive solutions for project development, ensuring
                     quality, efficiency, and adherence to deadlines at every stage.
 
                 </p>
@@ -428,7 +428,7 @@
     <section class="container-3">
         <div class="page-container">
             <div class="content-container-text txt-left">
-                <h1 class="title">Ignite Your Project: Let's Connect!</h1>
+                <h1 class="title">Power Up Your Project: Let's Connect!</h1>
                 <p class="text">
                     At FALCONSTRUCTION SERVICES LLC, we believe every great project begins with a conversation. Our team
                     of dedicated experts is ready to listen to your ideas, answer your questions, and provide innovative
@@ -441,9 +441,9 @@
                 <button class="ver-mas-btn">Contact Us →</button>
             </div>
             <div class="image-container img-right">
-                <div class="image back" style="background-image: url(PImageProject/project-5.jpg);"></div>
-                <img src="PImageProject/project-4.jpg" alt="Image2" class="image middle">
-                <img src="PImageProject/project-6.jpg" alt="Image1" class="image front">
+                <div class="image back" style="background-image: url(PImageInicio/Section_2-1.jpg);"></div>
+                <img src="PImageInicio/Section_2-3.jpg" alt="Image2" class="image middle">
+                <img src="PImageInicio/Section_2-2.jpg" alt="Image1" class="image front">
             </div>
         </div>
     </section>
@@ -453,18 +453,18 @@
         <button class="ver-mas-btn mobile-btn">Our Portfolio →</button>
         <div class="wrapper">
             <div class="items">
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-0.jpg)"></div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-1.jpg)"></div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-2.jpg)"></div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-3.jpg)"></div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-4.jpg)"></div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-5.jpg)"></div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-6.jpg)"></div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-0.jpg)"></div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-1.jpg)"></div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-2.jpg)"></div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-3.jpg)"></div>
-                <div class="item" tabindex="0" style="background-image: url(PImageProject/project-4.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageInicio/Proyect_1-1.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageInicio/Proyect_1-2.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageInicio/Proyect_1-3.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageInicio/Proyect_1-4.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageInicio/Proyect_1-5.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageInicio/Proyect_1-6.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageInicio/Proyect_1-7.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageInicio/Proyect_1-8.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageInicio/Proyect_1-9.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageInicio/Proyect_1-10.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageInicio/Proyect_1-11.jpg)"></div>
+                <div class="item" tabindex="0" style="background-image: url(PImageInicio/Proyect_1-12.jpg)"></div>
             </div>
         </div>
         <button class="ver-mas-btn pc-btn">Our Portfolio →</button>
@@ -473,8 +473,8 @@
     <section class="container-5">
         <div class="particles" id="particles"></div>
         <div class="title-container">
-            <h1 class="title">We offer.</h1>
-            <p class="subtitle">At FALCONSTRUCTION SERVICES LLC, we combine experience, innovation, and commitment to
+            <h1 class="title">We Provide.</h1>
+            <p class="subtitle">In our company, we combine experience, innovation, and commitment to
                 transform your ideas into concrete realities. Discover how our personalized solutions can make a
                 difference at every stage, ensuring quality, efficiency, and exceptional results.</p>
 
@@ -491,7 +491,7 @@
                     <p class="service-desc">We support you from feasibility studies to final supervision, optimizing
                         resources and ensuring on-time delivery. Our strategic guidance transforms challenges into
                         opportunities to maximize the profitability of your investment.</p>
-                    <a href="#arquitectura" class="service-more">Browse services <i class="fas fa-arrow-right"></i></a>
+                    <a href="#arquitectura" class="service-more">Explore services <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="service-card">
@@ -504,7 +504,7 @@
                     <p class="service-desc">We handle every detail from design to delivery to turn your ideas into
                         robust and aesthetically pleasing structures. Our team of experts guarantees precise and
                         efficient execution, delivering high-quality results at every phase of the project.</p>
-                    <a href="#espacios" class="service-more">Browse services <i class="fas fa-arrow-right"></i></a>
+                    <a href="#espacios" class="service-more">Explore services <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="service-card">
@@ -514,11 +514,11 @@
                     </div>
                     <h3 class="service-title">Specialized Workforce Subcontracting</h3>
                     <div class="separator"></div>
-                    <p class="service-desc">We provide highly qualified professionals to deliver impeccable service. We
+                    <p class="service-desc">We are powered by highly qualified experts to deliver outstanding service. We
                         take care of selecting, hiring, and managing specialized personnel, ensuring regulatory
                         compliance and operational excellence in every project.
                     </p>
-                    <a href="#industrial" class="service-more">Browse services <i class="fas fa-arrow-right"></i></a>
+                    <a href="#industrial" class="service-more">Explore services <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
