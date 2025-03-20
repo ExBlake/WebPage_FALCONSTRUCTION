@@ -48,22 +48,16 @@
                                 <span class="platform-badge-banner-services">Subcontracting</span>
                             </div>
                         </div>
-
                         <div class="purchase-section-banner-services">
-                            <div class="price-container-banner-services">
-                                <div class="price-banner-services">
-                                    <span>Everything with us</span>
-                                </div>
-                            </div>
 
                             <p class="subscription-note-banner-services">
-                                At FALCONSTRUCTION SERVICES LLC, we transform ideas into realities. We manage every
+                                We transform ideas into realities. We manage every
                                 phase of the project, from feasibility study to final delivery, ensuring quality,
                                 efficiency, and results that exceed expectations.
                             </p>
 
                             <div class="buttons-banner-services">
-                                <button class="contact-banner-services">Contact Us</button>
+                                <button class="cta-button">Contact Us</button>
                             </div>
                         </div>
                     </div>
@@ -89,7 +83,6 @@
                                 exceptional quality, we create lasting trust and ensure complete satisfaction.
                             </p>
                         </div>
-
 
                         <!-- Columna derecha -->
                         <div class="hero__media">
@@ -149,8 +142,9 @@
                                 <span class="subtitle">S-2 SVS</span>
                                 <h2 class="titulo-services-section">Construction Contracting</h2>
                                 <p class="parrafo-services-section">We execute complete projects as primary contractors,
-                                    from design to final delivery. We specialize in residential and commercial flooring for remodeling, new construction, premium
-                                    interior and exterior finishes, bathrooms, pools,  
+                                    from design to final delivery. We specialize in residential and commercial flooring
+                                    for remodeling, new construction, premium
+                                    interior and exterior finishes, bathrooms, pools,
                                     as well as rigorous quality control and compliance management.</p>
                                 <button class="cta-button">Start Your Project</button>
                             </div>
@@ -173,13 +167,15 @@
                             <div class="content-services-section">
                                 <span class="subtitle">S-3 SVS</span>
                                 <h2 class="titulo-services-section">Specialized Workforce Subcontracting</h2>
-                                <p class="parrafo-services-section">We supply highly skilled personnel for framing and drywall contractors
+                                <p class="parrafo-services-section">We supply highly skilled personnel for framing and
+                                    drywall contractors
                                     who require efficient and reliable execution. We handle the selection, hiring, and
-                                    management of specialized workforce, including payroll and insurance, securing regulatory compliance and reducing administrative burdens.</p>
+                                    management of specialized workforce, including payroll and insurance, securing
+                                    regulatory compliance and reducing administrative burdens.</p>
                                 <button class="cta-button">Power Your Project</button>
                             </div>
                         </div>
-                        
+
                         <div class="timeline-item" data-image="PImageServicios/Service_3.jpg">
                             <div class="icon-circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -190,83 +186,52 @@
                                 </svg>
                             </div>
                             <div class="content-services-section">
-                                <span class="subtitle">L-1 DAYS</span>
-                                <h2 class="titulo-services-section">Adquisición de Propiedades para Flips o
-                                    Renta/Wholesale</h2>
-                                <p class="parrafo-services-section">En Falconstruction, ofrecemos un servicio
-                                    especializado de adquisición de propiedades orientado tanto a inversionistas que
-                                    buscan oportunidades para "flips" (comprar, renovar y vender rápidamente para
-                                    obtener beneficios) como a aquellos interesados en la renta o venta al por mayor
-                                    (wholesale). Gracias a nuestra vasta experiencia y conocimiento del mercado
-                                    inmobiliario, identificamos propiedades con un alto potencial de retorno de
-                                    inversión.</p>
-                                <button class="cta-button">Prepare for Launch</button>
-                            </div>
-                            <div class="content-services-section">
-                                <br><br><br><br><br><br><br><br><br><br>
+                                <span class="subtitle">Contact Us</span>
+                                <h2 class="titulo-services-section">Get in Touch Quickly and Hassle-Free!</h2>
+                                <p class="parrafo-services-section">Have questions or need assistance? We're here to
+                                    respond as fast as possible. Reach out to us and get the information you
+                                    need quickly and easily. Your solution is just a message away! </p>
+                                <button class="cta-button">Contact Us Now!</button>
                             </div>
                         </div>
                     </div>
 
                 </div>
+                <!-- Container of the images -->
                 <div class="image-container" id="image-container">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zH04rGA73bITXkpags0NsGAUvolSqH.png"
-                        alt="Timeline Image" id="timeline-image">
+                    <img src="PImageResource/logoBlue.png" alt="Timeline Image" id="timeline-image">
                 </div>
 
                 <div class="slider-container" id="slider-container">
                     <div class="slider">
                         <div class="slide">
-                            <img src="PImageProject/project-6.jpg" alt="Meeting room" class="slide-image">
-                            <h2 class="slide-title">Adquisición de Propiedades para Flips o
-                                Renta/Wholesale</h2>
-                            <p class="slide-description">En Falconstruction, ofrecemos un servicio
-                                especializado de adquisición de propiedades orientado tanto a inversionistas que
-                                buscan oportunidades para "flips" (comprar, renovar y vender rápidamente para
-                                obtener beneficios) como a aquellos interesados en la renta o venta al por mayor
-                                (wholesale). Gracias a nuestra vasta experiencia y conocimiento del mercado
-                                inmobiliario, identificamos propiedades con un alto potencial de retorno de
-                                inversión.</p>
-                            <button class="cta-button">Prepare for Launch</button>
+                            <img src="PImageServicios/Service_1.jpg" alt="Meeting room" class="slide-image">
+                            <h2 class="slide-title">Project Consulting and Management</h2>
+                            <p class="slide-description">We provide advisory and comprehensive project
+                                management, covering financial feasibility studies, strategic planning, budgeting
+                                and cost control, permits and regulations management, and on-site supervision to
+                                ensure efficient and optimized execution.</p>
+                            <button class="cta-button">Get Ready</button>
                         </div>
                         <div class="slide">
-                            <img src="PImageProject/project-5.jpg" alt="Training" class="slide-image">
-                            <h2 class="slide-title">Adquisición de Propiedades para Flips o
-                                Renta/Wholesale</h2>
-                            <p class="slide-description">En Falconstruction, ofrecemos un servicio
-                                especializado de adquisición de propiedades orientado tanto a inversionistas que
-                                buscan oportunidades para "flips" (comprar, renovar y vender rápidamente para
-                                obtener beneficios) como a aquellos interesados en la renta o venta al por mayor
-                                (wholesale). Gracias a nuestra vasta experiencia y conocimiento del mercado
-                                inmobiliario, identificamos propiedades con un alto potencial de retorno de
-                                inversión.</p>
-                            <button class="cta-button">Prepare for Launch</button>
+                            <img src="PImageServicios/Service_2.jpg" alt="Training" class="slide-image">
+                            <h2 class="slide-title">Construction Contracting</h2>
+                            <p class="slide-description">We execute complete projects as primary contractors,
+                                from design to final delivery. We specialize in residential and commercial flooring
+                                for remodeling, new construction, premium
+                                interior and exterior finishes, bathrooms, pools,
+                                as well as rigorous quality control and compliance management.</p>
+                            <button class="cta-button">Start Your Project</button>
                         </div>
                         <div class="slide">
-                            <img src="PImageProject/project-3.jpg" alt="Equipment" class="slide-image">
-                            <h2 class="slide-title">Adquisición de Propiedades para Flips o
-                                Renta/Wholesale</h2>
-                            <p class="slide-description">En Falconstruction, ofrecemos un servicio
-                                especializado de adquisición de propiedades orientado tanto a inversionistas que
-                                buscan oportunidades para "flips" (comprar, renovar y vender rápidamente para
-                                obtener beneficios) como a aquellos interesados en la renta o venta al por mayor
-                                (wholesale). Gracias a nuestra vasta experiencia y conocimiento del mercado
-                                inmobiliario, identificamos propiedades con un alto potencial de retorno de
-                                inversión.</p>
-                            <button class="cta-button">Prepare for Launch</button>
-                        </div>
-                        <div class="slide">
-                            <img src="PImageProject/project-4.jpg" alt="Final" class="slide-image">
-                            <h2 class="slide-title">Adquisición de Propiedades para Flips o
-                                Renta/Wholesale</h2>
-                            <p class="slide-description">En Falconstruction, ofrecemos un servicio
-                                especializado de adquisición de propiedades orientado tanto a inversionistas que
-                                buscan oportunidades para "flips" (comprar, renovar y vender rápidamente para
-                                obtener beneficios) como a aquellos interesados en la renta o venta al por mayor
-                                (wholesale). Gracias a nuestra vasta experiencia y conocimiento del mercado
-                                inmobiliario, identificamos propiedades con un alto potencial de retorno de
-                                inversión.</p>
-                            <button class="cta-button">Prepare for Launch</button>
+                            <img src="PImageServicios/Service_3.jpg" alt="Equipment" class="slide-image">
+                            <h2 class="slide-title">Specialized Workforce Subcontracting</h2>
+                            <p class="slide-description">We supply highly skilled personnel for framing and
+                                drywall contractors
+                                who require efficient and reliable execution. We handle the selection, hiring, and
+                                management of specialized workforce, including payroll and insurance, securing
+                                regulatory compliance and reducing administrative burdens.</p>
+                            <button class="cta-button">Power Your Project</button>
                         </div>
                     </div>
                     <div class="dots"></div>
@@ -278,7 +243,8 @@
             <div class="contacts-banner-promo-card">
                 <div class="contacts-banner-gradient-blob"></div>
                 <div class="contacts-banner-content">
-                    <h1 class="contacts-banner-title" id="contacts-title">BUILD THE FUTURE: CONNECT WITH US TODAY AND TURN YOUR VISION INTO REALITY!</h1>
+                    <h1 class="contacts-banner-title" id="contacts-title">BUILD THE FUTURE: CONNECT WITH US TODAY AND
+                        TURN YOUR VISION INTO REALITY!</h1>
                 </div>
                 <button class="cta-button luxurious-button">¡Contáctanos!</button>
             </div>
