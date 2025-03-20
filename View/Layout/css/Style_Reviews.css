@@ -838,30 +838,7 @@ body {
     }
 }
 
-/* Efectos para los enlaces */
-a {
-    transition: all 0.3s ease;
-    position: relative;
-}
 
-a:hover {
-    color: var(--primary);
-}
-
-a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--primary);
-    transition: width 0.3s ease;
-}
-
-a:hover::after {
-    width: 100%;
-}
 
 /* Efectos para el scroll container */
 .mouse-icon {
