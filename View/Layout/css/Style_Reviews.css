@@ -18,6 +18,11 @@
   --font-type: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+@font-face {
+  font-family: 'Century Gothic';
+  src: local('Century Gothic');
+}
+
 /* ***************************** */
 /* Estilos Generales */
 /* ***************************** */
@@ -25,6 +30,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Century Gothic', system-ui, sans-serif;
 }
 
 body {

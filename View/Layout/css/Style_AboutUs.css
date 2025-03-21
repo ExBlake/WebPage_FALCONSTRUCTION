@@ -19,14 +19,19 @@
     --clr-cta: rgb(175, 208, 84);
 }
 
+@font-face {
+    font-family: 'Century Gothic';
+    src: local('Century Gothic');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Century Gothic', system-ui, sans-serif;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
     color: var(--text-color);
     min-height: 100vh;
     overflow-x: hidden;
@@ -764,7 +769,6 @@ p:hover {
 .banner-container-about-us {
     padding: 3rem 1rem;
     text-align: center;
-    font-family: system-ui, -apple-system, sans-serif;
 }
 
 .main-heading-about-us {
@@ -806,7 +810,6 @@ p:hover {
     min-height: 600px;
     display: flex;
     align-items: center;
-    font-family: system-ui, -apple-system, sans-serif;
     overflow: hidden;
 }
 
@@ -922,7 +925,6 @@ p:hover {
     position: relative;
     min-height: 100vh;
     display: flex;
-    font-family: system-ui, -apple-system, sans-serif;
     background-color: white;
 }
 
@@ -1032,8 +1034,6 @@ p:hover {
     /* background image default blur */
     --bg-blur-hover: 20px;
     /* background image blur on hover */
-
-    font-family: 'Roboto', sans-serif;
     display: grid;
     grid-template-columns: repeat(var(--grid-cols, 1), var(--size));
     gap: 2rem;
@@ -1154,7 +1154,6 @@ em {
 /* Sección 5 start */
 .steps-section-about-us {
     padding: 6rem 1.5rem;
-    font-family: system-ui, -apple-system, sans-serif;
 }
 
 .container-about-us {
@@ -1256,7 +1255,6 @@ em {
     overflow: hidden;
     display: flex;
     align-items: center;
-    font-family: system-ui, -apple-system, sans-serif;
 }
 
 .container-aa-about-us {
@@ -1392,7 +1390,6 @@ em {
 /* Sección 7 start */
 .philosophy-section-about-us {
     padding: 6rem 1.5rem;
-    font-family: system-ui, -apple-system, sans-serif;
     min-height: 100vh;
 }
 
@@ -1497,7 +1494,7 @@ em {
 /* Sección 7 end */
 
 /* Estilos para los modales */
-.modal {
+/* .modal {
     display: none;
     position: fixed;
     top: 0;
@@ -1505,15 +1502,13 @@ em {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
+    z-index: 9999 !important;
     backdrop-filter: blur(5px);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     justify-content: center;
-    /* Añadido */
     align-items: center;
-    /* Añadido */
 }
 
 .modal.show-users {
@@ -1522,9 +1517,11 @@ em {
 }
 
 .modal-content {
-    position: relative;
     background: linear-gradient(135deg, #041b3a 0%, #000000 100%);
     padding: 30px;
+    height: 80%;
+    max-height: 700px;
+    z-index: 99;
     width: 90%;
     max-width: 800px;
     border-radius: 20px;
@@ -1631,9 +1628,9 @@ em {
         width: 100%;
         max-height: 250px;
         object-fit: cover;
-        /* Mantiene la proporción y recorta la imagen */
+        /* Mantiene la proporción y recorta la imagen 
         object-position: center;
-        /* Centra la imagen dentro del contenedor */
+        /* Centra la imagen dentro del contenedor 
     }
 
     .modal-content {
@@ -1641,7 +1638,7 @@ em {
         width: 80%;
         padding: 20px;
     }
-}
+} */
 
 /* Animaciones globales para todos los elementos principales */
 .banner-container-about-us,

@@ -24,8 +24,14 @@
   --background-color: #0a0118;
 }
 
+@font-face {
+  font-family: 'Century Gothic';
+  src: local('Century Gothic');
+}
+
 body,
 html {
+  font-family: 'Century Gothic', system-ui, sans-serif;
   margin: 0;
   padding: 0;
   overflow: hidden;

@@ -14,14 +14,20 @@
     --border: #1f2937;
 }
 
+@font-face {
+    font-family: 'Century Gothic';
+    src: local('Century Gothic');
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Century Gothic', system-ui, sans-serif;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
     color: var(--text-color);
     min-height: 100vh;
     overflow-x: hidden;
@@ -1125,7 +1131,6 @@ p:hover {
     margin-top: 25px;
     position: relative;
     overflow: hidden;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);

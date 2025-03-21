@@ -21,7 +21,7 @@
 
 <body>
     <?php
-        require_once 'Layout/Header.php';
+    require_once 'Layout/Header.php';
     ?>
     <div class="parallax-container">
         <section class="parallax-section hero-section">
@@ -102,7 +102,8 @@
                                 the initial planning stage to the execution of new constructions and remodels.
                             </p>
                             <p class="description-about-us">
-                                Our expertise covers both residential and commercial interior and exterior finishes, including drywall, flooring, bathrooms,
+                                Our expertise covers both residential and commercial interior and exterior finishes,
+                                including drywall, flooring, bathrooms,
                                 and swimming pools. We pride ourselves on delivering reliable, efficient, and
                                 high-quality service, ensuring that every project is completed on time and within
                                 budget.
@@ -162,94 +163,119 @@
 
             <h2 class="title-about-us" style="text-align: center; margin-top: 100px;">Our Professional Team</h2>
 
-            <section class="profiles" style="display: flex; flex-wrap: wrap; justify-content: center; margin: 40px">
+            <section class="profiles"
+                style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin: 40px auto; max-width: 1200px;">
+
+
+                <style>
+                    .modal {
+                        display: none;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: rgba(0, 0, 0, 0.75);
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 1000;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: opacity 0.3s ease, visibility 0.3s ease;
+                    }
+
+                    /* Cuando se muestra el modal, se añade la clase "show-users" */
+                    .modal.show-users {
+                        display: flex;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    .modal-content {
+                        background-color: #18181b;
+                        color: #e4e4e7;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        width: 100%;
+                        max-width: 500px;
+                        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+                        transform: translateY(20px);
+                        transition: transform 0.3s ease;
+                        position: relative;
+                    }
+
+                    /* Al mostrar el modal, la animación hace que el contenido se desplace a su posición final */
+                    .modal.show-users .modal-content {
+                        transform: translateY(0);
+                    }
+
+                    .modal-image img {
+                        width: 100%;
+                        height: 280px;
+                        object-fit: cover;
+                    }
+
+                    .modal-info {
+                        padding: 24px;
+                    }
+
+                    .modal-info h3 {
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: white;
+                        margin-bottom: 16px;
+                    }
+
+                    .role {
+                        font-size: 18px;
+                        margin-bottom: 16px;
+                        color: #a1a1aa;
+                    }
+
+                    .info-details p {
+                        font-size: 14px;
+                        margin-bottom: 4px;
+                        color: #a1a1aa;
+                    }
+
+                    .close-modal {
+                        position: absolute;
+                        top: 16px;
+                        right: 16px;
+                        background-color: rgba(24, 24, 27, 0.7);
+                        border: none;
+                        color: white;
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        font-size: 18px;
+                    }
+
+                    .close-modal:hover {
+                        background-color: rgba(39, 39, 42, 0.9);
+                    }
+                </style>
+
+
+                <!-- Código HTML de Avatares y Modal (se mantiene la estructura original de los avatares) -->
                 <div class="avatar" style="--bg-img:url(PImageNosotros/FondoFelipeHernandez.jpg)">
                     <div class="avatar-img">
-                        <img src="PImageNosotros/FelipeHernandez.png">
+                        <img src="PImageNosotros/FelipeHernandez.png" alt="Juan Felipe">
                     </div>
                     <p>Juan Felipe</p>
                 </div>
 
-                <!-- 1 Modal - 'Juan Felipe Hernandez Zapata' -->
-                <div id="modal-1" class="modal">
-                    <div class="modal-content">
-                        <span class="close-modal">&times;</span>
-                        <div class="modal-body">
-                            <div class="modal-image">
-                                <img src="PImageUsers/fotofelipe.png" alt="Andrés Martínez">
-                            </div>
-                            <div class="modal-info">
-                                <h3>Andrés Martínez</h3>
-                                <p class="role">Director de Proyectos</p>
-                                <div class="info-details">
-                                    <p><strong>Nombre completo:</strong> Andrés Felipe Martínez Rodríguez</p>
-                                    <p><strong>Edad:</strong> 35 años</p>
-                                    <p><strong>Experiencia:</strong> 12 años en el sector construcción</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 1 Modal - 'Juan Felipe Hernandez Zapata' -->
 
 
                 <div class="avatar" style="--bg-img:url(PImageNosotros/FondoJuanCamilo.jpg)">
                     <div class="avatar-img">
-                        <img src="PImageNosotros/JuanCamilo.png">
+                        <img src="PImageNosotros/JuanCamilo.png" alt="Juan Camilo">
                     </div>
                     <p>Juan Camilo</p>
                 </div>
 
-                <!-- 2 Modal - 'Juan Camilo' -->
-                <div id="modal-2" class="modal">
-                    <div class="modal-content">
-                        <span class="close-modal">&times;</span>
-                        <div class="modal-body">
-                            <div class="modal-image">
-                                <img src="PImageNosotros/JuanCamilo.png" alt="Laura Gómez">
-                            </div>
-                            <div class="modal-info">
-                                <h3>Laura Gómez</h3>
-                                <p class="role">Directora de Proyectos</p>
-                                <div class="info-details">
-                                    <p><strong>Nombre completo:</strong>Laura Daniela Úzuga Gómez</p>
-                                    <p><strong>Edad:</strong> 30 años</p>
-                                    <p><strong>Experiencia:</strong> 10 años en el sector construcción</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 2 Modal - 'Laura Gómez' -->
 
-                <div class="avatar" style="--bg-img:url(PImageUsers/fondo3.jpg)">
-                    <div class="avatar-img">
-                        <img src="PImageUsers/fotofelipe.png">
-                    </div>
-                    <p>Javier López</p>
-                </div>
-
-                <!-- 3 Modal - 'Javier López' -->
-                <div id="modal-3" class="modal">
-                    <div class="modal-content">
-                        <span class="close-modal">&times;</span>
-                        <div class="modal-body">
-                            <div class="modal-image">
-                                <img src="PImageUsers/fotofelipe.png" alt="Javier López">
-                            </div>
-                            <div class="modal-info">
-                                <h3>Javier López</h3>
-                                <p class="role">Director de Proyectos</p>
-                                <div class="info-details">
-                                    <p><strong>Nombre completo:</strong>Javier Londoño López</p>
-                                    <p><strong>Edad:</strong> 40 años</p>
-                                    <p><strong>Experiencia:</strong> 20 años en el sector construcción</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 3 Modal - 'Javier López' -->
 
             </section>
 
@@ -366,16 +392,58 @@
 
         </div>
 
+        <!-- 1 Modal - 'Juan Felipe Hernandez Zapata' -->
+        <div id="modal-1" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img src="PImageUsers/fotofelipe.png" alt="Andrés Martínez">
+                    </div>
+                    <div class="modal-info">
+                        <h3>Andrés Martínez</h3>
+                        <p class="role">Director de Proyectos</p>
+                        <div class="info-details">
+                            <p><strong>Nombre completo:</strong> Andrés Felipe Martínez Rodríguez</p>
+                            <p><strong>Edad:</strong> 35 años</p>
+                            <p><strong>Experiencia:</strong> 12 años en el sector construcción</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 Modal - 'Juan Camilo' -->
+        <div id="modal-2" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img src="PImageNosotros/JuanCamilo.png" alt="Laura Gómez">
+                    </div>
+                    <div class="modal-info">
+                        <h3>Laura Gómez</h3>
+                        <p class="role">Directora de Proyectos</p>
+                        <div class="info-details">
+                            <p><strong>Nombre completo:</strong> Laura Daniela Úzuga Gómez</p>
+                            <p><strong>Edad:</strong> 30 años</p>
+                            <p><strong>Experiencia:</strong> 10 años en el sector construcción</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <section class="BannerEnd-Portfolio">
             <?php
-                require_once 'Layout/BannerEnd.php';
+            require_once 'Layout/BannerEnd.php';
             ?>
         </section>
 
         <div id="cursor-effect"></div>
         <?php
-            require_once 'Layout/FloatingButton.php';
-            require_once 'Layout/Footer.php';
+        require_once 'Layout/FloatingButton.php';
+        require_once 'Layout/Footer.php';
         ?>
         <!-- Banner Final -->
         <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script>

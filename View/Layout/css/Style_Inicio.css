@@ -3013,7 +3013,7 @@ body {
 /* Responsive para celulares*/
 @media (max-width: 768px) {
   .h11 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .h11 p {
@@ -3181,6 +3181,13 @@ body {
 
 .ver-mas-btn:active {
   transform: translateY(0);
+}
+
+.carousel-dots {
+  display: none; /* Oculto por defecto */
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
 }
 
 /* Ajustes responsive para el botón */
@@ -3369,21 +3376,41 @@ body {
   }
 
   .item {
-    width: 75vw;
-    height: 57vw;
+    width: 90vw;
+    height: 80vw;
     flex-shrink: 0;
     scroll-snap-align: center;
     border-radius: 12px;
-    /* Bordes redondeados */
     transition: transform 0.3s ease-in-out;
     margin: 0 5px;
-    /* Espaciado entre imágenes */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .items .item:hover,
   .items .item:focus {
     transform: scale(1.05);
   }
+
+  /* Dots indicator */
+  .carousel-dots {
+    display: flex; /* Se muestra solo en móvil */
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.2);
+}
 }
 
 

@@ -243,7 +243,6 @@ body {
     border-radius: 1rem;
     color: var(--paragraphs);
     font-size: 1rem;
-    font-family: var(--font-type);
     transition: all 0.3s ease;
 }
 

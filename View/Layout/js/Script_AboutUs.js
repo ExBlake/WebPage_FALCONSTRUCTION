@@ -72,60 +72,68 @@ document.addEventListener('DOMContentLoaded', () => {
 /* Script para el scrolling parallax */
 /*************************************/
 
+
+/*************************************/
+/* Script para el modal de avatares  */
+/*************************************/
+
 document.addEventListener('DOMContentLoaded', function () {
-    // Modificar los avatares para agregar el evento click
+    // Asignar evento click a cada avatar para abrir su modal correspondiente
     const avatars = document.querySelectorAll('.avatar');
 
     avatars.forEach((avatar, index) => {
-        // El índice + 1 corresponderá al número del modal
-        const modalId = `modal-${index + 1}`;
+      // El índice + 1 se usa para identificar el modal (modal-1, modal-2, etc.)
+      const modalId = `modal-${index + 1}`;
 
-        avatar.addEventListener('click', () => {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.style.display = 'flex'; // Cambiado de 'block' a 'flex'
-                modal.classList.add('show-users'); // Añadimos la clase show
-                document.body.style.overflow = 'hidden';
-            }
-        });
+      avatar.addEventListener('click', () => {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.style.display = 'flex'; // Se utiliza 'flex' para centrar el modal
+          modal.classList.add('show-users'); // Se añade la clase para activar la animación y visibilidad
+          document.body.style.overflow = 'hidden'; // Evitar scroll en el body mientras el modal está abierto
+        }
+      });
     });
 
-    // Cerrar modales
+    // Cerrar modales al hacer click en el botón de cierre
     const closeButtons = document.querySelectorAll('.close-modal');
     closeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const modal = button.closest('.modal');
-            modal.classList.remove('show-users'); // Removemos la clase show
-            setTimeout(() => {
-                modal.style.display = 'none';
-            }, 300); // Esperar a que termine la animación
-            document.body.style.overflow = 'auto';
-        });
+      button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        modal.classList.remove('show-users'); // Remover la clase para iniciar la animación de cierre
+        setTimeout(() => {
+          modal.style.display = 'none';
+        }, 300); // Se espera a que termine la animación (300ms)
+        document.body.style.overflow = 'auto';
+      });
     });
 
-    // Cerrar modal al hacer click fuera
+    // Cerrar modal al hacer click fuera del contenido del modal
     window.addEventListener('click', (e) => {
-        if (e.target.classList.contains('modal')) {
-            const modal = e.target;
-            modal.classList.remove('show-users');
-            setTimeout(() => {
-                modal.style.display = 'none';
-            }, 300);
-            document.body.style.overflow = 'auto';
-        }
+      if (e.target.classList.contains('modal')) {
+        const modal = e.target;
+        modal.classList.remove('show-users');
+        setTimeout(() => {
+          modal.style.display = 'none';
+        }, 300);
+        document.body.style.overflow = 'auto';
+      }
     });
 
-    // Cerrar modal con tecla ESC
+    // Cerrar modal con la tecla ESC
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            const modals = document.querySelectorAll('.modal');
-            modals.forEach(modal => {
-                modal.classList.remove('show-users');
-                setTimeout(() => {
-                    modal.style.display = 'none';
-                }, 300);
-            });
-            document.body.style.overflow = 'auto';
-        }
+      if (e.key === 'Escape') {
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+          modal.classList.remove('show-users');
+          setTimeout(() => {
+            modal.style.display = 'none';
+          }, 300);
+        });
+        document.body.style.overflow = 'auto';
+      }
     });
-});
+  });
+/*************************************/
+/* Script para el modal de avatares  */
+/*************************************/

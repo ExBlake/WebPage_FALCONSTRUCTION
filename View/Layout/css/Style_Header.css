@@ -7,6 +7,15 @@
     --color-highlight-header: #7c8c8c;
 }
 
+@font-face {
+    font-family: 'Century Gothic';
+    src: local('Century Gothic');
+}
+
+* {
+    font-family: 'Century Gothic', system-ui, sans-serif;
+}
+
 /* ***************************** */
 /* Animaciones */
 /* ***************************** */

@@ -468,6 +468,57 @@
             </div>
         </div>
         <button class="ver-mas-btn pc-btn">Our Portfolio →</button>
+
+<!-- Reemplaza el div carousel-dots actual con este -->
+<div class="carousel-dots"></div>
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <!-- Agrega más dots según la cantidad de imágenes -->
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth <= 1024) {
+        const items = document.querySelector('.items');
+        const dotsContainer = document.querySelector('.carousel-dots');
+        
+        // Obtener todas las imágenes del carrusel
+        const totalItems = items.querySelectorAll('.item').length;
+        
+        // Generar los puntos dinámicamente
+        for (let i = 0; i < totalItems; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dotsContainer.appendChild(dot);
+        }
+
+        const dots = document.querySelectorAll('.dot');
+        
+        items.addEventListener('scroll', function() {
+            const scrollPosition = items.scrollLeft;
+            const itemWidth = items.querySelector('.item').offsetWidth;
+            const activeIndex = Math.round(scrollPosition / itemWidth);
+            
+            // Actualizar estado activo de los puntos
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === activeIndex);
+            });
+        });
+
+        // Agregar funcionalidad de clic a los puntos
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                const itemWidth = items.querySelector('.item').offsetWidth;
+                items.scrollTo({
+                    left: itemWidth * index,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    }
+});
+</script>
     </section>
 
     <section class="container-5">

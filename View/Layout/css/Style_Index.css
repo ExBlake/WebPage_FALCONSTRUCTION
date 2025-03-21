@@ -11,9 +11,15 @@
     --color-background: #FAFAFA;
 }
 
+@font-face {
+    font-family: 'Century Gothic';
+    src: local('Century Gothic');
+}
+
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Century Gothic', system-ui, sans-serif;
 }
 
 body {
