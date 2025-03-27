@@ -302,11 +302,12 @@
                     </div>
                     <div class="modal-info">
                         <h3>GABRIELLE WEE</h3>
-                        <p class="profile-bio">Diseñadora UI/UX apasionada por crear experiencias digitales intuitivas y
+                        <p class="profile-bio">Diseñadora UI/UX apasionada por crear experiencias digitales
+                            intuitivas y
                             atractivas. Especializada en interfaces minimalistas con gran impacto visual.</p>
                         <div class="profile-tags">
-                        <button class="ver-mas-btn">Our Portfolio →</button>
-                        <button class="ver-mas-btn">Our Portfolio →</button>
+                            <button class="ver-mas-btn">Our Portfolio →</button>
+                            <button class="ver-mas-btn">Our Portfolio →</button>
                         </div>
                     </div>
                 </div>
@@ -316,7 +317,7 @@
         <!-- 2 Modal - 'Juan Camilo' -->
         <div id="modal-2" class="modal">
 
-        <div class="modal-content">
+            <div class="modal-content">
                 <span class="close-modal">&times;</span>
                 <div class="modal-body">
                     <div class="modal-image">
@@ -324,11 +325,12 @@
                     </div>
                     <div class="modal-info">
                         <h3>GABRIELLE WEE</h3>
-                        <p class="profile-bio">Diseñadora UI/UX apasionada por crear experiencias digitales intuitivas y
+                        <p class="profile-bio">Diseñadora UI/UX apasionada por crear experiencias digitales
+                            intuitivas y
                             atractivas. Especializada en interfaces minimalistas con gran impacto visual.</p>
                         <div class="profile-tags">
-                        <button class="ver-mas-btn">Our Portfolio →</button>
-                        <button class="ver-mas-btn">Our Portfolio →</button>
+                            <button class="ver-mas-btn">Our Portfolio →</button>
+                            <button class="ver-mas-btn">Our Portfolio →</button>
                         </div>
                     </div>
                 </div>

@@ -38,6 +38,7 @@ body {
     background: linear-gradient(135deg, #041b3a 0%, #000000 100%);
     background-blend-mode: overlay;
 }
+
 .video-and-content {
     display: flex;
     align-items: center;
@@ -843,7 +844,7 @@ p:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .content-about-us {
@@ -1493,154 +1494,21 @@ em {
 
 /* Sección 7 end */
 
-/* Estilos para los modales */
-/* .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 9999 !important;
-    backdrop-filter: blur(5px);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal.show-users {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content {
-    background: linear-gradient(135deg, #041b3a 0%, #000000 100%);
-    padding: 30px;
-    height: 80%;
-    max-height: 700px;
-    z-index: 99;
-    width: 90%;
-    max-width: 800px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
-    transform: translateY(-20px);
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.modal.show-users .modal-content {
-    transform: translateY(0);
-    opacity: 1;
-    z-index: 5;
-}
-
-.modal-body {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-}
-
-.modal-image {
-    flex: 0 0 300px;
-}
-
-.modal-image img {
-    width: 100%;
-    max-height: 350px;
-    border-radius: 15px;
-    background: black;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.modal-info {
-    flex: 1;
-    color: #ffffff;
-    margin-top: 50px;
-}
-
-.modal-info h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: var(--text-color-titles);
-}
-
-.role {
-    font-size: 1.2rem;
-    color: #3b82f6;
-    margin-bottom: 20px;
-}
-
-.info-details {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.info-details p {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-.close-modal {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    color: #ffffff;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.close-modal:hover {
-    color: #FFE600;
-}
-
-@keyframes modalFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    .modal-body {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .modal-image {
-        flex: 0 0 auto;
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-
-    .modal-image img {
-        width: 100%;
-        max-height: 250px;
-        object-fit: cover;
-        /* Mantiene la proporción y recorta la imagen 
-        object-position: center;
-        /* Centra la imagen dentro del contenedor 
-    }
-
-    .modal-content {
-        margin: 10% auto;
-        width: 80%;
-        padding: 20px;
-    }
-} */
-
 /* Animaciones globales para todos los elementos principales */
+
+/* Títulos */
+
+.main-heading-about-us,
+h1.heading-about-us,
+.title-about-us {
+    color: var(--text-color);
+    text-shadow: 0 0 10px rgba(0, 124, 220, 0.5),
+                 0 0 20px rgba(0, 124, 220, 0.3),
+                 0 0 30px rgba(0, 124, 220, 0.1);
+}
+
+/* Títulos */
+
 .banner-container-about-us,
 .savings-section-about-us,
 .security-section-about-us,
@@ -1817,46 +1685,167 @@ em {
     box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
 }
 
-/* Modificar los efectos hover para crear efecto neón */
-
-/* Efectos hover para títulos */
+/* Remover efectos neón anteriores */
 .main-heading-about-us:hover,
 .heading-about-us:hover,
-.title-about-us {
-    transform: scale(1.02);
-    color: #ffffff;
-    text-shadow: 0 0 10px var(--text-color-titles),
-                 0 0 20px var(--text-color-titles),
-                 0 0 30px var(--text-color-titles);
-}
-
-/* Efectos para elementos de la lista */
+.title-about-us:hover,
 .benefits-list-about-us li:hover,
-.security-list-about-us li:hover {
-    transform: translateX(10px);
-    padding-left: 1rem;
-    color: #ffffff;
-    text-shadow: 0 0 8px var(--text-color-titles),
-                 0 0 15px var(--text-color-titles);
-}
-
-/* Modificar cualquier otro elemento que use color: var(--text-color-titles) en hover */
-h1,
-h2,
+.security-list-about-us li:hover,
+h1:hover,
+h2:hover,
 .subtitle-about-us:hover,
 .philosophy-card-about-us:hover .card-title-about-us,
 .step-card-about-us:hover .step-title-about-us {
-    color: #ffffff;
-    text-shadow: 0 0 10px var(--text-color-titles),
-                 0 0 20px var(--text-color-titles),
-                 0 0 30px var(--text-color-titles);
+    text-shadow: none;
+    color: inherit;
 }
 
-/* Para elementos con fondo que necesiten el efecto neón */
-.floating-content:hover,
-.card-content:hover {
-    box-shadow: 0 0 15px var(--text-color-titles),
-                0 0 30px var(--text-color-titles);
+/* Efectos de aparición en scroll */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efectos sutiles para títulos */
+.main-heading-about-us,
+.heading-about-us,
+.title-about-us {
+    transition: transform 0.3s ease;
+}
+
+.main-heading-about-us:hover,
+.heading-about-us:hover,
+.title-about-us:hover {
+    transform: translateY(-3px);
+}
+
+/* Efectos refinados para cards */
+.philosophy-card-about-us {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+        box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.philosophy-card-about-us:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto suave para imágenes */
+.background-left-about-us,
+.image-side-about-us {
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.background-left-about-us:hover,
+.image-side-about-us:hover {
+    transform: scale(1.02);
+}
+
+/* Efectos para elementos de lista */
+.benefits-list-about-us li,
+.security-list-about-us li {
+    transition: transform 0.3s ease, padding-left 0.3s ease;
+    position: relative;
+}
+
+.benefits-list-about-us li:hover,
+.security-list-about-us li:hover {
+    transform: translateX(8px);
+    padding-left: 0.5rem;
+}
+
+.benefits-list-about-us li::before,
+.security-list-about-us li::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color-titles);
+    transition: width 0.3s ease;
+}
+
+.benefits-list-about-us li:hover::before,
+.security-list-about-us li:hover::before {
+    width: 15px;
+}
+
+/* Efecto de revelación para secciones */
+.section-reveal {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.section-reveal.reveal {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Efecto para buttons */
+.cta-button-about-us {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button-about-us:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.cta-button-about-us:hover:before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Efecto para floating-content */
+.floating-content {
+    transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1),
+        box-shadow 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.floating-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Animación suave para avatares */
+.avatar {
+    transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.avatar:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* ScrollTrigger para elementos */
+[data-scroll] {
+    opacity: 0;
+    transition: all 1s;
+}
+
+[data-scroll="in"] {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-scroll="out"] {
+    opacity: 0;
+    transform: translateY(100px);
 }
 
 /*************************************************/
@@ -1865,20 +1854,26 @@ h2,
 
 .modal-content {
     background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 21, 36, 0.979) 100%);
-    position: fixed; /* Cambiar de margin a position:fixed */
+    position: fixed;
+    /* Cambiar de margin a position:fixed */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centrado perfecto */
+    transform: translate(-50%, -50%);
+    /* Centrado perfecto */
     max-width: 800px;
     max-height: 400px;
-    width: 90%; /* Responsive */
+    width: 90%;
+    /* Responsive */
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    z-index: 1001; /* Asegurar que está por encima del overlay */
+    z-index: 1001;
+    /* Asegurar que está por encima del overlay */
 }
+
 .modal {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -1886,10 +1881,12 @@ h2,
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
+    display: flex; /* Ya no es 'none' para evitar problemas */
     justify-content: center;
     align-items: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+
 
 .close-modal {
     color: #aaa;
@@ -2015,11 +2012,11 @@ h2,
         flex-direction: column;
         height: auto;
     }
-    
+
     .modal-image {
         height: 300px;
     }
-    
+
     .modal-info {
         padding: 20px;
     }
@@ -2042,9 +2039,9 @@ h2,
     font-weight: 300;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-  }
-  
-  .ver-mas-btn::before {
+}
+
+.ver-mas-btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -2052,26 +2049,26 @@ h2,
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, z transparent,
-        rgba(59, 130, 246, 0.1),
-        transparent);
+            rgba(59, 130, 246, 0.1),
+            transparent);
     transition: left 0.7s ease;
-  }
-  
-  .ver-mas-btn:hover {
+}
+
+.ver-mas-btn:hover {
     background: rgba(59, 130, 246, 0.05);
     border-color: rgba(59, 130, 246, 0.3);
     color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(59, 130, 246, 0.1);
-  }
-  
-  .ver-mas-btn:hover::before {
+}
+
+.ver-mas-btn:hover::before {
     left: 100%;
-  }
-  
-  .ver-mas-btn:active {
+}
+
+.ver-mas-btn:active {
     transform: translateY(0);
-  }
+}
 
 
 /************************************************/

@@ -78,62 +78,72 @@ document.addEventListener('DOMContentLoaded', () => {
 /*************************************/
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Asignar evento click a cada avatar para abrir su modal correspondiente
-    const avatars = document.querySelectorAll('.avatar');
+  console.log('Script de modal cargado');
 
-    avatars.forEach((avatar, index) => {
-      // El índice + 1 se usa para identificar el modal (modal-1, modal-2, etc.)
-      const modalId = `modal-${index + 1}`;
-
-      avatar.addEventListener('click', () => {
-        const modal = document.getElementById(modalId);
-        if (modal) {
-          modal.style.display = 'flex'; // Se utiliza 'flex' para centrar el modal
-          modal.classList.add('show-users'); // Se añade la clase para activar la animación y visibilidad
-          document.body.style.overflow = 'hidden'; // Evitar scroll en el body mientras el modal está abierto
-        }
-      });
-    });
-
-    // Cerrar modales al hacer click en el botón de cierre
-    const closeButtons = document.querySelectorAll('.close-modal');
-    closeButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const modal = button.closest('.modal');
-        modal.classList.remove('show-users'); // Remover la clase para iniciar la animación de cierre
-        setTimeout(() => {
-          modal.style.display = 'none';
-        }, 300); // Se espera a que termine la animación (300ms)
-        document.body.style.overflow = 'auto';
-      });
-    });
-
-    // Cerrar modal al hacer click fuera del contenido del modal
-    window.addEventListener('click', (e) => {
-      if (e.target.classList.contains('modal')) {
-        const modal = e.target;
-        modal.classList.remove('show-users');
-        setTimeout(() => {
-          modal.style.display = 'none';
-        }, 300);
-        document.body.style.overflow = 'auto';
-      }
-    });
-
-    // Cerrar modal con la tecla ESC
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        const modals = document.querySelectorAll('.modal');
-        modals.forEach(modal => {
-          modal.classList.remove('show-users');
-          setTimeout(() => {
-            modal.style.display = 'none';
-          }, 300);
-        });
-        document.body.style.overflow = 'auto';
-      }
-    });
+  // Asegurar que todos los modales están completamente ocultos desde el inicio
+  document.querySelectorAll('.modal').forEach(modal => {
+      modal.style.visibility = 'hidden';
+      modal.style.opacity = '0';
   });
+
+  // Asignar evento click a cada avatar para abrir su modal correspondiente
+  const avatars = document.querySelectorAll('.avatar');
+  avatars.forEach((avatar, index) => {
+      const modalId = `modal-${index + 1}`;
+      avatar.addEventListener('click', () => {
+          const modal = document.getElementById(modalId);
+          if (modal) {
+              modal.style.visibility = 'visible';
+              modal.style.opacity = '1';
+              modal.classList.add('show-users');
+              document.body.style.overflow = 'hidden';
+          }
+      });
+  });
+
+  // Cerrar modales al hacer click en el botón de cierre
+  const closeButtons = document.querySelectorAll('.close-modal');
+  closeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          const modal = button.closest('.modal');
+          modal.classList.remove('show-users');
+          modal.style.opacity = '0';
+          setTimeout(() => {
+              modal.style.visibility = 'hidden';
+          }, 300);
+          document.body.style.overflow = 'auto';
+      });
+  });
+
+  // Cerrar modal al hacer click fuera del contenido del modal
+  window.addEventListener('click', (e) => {
+      if (e.target.classList.contains('modal')) {
+          const modal = e.target;
+          modal.classList.remove('show-users');
+          modal.style.opacity = '0';
+          setTimeout(() => {
+              modal.style.visibility = 'hidden';
+          }, 300);
+          document.body.style.overflow = 'auto';
+      }
+  });
+
+  // Cerrar modal con la tecla ESC
+  document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+          const modals = document.querySelectorAll('.modal');
+          modals.forEach(modal => {
+              modal.classList.remove('show-users');
+              modal.style.opacity = '0';
+              setTimeout(() => {
+                  modal.style.visibility = 'hidden';
+              }, 300);
+          });
+          document.body.style.overflow = 'auto';
+      }
+  });
+});
+
 /*************************************/
 /* Script para el modal de avatares  */
 /*************************************/
