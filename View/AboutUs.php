@@ -168,93 +168,165 @@
 
 
                 <style>
-                    .modal {
-                        display: none;
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background-color: rgba(0, 0, 0, 0.75);
-                        justify-content: center;
-                        align-items: center;
-                        z-index: 1000;
-                        opacity: 0;
-                        visibility: hidden;
-                        transition: opacity 0.3s ease, visibility 0.3s ease;
-                    }
+                
 
-                    /* Cuando se muestra el modal, se añade la clase "show-users" */
-                    .modal.show-users {
-                        display: flex;
-                        opacity: 1;
-                        visibility: visible;
-                    }
 
-                    .modal-content {
-                        background-color: #18181b;
-                        color: #e4e4e7;
-                        border-radius: 8px;
-                        overflow: hidden;
-                        width: 100%;
-                        max-width: 500px;
-                        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-                        transform: translateY(20px);
-                        transition: transform 0.3s ease;
-                        position: relative;
-                    }
+/* Estilos del Modal (mantenidos como solicitado) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
-                    /* Al mostrar el modal, la animación hace que el contenido se desplace a su posición final */
-                    .modal.show-users .modal-content {
-                        transform: translateY(0);
-                    }
+.modal-content {
+    background-color: #18181b;
+    margin: 5% auto;
+    max-width: 800px;
+    max-height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
 
-                    .modal-image img {
-                        width: 100%;
-                        height: 280px;
-                        object-fit: cover;
-                    }
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px 15px;
+    cursor: pointer;
+}
 
-                    .modal-info {
-                        padding: 24px;
-                    }
+.close-modal:hover {
+    color: #333;
+}
 
-                    .modal-info h3 {
-                        font-size: 24px;
-                        font-weight: bold;
-                        color: white;
-                        margin-bottom: 16px;
-                    }
+.modal-body {
+    display: flex;
+    height: 400px;
+}
 
-                    .role {
-                        font-size: 18px;
-                        margin-bottom: 16px;
-                        color: #a1a1aa;
-                    }
+/* Estilos adaptados para el perfil */
+.modal-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
 
-                    .info-details p {
-                        font-size: 14px;
-                        margin-bottom: 4px;
-                        color: #a1a1aa;
-                    }
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: hue-rotate(-10deg) saturate(1.5) contrast(1.1);
+}
 
-                    .close-modal {
-                        position: absolute;
-                        top: 16px;
-                        right: 16px;
-                        background-color: rgba(24, 24, 27, 0.7);
-                        border: none;
-                        color: white;
-                        width: 32px;
-                        height: 32px;
-                        border-radius: 50%;
-                        cursor: pointer;
-                        font-size: 18px;
-                    }
+.modal-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+}
 
-                    .close-modal:hover {
-                        background-color: rgba(39, 39, 42, 0.9);
-                    }
+.modal-info {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-info h3 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.profile-bio {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    max-width: 90%;
+}
+
+.profile-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tag {
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.designer-tag {
+    background-color: #ff5a5f;
+    color: white;
+}
+
+.follow-tag {
+    background-color: #00b8d9;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-links {
+    display: flex;
+    gap: 15px;
+}
+
+.profile-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.pink {
+    background-color: #ff9eb0;
+}
+
+.yellow {
+    background-color: #ffa726;
+}
+
+.blue {
+    background-color: #4dabf7;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .modal-body {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .modal-image {
+        height: 300px;
+    }
+    
+    .modal-info {
+        padding: 20px;
+    }
+}
                 </style>
 
 
@@ -401,12 +473,41 @@
                         <img src="PImageUsers/fotofelipe.png" alt="Andrés Martínez">
                     </div>
                     <div class="modal-info">
-                        <h3>Andrés Martínez</h3>
-                        <p class="role">Director de Proyectos</p>
-                        <div class="info-details">
-                            <p><strong>Nombre completo:</strong> Andrés Felipe Martínez Rodríguez</p>
-                            <p><strong>Edad:</strong> 35 años</p>
-                            <p><strong>Experiencia:</strong> 12 años en el sector construcción</p>
+                        <h3>GABRIELLE WEE</h3>
+                        <p class="profile-bio">Diseñadora UI/UX apasionada por crear experiencias digitales intuitivas y
+                            atractivas. Especializada en interfaces minimalistas con gran impacto visual.</p>
+                        <div class="profile-tags">
+                            <span class="tag designer-tag">UI DESIGNER</span>
+                            <button class="tag follow-tag">+ FOLLOW</button>
+                        </div>
+                        <div class="profile-links">
+                            <a href="#" class="profile-link pink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="briefcase">
+                                    <rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="profile-link yellow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="cube">
+                                    <path d="m21 16-9 5-9-5"></path>
+                                    <path d="m21 8-9 5-9-5"></path>
+                                    <path d="M3 8v8l9 5 9-5V8l-9-5z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="profile-link blue">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="github">
+                                    <path
+                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                    </path>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
