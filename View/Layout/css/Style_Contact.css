@@ -136,7 +136,7 @@ body {
     position: relative;
     background: var(--background-contact);
     opacity: 0;
-    animation: fadeIn 2s 1s forwards;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .form-section-contacts {
@@ -156,7 +156,7 @@ body {
             #000 90%,
             transparent 100%);
     opacity: 0;
-    animation: fadeIn 2s 1s forwards;
+    animation: slideFromLeft 1s ease-out 0.3s forwards;
 }
 
 .title-contacts {
@@ -165,6 +165,8 @@ body {
     margin-bottom: 0.5rem;
     line-height: 1.1;
     transition: transform 0.3s ease, text-shadow 0.3s ease;
+    opacity: 0;
+    animation: slideFromLeft 1s ease-out 0.6s forwards;
 }
 
 .title-contacts:hover {
@@ -185,6 +187,8 @@ body {
     color: var(--subtitle);
     margin-bottom: 3rem;
     font-size: 0.95rem;
+    opacity: 0;
+    animation: slideFromLeft 1s ease-out 0.9s forwards;
 }
 
 .subtitle-contacts a {
@@ -233,6 +237,8 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     margin-bottom: 1rem;
+    opacity: 0;
+    animation: slideFromLeft 1s ease-out 1.2s forwards;
 }
 
 .form-control-contacts {
@@ -281,6 +287,8 @@ textarea.form-control-contacts {
 
 .form-group-contacts.with-textarea .input-icon-contacts {
     top: 2.5rem;
+    opacity: 0;
+    animation: slideFromLeft 1s ease-out 1.5s forwards;
 }
 
 .form-group-contacts:hover .input-icon-contacts {
@@ -293,6 +301,8 @@ textarea.form-control-contacts {
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
+    opacity: 0;
+    animation: slideFromLeft 1s ease-out 1.8s forwards;
 }
 
 .attachment-btn-contacts {
@@ -324,6 +334,8 @@ textarea.form-control-contacts {
     padding: 0.25rem;
     width: 280px;
     font-size: 16px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 1.5s forwards;
 }
 
 .radio-inputs .radio {
@@ -433,7 +445,7 @@ textarea.form-control-contacts {
             #000 90%,
             transparent 100%);
     opacity: 0;
-    animation: fadeIn 2s 1s forwards;
+    animation: slideFromRight 1s ease-out 1s forwards;
 }
 
 .image-section-contacts img {
@@ -525,5 +537,28 @@ textarea.form-control-contacts {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Primero, agregamos las nuevas animaciones */
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
     }
 }

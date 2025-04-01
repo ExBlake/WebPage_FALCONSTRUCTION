@@ -39,6 +39,7 @@ body {
   color: var(--text-color);
   min-height: 100vh;
 }
+
 /* ***************************** */
 /* FIN Estilos Generales */
 /* ***************************** */
@@ -132,9 +133,10 @@ body {
   transform: translateY(-5px);
   color: var(--foreground);
 }
-/**************/ 
+
+/**************/
 /* FIN Banner */
-/**************/ 
+/**************/
 
 /* ***** */
 /* Posts */
@@ -360,6 +362,7 @@ body {
   transform: rotate(45deg);
   margin-right: 2px;
 }
+
 /* ********* */
 /* FIN Posts */
 /* ********* */
@@ -666,6 +669,7 @@ body {
     opacity: 0.5;
     transform: scale(1);
   }
+
   100% {
     opacity: 0.8;
     transform: scale(1.1);
@@ -723,6 +727,7 @@ body {
     width: 100%;
   }
 }
+
 /* ********************* */
 /* FIN Estilos Responsivos */
 /* ********************* */
@@ -732,178 +737,224 @@ body {
 .main-content-review,
 .feed-section-review,
 .sidebar-review {
-    opacity: 0;
-    animation: fadeIn 2s 1s forwards;
+  opacity: 0;
+  animation: fadeIn 2s 1s forwards;
 }
 
 /* Efectos para el hero section */
 .hero-section-review h1 {
-    transition: transform 0.3s ease, text-shadow 0.3s ease;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 .hero-section-review h1:hover {
-    transform: scale(1.05);
-    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  transform: scale(1.05);
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
 }
 
 .hero-section-review p {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .hero-section-review p:hover {
-    transform: translateY(-5px);
-    color: var(--foreground);
+  transform: translateY(-5px);
+  color: var(--foreground);
 }
 
 /* Efectos para los posts */
 .post-review {
-    transition: all 0.3s ease;
-    animation: fadeIn 2s 1s forwards;
+  transition: all 0.3s ease;
+  animation: fadeIn 2s 1s forwards;
 }
 
 .post-review:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Efectos para las imágenes de perfil */
 .profile-pic-review {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .profile-pic-review:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
 }
 
 /* Efectos para los nombres de usuario */
 .username-review {
-    transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .username-review:hover {
-    color: var(--primary);
+  color: var(--primary);
 }
 
 /* Efectos para los botones de acción */
 .post-actions-review i {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .post-actions-review i:hover {
-    transform: scale(1.2);
-    color: var(--primary);
+  transform: scale(1.2);
+  color: var(--primary);
 }
 
 /* Efectos para el carrusel */
 .carousel-slide-review {
-    transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .carousel-slide-review:hover {
-    filter: brightness(1.1);
+  filter: brightness(1.1);
 }
 
 /* Efectos para la sidebar */
 .profile-section-review {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .profile-section-review:hover {
-    transform: translateY(-5px);
-    background-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.18);
 }
 
 /* Efectos para las sugerencias */
 .suggestion-item-review {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .suggestion-item-review:hover {
-    transform: translateX(10px);
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 8px;
-    border-radius: 8px;
+  transform: translateX(10px);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+  border-radius: 8px;
 }
 
 /* Efectos para los gradientes */
 .gradient-2,
 .gradient-3 {
-    transition: opacity 0.3s ease;
-    animation: gradientPulse 8s infinite alternate;
+  transition: opacity 0.3s ease;
+  animation: gradientPulse 8s infinite alternate;
 }
 
 @keyframes gradientPulse {
-    0% {
-        opacity: 0.5;
-        transform: scale(1);
-    }
-    100% {
-        opacity: 0.8;
-        transform: scale(1.1);
-    }
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
 }
-
-
 
 /* Efectos para el scroll container */
 .mouse-icon {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .mouse-icon:hover {
-    transform: scale(1.1);
-    border-color: var(--primary);
+  transform: scale(1.1);
+  border-color: var(--primary);
 }
 
 /* Animación para elementos que aparecen en scroll */
 .fade-in-element {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
 }
 
 .fade-in-element.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Efectos para los botones del carrusel */
 .carousel-button-review {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .carousel-button-review:hover {
-    transform: translateY(-50%) scale(1.2);
-    background: rgba(59, 130, 246, 0.5);
+  transform: translateY(-50%) scale(1.2);
+  background: rgba(59, 130, 246, 0.5);
 }
 
 /* Efectos para timestamps */
 .timestamp-review {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .timestamp-review:hover {
-    color: var(--foreground);
-    letter-spacing: 1px;
+  color: var(--foreground);
+  letter-spacing: 1px;
 }
 
 /* Efectos para los likes */
 .likes-review {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .likes-review:hover {
-    transform: scale(1.05);
-    color: var(--primary);
+  transform: scale(1.05);
+  color: var(--primary);
 }
 
 /* Efectos para la caption */
 .caption-review {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .caption-review:hover {
-    padding-left: 10px;
-    border-left: 2px solid var(--primary);
+  padding-left: 10px;
+  border-left: 2px solid var(--primary);
+}
+
+/* Clases para animaciones de aparición */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Delays para animaciones secuenciales */
+.delay-1 {
+  transition-delay: 0.2s;
+}
+
+.delay-2 {
+  transition-delay: 0.4s;
+}
+
+.delay-3 {
+  transition-delay: 0.6s;
 }

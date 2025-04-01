@@ -18,7 +18,7 @@
 
 <body>
     <?php
-        require_once 'Layout/Header.php';
+    require_once 'Layout/Header.php';
     ?>
     <div class="background-gradients">
         <div class="gradient-1"></div>
@@ -27,9 +27,10 @@
     </div>
 
     <main>
-        <section class="hero-section-review container-section-review">
-            <h1>OVER <span class="counter">0</span> REASONS TO BUILD WITH CONFIDENCE</h1>
-            <p>
+        <!-- Hero Section -->
+        <section class="hero-section-review container-section-review fade-in">
+            <h1 class="fade-in delay-1">OVER <span class="counter">0</span> REASONS TO BUILD WITH CONFIDENCE</h1>
+            <p class="fade-in delay-2">
                 At Falconstruction, we don’t just erect structures we forge lasting relationships built on trust,
                 excellence, and transparency. Every testimonial reflects our dedication to meticulous craftsmanship and
                 unparalleled service. Discover why hundreds of clients have chosen us to turn their visions into
@@ -38,7 +39,7 @@
         </section>
 
         <!-- Scroll indicator -->
-        <div class="scroll-container">
+        <div class="scroll-container fade-in delay-3">
             <div class="mouse-icon">
                 <div class="mouse-wheel"></div>
             </div>
@@ -56,7 +57,7 @@
             <!-- Feed Section -->
             <div class="feed-section-review">
                 <!-- Posts -->
-                <div class="posts-review" id="post-Santiago Villada">
+                <div class="posts-review fade-in" id="post-Santiago Villada">
                     <div class="post-review">
                         <div class="post-header-review">
                             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
@@ -102,7 +103,7 @@
                     </div>
                 </div>
                 <!-- Posts -->
-                <div class="posts-review" id="post-Mateo Villada">
+                <div class="posts-review fade-in delay-1" id="post-Mateo Villada">
                     <div class="post-review">
                         <div class="post-header-review">
                             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
@@ -148,7 +149,7 @@
                     </div>
                 </div>
                 <!-- Posts -->
-                <div class="posts-review" id="post-Miguel Villada">
+                <div class="posts-review fade-in delay-2" id="post-Miguel Villada">
                     <div class="post-review">
                         <div class="post-header-review">
                             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
@@ -194,7 +195,7 @@
                     </div>
                 </div>
                 <!-- Posts -->
-                <div class="posts-review">
+                <div class="posts-review fade-in delay-3">
                     <div class="post-review">
                         <div class="post-header-review">
                             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
@@ -239,7 +240,7 @@
                     </div>
                 </div>
                 <!-- Posts -->
-                <div class="posts-review">
+                <div class="posts-review fade-in delay-4">
                     <div class="post-review">
                         <div class="post-header-review">
                             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
@@ -286,8 +287,8 @@
 
 
                 <!-- Sidebar -->
-                <div class="sidebar-review">
-                    <div class="profile-section-review">
+                <div class="sidebar-review fade-in-right">
+                    <div class="profile-section-review fade-in delay-1">
                         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                             alt="profile" class="profile-pic-review">
                         <div class="profile-info-review">
@@ -297,7 +298,7 @@
                         <button class="switch-btn-review" data-username="Santiago Villada"><i
                                 class="fa-solid fa-eye"></i></button>
                     </div>
-                    <div class="profile-section-review">
+                    <div class="profile-section-review fade-in delay-2">
                         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                             alt="profile" class="profile-pic-review">
                         <div class="profile-info-review">
@@ -307,7 +308,7 @@
                         <button class="switch-btn-review" data-username="Mateo Villada"><i
                                 class="fa-solid fa-eye"></i></button>
                     </div>
-                    <div class="profile-section-review">
+                    <div class="profile-section-review fade-in delay-3">
                         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                             alt="profile" class="profile-pic-review">
                         <div class="profile-info-review">
@@ -317,7 +318,7 @@
                         <button class="switch-btn-review" data-username="Miguel Villada"><i
                                 class="fa-solid fa-eye"></i></button>
                     </div>
-                    <div class="profile-section-review">
+                    <div class="profile-section-review fade-in delay-4">
                         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                             alt="profile" class="profile-pic-review">
                         <div class="profile-info-review">
@@ -326,7 +327,7 @@
                         </div>
                         <button class="switch-btn-review"><i class="fa-solid fa-eye"></i></button>
                     </div>
-                    <div class="profile-section-review">
+                    <div class="profile-section-review fade-in delay-5">
                         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5say60G188V3B6Cy7IiwXtz08q70oq.png"
                             alt="profile" class="profile-pic-review">
                         <div class="profile-info-review">
@@ -343,8 +344,8 @@
     <div id="cursor-effect"></div>
 
     <?php
-        require_once 'Layout/FloatingButton.php';
-        require_once 'Layout/Footer.php';
+    require_once 'Layout/FloatingButton.php';
+    require_once 'Layout/Footer.php';
     ?>
 
     <script src="Script_Header"></script>

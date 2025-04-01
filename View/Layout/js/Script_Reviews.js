@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-   
+
     const carousels = document.querySelectorAll(".post-carousel-review");
     const sidebar = document.querySelector(".sidebar-review");
     const postsContainer = document.querySelector(".feed-section-review");
@@ -57,10 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
             isDragging = false;
             container.style.cursor = 'grab';
             container.style.transition = 'transform 0.3s ease-out';
-            
+
             const movedBy = currentTranslate - prevTranslate;
 
-            if (Math.abs(movedBy) > 20) { 
+            if (Math.abs(movedBy) > 20) {
                 if (movedBy < 0 && currentIndex < slides.length - 1) {
                     currentIndex++;
                 } else if (movedBy > 0 && currentIndex > 0) {
@@ -103,20 +103,20 @@ document.addEventListener("DOMContentLoaded", () => {
     /************************************************************/
     function updateSidebarPosition() {
         if (!sidebar || !postsContainer) return;
-    
+
         const postsRect = postsContainer.getBoundingClientRect();
         const sidebarHeight = sidebar.offsetHeight;
         const viewportHeight = window.innerHeight;
-    
+
         // Posición inicial de la barra lateral (ajusta según tu diseño)
         const sidebarInitialTop = 100; // Por ejemplo, 100px desde el top
-    
+
         // Calcula hasta dónde puede bajar la sidebar
         const maxSidebarTop = postsRect.bottom - sidebarHeight;
-    
+
         // Lógica adicional para evitar que desaparezca arriba
         const minSidebarTop = Math.max(postsRect.top, sidebarInitialTop);
-    
+
         if (postsRect.top >= sidebarInitialTop) {
             // Cuando el contenedor de posts está en su posición inicial, la barra lateral no debe estar fija
             sidebar.style.position = "absolute";
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
             sidebar.style.top = `${Math.min(maxSidebarTop, sidebarInitialTop)}px`;
         }
     }
-    
+
     window.addEventListener("scroll", updateSidebarPosition);
     window.addEventListener("resize", updateSidebarPosition);
     updateSidebarPosition();
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let stepTime = Math.abs(Math.floor(duration / range));
         let timer = setInterval(() => {
             current += increment;
-            element.textContent = "+" + current ;
+            element.textContent = "+" + current;
             if (current === end) {
                 clearInterval(timer);
             }
@@ -206,4 +206,49 @@ document.addEventListener("DOMContentLoaded", () => {
     /***********************************************************************************/
     /*END Funcionalidad para hacer el efecto de auntoincremento en el numero del banner*/
     /***********************************************************************************/
+
+    /*********************************************/
+    /*Funcionalidad para animaciones de aparición*/
+    /*********************************************/
+    function handleScrollAnimations() {
+        const elements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+
+                    // Si es un post, animar sus elementos internos
+                    if (entry.target.classList.contains('posts-review')) {
+                        const internals = entry.target.querySelectorAll('.post-header-review, .post-carousel-review, .post-actions-review, .post-info-review');
+                        internals.forEach((el, index) => {
+                            setTimeout(() => {
+                                el.style.opacity = '1';
+                                el.style.transform = 'translateY(0)';
+                            }, index * 200);
+                        });
+                    }
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px'
+        });
+
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+    }
+
+    handleScrollAnimations();
+
+    // Estilo inicial para elementos internos de los posts
+    document.querySelectorAll('.post-header-review, .post-carousel-review, .post-actions-review, .post-info-review').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    });
+    /*************************************************/
+    /*END Funcionalidad para animaciones de aparición*/
+    /*************************************************/
 });

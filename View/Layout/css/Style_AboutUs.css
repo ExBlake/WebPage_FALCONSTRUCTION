@@ -2074,3 +2074,65 @@ h2:hover,
 /************************************************/
 /* Estilos para la sección de equipo y su modal */
 /************************************************/
+
+/* Estilos base para elementos que aparecerán con scroll */
+.fade-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+/* Clase que se aplicará cuando el elemento sea visible */
+.fade-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variaciones de animaciones */
+.fade-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-down {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-scale {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Clase activa para todas las variaciones */
+.fade-left.is-visible,
+.fade-right.is-visible,
+.fade-up.is-visible,
+.fade-down.is-visible,
+.fade-scale.is-visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* Delays personalizados */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }

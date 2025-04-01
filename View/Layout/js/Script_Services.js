@@ -564,3 +564,27 @@ document.addEventListener("mousemove", (event) => {
 /*********************************/
 /* Script para efecto del título */
 /*********************************/
+
+// Función para manejar las animaciones de aparición
+function handleScrollAnimations() {
+  const elements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .scale-in');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+}
+
+// Inicializar las animaciones cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+  handleScrollAnimations();
+});

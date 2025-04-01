@@ -79,22 +79,22 @@
         </div>
 
         <div class="container">
-            <div class="banner-container-about-us">
-                <h1 class="main-heading-about-us">
+            <!-- Banner principal -->
+            <div class="banner-container-about-us fade-down">
+                <h1 class="main-heading-about-us fade-up delay-200">
                     Excellence in every structure, trust in every project.
                 </h1>
-                <p class="subtitle-about-us">
-                    With a commitment to quality and customer satisfaction, Falconstruction builds with integrity and
-                    expertise.
+                <p class="subtitle-about-us fade-up delay-300">
+                    With a commitment to quality and customer satisfaction...
                 </p>
             </div>
 
-
-            <section class="savings-section-about-us">
+            <!-- Primera sección de ahorro -->
+            <section class="savings-section-about-us fade-scroll">
                 <div class="background-split-about-us">
-                    <div class="background-left-about-us"></div>
+                    <div class="background-left-about-us fade-left delay-200"></div>
                     <div class="background-right-about-us">
-                        <div class="content-about-us">
+                        <div class="content-about-us fade-right delay-300">
                             <h2 class="heading-about-us">At Falconstruction, Quality is Our Priority</h2>
                             <p class="description-about-us">
                                 We are a specialized organization in Construction Consulting, Contracting, and
@@ -125,10 +125,11 @@
                 </div>
             </section>
 
-            <section class="savings-section-about-us">
+            <!-- Segunda sección de ahorro -->
+            <section class="savings-section-about-us fade-scroll">
                 <div class="background-split-about-us">
                     <div class="background-right-about-us">
-                        <div class="content-about-us">
+                        <div class="content-about-us fade-left delay-200">
                             <h2 class="heading-about-us left">Unleash Your Project's Potential</h2>
                             <p class="description-about-us">
                                 At Falconstruction, we fuse visionary strategy with expert execution to transform your
@@ -154,35 +155,33 @@
                             </a>
                         </div>
                     </div>
-                    <div class="background-left-about-us other"></div>
+                    <div class="background-left-about-us other fade-right delay-300"></div>
                 </div>
             </section>
 
-            <h2 class="title-about-us" style="text-align: center; margin-top: 100px;">Our Professional Team</h2>
+            <!-- Sección del equipo -->
+            <h2 class="title-about-us fade-down" style="text-align: center; margin-top: 100px;">Our Professional Team</h2>
 
-            <section class="profiles"
-                style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin: 40px auto; max-width: 1200px;">
-
-                <!-- Código HTML de Avatares y Modal (se mantiene la estructura original de los avatares) -->
-                <div class="avatar" style="--bg-img:url(PImageNosotros/FondoFelipeHernandez.jpg)">
+            <section class="profiles fade-scroll" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin: 40px auto; max-width: 1200px;">
+                <div class="avatar fade-up delay-100" style="--bg-img:url(PImageNosotros/FondoFelipeHernandez.jpg)">
                     <div class="avatar-img">
                         <img src="PImageNosotros/FelipeHernandez.png" alt="Juan Felipe">
                     </div>
                     <p>Juan Felipe</p>
                 </div>
 
-                <div class="avatar" style="--bg-img:url(PImageNosotros/FondoJuanCamilo.jpg)">
+                <div class="avatar fade-up delay-200" style="--bg-img:url(PImageNosotros/FondoJuanCamilo.jpg)">
                     <div class="avatar-img">
                         <img src="PImageNosotros/JuanCamilo.png" alt="Juan Camilo">
                     </div>
                     <p>Juan Camilo</p>
                 </div>
-
             </section>
 
-            <section class="steps-section-about-us">
+            <!-- Sección de pasos -->
+            <section class="steps-section-about-us fade-scroll">
                 <div class="container-about-us">
-                    <div class="header-about-us">
+                    <div class="header-about-us fade-down">
                         <h2 class="title-about-us">At Falconstruction, success is built With facility.</h2>
                         <p class="subtitle-about-us">
                             Say goodbye to hassles. Just reach out, and we'll transform your vision into a masterpiece
@@ -191,7 +190,7 @@
                     </div>
 
                     <div class="steps-grid-about-us">
-                        <div class="step-card-about-us">
+                        <div class="step-card-about-us fade-up delay-100">
                             <div class="step-image-about-us">
                                 <img src="PImageNosotros/Step_1.jpg" alt="Paso 1: Consulta inicial">
                             </div>
@@ -202,7 +201,7 @@
                             </div>
                         </div>
 
-                        <div class="step-card-about-us">
+                        <div class="step-card-about-us fade-up delay-200">
                             <div class="step-image-about-us">
                                 <img src="PImageNosotros/Step_2.jpg" alt="Paso 2: Planificación del proyecto">
                             </div>
@@ -213,7 +212,7 @@
                             </div>
                         </div>
 
-                        <div class="step-card-about-us">
+                        <div class="step-card-about-us fade-up delay-300">
                             <div class="step-image-about-us">
                                 <img src="PImageNosotros/Step_3.jpg" alt="Paso 3: Ejecución de la obra">
                             </div>
@@ -227,15 +226,16 @@
                 </div>
             </section>
 
-            <section class="cards-section-about-us">
+            <!-- Sección de video -->
+            <section class="cards-section-about-us fade-scroll">
                 <div class="container-aa-about-us">
-                    <div class="video-background">
+                    <div class="video-background fade-scale">
                         <video autoplay muted loop class="fullscreen-video">
                             <source src="PImageServicios/Banner.mp4" type="video/mp4">
                             Your browser does not support the video.
                         </video>
                     </div>
-                    <div class="content-about-us floating-content">
+                    <div class="content-about-us floating-content fade-left">
                         <p class="subtitle-about-us">Tailored Guidance</p>
                         <h2 class="title-about-us">Your Vision, Expertly Delivered</h2>
                         <p class="description-about-us">
@@ -250,11 +250,12 @@
                 </div>
             </section>
 
-            <section class="philosophy-section-about-us">
+            <!-- Sección de filosofía -->
+            <section class="philosophy-section-about-us fade-scroll">
                 <div class="container-about-us">
-                    <h2 class="title-about-us">Our Core Values</h2>
+                    <h2 class="title-about-us fade-down">Our Core Values</h2>
                     <div class="philosophy-grid-about-us">
-                        <div class="philosophy-card-about-us card-1-about-us">
+                        <div class="philosophy-card-about-us card-1-about-us fade-left delay-100">
                             <span class="card-number-about-us">1</span>
                             <h3 class="card-title-about-us">Unwavering Commitment</h3>
                             <p class="card-description-about-us">
@@ -262,7 +263,7 @@
                                 execution.
                             </p>
                         </div>
-                        <div class="philosophy-card-about-us card-2-about-us">
+                        <div class="philosophy-card-about-us card-2-about-us fade-right delay-200">
                             <span class="card-number-about-us">2</span>
                             <h3 class="card-title-about-us">Uncompromising Quality</h3>
                             <p class="card-description-about-us">
@@ -270,7 +271,7 @@
                                 construction.
                             </p>
                         </div>
-                        <div class="philosophy-card-about-us card-3-about-us">
+                        <div class="philosophy-card-about-us card-3-about-us fade-left delay-300">
                             <span class="card-number-about-us">3</span>
                             <h3 class="card-title-about-us">Dependable Reliability</h3>
                             <p class="card-description-about-us">
@@ -278,7 +279,7 @@
                                 every project.
                             </p>
                         </div>
-                        <div class="philosophy-card-about-us card-4-about-us">
+                        <div class="philosophy-card-about-us card-4-about-us fade-right delay-400">
                             <span class="card-number-about-us">4</span>
                             <h3 class="card-title-about-us">Peak Efficiency</h3>
                             <p class="card-description-about-us">

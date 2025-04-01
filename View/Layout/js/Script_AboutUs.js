@@ -147,3 +147,33 @@ document.addEventListener('DOMContentLoaded', function () {
 /*************************************/
 /* Script para el modal de avatares  */
 /*************************************/
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Función para verificar si un elemento está en el viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Función para manejar la animación de los elementos
+    function handleScrollAnimation() {
+        const elements = document.querySelectorAll('.fade-scroll, .fade-left, .fade-right, .fade-up, .fade-down, .fade-scale');
+        
+        elements.forEach(element => {
+            if (isElementInViewport(element)) {
+                element.classList.add('is-visible');
+            }
+        });
+    }
+
+    // Escuchar el evento scroll
+    window.addEventListener('scroll', handleScrollAnimation);
+    
+    // Ejecutar una vez al cargar la página
+    handleScrollAnimation();
+});

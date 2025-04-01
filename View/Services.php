@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
     <title>SERVICES</title>
     <link rel="icon" href="PImageIconos/Icono.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -27,7 +27,7 @@
 
     <div class="fullscreen-container">
         <section class="fullscreen-section">
-            <div class="hero-banner-services">
+            <div class="hero-banner-services fade-in">
                 <!-- Video Background -->
                 <video autoplay loop muted playsinline class="background-video-banner-services">
                     <source src="PImageServicios/Banner.mp4" type="video/mp4">
@@ -75,9 +75,9 @@
                 <div class="container">
                     <div class="hero__content">
                         <!-- Columna izquierda -->
-                        <div class="hero__text">
-                            <h1 class="title-section-2-service">Exceeding Expectations, Building Trust</h1>
-                            <p>
+                        <div class="hero__text fade-in-left">
+                            <h1 class="title-section-2-service fade-in delay-1">Exceeding Expectations, Building Trust</h1>
+                            <p class="fade-in delay-2">
                                 We pride ourselves on our unwavering responsibility and commitment to surpassing our
                                 customers’ expectations at every step. With ethical practices, personalized service, and
                                 exceptional quality, we create lasting trust and ensure complete satisfaction.
@@ -85,7 +85,7 @@
                         </div>
 
                         <!-- Columna derecha -->
-                        <div class="hero__media">
+                        <div class="hero__media fade-in-right delay-1">
                             <div class="hero__monitor">
                                 <img src="PImageServicios/Section-2.jpg" alt="image" class="hero__game-image">
                                 <div class="hero__scanner"></div>
@@ -103,12 +103,12 @@
                 <div class="timeline" id="timeline-container">
 
                     <div class="timeline-items">
-                        <div class="timeline-item" data-image="PImageServicios/Service_1.jpg">
+                        <div class="timeline-item fade-in" data-image="PImageServicios/Service_1.jpg">
                             <div class="content-services-section">
                                 <h2 class="titulo-services-section main">OUR SERVICES</h2>
                             </div>
                         </div>
-                        <div class="timeline-item" data-image="PImageServicios/Service_1.jpg">
+                        <div class="timeline-item fade-in delay-1" data-image="PImageServicios/Service_1.jpg">
                             <div class="icon-circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -128,7 +128,7 @@
                                 <button class="cta-button">Get Ready</button>
                             </div>
                         </div>
-                        <div class="timeline-item" data-image="PImageServicios/Service_2.jpg">
+                        <div class="timeline-item fade-in delay-2" data-image="PImageServicios/Service_2.jpg">
                             <div class="icon-circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -149,7 +149,7 @@
                                 <button class="cta-button">Start Your Project</button>
                             </div>
                         </div>
-                        <div class="timeline-item" data-image="PImageServicios/Service_3.jpg">
+                        <div class="timeline-item fade-in delay-3" data-image="PImageServicios/Service_3.jpg">
                             <div class="icon-circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -176,7 +176,7 @@
                             </div>
                         </div>
 
-                        <div class="timeline-item" data-image="PImageServicios/Service_3.jpg">
+                        <div class="timeline-item fade-in delay-4" data-image="PImageServicios/Service_3.jpg">
                             <div class="icon-circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -204,29 +204,29 @@
 
                 <div class="slider-container" id="slider-container">
                     <div class="slider">
-                        <div class="slide">
-                            <img src="PImageServicios/Service_1.jpg" alt="Meeting room" class="slide-image">
-                            <h2 class="slide-title">Project Consulting and Management</h2>
-                            <p class="slide-description">We provide advisory and comprehensive project
+                        <div class="slide fade-in">
+                            <img src="PImageServicios/Service_1.jpg" alt="Meeting room" class="slide-image scale-in delay-1">
+                            <h2 class="slide-title fade-in-left delay-2">Project Consulting and Management</h2>
+                            <p class="slide-description fade-in delay-3">We provide advisory and comprehensive project
                                 management, covering financial feasibility studies, strategic planning, budgeting
                                 and cost control, permits and regulations management, and on-site supervision to
                                 ensure efficient and optimized execution.</p>
                             <button class="cta-button">Get Ready</button>
                         </div>
-                        <div class="slide">
-                            <img src="PImageServicios/Service_2.jpg" alt="Training" class="slide-image">
-                            <h2 class="slide-title">Construction Contracting</h2>
-                            <p class="slide-description">We execute complete projects as primary contractors,
+                        <div class="slide fade-in">
+                            <img src="PImageServicios/Service_2.jpg" alt="Training" class="slide-image scale-in delay-1">
+                            <h2 class="slide-title fade-in-left delay-2">Construction Contracting</h2>
+                            <p class="slide-description fade-in delay-3">We execute complete projects as primary contractors,
                                 from design to final delivery. We specialize in residential and commercial flooring
                                 for remodeling, new construction, premium
                                 interior and exterior finishes, bathrooms, pools,
                                 as well as rigorous quality control and compliance management.</p>
                             <button class="cta-button">Start Your Project</button>
                         </div>
-                        <div class="slide">
-                            <img src="PImageServicios/Service_3.jpg" alt="Equipment" class="slide-image">
-                            <h2 class="slide-title">Specialized Workforce Subcontracting</h2>
-                            <p class="slide-description">We supply highly skilled personnel for framing and
+                        <div class="slide fade-in">
+                            <img src="PImageServicios/Service_3.jpg" alt="Equipment" class="slide-image scale-in delay-1">
+                            <h2 class="slide-title fade-in-left delay-2">Specialized Workforce Subcontracting</h2>
+                            <p class="slide-description fade-in delay-3">We supply highly skilled personnel for framing and
                                 drywall contractors
                                 who require efficient and reliable execution. We handle the selection, hiring, and
                                 management of specialized workforce, including payroll and insurance, securing
@@ -239,8 +239,8 @@
             </div>
         </section>
 
-        <section class="fullscreen-section contacts-banner-container" id="contacts-section">
-            <div class="contacts-banner-promo-card">
+        <section class="fullscreen-section contacts-banner-container fade-in" id="contacts-section">
+            <div class="contacts-banner-promo-card fade-in delay-1">
                 <div class="contacts-banner-gradient-blob"></div>
                 <div class="contacts-banner-content">
                     <h1 class="contacts-banner-title" id="contacts-title">BUILD THE FUTURE: CONNECT WITH US TODAY AND
